@@ -1,0 +1,32 @@
+.#{$select} {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	padding: $select-padding;
+	vertical-align:middle;
+	font-size: $font-size-base; 
+	line-height:normal;
+	color: $base-text-gray;
+	border: $select-style;
+	@include border-radius($border-radius-base);
+	@include transition($base-trans);
+	
+	&:hover, &:active, &:focus {
+		color: $base-text-gray;
+		border: $select-hover-style;
+	}
+}
+
+.#{$select}.Confirm {
+	@include theme-color($color-confirm, $color-confirm-hover);
+}
+.#{$select}.Warning {
+	@include theme-color($color-warning, $color-warning-hover);
+}
+.#{$select}.Danger {
+	@include theme-color($color-danger, $color-danger-hover);
+}
+.#{$select}.Success {
+	@include theme-color($color-success, $color-success-hover);
+}

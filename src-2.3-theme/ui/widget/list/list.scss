@@ -1,0 +1,99 @@
+.#{$list} {
+	height: auto;
+	padding: 0;
+	list-style: none;
+	background: $list-bg;
+	border: $list-border-style;
+	@include border-radius($border-radius-base);
+}
+.#{$list} span {
+	display: inline-block;
+}
+.#{$list} > li {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: $list-text-gutter;
+	font-size: $list-font;
+	line-height: $list-line-height;
+	color: $list-font-color;
+	background: $list-bg;
+	border-top: $list-sub-style;
+}
+.#{$list} > li:first-child {
+	border-top:0;
+	@include border-radius($list-first-radius);
+}
+.#{$list} > li:last-child {
+	@include border-radius($list-last-radius);
+}
+.#{$list} > li.Link > a {
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+	vertical-align: middle;
+	padding: $list-text-gutter;
+	margin: $list-link-gutter;
+	color: $list-font-color;
+	text-decoration: none;
+	@include transition($base-trans);
+	
+	&:hover, &:active {
+		color: $list-link-hover;
+		background: $list-link-hoverbg;
+	}
+	
+	&:after {
+		content:'';
+		position:absolute;
+		top: 50%;
+		right: $list-link-right;
+		display: block;
+		width: $list-link-arrow-width;
+		height: $list-link-arrow-height;
+		margin-top: $list-link-top;
+		background: url($component-image) no-repeat $list-link-pos;
+	}
+}
+.#{$list} > li.Link:hover > a:after, 
+.#{$list} > li.Link:active > a:after, 
+.#{$list} > li.Link:focus > a:after {
+	background: url($component-image) no-repeat $list-link-hover-pos;
+}
+.#{$list} .Title {
+	margin: 0;
+	color: $list-title-font-color;
+	font-size: $list-title-font-size;
+	font-weight: bold;
+}
+//.#{$list} > li .Icon{
+//	position: absolute;
+//	top: 50%;
+//	right: 15px;
+//	height: 30px;
+//	width: 30px;
+//	margin-top: -9px;
+//	background-size: 100% 100%;
+//}
+.#{$list} > li.Divider {
+	padding: $list-text-gutter;
+	font-weight: bold;
+	line-height: $list-line-height;
+	@include gradation($list-flag, $list-bg, $list-bg, $list-bg-backend);
+}
+.#{$list} > li img.Thumbnail{
+	display: inline-block;
+	width: $list-link-thumb-width;
+	height: $list-link-thumb-height;
+	border: 0;
+}
+.#{$list} > li img.Thumbnail.Small{
+	top: 50%;
+	width: $list-link-small-thumb-width; 
+	height: $list-link-small-thumb-height;
+}
+.#{$list} > li img.Thumbnail + span {
+	margin-left: $list-link-thumb-span;
+}

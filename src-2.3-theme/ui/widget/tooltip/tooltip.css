@@ -1,0 +1,12 @@
+/************** tooltip **************/
+
+.af-tooltip {
+	z-index:10;
+	position:absolute;
+	padding: 5px 10px;
+}
+.af-tooltip:before, .af-tooltip:after {
+	z-index:10;
+	position:absolute;
+    display:block; 
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clear API - Table | Alopex UI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $('#btn1').click(function() {
+        $('#el').clear();
+      });
+      $('#btn2').click(function() {
+        $('#el2').clear();
+      });
+    });
+</script>
+
+<body>
+	<h3>Table with THEAD head</h3>
+	<button id="btn1" class="Button">Clear</button>
+	<div class="Table-wrapper">
+    	<div class="Table-scroller">
+			<table id="el" class="Table">
+				<thead>
+					<tr>
+						<th data-resizable="true">Head1</th>
+						<th>Head2</th>
+						<th data-resizable="true">Head3</th>
+						<th>Head4</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Row 1, Cell1</td>
+						<td>Row 1, Cell2</td>
+						<td>Row 1, Cell3</td>
+						<td>Row 1, Cell4</td>
+					</tr>
+					<tr>
+						<td>Row 2, Cell1</td>
+						<td>Row 2, Cell2</td>
+						<td>Row 2, Cell3</td>
+						<td>Row 2, Cell4</td>
+					</tr>
+					<tr>
+						<td>Row 3, Cell1</td>
+						<td>Row 3, Cell2</td>
+						<td>Row 3, Cell3</td>
+						<td>Row 3, Cell4</td>
+					</tr>
+					<tr>
+						<td>Row 4, Cell1</td>
+						<td>Row 4, Cell2</td>
+						<td>Row 4, Cell3</td>
+						<td>Row 4, Cell4</td>
+					</tr>
+					<tr>
+						<td>Row 5, Cell1</td>
+						<td>Row 5, Cell2</td>
+						<td>Row 5, Cell3</td>
+						<td>Row 5, Cell4</td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+	
+	<br><br>
+	<h3>Table with TH head</h3>
+	<button id="btn2" class="Button">Clear</button>
+	<div class="Table-wrapper">
+    	<div class="Table-scroller">
+			<table id="el2" class="Table">
+				<tr>
+					<th data-resizable="true">Head1</th>
+					<th>Head2</th>
+					<th data-resizable="true">Head3</th>
+					<th>Head4</th>
+				</tr>
+				<tr>
+					<td>Row 1, Cell1</td>
+					<td>Row 1, Cell2</td>
+					<td>Row 1, Cell3</td>
+					<td>Row 1, Cell4</td>
+				</tr>
+				<tr>
+					<td>Row 2, Cell1</td>
+					<td>Row 2, Cell2</td>
+					<td>Row 2, Cell3</td>
+					<td>Row 2, Cell4</td>
+				</tr>
+				<tr>
+					<td>Row 3, Cell1</td>
+					<td>Row 3, Cell2</td>
+					<td>Row 3, Cell3</td>
+					<td>Row 3, Cell4</td>
+				</tr>
+				<tr>
+					<td>Row 4, Cell1</td>
+					<td>Row 4, Cell2</td>
+					<td>Row 4, Cell3</td>
+					<td>Row 4, Cell4</td>
+				</tr>
+				<tr>
+					<td>Row 5, Cell1</td>
+					<td>Row 5, Cell2</td>
+					<td>Row 5, Cell3</td>
+					<td>Row 5, Cell4</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+/********* checkbox *********/
+.af-checkbox {
+    overflow:hidden;
+	vertical-align: middle;
+	width: 16px;
+	height: 16px;
+	margin: 8px;
+	padding:0px;
+	border:0px;
+}
+
+/* checkbox custom image for webkit browser */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	.af-checkbox {
+		appearance:none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-khtml-appearance:none;
+	}
+}
+
+/********* wrapcheckbox *********/
+.af-checkbox.af-wrapcheckbox {
+	position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: 8px;
+    padding: 0px;
+    border:0px;
+    vertical-align: middle;
+    cursor: pointer;
+    
+    opacity: 0;
+    _noFocusLine: expression(this.hideFocus = true);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity = 0);
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+}
+.af-checkbox.af-wrapcheckbox + .af-wrapcheckbox-span {
+  	display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+}

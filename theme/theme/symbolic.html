@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- TODO replace title dynamically -->
+	<title>Development | Alopex UI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css" />
+	
+	<script type="text/javascript"  src="../../js/libs/jquery/jquery-1.10.1.js"></script>
+	<script type="text/javascript"  src="../../dist/script/alopex-ui.min.js"></script>
+
+<script type="text/javascript">
+	$a.page(function() {
+
+		this.init = function(id, param) {
+			$('#addTabBtn').click(function() {
+				/* $('#editTabs').addTab('new', '#tab1'); */
+				$('#editTabs').addTab('<li data-content="#attrs">Attributes<button class="RemoveButton"></button></li>');
+			});
+			$('#button_dialog').click(function() {
+				$('#div_dialog').open({
+					title : "Title - blank",
+					top: 9200,
+					left: 300
+				});
+			});	
+			$('#button_dialog_confirm').click(function() {
+				$('#div_dialog_confirm').open({
+					title : "Title - confirm",
+					top: 9200,
+					left: 300
+				});
+			});	
+			$('#button_dialog_success').click(function() {
+				$('#div_dialog_success').open({
+					title : "Title - success",
+					top: 9200,
+					left: 300
+				});
+			});	
+			$('#button_dialog_warning').click(function() {
+				$('#div_dialog_warning').open({
+					title : "Title - warning",
+					top: 9200,
+					left: 300
+				});
+			});	
+			$('#button_dialog_danger').click(function() {
+				$('#div_dialog_danger').open({
+					title : "Title - danger",
+					top: 9200,
+					left: 300
+				});
+			});	
+		}
+	});
+</script>
+</head>
+<body>
+	<div class="Pos-rel Overflow-hid Padding-bottom-100">
+		<div class="Width-100" style="margin: 0 auto">
+	
+			<!-- button start -->
+				<h5>Button</h5>
+				<p>
+					<button class="Button Default">Default</button>
+					<button class="Button Confirm">Confirm</button>
+					<button class="Button Success">Success</button>
+					<button class="Button Warning">Warning</button>
+					<button class="Button Danger">Danger</button>
+				</p>
+				
+
+			<!-- //button end -->
+			
+			<!-- group button start -->
+				<div class="Float-left Width-50">
+					<h5>Basic Groupbutton</h5>
+					<div class="Groupbutton">
+						<button class="Button Default">Button 1</button>
+					    <a class="Button Confirm">Button 2</a> 
+					    <a class="Button Success">Button 3</a> 
+					    <a class="Button Warning">Button 4</a> 
+					    <a class="Button Danger">Button 5</a> 
+					</div>
+				</div>
+
+			<!-- //group button end -->
+			
+		
+			
+			<!-- textinput start -->
+			<div class="Splitter Margin-top-20"></div>
+			<div class="Margin-top-20">
+				<h5 class="Margin-top-10">Textinput</h5>
+				<input id="textId" class="Textinput">
+				<input id="textId" class="Textinput" data-disabled="true" value="Diasbled text">	
+				<input id="textId" class="Textinput Confirm" value="Confirm">
+				<input id="textId" class="Textinput Warning" value="Warning">
+				<input id="textId" class="Textinput Danger" value="Danger">
+				<input id="textId" class="Textinput Success" value="Success">
+				<h5 class="Margin-top-10">TextArea</h5>
+				<textarea class="Textarea" rows="4" cols="30">
+Time is.. Too Slow for those who Wait. Too Swift for those who Fear. Too Long for those who Grieve. Too Short for those who Rejoice. But for those who Love. Time is not..
+				</textarea>
+				<textarea class="Textarea" rows="4" cols="30" data-disabled="true">
+Time is.. Too Slow for those who Wait. Too Swift for those who Fear. Too Long for those who Grieve. Too Short for those who Rejoice. But for those who Love. Time is not..
+				</textarea><br>
+				<textarea class="Textarea Confirm" rows="4" cols="30">
+Time is.. Too Slow for those who Wait. Too Swift for those who Fear. Too Long for those who Grieve. Too Short for those who Rejoice. But for those who Love. Time is not..
+				</textarea>
+				<textarea class="Textarea Warning" rows="4" cols="30">
+Time is.. Too Slow for those who Wait. Too Swift for those who Fear. Too Long for those who Grieve. Too Short for those who Rejoice. But for those who Love. Time is not..
+				</textarea>
+				<textarea class="Textarea Danger" rows="4" cols="30">
+Time is.. Too Slow for those who Wait. Too Swift for those who Fear. Too Long for those who Grieve. Too Short for those who Rejoice. But for those who Love. Time is not..
+				</textarea>
+				<textarea class="Textarea Success" rows="4" cols="30">
+Time is.. Too Slow for those who Wait. Too Swift for those who Fear. Too Long for those who Grieve. Too Short for those who Rejoice. But for those who Love. Time is not..
+				</textarea>
+			</div>
+			<!-- //textinput end -->
+		
+			<!-- select start -->
+			<div class="Overflow-hid Margin-top-20">
+
+				
+				<div class="Float-left Width-100">
+					<h5>select</h5>
+					<select class="Select Confirm">
+					    <option value="korea">Korea</option>
+					    <option value="usa">USA</option>
+					    <option value="japan">Japan</option>
+					    <option value="china">China</option>
+					</select>
+					<select class="Select Warning">
+					    <option value="korea">Korea</option>
+					    <option value="usa">USA</option>
+					    <option value="japan">Japan</option>
+					    <option value="china">China</option>
+					</select>
+					<select class="Select Danger">
+					    <option value="korea">Korea</option>
+					    <option value="usa">USA</option>
+					    <option value="japan">Japan</option>
+					    <option value="china">China</option>
+					</select>
+					<select class="Select Success">
+					    <option value="korea">Korea</option>
+					    <option value="usa">USA</option>
+					    <option value="japan">Japan</option>
+					    <option value="china">China</option>
+					</select>
+				</div>
+			</div>
+			
+			<!-- Panel start -->
+			<div class="Overflow-hid Margin-top-20">
+				<h4>Panel</h4>
+				<div class="Float-left Width-30">
+					<h5>Basic Panel</h5>
+					<h6>Basic Panel</h6>
+					<div class="Panel">
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+					</div>
+					<h6>Basic Panel Header</h6>
+					<div class="Panel">
+						<div class="Panel-header">Panel Header</div>
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+					</div>
+					<h6>Basic Panel Footer</h6>
+					<div class="Panel">
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+						<div class="Panel-footer">패널 footer </div>
+					</div>
+				</div>
+				<div class="Float-left Width-30 Margin-left-40">
+					<h5>Theme Panel</h5>
+					<h6>Primary</h6>
+					<div class="Panel Primary">
+						<div class="Panel-header">Panel Header</div>
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+					</div>
+					<h6>Success</h6>
+					<div class="Panel Success">
+						<div class="Panel-header">Panel Header</div>
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+					</div>
+					<h6>Warning</h6>
+					<div class="Panel Warning">
+						<div class="Panel-header">Panel Header</div>
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+					</div>
+				</div>
+				<div class="Float-left Width-30 Margin-left-40">
+					<h6 class="Margin-top-30">Danger</h6>
+					<div class="Panel Danger">
+						<div class="Panel-header">Panel Header</div>
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+					</div>
+					<h6>Info</h6>
+					<div class="Panel Info">
+						<div class="Panel-header">Panel Header</div>
+						<div class="Panel-content">
+							Panel Basic
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //Panel end -->
+			<div class="Splitter Margin-top-30 Margin-bottom-20"></div>
+			<!-- Dialog start -->
+			<div class="Overflow-hid Margin-top-20">
+				<h4>Dialog</h4>
+				<div class="Float-left Margin-right-10">
+					<button id="button_dialog" class="Button">Basic Dialog open</button>
+					<div id="div_dialog" class="Dialog" data-dialog-type="blank" data-resizable="true">
+						<div class="Dialog-contents">
+						Time is.. - Henry Van Dyke<br><br>
+
+						Time is.. 
+						Too Slow for those who Wait 
+						Too Swift for those who Fear 
+						Too Long for those who Grieve 
+						Too Short for those who Rejoice 
+						But for those who Love 
+						Time is not..</div>
+						<div class="Dialog-btnwrap">
+							<button class="Button Large Default">default</button>
+							<button class="Button Large">확인</button>
+						</div>
+					</div>
+				</div>
+				<div class="Float-left Margin-right-10">
+					<button id="button_dialog_confirm" class="Button Confirm">Confirm Dialog open</button>
+					<div id="div_dialog_confirm" class="Dialog Confirm" data-dialog-type="blank" data-resizable="true">
+						<div class="Dialog-contents">
+						Time is.. - Henry Van Dyke<br><br>
+
+						Time is.. 
+						Too Slow for those who Wait 
+						Too Swift for those who Fear 
+						Too Long for those who Grieve 
+						Too Short for those who Rejoice 
+						But for those who Love 
+						Time is not..</div>
+						<div class="Dialog-btnwrap">
+							<button class="Button Large Default">default</button>
+							<button class="Button Large Confirm">확인</button>
+						</div>
+					</div>
+				</div>
+				<div class="Float-left Margin-right-10">
+					<button id="button_dialog_success" class="Button Success">Success Dialog open</button>
+					<div id="div_dialog_success" class="Dialog Success" data-dialog-type="blank" data-resizable="true">
+						<div class="Dialog-contents">
+						Time is.. - Henry Van Dyke<br><br>
+
+						Time is.. 
+						Too Slow for those who Wait 
+						Too Swift for those who Fear 
+						Too Long for those who Grieve 
+						Too Short for those who Rejoice 
+						But for those who Love 
+						Time is not..</div>
+						<div class="Dialog-btnwrap">
+							<button class="Button Large Default">default</button>
+							<button class="Button Large Success">확인</button>
+						</div>
+					</div>
+				</div>
+				<div class="Float-left Margin-right-10">
+					<button id="button_dialog_warning" class="Button Warning">Warning Dialog open</button>
+					<div id="div_dialog_warning" class="Dialog Warning" data-dialog-type="blank" data-resizable="true">
+						<div class="Dialog-contents">
+						Time is.. - Henry Van Dyke<br><br>
+
+						Time is.. 
+						Too Slow for those who Wait 
+						Too Swift for those who Fear 
+						Too Long for those who Grieve 
+						Too Short for those who Rejoice 
+						But for those who Love 
+						Time is not..</div>
+						<div class="Dialog-btnwrap">
+							<button class="Button Large Default">default</button>
+							<button class="Button Large Warning">확인</button>
+						</div>
+					</div>
+				</div>
+				<div class="Float-left">
+					<button id="button_dialog_danger" class="Button Danger">Danger Dialog open</button>
+					<div id="div_dialog_danger" class="Dialog Danger" data-dialog-type="blank" data-resizable="true">
+						<div class="Dialog-contents">
+						Time is.. - Henry Van Dyke<br><br>
+
+						Time is.. 
+						Too Slow for those who Wait 
+						Too Swift for those who Fear 
+						Too Long for those who Grieve 
+						Too Short for those who Rejoice 
+						But for those who Love 
+						Time is not..</div>
+						<div class="Dialog-btnwrap">
+							<button class="Button Large Default">default</button>
+							<button class="Button Large Danger">확인</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //Dialog end -->
+			<!-- etc start -->
+			<div class="Splitter Margin-top-30 Margin-bottom-20"></div>
+			<div class="Overflow-hid Margin-top-20">
+				<h4>Label</h4>
+				<span class="Label Default">Default</span>
+				<span class="Label Primary">Primary</span>
+				<span class="Label Success">Success</span>
+				<span class="Label Warning">Warning</span>
+				<span class="Label Danger">Danger</span>
+				<span class="Label Confirm">Confirm</span>
+			</div>
+		</div>
+	</div>
+	<div id="iframe_page_end"></div>
+</body>
+</html>

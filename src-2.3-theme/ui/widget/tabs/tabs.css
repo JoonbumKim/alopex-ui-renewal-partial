@@ -1,0 +1,55 @@
+
+/********* tabs *********/
+.af-tabs {
+	width: 100%;
+	margin: 0 ;
+	padding: 0 ;
+}
+
+.af-tabs .af-tabs-button-group {
+	display:block;
+	width: 100%;
+	overflow:hidden;
+	margin:0;
+	padding:0;
+}
+
+.af-tabs .af-tabs-button {
+	display:block;
+	float: left;
+	cursor: pointer;
+	margin: 0;
+	text-align: center;
+	padding: 0px 15px;
+	text-decoration: none;
+	line-height:33px;
+	position:relative;
+}
+
+.af-tabs .af-tabs-button .af-tabs-removebutton {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 11px;
+    right: 2px;
+    padding: 0px;
+    cursor: pointer;
+    border: 0;
+    text-align: center;
+}  
+
+.af-tabs .af-tabs-content {
+	padding: 20px 15px;
+	margin-top: -1px;
+	display:block;
+	border-top:1px solid #c3c3c3;
+}
+
+.af-tabs .af-tabs-button-icon{
+	display:block;
+	margin:auto ;
+	*margin:auto 0 ; /* for IE7*/ 
+	text-align:center;
+	border:0px;
+}
+

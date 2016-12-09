@@ -1,0 +1,32 @@
+{
+ "result": "success",
+ "textData": "Profits",
+ "chartData":[
+				{
+					"year": 2005,
+					"income": 11.1,
+					"expenses": 13.5
+				},
+				{
+					"year": 2006,
+					"income": 12.8,
+					"expenses": 16.2
+				},
+				{
+					"year": 2007,
+					"income": 15,
+					"expenses": 24.6
+				},
+				{
+					"year": 2008,
+					"income": 29.5,
+					"expenses": 15.1
+				},
+				{
+					"year": 2009,
+					"income": 33.9,
+					"expenses": 20.1
+				}
+			]
+}
+

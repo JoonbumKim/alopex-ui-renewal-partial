@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Navigate | Alopex UI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css" />
+
+<script type="text/javascript"  src="../../js/libs/jquery/jquery-1.11.1.js"></script>
+<script type="text/javascript"  src="../../dist/script/alopex-ui.min.js"></script>	
+
+<style>
+	body {background-color: #6F4E10; color:white;}
+</style>
+<script>
+$a.page({
+	init: function(id, param) {
+	    $a.page.method = 'POST';
+	    $('#content').setData(param);
+	}
+});
+</script>
+</head>
+<body>
+	<div>		
+		<h3>param을 통해 받은정보 </h3>
+		<div id="content">
+			<table class="Table">
+				<tr>
+					<td>아이디</td><td data-bind="text:id"></td>
+				</tr>
+				<tr>
+					<td>패스워드</td><td data-bind="text:password"></td>
+				</tr>
+			</table>
+		</div>		
+	</div>
+</body>
+</html>

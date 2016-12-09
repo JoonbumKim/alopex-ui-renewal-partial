@@ -1,0 +1,24 @@
+.messagebox{
+	background-color: #FFF;
+	border-radius: 7px;
+	border: 1px solid #30496C;
+	min-height: 100px;
+	box-shadow: #000 1px 1px 5px 0px;
+	box-sizing: border-box;
+	color: #444;
+	display: block;
+	font-family: NanumGothic;
+	height: 141px;
+	line-height: 18px;
+	min-width:150px;
+	width: auto;
+}
+.messagebox .messageWrap{padding:19px 16px;}
+.messagebox .msg_icon{float:left; width:53px; height:53px;}
+.messagebox .msg_icon.info{background:url(./images/ico_msg_info.png) no-repeat center center;}
+.messagebox .msg_icon.error{background:url(./images/ico_msg_error.png) no-repeat center center;}
+.messagebox .msg_icon.confirm{background:url(./images/ico_msg_confirm.png) no-repeat center center;}
+.messagebox .msg_txt{color:#444444; float:left; font-size:12px; margin-left:20px; width:calc(100% - 73px);}
+.messagebox .msgBtnWrap{text-align:center}
+.messagebox button.btn_common{margin:0px; width:auto; min-width:60px;}
+.messagebox button.btn_common + button.btn_common{margin-left:5%;} 

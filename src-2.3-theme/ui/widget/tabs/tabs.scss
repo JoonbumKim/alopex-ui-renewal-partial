@@ -1,0 +1,260 @@
+.#{$tabs}{
+	position: relative;
+	overflow: hidden; 
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.#{$tabs} > ul {
+	display: table;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	border-bottom: $tabs-style-hover;
+	&:before {
+		@include tabs-ul-line($tabs-ul-before);
+	}
+}
+.#{$tabs} > .Scroller {
+	overflow-x: auto;
+	padding: 0;
+	margin-top: $tabs-scroll-top;
+	border: 0;
+}
+.#{$tabs} > .Scroller > ul {
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-bottom: $tabs-style-hover;
+	&:before {
+		@include tabs-ul-line($tabs-ul-before);
+	}
+}
+.#{$tabs} > ul > li, 
+.#{$tabs} > .Scroller > ul > li {
+	position: relative;	
+	cursor: pointer;
+	display: table-cell;
+	margin: 0;
+	padding: $tabs-gutter;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	font-size: $font-size-base;
+	color: $tabs-font-color;
+	line-height: $tabs-line-height;
+	background: $tabs-bg;
+	@include tabs-arrow($tabs-arrow-bg);
+}
+.#{$tabs} > ul > li:first-child, 
+.#{$tabs} > .Scroller > ul > li:first-child {
+	border-left: $tabs-style;
+}
+.#{$tabs} > ul > li:hover, 
+.#{$tabs} > .Scroller > ul > li:hover,
+.#{$tabs} > ul > li:active, 
+.#{$tabs} > .Scroller > ul > li:active {
+	color: $tabs-font-hover;
+	font-weight: bold;
+	border: $tabs-style-hover;
+	border-bottom: 0;
+	@include gradation($flag, $tabs-bg-hover, $tabs-bg-hover, $tabs-bg-hover-backend);
+}
+.#{$tabs} > ul > li.Selected, 
+.#{$tabs} > .Scroller > ul > li.Selected {
+	color: $tabs-select-font;
+	font-weight: bold;
+	border: $tabs-style-hover;
+	border-bottom: 0;
+	background: $tabs-select-bg;
+}
+.#{$tabs} > ul > li.Disabled, 
+.#{$tabs} > .Scroller > ul > li.Disabled {
+	color: $tabs-disabled-color;
+	border: $tabs-disabled-border;
+	border-bottom-color : $tabs-disabled-border-bottom;
+}
+.#{$tabs} > ul > li.Tabs-ellipsis, 
+.#{$tabs} > .Scroller > ul > li.Tabs-ellipsis {	
+	@include ellipsis;
+}
+.#{$tabs} > ul > li img, 
+.#{$tabs} > .Scroller > ul > li img{
+	display: block;
+	height: $tabs-img-height;
+	margin: auto;
+	text-align: center;
+	border: 0px;
+}
+//remove buttonn
+.#{$tabs} ul > li .RemoveButton {
+    position: absolute;
+	cursor: pointer;
+	top: $tabs-element + 2;
+	right: ($tabs-element - 1);
+	width: $tabs-element;
+	height: $tabs-element;
+	padding: 0px;
+	border: 0;
+	text-align: center;
+	background: url($component-image) no-repeat $tabs-remove-pos;
+}
+.#{$tabs} ul > li .RemoveButton:hover, 
+.#{$tabs} ul > li .RemoveButton:active{
+	background: url($component-image) no-repeat $tabs-remove-hover-pos;
+}
+.#{$tabs} ul > li .RemoveButton.Disabled{
+	background: url($component-image) no-repeat $tabs-remove-disabled-pos;
+}
+//refresh button : 20160828 
+.#{$tabs} ul > li .RefreshButton {
+    position: absolute;
+	cursor: pointer;
+	top: $tabs-element + 1;
+	right: ($tabs-element - 1);
+	width: $tabs-element + 2;
+	height: $tabs-element + 2;
+	padding: 0px;
+	border: 0;
+	text-align: center;
+	background: url($component-image) no-repeat $tabs-refresh-pos;
+}
+.#{$tabs} ul > li .RefreshButton:hover, 
+.#{$tabs} ul > li .RefreshButton:active{
+	background: url($component-image) no-repeat $tabs-refresh-hover-pos;
+}
+.#{$tabs} ul > li .RefreshButton.Disabled{
+	background: url($component-image) no-repeat $tabs-refresh-disabled-pos;
+}
+.#{$tabs} div iframe {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+}
+
+//remove & add tabs
+.#{$tabs}.Edit {
+	position:relative;
+}
+.#{$tabs}.Edit > ul {
+	padding-right: 33px;
+}
+.#{$tabs}.Edit > div {
+	margin-right:33px;
+}
+.#{$tabs}.Edit > .Tabs-btn__edit,
+.#{$tabs}.Edit > .Scroller > .Tabs-btn__edit {
+	position:absolute;
+	top: $tabs-edit-top;
+	right: 0;
+	margin: 0;
+	padding: 0;
+}
+.#{$tabs}.Edit > .Tabs-btn__edit > button,
+.#{$tabs}.Edit > .Scroller > .Tabs-btn__edit > button {
+	width: $tabs-edit-btn-width;
+	height: $tabs-edit-btn-height;
+	text-indent: -9999px;
+	background: url($component-image) no-repeat $tabs-edit-btn-pos;
+	border: 0;
+}
+
+//Fixed tabs
+.#{$tabs}.Fixed > ul > li,
+.#{$tabs}.Fixed > .Scroller > ul > li {
+	float: left;
+	width: $tabs-fixed-width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+
+//2depth tabs
+.#{$tabs}.Sub-tabs {
+	> div {
+		padding: $tabs-content-gutter;
+		border-top: 0;
+	}
+}
+.#{$tabs}.Sub-tabs > ul {
+	margin-left: 1px;
+	border-bottom: $tabs-sub-style;
+}
+.#{$tabs}.Sub-tabs > ul:before {
+	display: inline;
+}
+.#{$tabs}.Sub-tabs > ul > li {
+	float: left;
+	padding: $tabs-gutter;
+	font-weight: normal;
+	background: $tabs-sub-bg;
+	border: 0;
+	filter: none;
+	
+	&:hover, &:active, &.Selected {
+		color: $tabs-font-hover;
+		font-weight: bold;
+		border-bottom: $tabs-sub-hover-bottom;
+	}
+}
+
+//Vertical-sub-tabs : 2depth를 vertical로 두고 3depth는 horizontal로
+.#{$tabs}.Vertical {
+	overflow: visible; 
+}
+.#{$tabs}.Vertical > .Scroller ~ div {
+	border: $tabs-style;
+	border-top: 0;
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs {
+	margin-left: $tabs-vertical-pos;
+	
+	> ul {
+		float: left;
+		width: -($tabs-vertical-pos)-1px;
+		border-bottom: 0;
+	}
+	
+	> ul ~ div {
+		float: left;
+	}
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li {
+	display: block;
+	color: $tabs-font-color;
+	width: $tabs-vertical-width;
+	height: $tabs-vertical-height;
+	margin-left: $tabs-vertical-left;
+	background: $tabs-bg;
+	border: $tabs-style;
+	border-top: 0;
+	@include border-radius($tabs-vertical-radius);
+	
+	&:first-child {
+		border-top:  $tabs-style;
+	}
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li > p {
+	color: $tabs-font-color;
+	line-height: 0;
+	@include transform(rotate(90deg));
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:hover,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:active,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li.Selected {
+	width: -$tabs-vertical-pos;
+	margin-left: 1px;
+	background: $tabs-vertical-hoverbg;
+	color: $tabs-vertical-hover-color;
+	border: $tabs-style-hover;
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:hover > p,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:active > p,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li.Selected > p {
+	color: $tabs-vertical-hover-color;
+}

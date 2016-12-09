@@ -1,0 +1,68 @@
+
+/********* Tree ********/
+
+.af-tree.af-default {
+ 
+}
+
+.af-tree.af-default li {
+
+}
+
+.af-tree.af-default > li {
+
+}
+
+.af-tree.af-default > li > ul{
+
+}
+
+.af-tree.af-default ul{
+	
+}
+
+.af-tree.af-default .af-tree-expanded li{
+	
+}
+
+.af-tree.af-default > li > .af-tree-icon {
+	background: url('./images/icon_tree_expand_close.png') no-repeat center center;
+}
+
+.af-tree.af-default .af-tree-icon{
+	background: url('./images/icon_tree_expand_close.png') no-repeat center center;
+}
+
+.af-tree.af-default .af-tree-expanded > .af-tree-icon{
+	background: url('./images/icon_tree_expand.png') no-repeat center center;
+}
+
+.af-tree.af-default .af-tree-group {
+	
+}
+
+.af-tree.af-default .af-tree-link {
+
+}
+
+.af-tree.af-default .af-tree-link.af-hover {
+	background:#000000;
+	color:#ffffff;
+}
+
+.af-tree.af-default .af-tree-link.af-pressed {
+	background:#00bede;
+	color:#ffffff;
+}
+
+.af-tree.af-default .af-tree input[type="checkbox"]{
+
+}
+
+.af-tree.af-default .af-tree-img{
+
+}
+
+.af-tree.af-default .af-tree-label{
+  font-size:12px;
+}

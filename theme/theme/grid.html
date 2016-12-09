@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta  http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tests - Alopex UI Tabs</title>
+<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css">
+<script src="../../js/libs/jquery/jquery-1.11.3.js"></script>
+<script src="../../dist/script/alopex-ui.min.js"></script>
+<style type="text/css">
+	* {font-size: 12px}
+ 	.Grid-wrapper {margin-bottom:30px;} 
+	.Grid-wrapper div {border:1px solid #d4d2ca; background: #e1dfd6; padding-top: 10px; padding-bottom: 10px; box-sizing:border-box}
+	.Grid-wrapper div > div {background: #d4d2ca; border: 1px solid #bdbbb3}
+ 	h4, h5, h6{margin:0 0 10px; padding:0} 
+	h4 {color:#26648c}
+    body {
+        font-size: 14px;
+    line-height: 20px;
+    word-wrap: break-word;
+    font-weight: normal;
+
+    } 
+	.ui-widget {position:absolute}
+	.list--style {border: 1px dotted #afb3b8; padding:10px; list-style: none}
+	.list--style li {padding:3px 0}
+</style>
+</head>
+<body>
+
+<!-- 	<h4>Grid Sample</h4> -->
+	<div>
+		<ul class="list--style">
+			<li>Alopex UI의 Grid System은 기본 12column으로 나뉘어져 있습니다.</li>
+			<li>각 Grid마다 percentage로 width 영역이 결정되며 12column을 기준으로 표현하고자 하는 column수를  넣으면 쉽게 적용 가능합니다.</li>
+			<li>Grid는 반응형인 경우 반응형이 아닌경우 부모 class의 명칭이 다르게 적용됩니다.<br />
+				[반응형이 아닌경우] 부모 class는 <span class="Label Primary Width-15">.Grid-wrapper</span> 적용<br />
+				[반응형인 경우] 부모 class는 <span class="Label Success Width-15">.Grid-container</span> 적용
+			</li>
+			<li>반응형이 아닌경우 <span class="Label Primary Width-15">.Grid-wrapper</span> 는  Media 사이즈에 따라 적용 할 수 있습니다.<br />
+				[Desktop size로 적용할 경우] document 사이즈를 desktop size 인 width: 970px에 맞출 경우에는 <span class="Label Success Width-15">.Grid-wrapper Lg</span> 를 적용합니다.<br />
+				[Tablet size로 적용할 경우] Tablet size인 width: 750px에 맞출 경우<span class="Label Confirm Width-15">.Grid-wrapper Md</span> 를 적용합니다.<br />
+				그 외 상황에 대해서는 해당  <span class="Label Primary Width-15">.Grid-wrapper</span> class 를 수정하여 알맞은 width 와 margin 값을 맞추어 사용하시면 됩니다. 
+			</li>
+		</ul>
+	</div>
+	<br />
+	<h5>12column을 모두 적용할 경우</h5>
+	<p>1column을 나타내므로  <span class="Label Primary Width-10">.Grid-sm-1</span>을 class로 선언합니다.</p>
+	<div class="Grid-wrapper Md">
+		<div class="Grid-sm-1">1</div>
+		<div class="Grid-sm-1">2</div>
+		<div class="Grid-sm-1">3</div>
+		<div class="Grid-sm-1">4</div>
+		<div class="Grid-sm-1">5</div>
+		<div class="Grid-sm-1">6</div>
+		<div class="Grid-sm-1">7</div>
+		<div class="Grid-sm-1">8</div>
+		<div class="Grid-sm-1">9</div>
+		<div class="Grid-sm-1">10</div>
+		<div class="Grid-sm-1">11</div>
+		<div class="Grid-sm-1">12</div>
+	</div>
+	<br />
+	<h5>12column을 4칸으로 나눌 경우</h5>
+	<p>4개/12column 이므로 각각 3개의 column 영역을 가집니다.  <span class="Label Primary Width-10">.Grid-sm-3</span>으로 각각 선언합니다.</p>
+	<div class="Grid-wrapper Md">
+		<div class="Grid-sm-3">3</div>
+		<div class="Grid-sm-3">3-2</div>
+		<div class="Grid-sm-3">3-3</div>
+		<div class="Grid-sm-3">3-4</div>
+	</div>
+	<br />
+	<h5>column 안에 column을 적용할 경우 (중첩:nesting)</h5>
+	<p>전체 Grid 영역 12column 에서 9column의 공간에만 컨텐츠를 넣을 예정이고 그 안에 각각 50% 씩 section을 나누고자 하는 경우<br />
+	   1. <span class="Label Primary Width-10">.Grid-wrapper</span>로 먼저 div를 하나 선언합니다.<br />
+	   2. 자식으로 9column에 해당하는 <span class="Label Primary Width-10">.Grid-sm-9</span> class를 포함하는 영역을 하나 선언합니다.<br />
+	   3. 위의 9column의 자식으로 그 영역을 2개로 나눌 div 를 하나씩 선언하고 그 해당 div에 <span class="Label Primary Width-10">.Grid-sm-6</span>를 class로 적용합니다.<br />
+	   *자식은 다시 12개의 column을 가질 수 있습니다.
+	</p>
+	<div class="Grid-wrapper Md">
+		<div class="Grid-sm-9">
+			<h4>Nesting</h4>
+			<div class="Grid-sm-6">자식 6column</div>
+			<div class="Grid-sm-6">자식 6column</div>
+		</div>
+	</div>
+	<br />
+	<h5>좌우로 영역을 가지고 가운데를 공간으로 나눌 경우</h5>
+	<p>좌우에 각각 컨텐츠를 넣는데 2개로 양분하지 않고 가운데 공간을 두고 좌로 6칸 우로 4칸의 영역을 두고 2칸의 공간을 두고자 할 경우 사용합니다.<br />
+		1. <span class="Label Primary Width-10">.Grid-wrapper</span>로 먼저 div를 하나 선언한다.<br />
+		2. 좌우 2개의 컨텐츠 영역을 구성할 div를 형성합니다.<br />
+		3. 좌의 영역은 6column에 해당하는 <span class="Label Primary Width-10">.Grid-sm-6</span>를 선언합니다.<br />
+		4. 우의 영역은 4column에 해당하는 <span class="Label Primary Width-10">.Grid-sm-4</span>를 선언하고 가운데 공간으로 2column을 구성해주는 <span class="Label Primary Width-10">.Push-2</span> class를 추가합니다.
+	</p>
+	<div class="Grid-wrapper Md">
+		<div class="Grid-sm-6">6column</div>
+		<div class="Grid-sm-4 Push-2">4column에 공간 2column</div>
+	</div>
+	<br />
+	<h5>중첩(Nesting)이며 좌우로 영역을 가지고 가운데를 공간으로 나눌 경우</h5>
+	<div class="Grid-wrapper Md">
+		<div class="Grid-sm-12">
+			<h4>Nesting</h4>
+			<div class="Grid-sm-3">자식 3column</div>
+			<div class="Grid-sm-6 Push-3">자식 6column / 공간 3column</div>
+		</div>
+	</div>
+</body>
+</html>

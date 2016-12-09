@@ -1,0 +1,29 @@
+/********* select *********/
+.af-select {
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+	text-align: center;
+	margin: 5px 5px;
+	line-height:normal;
+	vertical-align:middle;
+	*zoom:1; /* for IE7*/
+	*display:inline; /* for IE7*/
+	*height:25px; /* for IE7*/
+}
+
+.af-multiselect {
+	border-top: 1px solid #b2b2b2;
+	border-right: 1px solid #b2b2b2;
+	border-left: 1px solid #b2b2b2;
+	border-bottom: 2px solid #b2b2b2;
+	margin-bottom:-3px;
+	
+/* 	scrollbar-face-color: #ffffff; */
+/* 	scrollbar-shadow-color: #ffffff; */
+/* 	scrollbar-highlight-color: #ffffff; */
+/* 	scrollbar-3dlight-color: #eeeeee; */
+/* 	scrollbar-darkshadow-color: #eeeeee; */
+/* 	scrollbar-track-color: #eeeeee; */
+/* 	scrollbar-arrow-color: #a1a4a8; */
+}

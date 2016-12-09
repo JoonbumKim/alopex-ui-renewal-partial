@@ -1,0 +1,42 @@
+/********* dateinput *********/
+.af-dateinput.af-default {
+	border: 1px solid #bfc8cf;
+	background: #ffffff;
+	font-size: 12px;
+  	color: #000000;
+  	
+  	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-dateinput.af-default.af-hover{
+	border: 1px solid #00bede;
+	background: #ffffff;
+	
+}
+
+.af-dateinput.af-default:focus{
+	border: 1px solid #00bede;
+	background: #ffffff;
+	
+}
+
+.af-dateinput.af-default.af-disabled {
+    border: 1px solid #d7dadd;
+	background: #f2f2f2;
+	color: #9a9a9a;
+}
+
+.af-dateinput-image {
+	display:inline-block;
+	background-image: url(images/ico_calendar.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width:24px;
+	height:24px;
+}
+
+/* .af-dateinput-image ~ .af-dateinput.af-default { */
+/* 	margin-right:3px; */
+/* } */

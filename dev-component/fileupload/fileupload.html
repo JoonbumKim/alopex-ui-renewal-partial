@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<title>테스트 페이지</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css">
+<link rel="stylesheet" type="text/css" href="../../dist/css/src/alopex-ext.css"> 
+<!-- <link rel="stylesheet" type="text/css" href="./css/common.css"> -->
+
+<script type="text/javascript" src="../../js/libs/jquery/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../../dist/script/alopex-ui.js"></script>
+<script type="text/javascript" src="../../dist/script/src/alopex-ext-setup.js"></script>
+<script type="text/javascript" src="../../dist/script/src/alopex-ext.js"></script>
+<script type="text/javascript" src="fileupload.js"></script>
+
+
+<script>
+
+
+</script>
+</head>
+<body>
+싱글 업로드
+  <div class="Margin-bottom-10">
+    <div id="fileuploader" class="FileUpload" data-selectType="basic" ></div>
+  </div>
+  <button id="uploadBtn1" class="Button">업로드</button>
+<br>
+<br>
+<br>
+
+멀티 업로드
+
+<div id="fileuploaderA" class="FileUpload" data-selectType="advance" ></div>
+<div>
+ <div class="Float-left">
+   <button id="btn_setCheckedAllTrueA" class="Button">전체 선택</button>
+   <button id="btn_setCheckedAllFalseA" class="Button">전체 해제</button>
+   <button id="btn_cancelCheckedA" class="Button">선택 삭제</button>
+ </div>
+ <div class="Float-right">
+   <button id="startUploadA" class="Button Confirm"> startUpload </button>
+   <button id="stopUploadA" class="Button Danger"> stopUpload </button>
+   <button id="cancelAllA" class="Button Warning"> cancelAll </button>
+ </div>
+ 
+</div>
+</body>
+</html>

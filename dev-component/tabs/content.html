@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Tabs Sample</title>
+	<style>
+	#tab_targetPath {
+	    background-color: #506482;
+	    width: 400px;
+	    height: 200px;
+	    padding: 10px;	    
+	}
+	#tab_targetPath p {
+		color: white;
+	}
+	#other {
+		font-size: 22px;
+	}
+	</style>
+</head>
+<body>
+	<div id="tab_targetPath">
+		<p id="nowdate"></p>	
+		<p>tabs-targetpath.html</p>
+		<p id="other">Other HTML</p>
+		
+	</div>
+	
+	<script>
+		document.getElementById("nowdate").innerHTML = (new Date()).toString();
+	</script>
+</body>
+</html>

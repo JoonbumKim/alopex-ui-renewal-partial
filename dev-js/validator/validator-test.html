@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+
+	<link rel="stylesheet" type="text/css" href="../css/alopex_ui.css" />
+	<link rel="stylesheet" type="text/css" href="../css/alopex_ui_theme.css" />
+	<link rel="stylesheet" href="../test/qunit/qunit.css">
+	
+	<script type="text/javascript"  src="../script/jquery/jquery-1.10.1.js"></script>
+	<script type="text/javascript"  src="../script/alopex_ui.js"></script>
+	<script type="text/javascript"  src="../script/alopex_ui_event.js"></script>
+	<script type="text/javascript"  src="../script/alopex_controller.js"></script>
+	<script type="text/javascript"  src="../script/validator.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../demo/style/demo.css" />
+	
+	<!-- should be included after alopex ui script -->
+	<script type="text/javascript"  src="../demo/script/navigate_config_demo.js"></script>
+	<script type="text/javascript"  src="../demo/script/main.js"></script>
+	<script type="text/javascript"  src="../demo/script/demo-index.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../demo/style/prettify.css" />
+	<script type="text/javascript"  src="../demo/script/prettify.js"></script>
+	
+<script type="text/unittest-template" id="sampleform">
+<form name="testing">
+	<input name="name"/>
+</form>
+</script>
+<script type="text/javascript">
+
+$(function() {
+/*******************************************************
+ * Module - validator instance creation
+ *******************************************************/
+module('validator instance', {
+  setup : function() { document.getElementById('qunit-fixture').innerHTML = ''; },
+  teardown : function() { document.getElementById('qunit-fixture').innerHTML = '';}
+});
+test('validator instance creation and referencing', function() {
+  document.getElementById('qunit-fixture').innerHTML = '';
+  var fs = '<form name="testing">'+ '<input name="name"/>' + '</form>';
+  $(document.getElementById('qunit-fixture')).append($('#sampleform').html());
+  var v = $('form[name="testing"]').validator();
+  
+  ok(typeof v == 'object', 'validator creation using jquery plugin');
+  ok(v.validate, 'validator instance check - has validate() method');
+  equal(v, $('form[name="testing"]').validator(), 'Validator retrieval using jquery');
+  equal($('form[name="testing"]').validate(), true, 'Without validate rule, validate() will return true');
+});
+
+test('validator configuration using Javascript', function() {
+  document.getElementById('qunit-fixture').innerHTML = '';
+  
+  var fs = '<form name="test" id="test1">';
+  fs += '<input name="name" type="text">';
+  fs += '<select name="age">';
+  fs += '  <option value="20">20</option>';
+  fs += '  <option value="21">21</option>';
+  fs += '  <option value="22">22</option>';
+  fs += '</select>';
+  fs += '<textarea name="desc"></textarea>'
+  fs += '</form>'
+  
+  $('#qunit-fixture').append(fs);
+  
+  $('#test1').validator({elements:{
+    name : {
+      rule : {required : true, minlength : 5}
+    },
+    age : {
+      rule : {required : true, min : 21}
+    }
+  }});
+  
+  equal($('#test1').validate(),false,'initial - invalid test');
+  
+  $('#test1 input[name="name"]').val('testname');
+  $('#test1 select').val('20');
+  equal($('#test1').validate(),false,'invalid test (2)');
+  
+  $('#test1 select').val('22');
+  equal($('#test1').validate(),true,'valid test');
+  
+  $('#test1 input[name="name"]').val('tes');
+  equal($('#test1').validate(),false,'re-invalidate');
+});
+
+test('validator configuration using tag attribute', function() {
+	document.getElementById('qunit-fixture').innerHTML = '';
+  
+  var fs = '<form name="test" id="test1">';
+  fs += '<input name="name" type="text" data-validation-rule={required:true,minlength:5}>';
+  fs += '<select name="age" data-validation-rule={required:true,min:21}>';
+  fs += '  <option value="20">20</option>';
+  fs += '  <option value="21">21</option>';
+  fs += '  <option value="22">22</option>';
+  fs += '</select>';
+  fs += '<textarea name="desc"></textarea>'
+  fs += '</form>'
+  
+  $('#qunit-fixture').append(fs);
+  
+  $('#test1').validator();
+  
+  equal($('#test1').validate(),false,'initial - invalid test');
+  
+  $('#test1 input[name="name"]').val('testname');
+  $('#test1 select').val('20');
+  equal($('#test1').validate(),false,'invalid test (2)');
+  
+  $('#test1 select').val('22');
+  equal($('#test1').validate(),true,'valid test');
+  
+  $('#test1 input[name="name"]').val('tes');
+  equal($('#test1').validate(),false,'re-invalidate');
+});
+
+/*******************************************************
+ * Module - validation correctness
+ *******************************************************/
+module('validation correctness', {
+  setup : function() { 
+    document.getElementById('qunit-fixture').innerHTML = '';
+    var fs = '<form id="f1">';
+    fs += '<input type="text" name="name">';
+    fs += '<select name="age">';
+    fs += '<option value="" selected="selected"></option>';
+    fs += '<option value="20">20</option>';
+    fs += '<option value="21">21</option>';
+    fs += '<option value="22">22</option>';
+    fs += '<option value="23">23</option>';
+    fs += '<option value="24">24</option>';
+    fs += '<option value="25">25</option>';
+    fs += '</select>';
+    fs += '<textarea name="desc"></textarea>';
+    fs += '<input type="checkbox" name="topic" value="A"/>';
+    fs += '<input type="checkbox" name="topic" value="B"/>';
+    fs += '<input type="checkbox" name="topic" value="C"/>';
+    fs += '<input type="checkbox" name="topic" value="D"/>';
+    fs += '</form>';
+    document.getElementById('qunit-fixture').innerHTML = fs;
+    $('#f1').validator();
+  },
+  teardown : function() { document.getElementById('qunit-fixture').innerHTML = '';}
+});
+test('required rule', function() {
+  equal($('#f1 [name="name"]').validate(), true, 'without required rule, validate() will return true');
+  
+  $('#f1 [name="name"]').validator({rule : {required : true}});
+  equal($('#f1 [name="name"]').validate(), false, 'required fail on null string');
+  
+  $('#f1 [name="name"]').val('t');
+  equal($('#f1 [name="name"]').validate(), true, 'with only one character, validate() will return true for require rule');
+  
+  $('#f1 [name="name"]').val('');
+  equal($('#f1 [name="name"]').validate(), false, 'change input value to null string will make validate() return false');
+});
+test('minlength rule', function() {
+  equal($('#f1 [name="name"]').validate(), true, 'without required and minlength rule, input field is considered "optional"');
+  
+  $('#f1 [name="name"]').validator({rule : {minlength:4}});
+  equal($('#f1 [name="name"]').validate(), true, 'set minlength rule value as 4. without required rule, minlength rule will not cause null string to be validated as invalid.');
+  
+  $('#f1 [name="name"]').val('123');
+  equal($('#f1 [name="name"]').validate(), false, 'minlength rule has been set to 4. only three characters in input field will be validated as invalid.');
+  
+  $('#f1 [name="name"]').val('1234');
+  equal($('#f1 [name="name"]').validate(), true, 'rule value and input field length has same value. now it is valid.');
+  
+  $('#f1 [name="name"]').val('123456');
+  equal($('#f1 [name="name"]').validate(), true, 'minlength rule value : 4, actual length : 6. valid.');
+  
+  $('#f1 [name="name"]').validator({rule : {minlength:8}});
+  equal($('#f1 [name="name"]').validate(), false, 'change minlength rule value to 8. now it is invalid.');
+  
+  var t = $('#f1 [name="topic"]');
+  var tv = t.validator({rule : {minlength:2}});
+  
+  equal(tv.validate(), true, '0 of 4 checkbox chekced. minlength:2, not required - valid');
+  t.filter('[value="A"]').prop('checked', true);
+  equal(tv.validate(), false, '1 of 4 checkbox chekced. minlength:2 - invalid');
+  t.filter('[value="B"]').prop('checked', true);
+  equal(tv.validate(), true, '2 of 4 checkbox chekced. minlength:2 - valid');
+  t.filter('[value="C"]').prop('checked', true);
+  equal(tv.validate(), true, '3 of 4 checkbox chekced. minlength:2 - valid');
+  t.filter('[value="D"]').prop('checked', true);
+  equal(tv.validate(), true, '4 of 4 checkbox chekced. minlength:2 - valid');
+  
+});
+test('maxlength rule', function() {
+  equal($('#f1 [name="name"]').validate(), true, 'without required and maxlength rule, input field is considered "optional"');
+  
+  $('#f1 [name="name"]').validator({rule : {maxlength:4}});
+  equal($('#f1 [name="name"]').validate(), true, 'maxlength:4, null string. valid.');
+  
+  $('#f1 [name="name"]').val('123');
+  equal($('#f1 [name="name"]').validate(), true, 'maxlength:4, input value "123" has length 3. valid.');
+  
+  $('#f1 [name="name"]').val('1234');
+  equal($('#f1 [name="name"]').validate(), true, 'maxlength:4, input value "1234" has length 4. valid.');
+  
+  $('#f1 [name="name"]').val('123456');
+  equal($('#f1 [name="name"]').validate(), false, 'maxlength:4, input value "123456" has length 6. invalid.');
+  
+  $('#f1 [name="name"]').validator({rule : {maxlength:8}});
+  equal($('#f1 [name="name"]').validate(), true, 'maxlength:8, input value "123456" has length 6. valid.');
+  
+  var t = $('#f1 [name="topic"]');
+  var tv = t.validator({rule : {maxlength:2}});
+  
+  equal(tv.validate(), true, '0 of 4 checkbox chekced. maxlength:2, not required - valid');
+  t.filter('[value="A"]').prop('checked', true);
+  equal(tv.validate(), true, '1 of 4 checkbox chekced. maxlength:2 - valid');
+  t.filter('[value="B"]').prop('checked', true);
+  equal(tv.validate(), true, '2 of 4 checkbox chekced. maxlength:2 - valid');
+  t.filter('[value="C"]').prop('checked', true);
+  equal(tv.validate(), false, '3 of 4 checkbox chekced. maxlength:2 - invalid');
+  t.filter('[value="D"]').prop('checked', true);
+  equal(tv.validate(), false, '4 of 4 checkbox chekced. maxlength:2 - invalid');
+});
+test('rangelength rule', function() {
+  var e = $('#f1 [name="name"]');
+  var v = e.validator({rule : {rangelength:[4,8]}});
+  equal(v.validate(), true, 'set rangelength/no required : input field is considered optional. null string is valid.');
+  e.val('12');
+  equal(v.validate(), false, 'rangelength : [4,8]. input value "12" has length 2, so invalid.');
+  e.val('1234');
+  equal(v.validate(), true, 'rangelength : [4,8]. input value "1234" has length 4, so valid.');
+  e.val('123456');
+  equal(v.validate(), true, 'rangelength : [4,8]. input value "123456" has length 6, so valid.');
+  e.val('12345678');
+  equal(v.validate(), true, 'rangelength : [4,8]. input value "12345678" has length 8, so valid.');
+  e.val('123456789');
+  equal(v.validate(), false, 'rangelength : [4,8]. input value "123456789" has length 9, so invalid.');
+  e.val('1234567');
+  equal(v.validate(), true, 'rangelength : [4,8]. input value "1234567" has length 7, so valid.');
+});
+test('min rule', function() {
+  var e = $('#f1 [name="age"]');
+  var v = e.validator({rule : {min:23}});
+  equal(v.validate(), true, 'min:23. age field has default value of null string. no required rule makes this field optional. valid');
+  e.val('21');
+  equal(v.validate(), false, 'min:23, age:21. invalid');
+  e.val('25');
+  equal(v.validate(), true, 'min:23, age:25. valid');
+  e.val('22');
+  equal(v.validate(), false, 'min:23, age:22. invalid');
+  e.val('24');
+  equal(v.validate(), true, 'min:23, age:24. valid');
+  e.val('23');
+  equal(v.validate(), true, 'min:23, age:23. valid');
+});
+test('max rule', function() {
+  var e = $('#f1 [name="age"]');
+  var v = e.validator({rule : {max:23}});
+  equal(v.validate(), true, 'max:23. age field has default value of null string. no required rule makes this field optional. valid');
+  e.val('21');
+  equal(v.validate(), true, 'max:23, age:21. valid');
+  e.val('25');
+  equal(v.validate(), false, 'max:23, age:25. invalid');
+  e.val('22');
+  equal(v.validate(), true, 'max:23, age:22. valid');
+  e.val('24');
+  equal(v.validate(), false, 'max:23, age:24. invalid');
+  e.val('23');
+  equal(v.validate(), true, 'max:23, age:23. valid');
+});
+test('range rule', function() {
+  var e = $('#f1 [name="age"]');
+  var v = e.validator({rule : {range:[22,24]}});
+  equal(v.validate(), true, 'range:[22,24]. age field has default value of null string. no required rule makes this field optional. valid');
+  e.val('21');
+  equal(v.validate(), false, 'range:[22,24], age:21. invalid');
+  e.val('25');
+  equal(v.validate(), false, 'range:[22,24], age:25. invalid');
+  e.val('22');
+  equal(v.validate(), true, 'range:[22,24], age:22. valid');
+  e.val('24');
+  equal(v.validate(), true, 'range:[22,24], age:24. valid');
+  e.val('23');
+  equal(v.validate(), true, 'range:[22,24], age:23. valid');
+});
+test('email rule', function() {
+  var e = $('#f1 [name="name"]');
+  var v = e.validator({rule : {email:true}});
+  e.val('1234');
+  equal(v.validate(), false, 'string "1234" is not email form.');
+  e.val('hello@world.com');
+  equal(v.validate(), true, 'string "hello@world.com" is email form.');
+  e.val('hello@world.c');
+  equal(v.validate(), false, 'string "hello@world.c" is not complete email form.');
+});
+test('url rule', function() {
+  var e = $('#f1 [name="name"]');
+  var v = e.validator({rule : {url:true}});
+  e.val('1234');
+  equal(v.validate(), false, 'string "1234" is not url.');
+  e.val('http://www.alopexui.com');
+  equal(v.validate(), true, 'string "http://www.alopexui.com" is url.');
+  e.val('http://');
+  equal(v.validate(), false, 'string "http://" is not complete url.');
+  e.val('ftp://www.alopex.com:21');
+  equal(v.validate(), true, '"ftp://www.alopex.com:21" is url.');
+  e.val('https://www.alopexui.com');
+  equal(v.validate(), true, '"https://www.alopexui.com" is url');
+});
+test('date rule', function() {
+  var e = $('#f1 [name="name"]');
+  var v = e.validator({rule : {date:true}});
+  e.val('2000/01/01');
+  equal(v.validate(), true, '2000/01/01 is valid date');
+  e.val('20000101');
+  equal(v.validate(), false, '20000101 is not considered as valid');
+  e.val('2000-01-01');
+  equal(v.validate(), true, '2000-01-01 is valid');
+  e.val('2011-12-32');
+  equal(v.validate(), false, '2011-12-32 is not valid');
+});
+test('number rule', function() {
+  var e = $('#f1 [name="name"]');
+  var v = e.validator({rule : {number:true}});
+  $.each(
+      [['123',true],['0123',true],['afsd',false],['123A',false],
+       ['1 1', false],['-231',true],['+1234',true]
+      ],
+      function(i,cond){
+        e.val(cond[0]);
+        equal(v.validate(), cond[1], '"'+cond[0] + '" is ' + (cond[1]?'valid':'invalid'));
+  });
+});
+test('digits rule', function() {
+  equal(1,1,'TODO');
+});
+test('alphabet rule', function() {
+  equal(1,1,'TODO');
+});
+test('equalTo rule', function() {
+  equal(1,1,'TODO');
+});
+test('numalpha rule', function() {
+  equal(1,1,'TODO');
+});
+test('nospace rule', function() {
+  equal(1,1,'TODO');
+});
+
+test('rule conjunction test', function() {
+  equal(1,1,'TODO');
+});
+
+/*******************************************************
+ * Module - invalidity treatment
+ *******************************************************/
+module('invalidity treatment', {
+  setup : function() { document.getElementById('qunit-fixture').innerHTML = ''; },
+  teardown : function() { document.getElementById('qunit-fixture').innerHTML = '';}
+});
+test('Error message manipulate', function() {
+  equal(1,1,'TODO');
+});
+
+test('Form submit handler control', function() {
+  equal(1,1,'TODO');
+});
+});
+</script>
+<title>Alopex UI Input/Form Validator Unit Test</title>
+</head>
+<body>
+	<div class="main-container doc">
+		<div class="main wrapper clearfix">
+			<div class="page-header">
+				<h1>Input/Form Validator Unit Test</h1>
+			</div>
+			<div id="qunit"></div>
+			<div id="qunit-fixture">
+				
+			</div>
+			<script type="text/javascript" src="../test/qunit/qunit.js"></script>
+		</div>
+	</div>
+</body>
+</html>

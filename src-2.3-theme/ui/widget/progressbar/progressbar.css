@@ -1,0 +1,10 @@
+/********* Progressbar(temp) ************/
+.af-progressbar {
+	border: 1px solid #AAA;
+}
+
+.af-progressbar div {
+	margin: -1px 0 0 -1px ;
+}
+
+

@@ -1,0 +1,42 @@
+/********* dialog *********/
+.af-dialog.af-default {
+	width:277px;
+	height:300px;
+	background-color:#FFF;
+	border:1px solid #61dcf0;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 1px 1px 5px #000000;
+}
+
+.af-dialog.af-default .dialog_header{
+	font-size:20px;
+	font-weight:bold; 
+	color:#ffffff;
+	
+	background: #04bfe0;
+	background: -ms-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: -moz-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: -o-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #65d9ec), color-stop(1, #04bfe0));
+	background: -webkit-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: linear-gradient(to bottom, #65d9ec 0%, #04bfe0 100%);
+}
+.af-dialog.af-default .dialog_header .dialog_btn{
+	background:url('./images/datepicker_close_normal.png') no-repeat center center; 
+}
+
+.af-dialog.af-default  .dialog_header .dialog_btn.af-hover{
+	background:url('./images/datepicker_close_hover.png') no-repeat center center;
+}	
+.af-dialog.af-default  .dialog_header .dialog_btn.af-pressed{
+	background:url('./images/datepicker_close_pressed.png') no-repeat center center;
+}
+
+/********* dialog mask *********/
+.af-dialog-mask {
+	background-color: black;
+}

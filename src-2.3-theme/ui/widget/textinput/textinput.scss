@@ -1,0 +1,37 @@
+.#{$textinput} {
+	position: relative;
+	overflow: hidden;
+	height: $textinput-height;
+	padding: 0px 8px;
+	line-height: $textinput-line-height;
+	vertical-align: middle;
+	font-size: $font-size-base;
+  	color: $textinput-font-color;
+	background: $textinput-bg;
+	border: $textinput-style;
+	@include transition($base-trans);
+  	
+  	@include border-radius($border-radius-base);
+  	
+  	&:hover, &:focus, &:active {
+	  	border: $textinput-hover;
+  	}
+  	
+  	&.Disabled {
+		color: $textinput-disabled-color;
+		background: $textinput-disabled-bg;
+	  	border: $textinput-disabled-style;
+  	}
+}
+.#{$textinput}.Confirm {
+	@include theme-color($color-confirm, $color-confirm-hover);
+}
+.#{$textinput}.Warning {
+	@include theme-color($color-warning, $color-warning-hover);
+}
+.#{$textinput}.Danger {
+	@include theme-color($color-danger, $color-danger-hover);
+}
+.#{$textinput}.Success {
+	@include theme-color($color-success, $color-success-hover);
+}

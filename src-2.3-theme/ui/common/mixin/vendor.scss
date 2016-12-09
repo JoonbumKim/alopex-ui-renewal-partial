@@ -1,0 +1,74 @@
+@mixin background($flag, $base, $gradstart:0, $gradend:0) {
+	@if $flag == 0 {
+		background: $base;
+	}
+	@if $flag == 1 {
+		background: $base;
+		background: -ms-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: -moz-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: -o-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $gradstart), color-stop(1, $gradend));
+		background: -webkit-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: linear-gradient(to bottom, $gradstart 0%, $gradend 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$gradstart}', endColorstr='#{$gradend}');
+	}
+}
+
+@mixin gradation($flag, $backbase: "", $backstart: "", $backend: "") {
+	@if $flag == 0 {
+		@include background($flag, $backbase);
+	}
+	@if $flag == 1 {
+		@include background($flag, $backbase, $backstart, $backend);
+	}
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin opacity($transparent) {
+      _noFocusLine: expression(this.hideFocus = true);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($transparent*100) + ")";
+    	    filter: alpha(opacity = ($transparent*100));
+    -khtml-opacity: $transparent;
+      -moz-opacity: $transparent;
+		   opacity: $transparent;
+}
+
+@mixin appearance($value) {
+	-webkit-appearance: $value;
+	 -khtml-appearance:$value;
+	   -moz-appearance: $value;
+			appearance:$value;
+}
+
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	   -moz-box-shadow: $value;
+			box-shadow: $value;
+}
+
+@mixin background-clip($value) {
+	-webkit-background-clip: $value;
+	   -moz-background-clip: $value;
+			background-clip: $value;
+}
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+       -moz-transform: $value;
+        -ms-transform: $value;
+    	 -o-transform: $value;
+    		transform: $value;
+}
+
+@mixin transition($value) {
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+	     -o-transition: $value;
+			transition: $value;
+}

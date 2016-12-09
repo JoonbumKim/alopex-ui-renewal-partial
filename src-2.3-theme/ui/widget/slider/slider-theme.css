@@ -1,0 +1,21 @@
+/********* Slider(temp) ************/
+.af-slider.af-default {
+	width: 300px;
+	height: 17px;
+	border: 1px solid #AAA;
+	background-color: #FFF;
+}
+
+.af-slider.af-default div {
+	width: 20px;
+	height: 20px;
+	color: #555;
+	background-color: lightGrey;
+	border-color: lightGrey;
+}
+
+/*customizable */
+.af-slider.af-default.af-pressed {
+	color: #999 ;
+	border: 2px solid red ;
+}

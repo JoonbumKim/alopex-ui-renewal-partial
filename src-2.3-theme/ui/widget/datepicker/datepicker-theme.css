@@ -1,0 +1,177 @@
+/********* Datepicker ************/
+.af-datepicker.af-default {
+	background: #00bede;
+	background: -ms-linear-gradient(top, #34d0ea 0%, #04bfe0 100%);
+	background: -moz-linear-gradient(top, #34d0ea 0%, #04bfe0 100%);
+	background: -o-linear-gradient(top, #34d0ea 0%, #04bfe0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #34d0ea), color-stop(1, #04bfe0));
+	background: -webkit-linear-gradient(top, #34d0ea 0%, #04bfe0 100%);
+	background: linear-gradient(to bottom, #34d0ea 0%, #04bfe0 100%);
+	
+	border-color: #61dcf0;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 1px 1px 5px #000000;
+}
+
+.af-datepicker.af-default .af-datepicker-header {
+	color: #FFF;
+	border-bottom-color: #00b5d4;
+}
+
+.af-datepicker.af-default .af-datepicker-header .af-datepicker-control {
+	color: #FFF;
+	background-color: transparent;
+}
+
+.af-datepicker.af-default .af-prev-year .af-datepicker-control,
+.af-datepicker.af-default .af-prev-month .af-datepicker-control {
+	background:url('./images/datepicker_prev_normal.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-prev-year .af-datepicker-control.af-hover,
+.af-datepicker.af-default .af-prev-month .af-datepicker-control.af-hover {
+	background:url('./images/datepicker_prev_hover.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-prev-year .af-datepicker-control.af-pressed,
+.af-datepicker.af-default .af-prev-month .af-datepicker-control.af-pressed {
+	background:url('./images/datepicker_prev_pressed.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-prev-year .af-datepicker-control.af-disabled,
+.af-datepicker.af-default .af-prev-month .af-datepicker-control.af-disabled {
+	background:url('./images/datepicker_btn_prev_disabled.png') no-repeat center center;
+	cursor: default;
+}
+
+.af-datepicker.af-default .af-next-year .af-datepicker-control,
+.af-datepicker.af-default .af-next-month .af-datepicker-control {
+	background:url('./images/datepicker_next_normal.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-next-year .af-datepicker-control.af-hover,
+.af-datepicker.af-default .af-next-month .af-datepicker-control.af-hover {
+	background:url('./images/datepicker_next_hover.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-next-year .af-datepicker-control.af-pressed,
+.af-datepicker.af-default .af-next-month .af-datepicker-control.af-pressed {
+	background:url('./images/datepicker_next_pressed.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-next-year .af-datepicker-control.af-disabled,
+.af-datepicker.af-default .af-next-month .af-datepicker-control.af-disabled {
+	background:url('./images/datepicker_btn_next_disabled.png') no-repeat center center;
+	cursor: default;
+}
+
+.af-datepicker.af-default .af-btn-close .af-datepicker-control {
+	background:url('./images/datepicker_close_normal.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-btn-close .af-datepicker-control.af-hover {
+	background:url('./images/datepicker_close_hover.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-btn-close .af-datepicker-control.af-pressed {
+	background:url('./images/datepicker_close_pressed.png') no-repeat center center;
+}
+
+.af-datepicker.af-default .af-datepicker-tableCell{
+	border-color: #04bfe0;
+	background-color: #ffffff;
+}
+
+.af-datepicker.af-default .af-datepicker-day,
+.af-datepicker.af-default .af-datepicker-month {
+	color: #000000;
+	background-color: #ffffff;
+}
+
+.af-datepicker.af-default .af-datepicker-day.holiday {
+	color: #000000;
+	background-color: #e9edf0;
+}
+
+.af-datepicker.af-default .af-datepicker-day.saturday {
+	color: #000000;
+}
+
+.af-datepicker.af-default .af-datepicker-day.af-hover,
+.af-datepicker.af-default .af-datepicker-month.af-hover {
+	color: #000000;
+	background-color: #00bede;
+}
+
+.af-datepicker.af-default .af-datepicker-day.af-pressed, 
+.af-datepicker.af-default .af-datepicker-month.af-pressed {
+	color: #ffffff;
+	background-color: #0099c5;
+}
+
+.af-datepicker.af-default .af-datepicker-day.af-disabled{
+	color: #d3d3d3;
+	cursor: default;
+}
+
+.af-datepicker.af-default .af-today{
+	color: #ffffff;
+	background-color: #b7bcbf;
+}
+
+.af-datepicker.af-default .af-datepicker-weekdays {
+	color: #ffffff;
+}
+
+.af-datepicker.af-default .af-datepicker-weekdays.holiday {
+	color: #ffffff;
+}
+.af-datepicker.af-default .af-datepicker-weekdays.saturday {
+	color: #ffffff;
+}
+
+.af-datepicker.af-default .af-datepicker-prev-month-day,
+.af-datepicker.af-default .af-datepicker-next-month-day {
+	color: #afafaf;
+	background-color: #e9edf0;
+}
+.af-datepicker.af-default .af-datepicker-prev-month-day.af-disabled,
+.af-datepicker.af-default .af-datepicker-next-month-day.af-disabled {
+	color: #d3d3d3;
+	cursor: default; 
+}
+.af-datepicker.af-default .af-datepicker-prev-month-day.af-hover,
+.af-datepicker.af-default .af-datepicker-next-month-day.af-hover {
+    color: #afafaf;
+	background-color: #00bede;
+}
+.af-datepicker.af-default .af-datepicker-prev-month-day.af-pressed,
+.af-datepicker.af-default .af-datepicker-next-month-day.af-pressed {
+    color: #ffffff;
+	background-color: #0099c5;
+}
+
+.af-datepicker.af-default .af-datepicker-bottom {
+    border-color: #04bfe0;  
+    background-color: #ffffff;
+}
+
+.af-datepicker.af-default .af-datepicker-bottom .af-datepicker-bottom-button {
+    width:30%;
+}
+
+.af-datepicker.af-default .af-datepicker-bottom .af-datepicker-bottom-text {
+    color: red;
+}
+
+.af-datepicker.af-default tr.af-hover a{
+	color: #000000 !important;
+	background-color: #00bede !important;
+}
+.af-datepicker.af-default  tr.af-pressed a{
+	color: #ffffff !important;
+	background-color: #0099c5 !important;
+}

@@ -1,0 +1,102 @@
+
+/********* table *********/
+
+.af-table-wrapper {
+	position:relative;
+	margin: 10px 0;
+}
+
+
+.af-table-wrapper th {
+	padding: 0px 10px;
+	vertical-align: middle;
+	height:31px;
+	line-height:31px;
+	*height:17px;
+	overflow:hidden;
+	position:relative;
+}
+
+.af-table-wrapper td {
+	padding: 0px 10px;
+	vertical-align: middle;
+	height:28px;
+	line-height:28px;
+	*height:17px;
+	overflow:hidden;
+	position:relative;
+/* 	white-space:nowrap; */
+}
+
+.af-table-wrapper .af-sort-ascending,.af-sort-descending {
+	position: relative;
+}
+
+.af-table .af-table-ascending .af-icon{
+	position:relative;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	margin-top:0px;
+	margin-left:5px;
+	border:0;
+	background-repeat:no-repeat;
+}
+
+.af-table .af-table-descending .af-icon{
+	position:relative;
+	display:inline-block;
+	width:10px;
+	height:10px;
+	margin-top:0px;
+	margin-left:5px;
+	border:0;
+	background-repeat:no-repeat;
+}
+
+.af-table .af-table-resize {
+	position: absolute;
+	right: 1px;
+	bottom: 1px;
+	width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid black;
+}
+
+.af-table .af-table-editor {
+	cursor:text;
+}
+
+.af-table .af-table-editor.af-editing {
+	padding:0px ;
+	padding-left:10px ;
+}
+
+.af-table .af-table-editor.af-edited {
+	
+}
+
+.af-table .af-table-editor input {
+	overflow: hidden;
+	border:0px;
+	padding: 0px 0px ;
+	margin: 0px ;
+	line-height: 12px;
+	vertical-align: middle;
+	min-width:90%;
+}
+
+.af-table-scroller {
+	overflow:auto;
+	overflow-y:auto;
+	display:inline-block;
+	width:100%;
+}
+
+/* .af-table-scroller.body { */
+/* 	margin-top:30px; */
+/* } */
+
+.af-table-scroller .af-table-head {
+}

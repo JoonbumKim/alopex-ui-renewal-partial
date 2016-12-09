@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Sorting - Table | Alopex UI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script>
+		function compare_height(a, b) {
+		  var a = parseInt(a[0].split('/')[0]);
+		  var b = parseInt(b[0].split('/')[0]);
+		  return (a-b);
+		}
+		/**
+		 * @param a Array of array which contains cell content and table row. a[0] indicates string-typed cell content.
+		 */
+		function compare_weight(a, b) {
+		  console.log(a);
+		  var a = parseInt(a[0].split('/')[1]);
+		  var b = parseInt(b[0].split('/')[1]);
+		  return (a-b);
+		}
+		
+		$(document).ready(function() {
+			var header = $('#id')[0];
+			$('table').sort(header);
+		});
+	</script>
+	<style>
+		@media screen and (max-width:500px) {
+			col {display:none;}
+			col:first-child {display:block;}
+		}
+	</style>
+</head>
+<body>
+	<div class="Table-wrapper">
+    	<div class="Table-scroller">
+			<table class="Table">
+				<colgroup>
+					<col style="width:80px;"></col>
+					<col></col>
+					<col></col>
+					<col></col>
+					<col></col>
+					<col style="width:100px;"></col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th id="id" data-sortable="number">No.</th>
+						<th data-sortable="string">First Name</th>
+						<th data-sortable="string">Last Name</th>
+						<th data-sortable="date">Birthdate</th>
+						<th id="weight" data-sort-function="compare_weight">Height / Weight</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>June</td>
+						<td>Park</td>
+						<td>11/22/1976</td>
+						<td>180 / 78</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Ji-hyun</td>
+						<td>Lim</td>
+						<td>06/17/1982</td>
+						<td>170 / 00</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Jun Seok</td>
+						<td>Lee</td>
+						<td>02/09/1983</td>
+						<td>183 / 80</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Si-myung</td>
+						<td>Yang</td>
+						<td>12/05/1982</td>
+						<td>183 / 85</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Sang-Hoon</td>
+						<td>Han</td>
+						<td>02/09/1984</td>
+						<td>174 / 55</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Sang-jun</td>
+						<td>Yoon</td>
+						<td>06/17/1984</td>
+						<td>188 / 90</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>Min-young</td>
+						<td>Song</td>
+						<td>03/05/1986</td>
+						<td>176 / 60</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					
+					<tr>
+						<td>8</td>
+						<td>Bong-chan</td>
+						<td>Kim</td>
+						<td>03/05/1986</td>
+						<td>178 / 60</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>Seo-young</td>
+						<td>Ahn</td>
+						<td>03/05/1983</td>
+						<td>178 / 60</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>Yae-ji</td>
+						<td>Lee</td>
+						<td>03/05/1990</td>
+						<td>163 / 00</td>
+						<td><input type="button" class="Button" value="more" /></td>
+					</tr>
+				</tbody>
+				
+				
+				<tfoot>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+	
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+/********* Navigation Menu ********/
+/* Common Style */
+.#{$hierarchical} {
+	position: relative;
+	list-style :none;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+}
+
+.#{$hierarchical} li {
+	position: relative;
+	cursor: pointer;
+	list-style: none;
+}
+
+.#{$hierarchical} a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: $base-text-gray;
+}
+
+.#{$hierarchical} > li {
+	display: inline-block;
+	float: left; 
+	padding: 4px 30px 10px 20px;
+	background: url('./images/hierach_icon.png') no-repeat 0 -87px;
+	&:first-child {
+		background: none;
+	}
+	
+	&:first-child > a {
+		content:'';
+		display: inline-block;
+		width: 19px;
+		height: 19px;
+		padding: 3px 20px 0 25px;
+		margin-top:-3px;
+		background: url('./images/hierach_icon.png') no-repeat 0 0px;
+	}
+	
+	&:first-child > a:after {
+		background: none;
+	}
+}
+
+.#{$hierarchical} > li.Expandable > .ArrowIcon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right:5px;
+	background: url('./images/hierach_icon.png') no-repeat 0 -30px;
+}
+
+.#{$hierarchical} > li.Expandable:hover > .ArrowIcon {
+	background: url('./images/hierach_icon.png') no-repeat 0 -60px;
+}
+
+.#{$hierarchical} > li.Expanded > ul > li {
+	&:hover {
+		background: $hierarch-hover;
+	}
+	
+	&:hover a {color: $hierarch-sub-hover}
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.#{$hierarchical} > li > ul {
+	top: 25px;
+	left: 20px;
+}
+/* 3 depth 이상 sub menu */
+.#{$hierarchical} ul {
+	position:absolute;
+	top: 10px;
+	left: 100%;
+	width: 160px;
+	margin: 0;
+	padding: 6px 0;
+	border: $hierarch-sub-style;
+	@include border-radius($border-radius-base);
+}
+
+.#{$hierarchical} ul > li {
+	display: block;
+	height: $hierarch-height;
+	padding: 0 18px;
+	list-style: none;
+	line-height: $hierarch-height - 2px;
+	background: $hierarch-sub-bg;
+}

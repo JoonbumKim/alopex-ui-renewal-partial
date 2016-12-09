@@ -1,0 +1,121 @@
+.#{$dialog} {
+	width: 270px;
+	//min-height: $dialog-minheight;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+	background: $body-bg;
+	border: $dialog-wrap;
+	@include border-radius($border-radius-base);
+	@include box-shadow($dialog-shadow);
+}
+.#{$dialog} .Header{
+	position: relative;
+	width: 100%;
+	height: $dialog-header-height;
+	font-size: $font-size-base;
+	font-weight: bold; 
+	line-height: $dialog-header-lineheight;
+	text-align: center;
+	color: $base-text-gray;
+	border-bottom: $dialog-header-primary;
+}
+.#{$dialog} .Header .DialogBtn{
+	position: absolute;
+	cursor: pointer;
+	top: $dialog-btn-top;
+	right: $dialog-btn-right;
+	width: $dialog-btn-width; 
+	height: $dialog-btn-height;
+	padding: 0;
+	border: 0;
+	background: url($component-image) no-repeat $dialog-btn-pos;
+	
+	&:hover {
+		background: url($component-image) no-repeat $dialog-btn-hover-pos;
+	}
+	&:active {
+		background: url($component-image) no-repeat $dialog-btn-active-pos;
+	}
+}
+
+.#{$dialog} .DialogToggle {
+	position: absolute;
+	cursor: pointer;
+	top: $dialog-toggle-top;
+	left: $dialog-toggle-left;
+	width: $dialog-toggle-width; 
+	height: $dialog-toggle-height;
+	padding: 0;
+	border: 0;
+	background: url($dialog-toggle) no-repeat $dialog-toggle-pos;
+	
+	&:hover {
+		background: url($dialog-toggle) no-repeat $dialog-toggle-hover-pos;
+	}
+	
+	&.Expanded {
+		background: url($dialog-toggle) no-repeat $dialog-toggle-expanded-pos;
+	}
+	&.Expanded:hover {
+		background: url($dialog-toggle) no-repeat $dialog-toggle-expanded-hover-pos;
+	}
+}
+
+.#{$dialog}.Confirm {
+	border: 1px solid $color-confirm;
+	
+	.Header {
+		@include dialog-theme($color-confirm, $dialog-header-confirm);
+	}
+}
+
+.#{$dialog}.Success {
+	border: 1px solid $color-success;
+	
+	.Header {
+		@include dialog-theme($dialog-title-success, $dialog-header-success);
+	}
+}
+
+.#{$dialog}.Warning {
+	border: 1px solid $color-warning;
+	
+	.Header {
+		@include dialog-theme($dialog-title-warning, $dialog-header-warning);
+	}
+}
+
+.#{$dialog}.Danger {
+	border: 1px solid $color-danger;
+	
+	.Header {
+		@include dialog-theme($color-danger, $dialog-header-warning);
+	}
+}
+
+.#{$dialog} .ResizeBtn{
+	position: absolute;
+    cursor: se-resize;
+	right: $dialog-resize-width / 2;
+	bottom: $dialog-resize-height / 2;
+    width: $dialog-resize-width;
+    height: $dialog-resize-height;
+    background: url($component-image) no-repeat $dialog-resize-pos;
+}
+
+.Dialog-mask {
+	background: #000000;
+}
+
+.Dialog-contents {
+	padding: $dialog-contents;
+}
+
+.Dialog-btnwrap {
+	margin-bottom: $dialog-bottom;
+	text-align: center;
+	
+	& button {
+		margin: $dialog-btn-gutter;
+	}
+}

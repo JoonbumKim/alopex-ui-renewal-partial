@@ -1,0 +1,146 @@
+.#{$navmenu} {
+	position: relative;
+	height: $navmenu-height;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: $navmenu-font-size;
+	color: $navmenu-font-color; 
+	border: $navmenu-border;
+	@include border-radius($border-radius-base);
+	@include gradation($flag, $navmenu-bg, $navmenu-bg, $navmenu-bg-backend);
+}
+.#{$navmenu} li {
+	position:relative;
+	cursor: pointer;
+	list-style: none;
+
+	&:hover {
+		color: $navmenu-font-hover;
+		background: $navmenu-hover;
+	}
+}
+.#{$navmenu} a {
+	display: block;
+	width: 100%;
+	height: $navmenu-height;
+	line-height: $navmenu-height;
+	text-decoration: none;
+}
+.#{$navmenu} > li {
+	display: inline-block;
+	height: $navmenu-height;
+	line-height: $navmenu-height;
+	
+	& > a {
+		display: inline-block;
+		color: $navmenu-font-color;
+		padding: $nav-padding;
+	}
+	
+	&:hover > a {
+		color: $navmenu-font-hover;
+	}
+}
+.#{$navmenu} > li.Expandable > .ArrowIcon {
+	/*display:inline-block;*/
+	position: absolute;
+	top:($navmenu-height/2)-4px;
+	right: $nav-arrow-right;
+	width: $nav-arrow-width;
+	height: $nav-arrow-height;
+	margin-left: $nav-arrow-left;
+	background: url($component-image) no-repeat $nav-arrow-pos; 
+	border: 0;
+}
+
+//theme dark start
+.#{$navmenu} > li.Expandable:hover > .ArrowIcon {
+	background: url($component-image) no-repeat $nav-arrow-hover-pos; 
+}
+
+//theme dark end
+.#{$navmenu} > li.Expanded {
+	/*padding: 0 20px;*/
+	background: $navmenu-hover;
+	
+	& > a {
+		display: inline-block;
+		color: $navmenu-font-hover;
+	}
+}
+.#{$navmenu} > li.Expanded > ul > li:hover > a {
+	color: $nav-sub-font-hover;
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.#{$navmenu} > li > ul {
+	top:102%;
+	left:0%;
+}
+
+/* 3 depth 이상 sub menu */
+.#{$navmenu} ul {
+	position:absolute;
+	top: $nav-sub-top;
+	left: 100%;
+	width: $nav-sub-width;
+	margin: 0;
+	padding: $nav-sub-padding;
+	background: $nav-sub-bg;
+	border: $nav-sub-border;
+	@include border-radius($border-radius-base);
+	@include box-shadow($nav-sub-shadow);
+}
+.#{$navmenu} ul > li {
+	display: block;
+	height: $nav-sub-height;
+	padding: $nav-sub-li-padding;
+	list-style: none;
+	line-height: $nav-sub-height - 2px;
+	background: $nav-sub-bg;
+}
+.#{$navmenu} ul li {
+	&:hover, & a:hover, &.Expanded {
+		color: $nav-sub-font-hover;
+		background: $nav-sub-hover-1depth;
+	}
+}
+.#{$navmenu} ul > .Expanded > .ArrowIcon{
+	position: absolute;
+	top: ($nav-sub-height/2) - 3px;
+	right: $nav-sub-expanded-right;
+	display: inline-block;
+	width: $nav-sub-expanded-arrow-width;
+	height: $nav-sub-expanded-arrow-height;
+	background: url($component-image) no-repeat $nav-sub-expanded-pos; 
+	border: 0;
+}
+.#{$navmenu} ul .Expandable > a , 
+.#{$navmenu} ul li > a {
+	display: inline-block;
+	width:100%;
+	height: $nav-sub-height;
+	color: $base-text-gray;
+	line-height: $nav-sub-height - 2px;
+}
+.#{$navmenu} ul > .Expanded {
+	& > a, & > li > a {
+		color: $nav-sub-font-hover;
+	}
+}
+.#{$navmenu} ul .Expanded > ul > li.Expanded, 
+.#{$navmenu} ul .Expanded > ul > li:hover {
+	background: $nav-sub-hover-2depth; 
+	color: $nav-sub-font-hover;
+}
+.#{$navmenu} ul .Expanded > ul > .Expanded > ul > li:hover, 
+.#{$navmenu} ul .Expanded > ul > .Expanded > ul > li:hover a {
+	background: $nav-sub-hover-3depth; 
+	color: $nav-sub-font-hover;
+}
+.#{$navmenu} ul .Expanded > ul > li:hover > a, 
+.#{$navmenu} ul .Expanded > ul > .Expanded > ul > li:hover a {
+	color: $nav-sub-font-hover;
+	background: none;
+}

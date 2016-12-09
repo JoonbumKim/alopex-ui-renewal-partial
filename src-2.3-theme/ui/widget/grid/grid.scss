@@ -1,0 +1,102 @@
+//grid variables
+$total-grid-columns: 12 !default;
+$grid-gutter: 30px !default;
+$push: 0 !default;
+
+//wide desktop : ex
+$break-wide: 1180px;
+//desktop :lg
+$break-desktop: 992px;
+//tablet : md
+$break-tablet: 768px;
+//mobile : sm
+$break-mobile: 320px;
+
+$container-wide: 1200px - $grid-gutter;
+$container-desktop: 1000px - $grid-gutter;
+$container-tablet: 780px - $grid-gutter;
+$container-mobile: 340px - $grid-gutter;
+
+$max-width: $break-wide + $grid-gutter; 
+$min-width: $break-mobile - 20px;
+
+$gutter-pcnt: ($grid-gutter/$total-grid-columns) * 100%;
+
+//mixin
+//make grid common css
+@mixin make-grid-option($i:1, $collist: ".Grid-sm-#{$i}, .Grid-md-#{$i}, .Grid-lg-#{$i}, .Grid-ex-#{$i}, .Push-#{$i}") {
+	@for $i from 2 through $total-grid-columns {
+		$collist: "#{$collist}, .Grid-sm-#{$i}, .Grid-md-#{$i}, .Grid-lg-#{$i}, .Grid-ex-#{$i}, .Push-#{$i}";
+	}
+	#{$collist} {
+		float: left;
+		position: relative;
+		min-height: 1px;
+	}
+}
+//width mixin
+@mixin calc-columns($class, $i:1) {
+	@for $i from 1 through $total-grid-columns {
+		.Grid-#{$class}-#{$i} {
+			width: percentage(($i / $total-grid-columns));
+		}
+	}
+}
+//grid ie9.0 wrapper
+.Grid-wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+	width: $container-wide;
+}
+.Grid-wrapper.Lg {
+	margin: 0 auto;
+	overflow: hidden;
+	width: $container-desktop;
+}
+.Grid-wrapper.Md {
+	margin: 0 auto;
+	overflow: hidden;
+	width: $container-tablet;
+}
+
+@include make-grid-option;
+
+//base grid : mobile
+.Grid-container {
+	margin: 0 auto;
+	padding: 0 $grid-gutter / 2; 
+	@include clearfix();
+}
+@include calc-columns(sm);
+
+//device width : media query
+@media (min-width: $break-tablet) {
+	.Grid-container {
+		width: $container-tablet;
+	}
+	@include calc-columns(md);
+}
+@media (min-width: $break-desktop) {
+	.Grid-container {
+		width: $container-desktop;
+	}
+	@include calc-columns(lg);
+}
+@media (min-width: $break-wide) {
+	.Grid-container {
+		width: $container-wide;
+	}
+	@include calc-columns(ex);
+}
+
+//push mixin
+@mixin push-cols($i:1) {
+	@for $i from 1 through $total-grid-columns {
+		.Push-#{$i} {
+			margin-left: percentage(($i / $total-grid-columns));
+		}
+	}
+}
+
+@include push-cols();
+

@@ -1,0 +1,28 @@
+<!-- child -->
+<!-- iframe: true 또는 windowpopup: true 인 경우, DOCTYPE html head title meta link body 등 포함 시켜야 한다. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Popup Data</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css" />
+	
+	<script type="text/javascript"  src="../../js/libs/jquery/jquery-1.11.3.js"></script>
+	<script type="text/javascript"  src="../../dist/script/alopex-ui.min.js"></script>	
+	<script>
+		window.onload = function() { this.document.title = "your new title"; } // load된 문서에서 처리
+	</script>
+<script>
+        $a.page(function() {
+            this.init = function(id, param) {
+
+            };
+        });
+</script>
+</head>
+<body>
+	<button class="Button">child</button>
+</body>
+</html>

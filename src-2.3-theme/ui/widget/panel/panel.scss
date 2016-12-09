@@ -1,0 +1,100 @@
+.#{$panel} {
+	margin-bottom: $panel-bottom-gutter;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+	background: $body-bg;
+	border: $panel-style;
+	@include border-radius($border-radius-base);
+}
+.#{$panel} .Panel-content {
+	padding: $panel-content-padding;
+	@include clearfix()
+}
+.#{$panel} .Panel-header {
+	padding: $panel-header-padding;
+	font-weight: bold;
+	border-bottom: $panel-style;
+	@include gradation($flag, $panel-theme-bg, $panel-theme-bg, $panel-theme-bg-backend);
+}
+.#{$panel} .Panel-footer {
+	padding: $panel-footer-padding;
+	font-weight: bold;
+	border-top: $panel-style;
+	@include gradation($flag, $panel-theme-bg, $panel-theme-bg, $panel-theme-bg-backend);
+}
+
+// Panel Theme Primary
+.#{$panel}.Primary {
+	border: 1px solid $panel-color-primary;
+}
+.#{$panel}.Primary .Panel-header {
+	color: $base-text-white;
+	background: $panel-color-primary;
+	border-bottom: 1px solid $panel-color-primary;
+	@include gradation($flag, $panel-color-primary, $panel-color-primary, $panel-color-primary-backend);
+}
+.#{$panel}.Primary .Panel-footer {
+	color: $base-text-white;
+	background: $color-primary;
+	border-top: 1px solid $color-primary;
+}
+
+//Panel Theme Success
+.#{$panel}.Success {
+	border: 1px solid $color-success;
+}
+.#{$panel}.Success .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-success;
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+.#{$panel}.Success .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-success;
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+
+//Panel Theme Warning
+.#{$panel}.Warning {
+	border: 1px solid $color-warning;
+}
+.#{$panel}.Warning .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-warning;
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+.#{$panel}.Warning .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-warning;
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+
+//Panel Theme Danger
+.#{$panel}.Danger {
+	border: 1px solid $color-danger;
+}
+.#{$panel}.Danger .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-danger;
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+.#{$panel}.Danger .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-danger;
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+
+//Panel Theme Info
+.#{$panel}.Info {
+	border: 1px solid $color-info;
+}
+.#{$panel}.Info .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-info;
+	@include gradation($flag, $color-info, $color-info, $color-info-backend);
+}
+.#{$panel}.Info .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-info;
+	@include gradation($flag, $color-info, $color-info, $color-info-backend);
+}

@@ -1,0 +1,67 @@
+
+/********* select *********/
+.af-select.af-default {
+	color: #000000;
+	*width:60px; /* for IE7*/
+}
+
+.af-select.af-default.af-hover {
+	color: #000000;
+	/* background: url('./select_iconOver.png') no-repeat right; */
+}
+
+.af-select.af-default.af-pressed {
+	color: #000000;
+	/* background: url('./select_iconOver.png') no-repeat right; */
+}
+
+div.af-select.af-default {
+	border-top: 1px solid #DADADA;
+	border-left: 1px solid #DADADA;
+	border-right: 1px solid #DADADA;
+	border-bottom: 1px solid #A8A8A8;
+	min-width: 100px;
+	height: 32px;
+	line-height: 32px;
+	-webkit-border-radius: 5px;
+	background: url(./images/ico_selected.png), url(./images/bg_btnSearch.png);
+	background-position: right 10px, left top;
+	background-origin: conent- box, padding-box;
+	background-repeat: no-repeat, repeat;
+	text-align:left;
+	text-indent:10px;
+}
+
+
+div.af-select.af-default.af-disabled {
+	opacity:0.6;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=60)"; 
+    filter: alpha(opacity=60); 
+}
+	
+	
+div.af-select.af-default > select {
+	position:absolute;
+	left:0;top:0;
+	opacity:0;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+    filter: alpha(opacity=0);
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-o-appearance: none;
+	-ms-appearance: none;
+	
+	background:transparent;
+	border:0;
+	width:100%;
+	height:100%;
+	display:inline-block;
+}
+
+
+/* .af-select.af-default.af-disabled {
+    opacity: 0.5;  all-browser
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; IE-8
+    filter: alpha(opacity=50); IE-7 
+} */

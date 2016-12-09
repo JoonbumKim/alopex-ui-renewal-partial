@@ -1,0 +1,39 @@
+.#{$radio} {
+	position: relative;
+	top: $imgradio-top;
+    overflow:hidden;
+	padding: 0;
+	vertical-align: middle;
+	border: 0;
+}
+.ImageRadio {
+	position:relative;
+	
+	&:after {
+		content: '';
+		position:absolute;
+		top: $imgchk-top-pos;
+		left: $imgradio-left-pos;
+		left: 0px \0/IE8;
+		width: $imgradio-size;
+		height: $imgradio-size;
+		margin-top: $imgchk-margin-top;
+		background: url($component-image) no-repeat $imgradio-pos;
+	}
+	
+	&.Checked:after {
+		background: url($component-image) no-repeat $imgradio-checked-pos;
+	}
+	
+	&.Disabled:after {
+		background: url($component-image) no-repeat $imgradio-disabled-pos;
+	}
+	
+	&.Checked.Disabled:after {
+		background: url($component-image) no-repeat $imgradio-checked-disabled-pos;
+	}
+	
+	> .#{$radio} {
+		@include opacity(0);
+	}
+}

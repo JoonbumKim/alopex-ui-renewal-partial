@@ -1,0 +1,38 @@
+.#{$autocomplete} {
+	position: relative;
+	display: inline-block;
+}
+.#{$autocomplete} .#{$dropdown} li {
+	@include ellipsis;
+}
+.#{$autocomplete} > .Clear {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	top: $autocom-btn-clear-top;
+	right: $autocom-btn-clear-right;
+	width: $autocom-btn-width;
+	height: $autocom-btn-height;
+	text-indent:-99999px;
+	background: #ffffff url($component-image) no-repeat $autocom-clear-pos;
+}
+  	
+.#{$autocomplete} > .Clear:hover, 
+.#{$autocomplete} > .Clear:focus,
+.#{$autocomplete} > .Clear:active {
+	background: #ffffff url($component-image) no-repeat $autocom-opener-pos;
+}
+//20160831 tango issue
+.#{$autocomplete} > .Opener {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: $autocom-btn-width;
+	height:  $autocom-btn-height + 10;
+	background: url($autocom-img) no-repeat $autocom-bg-pos;
+	&:hover, &:active, &.ui-state-active {
+		background: url($autocom-img-hover) no-repeat $autocom-bg-pos;
+	}
+} 

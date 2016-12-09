@@ -1,0 +1,98 @@
+.#{$dateinput}, .#{$daterange} {
+	display:inline-block;
+	position: relative;
+}
+.#{$dateinput}>input, 
+.#{$daterange} .Startdate>input, 
+.#{$daterange} .Enddate>input {
+	outline: 0;
+	overflow: hidden;
+	width: $input-width;
+	height: $input-height;
+	padding: $input-gutter;
+	vertical-align: middle;
+	font-size: $font-size-base;
+	line-height: $input-line-height;
+  	color: $input-font-color;
+	background: $input-bg;
+	border: $input-style;
+  	@include border-radius($border-radius-base);
+  	@include transition($base-trans);
+}
+.#{$dateinput}>input:hover, 
+.#{$daterange} .Startdate>input:hover, 
+.#{$daterange} .Enddate>input:hover,
+.#{$dateinput} > input:focus, 
+.#{$daterange} .Startdate > input:focus, 
+.#{$daterange} .Enddate > input:focus, {
+	background: $input-bg;
+	border: $input-hover;
+}
+.#{$dateinput} > input:active, 
+.#{$daterange} .Startdate > input:active, 
+.#{$daterange} .Enddate > input:active{
+	background: $input-bg;
+	border: $input-hover;
+}
+.#{$dateinput} > input.Disabled,
+.#{$daterange} .Startdate > input.Disabled,
+.#{$daterange} .Enddate > input.Disabled {
+	background: $input-disabled-bg;
+    border: $input-disabled-style;
+}
+.#{$dateinput} > .Calendar, 
+.#{$daterange} .Calendar {
+	cursor: pointer;
+	display: inline-block;
+	//input width size 조정으로 인한 clear와 calendar 위치값 조정
+	position: relative;
+	right: $calendar-right;
+	vertical-align: middle;
+	width: $calendar-width;
+	height: $calendar-height;
+	//margin-left: $calendar-margin-left;
+	background-color: #ffffff;
+	background-image: url($component-image);
+	background-repeat: no-repeat;
+	background-position: $calendar-pos;
+	border: $calendar-icon-style;
+	@include border-radius($calendar-radius);
+}
+.#{$dateinput} > .Calendar.Single,
+.#{$daterange} .Calendar.Single {
+	margin-left: -4px;
+	@include border-radius($border-radius-base);
+}
+.#{$dateinput} > .Calendar:hover,
+.#{$daterange} .Calendar:hover,
+.#{$dateinput} > .Calendar:active,
+.#{$daterange} .Calendar:active {
+	background-color: $calendar-icon-hover-bg;
+	background-image: url($component-image);
+	background-repeat: no-repeat;
+	background-position: $calendar-hover-pos;
+	border: $calendar-icon-hover-style; 
+	@include transition($calendar-trans);
+}
+
+.#{$dateinput}>.Clear,
+.#{$daterange} .Clear {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	top: $dateclear-top;
+	right: $dateclear-right;
+	width: $dateclear-width;
+	height: $dateclear-height;
+	//margin: $dateclear-icon-gutter;
+	text-indent:-99999px;
+	background: url($component-image) no-repeat $dateclear-pos;
+	border: 0;
+}
+.#{$dateinput}>.Clear:hover,
+.#{$daterange} .Clear:hover,
+.#{$dateinput}>.Clear:active,
+.#{$daterange} .Clear:active {
+	background: url($component-image) no-repeat $dateclear-hover-pos;
+	border: 0;
+ }

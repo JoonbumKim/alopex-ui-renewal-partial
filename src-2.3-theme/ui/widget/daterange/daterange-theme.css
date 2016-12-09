@@ -1,0 +1,15 @@
+.af-daterange.af-default .af-daterange-start, .af-daterange.af-default .af-daterange-end{
+	border: 1px solid #bfc8cf;
+	background: #ffffff;
+	font-size: 12px;
+  	color: #000000;
+  	
+  	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-daterange.af-default .af-daterange-start.af-hover, .af-daterange.af-default .af-daterange-end.af-hover{
+	border: 1px solid #00bede;
+	background: #ffffff;
+}

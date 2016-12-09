@@ -1,0 +1,35 @@
+.af-group.af-default {
+	border-color: #A7A7A7;
+	border-radius: 5px;
+}
+
+.af-group.af-default .af-button {
+	border-color: #007191;
+	border-radius: 0px;
+}
+
+.af-group.af-default .af-radio-text, 
+.af-group.af-default .af-checkbox-text {
+	background: #D9E2E9;
+	background: -ms-linear-gradient(top, #F4F4F4 0%, #E5E6E5 100%);
+	background: -moz-linear-gradient(top, #F4F4F4 0%, #E5E6E5 100%);
+	background: -o-linear-gradient(top, #F4F4F4 0%, #E5E6E5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #F4F4F4), color-stop(1, #E5E6E5));
+	background: -webkit-linear-gradient(top, #F4F4F4 0%, #E5E6E5 100%);
+	background: linear-gradient(to bottom, #F4F4F4 0%, #E5E6E5 100%);
+	border-color: #A7A7A7;
+	font-size: 12px;
+	color: #000;
+}
+
+.af-group.af-default .af-radio-text.af-checked, 
+.af-group.af-default .af-checkbox-text.af-checked {
+	background: #00BEDE;
+	background: -ms-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: -moz-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: -o-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #32D0EB), color-stop(1, #04BFE0));
+	background: -webkit-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: linear-gradient(to bottom, #32D0EB 0%, #04BFE0 100%);
+	color: #FFF;
+}

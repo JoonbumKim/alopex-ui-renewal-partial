@@ -1,0 +1,131 @@
+
+
+/********* list *********/
+.af-list.af-default {
+	background: #ffffff;
+	border:1px solid #e2e2e2;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-list.af-default .af-list-row {
+	border-bottom: 1px solid #edeef0;
+	background: #ffffff;
+	font-size: 12px;
+	color: #000000;
+}
+
+
+.af-list.af-default .af-list-title {
+	font-size:15px;
+	color: #000000;
+}
+
+.af-list.af-default .af-list-row.af-hover {
+	background: #edeef0;
+	background: -ms-linear-gradient(top, #f4f4f4  0%, #e5e6e5  100%);
+	background: -moz-linear-gradient(top, #f4f4f4  0%, #e5e6e5  100%);
+	background: -o-linear-gradient(top, #f4f4f4  0%, #e5e6e5  100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4 ), color-stop(1, #e5e6e5 ));
+	background: -webkit-linear-gradient(top, #f4f4f4  0%, #e5e6e5  100%);
+	background: linear-gradient(to bottom, #f4f4f4  0%, #e5e6e5  100%);
+	
+	font-weight: bold;
+}
+
+.af-list.af-default .af-list-row.af-pressed {
+	background: #43d3eb;
+	background: -ms-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: -moz-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: -o-linear-gradient(top, #65d9ec 0%, #2BD9E4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #65d9ec), color-stop(1, #04bfe0));
+	background: -webkit-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: linear-gradient(to bottom, #65d9ec 0%, #04bfe0 100%);
+	
+	font-weight: bold;
+	color:#ffffff;
+	
+	border:1px solid #00b5d4;
+}
+
+.af-list.af-default .af-list-row .af-list-btn {
+	background:url(./images/navibar_child_normal.png) no-repeat center right;
+}
+
+.af-list.af-default .af-list-row.af-hover .af-list-btn {
+	background:url(./images/navibar_child_hover.png) no-repeat center right;
+}
+
+.af-list.af-default .af-list-row.af-pressed .af-list-btn {
+	background:url(./images/navibar_child_click.png) no-repeat center right;
+}
+
+.af-list.af-default .af-list-row .af-list-icon-arrow-r {
+	background:url(./images/navibar_child_normal.png) no-repeat center center;
+}
+.af-list.af-default .af-list-row.af-hover .af-list-icon-arrow-r {
+	background:url(./images/navibar_child_hover.png) no-repeat center center;
+}
+.af-list.af-default .af-list-row.af-pressed .af-list-icon-arrow-r {
+	background:url(./images/navibar_child_click.png) no-repeat center center;
+}
+
+.af-list.af-default .af-list-divider {
+	background: #00bede;
+	background: -ms-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: -moz-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: -o-linear-gradient(top, #65d9ec 0%, #2BD9E4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #65d9ec), color-stop(1, #04bfe0));
+	background: -webkit-linear-gradient(top, #65d9ec 0%, #04bfe0 100%);
+	background: linear-gradient(to bottom, #65d9ec 0%, #04bfe0 100%);
+	
+	color: #ffffff;
+	font-weight: bold;
+}
+
+/***********************************************/
+
+.af-list.af-default .af-list-row .af-list-btn.split {
+	font-weight:bold;
+	border-left:1px solid #eee;
+	color:#000000;
+	background:none;
+}
+
+.af-list.af-default .af-list-row .af-list-btn.split.af-hover {
+	background-color:#e7fbee;
+	color: #000000;
+}
+
+.af-list.af-default .af-list-row .af-list-btn.split.af-pressed {
+	background-color:#8DEEEE;
+	color: #000000;
+}
+
+.af-list.af-default .af-list-row .af-list-thumbnail{
+	height:50px;
+	width:50px;
+}
+
+.af-list.af-default .af-list-row .af-list-thumbnail-icon{
+	min-height:16px;
+	min-width:16px;
+	max-height:24px;
+	max-width:24px; 
+}
+
+.af-list.af-default .af-list-icon-plus {
+	background: rgb(102, 102, 102) /*{global-icon-color}*/;
+	background-image: url(http://jquerymobile.com/demos/1.2.0/css/themes/default/images/icons-18-white.png) /*{global-icon-set}*/;
+	background-repeat: no-repeat;
+	background-position: 0px 50%;
+}
+
+.af-list.af-default .af-list-icon-x {
+	background: rgb(102, 102, 102) /*{global-icon-color}*/;
+	background-image: url(http://jquerymobile.com/demos/1.2.0/css/themes/default/images/icons-18-white.png) /*{global-icon-set}*/;
+	background-repeat: no-repeat;
+	background-position: -72px 50%;
+}

@@ -1,0 +1,115 @@
+.#{$dropdown}, .#{$dropdown} * {
+	list-style:none;
+	font-size: $font-size-base;
+}
+.#{$dropdown}, .#{$dropdown} ul {
+	z-index: 10;
+	padding: $dropdown-ul-padding;
+	margin: 0;
+	min-width: $dropdown-minwidth;
+	background: $body-bg;
+	border: $dropdown-list-border;
+	@include border-radius($border-radius-base);
+}
+.#{$dropdown} .Header a {
+	color: $dropdown-header-color;
+}
+.#{$dropdown} > li.Header:hover, 
+.#{$dropdown} > li.Header.Focused {
+	cursor: auto;
+	background: none;
+	
+	& > a {
+		color: $dropdown-header-color;
+	}
+}
+.#{$dropdown} .Divider {
+	margin: 0;
+	padding: 0;
+}
+.#{$dropdown} ul {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 100%;
+}
+.#{$dropdown} li {
+	position: relative;
+	padding: $dropdown-li-padding;
+	line-height: $dropdown-line-height;
+	color: $base-text-gray;
+	
+	& > a {
+		width:100%; 
+		height:100%; 
+		display:inline-block;
+		color: $base-text-gray;
+		text-decoration: none;
+		
+		&:hover {
+			color: $dropdown-color-hover;
+			text-decoration: none;
+		}
+	}
+	
+	&.Disabled, &.Disabled * {color: #aaaaaa;}
+}
+
+.#{$dropdown} > li:hover, 
+.#{$dropdown} > li.Focused {
+	cursor: pointer;
+	background: $dropdown-list-hover;
+	color: $dropdown-color-hover;
+	@include transition($base-trans);
+	
+	&.Disabled, 
+	&.Disabled > a, 
+	&.Disabled > a:hover {
+		background: $body-bg;
+		color: $dropdown-disabled-color;
+	}
+	
+	& > a {
+		color: $dropdown-color-hover;
+	}
+	
+}
+
+//2depth background color
+.#{$dropdown} > li > ul > li:hover, 
+.#{$dropdown} > li > ul > li.Focused {
+	background: $dropdown-list-2depth-hover;
+	color: $dropdown-color-hover;
+	@include transition($base-trans);
+}
+
+//3depth background color
+.#{$dropdown} > li > ul > li > ul > li:hover, 
+.#{$dropdown} > li > ul > li > ul > li.Focused {
+	background: $dropdown-list-3depth-hover;
+	color: $dropdown-color-hover;
+	@include transition($base-trans);
+} 
+
+.#{$dropdown} .Expandable {
+	position:relative;
+	&:after {
+		content: ""; 
+		position: absolute;
+		right: $dropdown-arrow-right;
+		top: $dropdown-arrow-top;
+		width: $dropdown-arrow-width;
+		height: $dropdown-arrow-height;
+		margin-top: -4px;
+		background: url($component-image) no-repeat $dropdown-arrow-pos; 
+	}
+	&:hover:after, 
+	&.Focused:after {
+		background: url($component-image) no-repeat $dropdown-arrow-hover-pos; 
+	}
+}
+.#{$dropdown} .Expandable .Expandable {
+	&.af-expanded {
+		color: $dropdown-color-hover;
+	}
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Navigate Back4 | Alopex UI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css" />
+
+<script type="text/javascript"  src="../../js/libs/jquery/jquery-1.11.1.js"></script>
+<script type="text/javascript"  src="../../dist/script/alopex-ui.min.js"></script>	
+
+<style>
+	body {background-color: skyblue; color:white;}
+	div div { margin-top: 10px;}
+</style>
+<script>
+$a.page({
+	init: function(id, param) {
+
+		// 이전 페이지의 정보 	
+		$('h1').after('<span>From :'+param.pageNum+' page</span>'); 
+
+		var thispage = 4;
+		var pdata = {pageNum:thispage}; // 이 페이지의 정보 
+
+	    $('#btn_back').on('click', function() {
+	    	// 'Back' 버튼 을 누르면 현재페이지 정보(pdata)를 들고 이전페이지로 이동 
+			$a.back(pdata); 
+		});
+
+		$('body').setData(pdata); // 현재페이지 정보 세팅 
+	}
+});
+</script>
+</head>
+<body>
+	<div>		
+		<h1 data-bind="text:pageNum"></h1>
+		<div>
+			<button id="btn_back" class="Button">Back</button>
+	<!-- <button id="btn_navigate_next" class="Button">Next</button> -->
+		</div>		
+	</div>
+</body>
+</html>

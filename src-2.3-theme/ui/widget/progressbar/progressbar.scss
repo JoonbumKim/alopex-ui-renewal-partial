@@ -1,0 +1,22 @@
+.#{$progressbar} {
+	overflow: hidden;
+	height: $bar-height;
+	background: $bar-bg;
+	@include border-radius(4px);
+}
+.#{$progressbar} div {
+	background: $bar-progress-bg;
+}
+.#{$progressbar}.Progress-text{
+	height: $bar-height * 2;
+    font-size: $font-size-base;
+}
+
+.#{$progressbar}.Progress-text span{
+    padding-top: 1px;
+    text-align: center;
+    color: $base-text-white;
+}
+.#{$progressbar}.Progress-img div {
+	background: url($bar-progress-img);
+}

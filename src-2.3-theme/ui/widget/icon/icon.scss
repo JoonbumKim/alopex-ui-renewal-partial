@@ -1,0 +1,942 @@
+.#{$icon} {
+	display:inline-block;
+	vertical-align:middle;
+	width: 14px;
+	height: 14px;
+	margin: $icon-margin;
+	background: $icon-bg no-repeat 1000px 1000px;
+}
+.#{$icon}.White {
+	background: $icon-white-bg no-repeat 1000px 1000px;
+}
+.#{$icon}.Default {
+	background: $icon-bg no-repeat 1000px 1000px;
+}
+.#{$icon}.Glass,
+.#{$button} .#{$icon}.Glass,
+.#{$button}.Typeb .#{$icon}.Glass {
+  background-position: 0 0;
+}
+
+.#{$icon}.Music,
+.#{$button} .#{$icon}.Music,
+.#{$button}.Typeb .#{$icon}.Music {
+  background-position: -24px 0;
+}
+
+.#{$icon}.Search,
+.#{$button} .#{$icon}.Search,
+.#{$button}.Typeb .#{$icon}.Search {
+  background-position: -48px 0;
+}
+
+.#{$icon}.Envelope,
+.#{$button} .#{$icon}.Envelope,
+.#{$button}.Typeb .#{$icon}.Envelope {
+  background-position: -72px 0;
+}
+
+.#{$icon}.Heart,
+.#{$button} .#{$icon}.Heart,
+.#{$button}.Typeb .#{$icon}.Heart {
+  background-position: -96px 0;
+}
+
+.#{$icon}.Star,
+.#{$button} .#{$icon}.Star,
+.#{$button}.Typeb .#{$icon}.Star {
+  background-position: -120px 0;
+}
+
+.#{$icon}.Star-empty,
+.#{$button} .#{$icon}.Star-empty,
+.#{$button}.Typeb .#{$icon}.Star-empty {
+  background-position: -144px 0;
+}
+
+.#{$icon}.User,
+.#{$button} .#{$icon}.User,
+.#{$button}.Typeb .#{$icon}.User {
+  background-position: -168px 0;
+}
+
+.#{$icon}.Film,
+.#{$button} .#{$icon}.Film,
+.#{$button}.Typeb .#{$icon}.Film {
+  background-position: -192px 0;
+}
+
+.#{$icon}.Th-large,
+.#{$button} .#{$icon}.Th-large,
+.#{$button}.Typeb .#{$icon}.Th-large {
+  background-position: -216px 0;
+}
+
+.#{$icon}.Th,
+.#{$button} .#{$icon}.Th,
+.#{$button}.Typeb .#{$icon}.Th {
+  background-position: -240px 0;
+}
+
+.#{$icon}.Th-list,
+.#{$button} .#{$icon}.Th-list,
+.#{$button}.Typeb .#{$icon}.Th-list {
+  background-position: -264px 0;
+}
+
+.#{$icon}.Ok,
+.#{$button} .#{$icon}.Ok,
+.#{$button}.Typeb .#{$icon}.Ok {
+  background-position: -288px 0;
+}
+
+.#{$icon}.Remove,
+.#{$button} .#{$icon}.Remove,
+.#{$button}.Typeb .#{$icon}.Remove {
+  background-position: -312px 0;
+}
+
+.#{$icon}.Zoom-in,
+.#{$button} .#{$icon}.Zoom-in,
+.#{$button}.Typeb .#{$icon}.Zoom-in {
+  background-position: -336px 0;
+}
+
+.#{$icon}.Zoom-out,
+.#{$button} .#{$icon}.Zoom-out,
+.#{$button}.Typeb .#{$icon}.Zoom-out {
+  background-position: -360px 0;
+}
+
+.#{$icon}.Off,
+.#{$button} .#{$icon}.Off,
+.#{$button}.Typeb .#{$icon}.Off {
+  background-position: -384px 0;
+}
+
+.#{$icon}.Signal,
+.#{$button} .#{$icon}.Signal,
+.#{$button}.Typeb .#{$icon}.Signal {
+  background-position: -408px 0;
+}
+
+.#{$icon}.Cog,
+.#{$button} .#{$icon}.Cog,
+.#{$button}.Typeb .#{$icon}.Cog {
+  background-position: -432px 0;
+}
+
+.#{$icon}.Trash,
+.#{$button} .#{$icon}.Trash,
+.#{$button}.Typeb .#{$icon}.Trash {
+  background-position: -456px 0;
+}
+
+.#{$icon}.Home,
+.#{$button} .#{$icon}.Home,
+.#{$button}.Typeb .#{$icon}.Home {
+  background-position: 0 -24px;
+}
+
+.#{$icon}.File,
+.#{$button} .#{$icon}.File,
+.#{$button}.Typeb .#{$icon}.File {
+  background-position: -24px -24px;
+}
+
+.#{$icon}.Time,
+.#{$button} .#{$icon}.Time,
+.#{$button}.Typeb .#{$icon}.Time {
+  background-position: -48px -24px;
+}
+
+.#{$icon}.Road,
+.#{$button} .#{$icon}.Road,
+.#{$button}.Typeb .#{$icon}.Road {
+  background-position: -72px -24px;
+}
+
+.#{$icon}.Download-alt,
+.#{$button} .#{$icon}.Download-alt,
+.#{$button}.Typeb .#{$icon}.Download-alt {
+  background-position: -96px -24px;
+}
+
+.#{$icon}.Download,
+.#{$button} .#{$icon}.Download,
+.#{$button}.Typeb .#{$icon}.Download {
+  background-position: -120px -24px;
+}
+
+.#{$icon}.Upload,
+.#{$button} .#{$icon}.Upload,
+.#{$button}.Typeb .#{$icon}.Upload {
+  background-position: -144px -24px;
+}
+
+.#{$icon}.Inbox,
+.#{$button} .#{$icon}.Inbox,
+.#{$button}.Typeb .#{$icon}.Inbox {
+  background-position: -168px -24px;
+}
+
+.#{$icon}.Play-circle,
+.#{$button} .#{$icon}.Play-circle,
+.#{$button}.Typeb .#{$icon}.Play-circle {
+  background-position: -192px -24px;
+}
+
+.#{$icon}.Repeat,
+.#{$button} .#{$icon}.Repeat,
+.#{$button}.Typeb .#{$icon}.Repeat {
+  background-position: -216px -24px;
+}
+
+.#{$icon}.Refresh,
+.#{$button} .#{$icon}.Refresh,
+.#{$button}.Typeb .#{$icon}.Refresh {
+  background-position: -240px -24px;
+}
+
+.#{$icon}.List-alt,
+.#{$button} .#{$icon}.List-alt,
+.#{$button}.Typeb .#{$icon}.List-alt {
+  background-position: -264px -24px;
+}
+
+.#{$icon}.Lock,
+.#{$button} .#{$icon}.Lock,
+.#{$button}.Typeb .#{$icon}.Lock {
+  background-position: -287px -24px;
+}
+
+.#{$icon}.Flag,
+.#{$button} .#{$icon}.Flag,
+.#{$button}.Typeb .#{$icon}.Flag {
+  background-position: -312px -24px;
+}
+
+.#{$icon}.Headphones,
+.#{$button} .#{$icon}.Headphones,
+.#{$button}.Typeb .#{$icon}.Headphones {
+  background-position: -336px -24px;
+}
+
+.#{$icon}.Volume-off,
+.#{$button} .#{$icon}.Volume-off,
+.#{$button}.Typeb .#{$icon}.Volume-off {
+  background-position: -360px -24px;
+}
+
+.#{$icon}.Volume-down,
+.#{$button} .#{$icon}.Volume-down,
+.#{$button}.Typeb .#{$icon}.Volume-down {
+  background-position: -384px -24px;
+}
+
+.#{$icon}.Volume-up,
+.#{$button} .#{$icon}.Volume-up,
+.#{$button}.Typeb .#{$icon}.Volume-up {
+  background-position: -408px -24px;
+}
+
+.#{$icon}.Qrcode,
+.#{$button} .#{$icon}.Qrcode,
+.#{$button}.Typeb .#{$icon}.Qrcode {
+  background-position: -432px -24px;
+}
+
+.#{$icon}.Barcode,
+.#{$button} .#{$icon}.Barcode,
+.#{$button}.Typeb .#{$icon}.Barcode {
+  background-position: -456px -24px;
+}
+
+.#{$icon}.Tag,
+.#{$button} .#{$icon}.Tag,
+.#{$button}.Typeb .#{$icon}.Tag {
+  background-position: 0 -48px;
+}
+
+.#{$icon}.Tags,
+.#{$button} .#{$icon}.Tags,
+.#{$button}.Typeb .#{$icon}.Tags {
+  background-position: -25px -48px;
+}
+
+.#{$icon}.Book,
+.#{$button} .#{$icon}.Book,
+.#{$button}.Typeb .#{$icon}.Book {
+  background-position: -48px -48px;
+}
+
+.#{$icon}.Bookmark,
+.#{$button} .#{$icon}.Bookmark,
+.#{$button}.Typeb .#{$icon}.Bookmark {
+  background-position: -72px -48px;
+}
+
+.#{$icon}.Print,
+.#{$button} .#{$icon}.Print,
+.#{$button}.Typeb .#{$icon}.Print {
+  background-position: -96px -48px;
+}
+
+.#{$icon}.Camera,
+.#{$button} .#{$icon}.Camera,
+.#{$button}.Typeb .#{$icon}.Camera {
+  background-position: -120px -48px;
+}
+
+.#{$icon}.Font,
+.#{$button} .#{$icon}.Font,
+.#{$button}.Typeb .#{$icon}.Font {
+  background-position: -144px -48px;
+}
+
+.#{$icon}.Bold,
+.#{$button} .#{$icon}.Bold,
+.#{$button}.Typeb .#{$icon}.Bold {
+  background-position: -167px -48px;
+}
+
+.#{$icon}.Italic,
+.#{$button} .#{$icon}.Italic,
+.#{$button}.Typeb .#{$icon}.Italic {
+  background-position: -192px -48px;
+}
+
+.#{$icon}.Text-height,
+.#{$button} .#{$icon}.Text-height,
+.#{$button}.Typeb .#{$icon}.Text-height {
+  background-position: -216px -48px;
+}
+
+.#{$icon}.Text-width,
+.#{$button} .#{$icon}.Text-width,
+.#{$button}.Typeb .#{$icon}.Text-width {
+  background-position: -240px -48px;
+}
+
+.#{$icon}.Align-left,
+.#{$button} .#{$icon}.Align-left,
+.#{$button}.Typeb .#{$icon}.Align-left {
+  background-position: -264px -48px;
+}
+
+.#{$icon}.Align-center,
+.#{$button} .#{$icon}.Align-center,
+.#{$button}.Typeb .#{$icon}.Align-center {
+  background-position: -288px -48px;
+}
+
+.#{$icon}.Align-right,
+.#{$button} .#{$icon}.Align-right,
+.#{$button}.Typeb .#{$icon}.Align-right {
+  background-position: -312px -48px;
+}
+
+.#{$icon}.Align-justify,
+.#{$button} .#{$icon}.Align-justify,
+.#{$button}.Typeb .#{$icon}.Align-justify {
+  background-position: -336px -48px;
+}
+
+.#{$icon}.List,
+.#{$button} .#{$icon}.List,
+.#{$button}.Typeb .#{$icon}.List {
+  background-position: -360px -48px;
+}
+
+.#{$icon}.Indent-left,
+.#{$button} .#{$icon}.Indent-left,
+.#{$button}.Typeb .#{$icon}.Indent-left {
+  background-position: -384px -48px;
+}
+
+.#{$icon}.Indent-right,
+.#{$button} .#{$icon}.Indent-right,
+.#{$button}.Typeb .#{$icon}.Indent-right {
+  background-position: -408px -48px;
+}
+
+.#{$icon}.Facetime-video,
+.#{$button} .#{$icon}.Facetime-video,
+.#{$button}.Typeb .#{$icon}.Facetime-video {
+  background-position: -432px -48px;
+}
+
+.#{$icon}.Picture,
+.#{$button} .#{$icon}.Picture,
+.#{$button}.Typeb .#{$icon}.Picture {
+  background-position: -456px -48px;
+}
+
+.#{$icon}.Pencil,
+.#{$button} .#{$icon}.Pencil,
+.#{$button}.Typeb .#{$icon}.Pencil {
+  background-position: 0 -72px;
+}
+
+.#{$icon}.Map-marker,
+.#{$button} .#{$icon}.Map-marker,
+.#{$button}.Typeb .#{$icon}.Map-marker {
+  background-position: -24px -72px;
+}
+
+.#{$icon}.Adjust,
+.#{$button} .#{$icon}.Adjust,
+.#{$button}.Typeb .#{$icon}.Adjust {
+  background-position: -48px -72px;
+}
+
+.#{$icon}.Tint,
+.#{$button} .#{$icon}.Tint,
+.#{$button}.Typeb .#{$icon}.Tint {
+  background-position: -72px -72px;
+}
+
+.#{$icon}.Edit,
+.#{$button} .#{$icon}.Edit,
+.#{$button}.Typeb .#{$icon}.Edit {
+  background-position: -96px -72px;
+}
+
+.#{$icon}.Share,
+.#{$button} .#{$icon}.Share,
+.#{$button}.Typeb .#{$icon}.Share {
+  background-position: -120px -72px;
+}
+
+.#{$icon}.Check,
+.#{$button} .#{$icon}.Check,
+.#{$button}.Typeb .#{$icon}.Check {
+  background-position: -144px -72px;
+}
+
+.#{$icon}.Move,
+.#{$button} .#{$icon}.Move,
+.#{$button}.Typeb .#{$icon}.Move {
+  background-position: -168px -72px;
+}
+
+.#{$icon}.Step-backward,
+.#{$button} .#{$icon}.Step-backward,
+.#{$button}.Typeb .#{$icon}.Step-backward {
+  background-position: -192px -72px;
+}
+
+.#{$icon}.Fast-backward,
+.#{$button} .#{$icon}.Fast-backward,
+.#{$button}.Typeb .#{$icon}.Fast-backward {
+  background-position: -216px -72px;
+}
+
+.#{$icon}.Backward,
+.#{$button} .#{$icon}.Backward,
+.#{$button}.Typeb .#{$icon}.Backward {
+  background-position: -240px -72px;
+}
+
+.#{$icon}.Play,
+.#{$button} .#{$icon}.Play,
+.#{$button}.Typeb .#{$icon}.Play {
+  background-position: -264px -72px;
+}
+
+.#{$icon}.Pause,
+.#{$button} .#{$icon}.Pause,
+.#{$button}.Typeb .#{$icon}.Pause {
+  background-position: -288px -72px;
+}
+
+.#{$icon}.Stop,
+.#{$button} .#{$icon}.Stop,
+.#{$button}.Typeb .#{$icon}.Stop {
+  background-position: -312px -72px;
+}
+
+.#{$icon}.Forward,
+.#{$button} .#{$icon}.Forward,
+.#{$button}.Typeb .#{$icon}.Forward {
+  background-position: -336px -72px;
+}
+
+.#{$icon}.Fast-forward,
+.#{$button} .#{$icon}.Fast-forward,
+.#{$button}.Typeb .#{$icon}.Fast-forward {
+  background-position: -360px -72px;
+}
+
+.#{$icon}.Step-forward,
+.#{$button} .#{$icon}.Step-forward,
+.#{$button}.Typeb .#{$icon}.Step-forward {
+  background-position: -384px -72px;
+}
+
+.#{$icon}.Eject,
+.#{$button} .#{$icon}.Eject,
+.#{$button}.Typeb .#{$icon}.Eject {
+  background-position: -408px -72px;
+}
+
+.#{$icon}.Chevron-left,
+.#{$button} .#{$icon}.Chevron-left,
+.#{$button}.Typeb .#{$icon}.Chevron-left {
+  background-position: -432px -72px;
+}
+
+.#{$icon}.Chevron-right,
+.#{$button} .#{$icon}.Chevron-right,
+.#{$button}.Typeb .#{$icon}.Chevron-right {
+  background-position: -456px -72px;
+}
+
+.#{$icon}.Plus-sign,
+.#{$button} .#{$icon}.Plus-sign,
+.#{$button}.Typeb .#{$icon}.Plus-sign {
+  background-position: 0 -96px;
+}
+
+.#{$icon}.Minus-sign,
+.#{$button} .#{$icon}.Minus-sign,
+.#{$button}.Typeb .#{$icon}.Minus-sign {
+  background-position: -24px -96px;
+}
+
+.#{$icon}.Remove-sign,
+.#{$button} .#{$icon}.Remove-sign,
+.#{$button}.Typeb .#{$icon}.Remove-sign {
+  background-position: -48px -96px;
+}
+
+.#{$icon}.Ok-sign,
+.#{$button} .#{$icon}.Ok-sign,
+.#{$button}.Typeb .#{$icon}.Ok-sign {
+  background-position: -72px -96px;
+}
+
+.#{$icon}.Question-sign,
+.#{$button} .#{$icon}.Question-sign,
+.#{$button}.Typeb .#{$icon}.Question-sign {
+  background-position: -96px -96px;
+}
+
+.#{$icon}.Info-sign,
+.#{$button} .#{$icon}.Info-sign,
+.#{$button}.Typeb .#{$icon}.Info-sign {
+  background-position: -120px -96px;
+}
+
+.#{$icon}.Screenshot,
+.#{$button} .#{$icon}.Screenshot,
+.#{$button}.Typeb .#{$icon}.Screenshot {
+  background-position: -144px -96px;
+}
+
+.#{$icon}.Remove-circle,
+.#{$button} .#{$icon}.Remove-circle,
+.#{$button}.Typeb .#{$icon}.Remove-circle {
+  background-position: -168px -96px;
+}
+
+.#{$icon}.Ok-circle,
+.#{$button} .#{$icon}.Ok-circle,
+.#{$button}.Typeb .#{$icon}.Ok-circle {
+  background-position: -192px -96px;
+}
+
+.#{$icon}.Ban-circle,
+.#{$button} .#{$icon}.Ban-circle,
+.#{$button}.Typeb .#{$icon}.Ban-circle {
+  background-position: -216px -96px;
+}
+
+.#{$icon}.Arrow-left,
+.#{$button} .#{$icon}.Arrow-left,
+.#{$button}.Typeb .#{$icon}.Arrow-left {
+  background-position: -240px -96px;
+}
+
+.#{$icon}.Arrow-right,
+.#{$button} .#{$icon}.Arrow-right,
+.#{$button}.Typeb .#{$icon}.Arrow-right {
+  background-position: -264px -96px;
+}
+
+.#{$icon}.Arrow-up,
+.#{$button} .#{$icon}.Arrow-up,
+.#{$button}.Typeb .#{$icon}.Arrow-up {
+  background-position: -289px -96px;
+}
+
+.#{$icon}.Arrow-down,
+.#{$button} .#{$icon}.Arrow-down,
+.#{$button}.Typeb .#{$icon}.Arrow-down {
+  background-position: -312px -96px;
+}
+
+.#{$icon}.Share-alt,
+.#{$button} .#{$icon}.Share-alt,
+.#{$button}.Typeb .#{$icon}.Share-alt {
+  background-position: -336px -96px;
+}
+
+.#{$icon}.Resize-full,
+.#{$button} .#{$icon}.Resize-full,
+.#{$button}.Typeb .#{$icon}.Resize-full {
+  background-position: -360px -96px;
+}
+
+.#{$icon}.Resize-small,
+.#{$button} .#{$icon}.Resize-small,
+.#{$button}.Typeb .#{$icon}.Resize-small {
+  background-position: -384px -96px;
+}
+
+.#{$icon}.Plus,
+.#{$button} .#{$icon}.Plus,
+.#{$button}.Typeb .#{$icon}.Plus {
+  background-position: -408px -96px;
+}
+
+.#{$icon}.Minus,
+.#{$button} .#{$icon}.Minus,
+.#{$button}.Typeb .#{$icon}.Minus {
+  background-position: -433px -96px;
+}
+
+.#{$icon}.Asterisk,
+.#{$button} .#{$icon}.Asterisk,
+.#{$button}.Typeb .#{$icon}.Asterisk {
+  background-position: -456px -96px;
+}
+
+.#{$icon}.Exclamation-sign,
+.#{$button} .#{$icon}.Exclamation-sign,
+.#{$button}.Typeb .#{$icon}.Exclamation-sign {
+  background-position: 0 -120px;
+}
+
+.#{$icon}.Gift,
+.#{$button} .#{$icon}.Gift,
+.#{$button}.Typeb .#{$icon}.Gift {
+  background-position: -24px -120px;
+}
+
+.#{$icon}.Leaf,
+.#{$button} .#{$icon}.Leaf,
+.#{$button}.Typeb .#{$icon}.Leaf {
+  background-position: -48px -120px;
+}
+
+.#{$icon}.Fire,
+.#{$button} .#{$icon}.Fire,
+.#{$button}.Typeb .#{$icon}.Fire {
+  background-position: -72px -120px;
+}
+
+.#{$icon}.Eye-open,
+.#{$button} .#{$icon}.Eye-open,
+.#{$button}.Typeb .#{$icon}.Eye-open {
+  background-position: -96px -120px;
+}
+
+.#{$icon}.Eye-close,
+.#{$button} .#{$icon}.Eye-close,
+.#{$button}.Typeb .#{$icon}.Eye-close {
+  background-position: -120px -120px;
+}
+
+.#{$icon}.Warning-sign,
+.#{$button} .#{$icon}.Warning-sign,
+.#{$button}.Typeb .#{$icon}.Warning-sign {
+  background-position: -144px -120px;
+}
+
+.#{$icon}.Plane,
+.#{$button} .#{$icon}.Plane,
+.#{$button}.Typeb .#{$icon}.Plane {
+  background-position: -168px -120px;
+}
+
+.#{$icon}.Calendar,
+.#{$button} .#{$icon}.Calendar,
+.#{$button}.Typeb .#{$icon}.Calendar {
+  background-position: -192px -120px;
+}
+
+.#{$icon}.Random,
+.#{$button} .#{$icon}.Random,
+.#{$button}.Typeb .#{$icon}.Random {
+  width: 16px;
+  background-position: -216px -120px;
+}
+
+.#{$icon}.Comment,
+.#{$button} .#{$icon}.Comment,
+.#{$button}.Typeb .#{$icon}.Comment {
+  background-position: -240px -120px;
+}
+
+.#{$icon}.Magnet,
+.#{$button} .#{$icon}.Magnet,
+.#{$button}.Typeb .#{$icon}.Magnet {
+  background-position: -264px -120px;
+}
+
+.#{$icon}.Chevron-up,
+.#{$button} .#{$icon}.Chevron-up,
+.#{$button}.Typeb .#{$icon}.Chevron-up {
+  background-position: -288px -120px;
+}
+
+.#{$icon}.Chevron-down,
+.#{$button} .#{$icon}.Chevron-down,
+.#{$button}.Typeb .#{$icon}.Chevron-down {
+  background-position: -313px -119px;
+}
+
+.#{$icon}.Retweet,
+.#{$button} .#{$icon}.Retweet,
+.#{$button}.Typeb .#{$icon}.Retweet {
+  background-position: -336px -120px;
+}
+
+.#{$icon}.Shopping-cart,
+.#{$button} .#{$icon}.Shopping-cart,
+.#{$button}.Typeb .#{$icon}.Shopping-cart {
+  background-position: -360px -120px;
+}
+
+.#{$icon}.Folder-close,
+.#{$button} .#{$icon}.Folder-close,
+.#{$button}.Typeb .#{$icon}.Folder-close {
+  width: 16px;
+  background-position: -384px -120px;
+}
+
+.#{$icon}.Folder-open,
+.#{$button} .#{$icon}.Folder-open,
+.#{$button}.Typeb .#{$icon}.Folder-open {
+  width: 16px;
+  background-position: -408px -120px;
+}
+
+.#{$icon}.Resize-vertical,
+.#{$button} .#{$icon}.Resize-vertical,
+.#{$button}.Typeb .#{$icon}.Resize-vertical {
+  background-position: -432px -119px;
+}
+
+.#{$icon}.Resize-horizontal,
+.#{$button} .#{$icon}.Resize-horizontal,
+.#{$button}.Typeb .#{$icon}.Resize-horizontal {
+  background-position: -456px -118px;
+}
+
+.#{$icon}.Hdd,
+.#{$button} .#{$icon}.Hdd,
+.#{$button}.Typeb .#{$icon}.Hdd {
+  background-position: 0 -144px;
+}
+
+.#{$icon}.Bullhorn,
+.#{$button} .#{$icon}.Bullhorn,
+.#{$button}.Typeb .#{$icon}.Bullhorn {
+  background-position: -24px -144px;
+}
+
+.#{$icon}.Bell,
+.#{$button} .#{$icon}.Bell,
+.#{$button}.Typeb .#{$icon}.Bell {
+  background-position: -48px -144px;
+}
+
+.#{$icon}.Certificate,
+.#{$button} .#{$icon}.Certificate,
+.#{$button}.Typeb .#{$icon}.Certificate {
+  background-position: -72px -144px;
+}
+
+.#{$icon}.Thumbs-up,
+.#{$button} .#{$icon}.Thumbs-up,
+.#{$button}.Typeb .#{$icon}.Thumbs-up {
+  background-position: -96px -144px;
+}
+
+.#{$icon}.Thumbs-down,
+.#{$button} .#{$icon}.Thumbs-down,
+.#{$button}.Typeb .#{$icon}.Thumbs-down {
+  background-position: -120px -144px;
+}
+
+.#{$icon}.Hand-right,
+.#{$button} .#{$icon}.Hand-right,
+.#{$button}.Typeb .#{$icon}.Hand-right {
+  background-position: -144px -144px;
+}
+
+.#{$icon}.Hand-left,
+.#{$button} .#{$icon}.Hand-left,
+.#{$button}.Typeb .#{$icon}.Hand-left {
+  background-position: -168px -144px;
+}
+
+.#{$icon}.Hand-up,
+.#{$button} .#{$icon}.Hand-up,
+.#{$button}.Typeb .#{$icon}.Hand-up {
+  background-position: -192px -144px;
+}
+
+.#{$icon}.Hand-down,
+.#{$button} .#{$icon}.Hand-down,
+.#{$button}.Typeb .#{$icon}.Hand-down {
+  background-position: -216px -144px;
+}
+
+.#{$icon}.Circle-arrow-right,
+.#{$button} .#{$icon}.Circle-arrow-right,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-right {
+  background-position: -240px -144px;
+}
+
+.#{$icon}.Circle-arrow-left,
+.#{$button} .#{$icon}.Circle-arrow-left,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-left {
+  background-position: -264px -144px;
+}
+
+.#{$icon}.Circle-arrow-up,
+.#{$button} .#{$icon}.Circle-arrow-up,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-up {
+  background-position: -288px -144px;
+}
+
+.#{$icon}.Circle-arrow-down,
+.#{$button} .#{$icon}.Circle-arrow-down,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-down {
+  background-position: -312px -144px;
+}
+
+.#{$icon}.Globe,
+.#{$button} .#{$icon}.Globe,
+.#{$button}.Typeb .#{$icon}.Globe {
+  background-position: -336px -144px;
+}
+
+.#{$icon}.Wrench,
+.#{$button} .#{$icon}.Wrench,
+.#{$button}.Typeb .#{$icon}.Wrench {
+  background-position: -360px -144px;
+}
+
+.#{$icon}.Tasks,
+.#{$button} .#{$icon}.Tasks,
+.#{$button}.Typeb .#{$icon}.Tasks {
+  background-position: -384px -144px;
+}
+
+.#{$icon}.Filter,
+.#{$button} .#{$icon}.Filter,
+.#{$button}.Typeb .#{$icon}.Filter {
+  background-position: -408px -144px;
+}
+
+.#{$icon}.Briefcase,
+.#{$button} .#{$icon}.Briefcase,
+.#{$button}.Typeb .#{$icon}.Briefcase {
+  background-position: -432px -144px;
+}
+
+.#{$icon}.Fullscreen,
+.#{$button} .#{$icon}.Fullscreen,
+.#{$button}.Typeb .#{$icon}.Fullscreen {
+  background-position: -456px -144px;
+}
+
+.#{$icon}.Down-arrow,
+.#{$button} .#{$icon}.Down-arrow,
+.#{$button}.Typeb .#{$icon}.Down-arrow {
+  background-position: -264px -72px;
+  @include transform(rotate(90deg));
+}
+
+.#{$icon}.Magic,
+.#{$button} .#{$icon}.Magic,
+.#{$button}.Typeb .#{$icon}.Magic {
+  background-position: -2px -170px;
+}
+
+.#{$icon}.Underline,
+.#{$button} .#{$icon}.Underline,
+.#{$button}.Typeb .#{$icon}.Underline {
+  background-position: -24px -170px;
+}
+
+.#{$icon}.Remove-font-style,
+.#{$button} .#{$icon}.Remove-font-style,
+.#{$button}.Typeb .#{$icon}.Remove-font-style {
+  background-position: -48px -170px;
+}
+
+.#{$icon}.Ordered-list,
+.#{$button} .#{$icon}.Ordered-list,
+.#{$button}.Typeb .#{$icon}.Ordered-list {
+  background-position: -72px -170px;
+}
+
+.#{$icon}.Link,
+.#{$button} .#{$icon}.Link,
+.#{$button}.Typeb .#{$icon}.Link {
+  background-position: -96px -170px;
+}
+
+.#{$icon}.Unlink,
+.#{$button} .#{$icon}.Unlink,
+.#{$button}.Typeb .#{$icon}.Unlink {
+  background-position: -120px -170px;
+}
+
+.#{$icon}.Codeview,
+.#{$button} .#{$icon}.Codeview,
+.#{$button}.Typeb .#{$icon}.Codeview {
+  background-position: -145px -170px;
+}
+
+.#{$icon}.Undo,
+.#{$button} .#{$icon}.Undo,
+.#{$button}.Typeb .#{$icon}.Undo {
+  background-position: -168px -170px;
+}
+
+.#{$icon}.Line-help,
+.#{$button} .#{$icon}.Line-help,
+.#{$button}.Typeb .#{$icon}.Line-help {
+  background-position: -189px -170px;
+}
+
+//only editor icon
+.#{$icon}.Editor-magic,
+.#{$button} .#{$icon}.Editor-magic,
+.#{$button}.Typeb .#{$icon}.Editor-magic {
+  width: 27px;
+  background-position: -217px -170px;
+}
+.#{$icon}.Editor-text-height,
+.#{$button} .#{$icon}.Editor-text-height,
+.#{$button}.Typeb .#{$icon}.Editor-text-height {
+  width: 27px;
+  background-position: -263px -170px;
+}
+.#{$icon}.Editor-align-left,
+.#{$button} .#{$icon}.Editor-align-left,
+.#{$button}.Typeb .#{$icon}.Editor-align-left {
+  width: 27px;
+  background-position: -313px -170px;
+}
+.#{$icon}.Editor-arrow,
+.#{$button} .#{$icon}.Editor-arrow,
+.#{$button}.Typeb .#{$icon}.Editor-arrow {
+  background-position: -452px -170px;
+}

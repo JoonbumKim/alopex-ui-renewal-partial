@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table Scroll - Table | Alopex UI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script>
+		$(document).ready(function() {
+		  $('table').on('resize', function(e){
+		    $(e.currentTarget).refresh();
+		  });
+		});
+	</script>
+</head>
+<body>
+
+	<h2>Scrolling</h2>
+	<p> 
+		data-scroll 속성의 값을 "all"로 설정하면, 테이블 전체가 스크롤된다.
+		스크롤 기능을 사용할 경우, 테이블의 wrapper 크기(스크롤 되는 테이블의 크기) 조정은 data-height와 data-width를 통해 조절합니다.
+		CSS3 flexbox를 사용하는 경우에는 별도의 크기를 조절하지 않아도, 지정한 영역을 다 채우도록 구현되어 있습니다. (box-flex 속성 사용)
+	</p> 
+	
+	<div class="Table-wrapper">
+    	<div class="Table-scroller">
+			<table data-highlight="true"  class="Table" data-height="200px" data-scroll="all">
+				<thead>
+					<tr >
+						<td data-resizable="true" data-sortable="string">1st Header </td>
+						<td data-resizable="true">2nd Header </td>
+						<td data-resizable="true">3rd Header </td>
+						<td data-resizable="true">4th Header </td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+				</tbody>
+				
+				<tfoot>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+	<br><br>	
+	
+	<h2>Header Fix with vertical scrolling</h2>
+	<p>
+		이 예제는 우선 data-scroll 속성값을 body로 지정하여, 헤더부분은 고정하고 바디영역만 스크롤됩니다. 
+		또한 data-width 속성값을 "80%"를 사용하여 table wrapper 크기를 조정하였습니다.
+	</p>
+	<div class="Table-wrapper">
+    	<div class="Table-scroller">
+			<table data-highlight="true"  class="Table" data-height="200px" data-width="80%" data-scroll="body">
+				<thead>
+					<tr >
+						<td data-resizable="true" data-sortable="string">1st Header</td>
+						<td data-resizable="true">2nd Header </td>
+						<td data-resizable="true">3rd Header </td>
+						<td data-resizable="true">4th Header </td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+					</tr>
+				</tbody>
+				
+				<tfoot>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+
+
+
+	<h2>Header Fix with horizontal and vertical scrolling</h2>
+	<p>
+		이번 예제는 위의 예제에서 테이블 가로 너비 크기를 wrapper 가로 너비 크기보다 크게 설정(width:1400px 로 설정)할 경우, 헤더가 고정된 상태에서 가로 세로 스크롤이 되는 것을 보여주는 예제입니다.
+	</p>
+	
+	<div class="Table-wrapper">
+    	<div class="Table-scroller">
+			<table class="Table" data-height="250px" data-scroll="body" style="width:1400px;" class="mytable">
+				<colgroup>
+					<col style="width:150px;"></col>
+					<col style="width:150px;"></col>
+					<col></col>
+					<col></col>
+					<col></col>
+					<col style="width:150px;"></col>
+					<col style="width:150px;"></col>
+					<col style="width:150px;"></col>
+				</colgroup>
+				<thead>
+					<tr >
+						<td data-resizable="true" data-sortable="string">1st Header </td>
+						<td data-resizable="true">2nd Header </td>
+						<td data-resizable="true">3rd Header </td>
+						<td data-resizable="true">4th Header </td>
+						<td data-resizable="true">5th Header </td>
+						<td data-resizable="true">6th Header </td>
+						<td data-resizable="true">7th Header </td>
+						<td data-resizable="true">8th Header </td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td> Row 1, Col 1</td>
+						<td> Row 1, Col 2</td>
+						<td> Row 1, Col 3 </td>
+						<td> Row 1, Col 4 </td>
+						<td> Row 1, Col 5</td>
+						<td> Row 1, Col 6</td>
+						<td> Row 1, Col 7 </td>
+						<td> Row 1, Col 8 </td>
+					</tr>
+					<tr>
+						<td> Row 2, Col 1</td>
+						<td> Row 2, Col 2</td>
+						<td> Row 2, Col 3 </td>
+						<td> Row 2, Col 4 </td>
+						<td> Row 2, Col 5</td>
+						<td> Row 2, Col 6</td>
+						<td> Row 2, Col 7 </td>
+						<td> Row 2, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 3, Col 1</td>
+						<td> Row 3, Col 2</td>
+						<td> Row 3, Col 3 </td>
+						<td> Row 3, Col 4 </td>
+						<td> Row 3, Col 5</td>
+						<td> Row 3, Col 6</td>
+						<td> Row 3, Col 7 </td>
+						<td> Row 3, Col 8 long sentence test</td>
+					</tr>
+					<tr>
+						<td> Row 4, Col 1</td>
+						<td> Row 4, Col 2</td>
+						<td> Row 4, Col 3 </td>
+						<td> Row 4, Col 4 </td>
+						<td> Row 4, Col 5</td>
+						<td> Row 4, Col 6</td>
+						<td> Row 4, Col 7 </td>
+						<td> Row 4, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 5, Col 1</td>
+						<td> Row 5, Col 2</td>
+						<td> Row 5, Col 3 </td>
+						<td> Row 5, Col 4 </td>
+						<td> Row 5, Col 5</td>
+						<td> Row 5, Col 6</td>
+						<td> Row 5, Col 7 </td>
+						<td> Row 5, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 6, Col 1</td>
+						<td> Row 6, Col 2</td>
+						<td> Row 6, Col 3 </td>
+						<td> Row 6, Col 4 </td>
+						<td> Row 6, Col 5</td>
+						<td> Row 6, Col 6</td>
+						<td> Row 6, Col 7 </td>
+						<td> Row 6, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 7, Col 1</td>
+						<td> Row 7, Col 2</td>
+						<td> Row 7, Col 3 </td>
+						<td> Row 7, Col 4 </td>
+						<td> Row 7, Col 5</td>
+						<td> Row 7, Col 6</td>
+						<td> Row 7, Col 7 </td>
+						<td> Row 7, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 8, Col 1</td>
+						<td> Row 8, Col 2</td>
+						<td> Row 8, Col 3 </td>
+						<td> Row 8, Col 4 </td>
+						<td> Row 8, Col 5</td>
+						<td> Row 8, Col 6</td>
+						<td> Row 8, Col 7 </td>
+						<td> Row 8, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 9, Col 1</td>
+						<td> Row 9, Col 2</td>
+						<td> Row 9, Col 3 </td>
+						<td> Row 9, Col 4 </td>
+						<td> Row 9, Col 5</td>
+						<td> Row 9, Col 6</td>
+						<td> Row 9, Col 7 </td>
+						<td> Row 9, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 10, Col 1</td>
+						<td> Row 10, Col 2</td>
+						<td> Row 10, Col 3 </td>
+						<td> Row 10, Col 4 </td>
+						<td> Row 10, Col 5</td>
+						<td> Row 10, Col 6</td>
+						<td> Row 10, Col 7 </td>
+						<td> Row 10, Col 8  </td>
+					</tr>
+					<tr>
+						<td> Row 11, Col 1</td>
+						<td> Row 11, Col 2</td>
+						<td> Row 11, Col 3 </td>
+						<td> Row 11, Col 4 </td>
+						<td> Row 11, Col 5</td>
+						<td> Row 11, Col 6</td>
+						<td> Row 11, Col 7 </td>
+						<td> Row 11, Col 8  </td>
+					</tr>
+				</tbody>
+				
+				<tfoot>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+	
+</body>
+</html>

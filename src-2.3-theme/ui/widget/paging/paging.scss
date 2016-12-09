@@ -1,0 +1,270 @@
+.#{$paging}, .#{$paging} * {
+	vertical-align: middle;
+}
+.#{$paging} {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0;
+	font-size: $font-size-base;
+	text-align: center;
+}
+.#{$paging} .Link{
+	display: inline-block;
+	float: left;
+	padding: $paging-link-padding;
+	color: $page-font-color;
+	
+	&:hover, &:active, &.Selected {
+		color: $page-font-hover;
+		font-weight: bold;
+	}
+}
+.#{$paging} .Link.Prev {
+	margin-right: $paging-gutter;
+	border-right: $page-line; 
+	
+	span {
+		display: inline-block;
+		width: $paging-width;
+		height: $paging-height;
+		padding-left: $paging-left;
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-prev-pos;
+	}
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-prev-hover-pos; 
+	}
+}
+.#{$paging} .Link.Prev-group {
+	span {
+		display: inline-block;
+		width: $paging-group-width;
+		height: $paging-group-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-prevgroup-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-prevgroup-hover-pos;
+	}
+}
+.#{$paging} .Link.Next {
+	margin-left: $paging-gutter;
+	border-left: $page-line; 
+	
+	span {
+		display: inline-block;
+		width: $paging-width;
+		height: $paging-height;
+		margin-left: $paging-left;
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-next-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-next-hover-pos;
+	}
+}
+.#{$paging} .Link.Next-group {
+	span {
+		display: inline-block;
+		width: $paging-group-width;
+		height: $paging-group-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-nextgroup-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-nextgroup-hover-pos;
+	}
+}
+.#{$paging} .Link.First {
+	span {
+		display: inline-block;
+		width: $paging-first-width;
+		height: $paging-first-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-first-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-first-hover-pos;
+	}
+}
+.#{$paging} .Link.Last {
+	span {
+		display: inline-block;
+		width: $paging-first-width;
+		height: $paging-first-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-last-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-last-hover-pos;
+	}
+}
+
+//typeb
+.#{$paging}.Typeb .Link {
+	display: inline-block;
+	float: left;
+	padding: $paging-typeb-padding;
+	color: $page-font-color;
+	border: $paging-typeb-linkborder;
+	border-right: 0;
+	&:hover, &:active, &.Selected {
+		color: $page-font-hover;
+		font-weight: bold;
+	}
+}
+.#{$paging}.Typeb .Link.Prev {
+	border: $paging-typeb-prev;
+	margin: 0;
+	padding: 0;
+}
+.#{$paging}.Typeb .Link.Prev span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prev-pos);
+}
+.#{$paging}.Typeb .Link.Prev:hover span, 
+.#{$paging}.Typeb .Link.Prev:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prev-hover-pos);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Prev-group {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-right: 0;
+	@include border-radius($paging-typeb-prevgroup-radius);
+}
+.#{$paging}.Typeb .Link.Prev-group span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prevgroup-pos);
+}
+.#{$paging}.Typeb .Link.Prev-group:hover span, 
+.#{$paging}.Typeb .Link.Prev-group:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prevgroup-hover-pos);
+	@include border-radius($paging-typeb-prevgroup-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Next {
+	margin: 0;
+	padding: 0;
+	border: $paging-typeb-prev;
+}
+.#{$paging}.Typeb .Link.Next span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	margin: 0;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-next-pos);
+}
+.#{$paging}.Typeb .Link.Next:hover span, 
+.#{$paging}.Typeb .Link.Next:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-next-hover-pos);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Next-group {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-left: 0;
+	@include border-radius($paging-typeb-nextgroup-radius);
+}
+.#{$paging}.Typeb .Link.Next-group span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-nextgroup-pos);
+}
+.#{$paging}.Typeb .Link.Next-group:hover span, 
+.#{$paging}.Typeb .Link.Next-group:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-nextgroup-hover-pos);
+	@include border-radius($paging-typeb-nextgroup-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.First {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-right: 0;
+	@include border-radius($paging-typeb-first-radius);
+}
+.#{$paging}.Typeb .Link.First span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-first-pos);
+}
+.#{$paging}.Typeb .Link.First:hover span, 
+.#{$paging}.Typeb .Link.First:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-first-hover-pos);
+	@include border-radius($paging-typeb-first-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Last {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-left: 0;
+	@include border-radius($paging-typeb-last-radius);
+}
+.#{$paging}.Typeb .Link.Last span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-last-pos);
+}
+.#{$paging}.Typeb .Link.Last:hover span, 
+.#{$paging}.Typeb .Link.NLast:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-last-hover-pos);
+	@include border-radius($paging-typeb-last-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+
+//mobile
+.#{$paging}.Mobile {border:0;}
+.#{$paging}.Mobile .Link {
+	width: $paging-mobile-width;
+	height: $paging-mobile-height;
+	margin: $paging-mobile-gutter;
+	padding: $paging-mobile-padding;
+	font-size: 0;
+	background: $paging-mobile-bg;
+	border: 0;
+	@include border-radius($paging-mobile-radius);
+	@include transition($base-trans);
+	
+	&.Selected, &:hover, &:active {
+		font-weight: $paging-mobile-font-hover;
+		background: $paging-mobile-bghover;
+	}
+}
+.#{$paging}.Mobile.Left {
+	top: 0;
+	left: $paging-mobile-pos;
+	text-align: left;
+}
+.#{$paging}.Mobile.Right {
+	top: 0;
+	right: $paging-mobile-pos;
+	text-align: right;
+}

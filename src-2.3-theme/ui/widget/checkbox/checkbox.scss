@@ -1,0 +1,39 @@
+.#{$checkbox} {
+	position: relative;
+	top: -1px;
+    overflow:hidden;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+}
+.ImageCheckbox {
+	position:relative;
+	
+	&:after {
+		content: '';
+		position:absolute;
+		left: $imgchk-left-pos;
+		left: 0px \0/IE8;
+		top: $imgchk-top-pos;
+		width: $imgchk-size;
+		height: $imgchk-size;
+		margin-top: $imgchk-margin-top;
+		background: url($component-image) no-repeat $imgchk-pos;
+	}
+	
+	&.Checked:after {
+		background: url($component-image) no-repeat $imgchk-checked-pos;
+	}
+	
+	&.Disabled:after {
+		background: url($component-image) no-repeat $imgchk-disabled-pos;
+	}
+	
+	&.Checked.Disabled:after {
+		background: url($component-image) no-repeat $imgchk-checked-disabled-pos;
+	}
+	
+	> .#{$checkbox} {
+		@include opacity(0);
+	}
+}

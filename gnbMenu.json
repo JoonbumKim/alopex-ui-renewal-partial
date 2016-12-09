@@ -1,0 +1,51 @@
+{
+ "menus":
+  [  
+   {
+    "text":"Getting Started",
+    "items":[
+      {"text":"초보자 가이드" , "linkUrl" : "/2.3/started/started.html?target=education"}
+      ]
+   },
+   {
+    "text":"Document",
+    "items":[
+      {"text":"제품 개요" , "linkUrl" : "/2.3/document/document.html?target=overview"},
+      {"text":"사용 가이드" , "linkUrl" : "/2.3/document/document.html?target=using"},
+      {"text":"개발 가이드" , "linkUrl" : "/2.3/document/document.html?target=development"},
+      {"text":"퍼블리싱 가이드" , "linkUrl" : "/2.3/document/document.html?target=publish"},
+      {"text":"Alopex Handlebars Java" , "linkUrl" : "/2.3/document/document.html?target=handlebars_java"},
+      {"text":"웹 퍼포먼스 향상 가이드" , "linkUrl" : "/2.3/document/document.html?target=performance"}]
+   },
+   {
+    "text":"Development",
+    "items":[
+      {"text":"Component" , "linkUrl" : "/2.3/dev-component/component.html?target=accordion"},
+      {"text":"Javascript" , "linkUrl" : "/2.3/dev-js/javascript.html?target=databind"},
+      {"text":"Chart" , "linkUrl" : "/2.3/dev-thirdparty/thirdparty.html?target=chart"}
+      ]
+   },
+   {
+    "text":"Download","linkUrl" : "/2.3/download/download.html"
+   },
+   {
+    "text":"Theme","linkUrl" : "/2.3/theme/theme.html?target=theme"
+   },
+   {
+    "text":"Support",
+    "items":[
+      {"text":"구입/지원" , "linkUrl" : "/2.3/support/support.html?target=support"},
+      {"text":"사례" , "linkUrl" : "/2.3/support/support.html?target=example"}]
+   },
+   {
+    "text":"Demo",
+    "items":[
+      {"text":"Alopex UI/UX 표준", "linkUrl" : "/2.3/demonstration/demonstration.html?target=alopexUIUX"},
+      {"text":"Demo - Alopex Auto", "linkUrl" : "/2.3/demonstration/demonstration.html?target=alopexauto"}]
+   },
+   {
+    "text":"AlopexUI 2.2","linkUrl" : "/2.2/index.html"
+   }
+  ]
+  
+}

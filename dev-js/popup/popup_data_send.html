@@ -1,0 +1,28 @@
+<!-- child -->
+<!-- iframe: true 인 경우, DOCTYPE html head title meta link body 등 포함 시켜야 한다. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Popup Data</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css" />
+	
+	<script type="text/javascript"  src="../../js/libs/jquery/jquery-1.11.3.js"></script>
+	<script type="text/javascript"  src="../../dist/script/alopex-ui.min.js"></script>	
+<!-- Child html -->
+<script>
+$a.page(function() {
+    this.init = function(id, param) {
+    	// 팝업창 내 $a.page.init 함수 두번째 인자로 전달
+        $('#spanData').text(param["item"]);
+    }
+});
+</script>
+
+</head>
+<body>
+	전달 받은 데이터 :: <span id="spanData" class="Font-bold Font-big"></span>	
+</body>
+</html>

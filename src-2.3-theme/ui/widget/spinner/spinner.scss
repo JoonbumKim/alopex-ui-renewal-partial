@@ -1,0 +1,54 @@
+.#{$spinner} {
+	position:relative;
+	display:inline-block;
+  	overflow:hidden;
+  	height: $spinner-height;
+	padding-right: $spinner-right;
+    line-height: $spinner-lineheight;
+	font-size: $font-size-base;
+	color: $spinner-font-color;
+  	border: $spinner-border-style;
+  	@include gradation($spinner-flag, $spinner-bg, $spinner-bg, $spinner-bg-backend);
+	@include border-radius($border-radius-base);
+}
+.#{$spinner}.Disabled {
+	color: $spinner-disabled-color;
+	background: $spinner-disabled;
+	border: $spinner-disabled-border;
+}
+.#{$spinner} > input {
+	height: 100%;
+	padding: $spinner-input-padding;
+	border: 0;
+}
+.#{$spinner} >.Up {
+	top: 0;
+	text-indent: -9999px;
+	background: url($component-image) no-repeat $spinner-up-pos;
+}
+.#{$spinner} >.Up:hover {
+	background: $spinner-hover-bg url($component-image) no-repeat $spinner-up-hover-pos;
+}
+.#{$spinner} >.Down {
+	bottom: 0;
+	text-indent: -9999px;
+	background: url($component-image) no-repeat $spinner-down-pos;
+}
+.#{$spinner} >.Down:hover {
+	background: $spinner-hover-bg url($component-image) no-repeat $spinner-down-hover-pos;
+}
+.#{$spinner}>.Up, .#{$spinner}>.Down {
+	position: absolute;
+	right: 0px;
+	cursor:pointer;
+	display: block;
+	width: $spinner-btn-width;
+	height: 50%;
+	border-left: $spinner-border-style;
+}
+.#{$spinner}.Time input[data-ampm],
+.#{$spinner}.Time input[data-hour],
+.#{$spinner}.Time input[data-minute] {
+	width: $spinner-time-width;
+	text-align: center;
+}

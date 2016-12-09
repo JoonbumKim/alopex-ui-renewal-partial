@@ -1,0 +1,32 @@
+@CHARSET "UTF-8";
+/*
+classname이 지정되면 이 속성은 사라짐
+단, 원하는 경우 customizing은 가능할 수도 있음
+*/
+
+* {
+	-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+table,tr,th,td {
+	border-collapse: collapse;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+p{
+	margin:1em 0;
+	display:block;
+}
+
+label {
+	vertical-align: middle;	
+}
+

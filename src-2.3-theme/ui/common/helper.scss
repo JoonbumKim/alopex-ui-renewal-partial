@@ -1,0 +1,205 @@
+//header
+h1 {font-size: 40px;}
+h2 {font-size: 32px;}
+h3 {font-size: 29px;}
+h4 {font-size: 20px;}
+h5 {font-size: 16px;}
+h6 {font-size: 12px;}
+
+//header class
+.Header-1 {font-size: 40px;}
+.Header-2 {font-size: 32px;}
+.Header-3 {font-size: 29px;}
+.Header-4 {font-size: 20px;}
+.Header-5 {font-size: 16px;}
+.Header-6 {font-size: 12px;}
+
+.Disabled {
+	cursor: not-allowed !important;
+}
+.Flexlayout {
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	display: -webkit-box;
+}
+
+.Clearfix {
+	@include clearfix();
+}
+
+.Ellipsis {
+	@include ellipsis;
+}
+
+.Clearboth {
+	clear: both;
+}
+// float, position, align
+.Float-left {
+	float: left;
+}
+.Float-right {
+	float: right;
+}
+.Pos-abs {
+	position: absolute;
+}
+.Pos-rel {
+	position: relative;
+}
+.Pos-fix {
+	position: fix;
+}
+.Valign-top {
+	vertical-align: top;
+}
+.Valign-md {
+	vertical-align: middle;
+}
+.Valign-bot {
+	vertical-align: bottom;
+}
+.Text-underline {
+	text-decoration: underline;
+}
+.Text-through {
+	text-decoration: line-through;
+}
+.Text-none {
+	text-decoration: none;
+}
+.Text-left {
+	text-align: left;
+}
+.Text-right {
+	text-align: right;
+}
+.Text-center {
+	text-align: center;
+}
+
+// display
+.Display-none {
+	display: none
+}
+.Display-inblock {
+	display: inline-block;
+}
+.Display-inline {
+	display: inline;
+}
+.Display-block {
+	display: block;
+}
+
+//overflow
+.Overflow-hid {
+	overflow: hidden;
+}
+.Overflow-x {
+	overflow-x: auto;
+}
+.Overflow-y {
+	overflow-y: auto;
+}
+
+//font
+.Font-default {
+	font-size: 12px;
+}
+.Font-normal {
+	font-weight: normal;
+}
+.Font-bold {
+	font-weight: bold;
+}
+.Font-italic {
+	font-style: italic;
+}
+.Font-big {
+	font-size: $font-size-large;
+}
+.Font-small {
+	font-size: $font-size-small;
+}
+
+//list-style
+.List-style-none {
+	list-style: none;
+}
+
+//color
+.Color-default {
+	color: $color-default;
+}
+.Color-primary {
+	color: $color-primary;
+}
+.Color-confirm {
+	color: $color-confirm;
+}
+.Color-success {
+	color: $color-success;
+}
+.Color-warning {
+	color: $color-warning;
+}
+.Color-danger {
+	color: $color-danger;
+}
+.Color-info {
+	color: $color-info;
+}
+.Color-white {
+	color: $color-white;
+}
+
+//background
+.Bg-default {
+	background: $color-default;
+}
+.Bg-primary {
+	background: $color-primary;
+}
+.Bg-confirm {
+	background: $color-confirm;
+}
+.Bg-success {
+	background: $color-success;
+}
+.Bg-warning {
+	background: $color-warning;
+}
+.Bg-danger {
+	background: $color-danger;
+}
+.Bg-info {
+	background: $color-info;
+}
+.Bg-white {
+	background: $color-white;
+}
+
+
+//width, padding, margin
+.Margin-auto {
+	margin: auto;
+}
+.Margin-0 {
+	margin: 0;
+}
+
+.Padding-0 {
+	padding: 0;
+}
+@include gutter-options(Padding, padding, left);
+@include gutter-options(Padding, padding, right);
+@include gutter-options(Padding, padding, top);
+@include gutter-options(Padding, padding, bottom);
+@include gutter-options(Margin, margin, left);
+@include gutter-options(Margin, margin, right);
+@include gutter-options(Margin, margin, top);
+@include gutter-options(Margin, margin, bottom);
+
+@include width-gutter(Width, width);

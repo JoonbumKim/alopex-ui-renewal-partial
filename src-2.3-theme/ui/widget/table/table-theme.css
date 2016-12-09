@@ -1,0 +1,39 @@
+
+/********* table *********/
+.af-table-wrapper.af-default {
+	border-top:1px solid #c0c7cf;
+	border-bottom:1px solid #c0c7cf;
+}
+
+.af-table-wrapper.af-default {
+	
+}
+
+.af-table-wrapper.af-default th {
+	border-bottom:1px solid #c0c7cf;
+}
+
+.af-table-wrapper.af-default td {
+	border-bottom: 1px solid #edeef0;
+}
+
+.af-table-wrapper.af-default .af-table-ascending .af-icon{
+/* 	background-image:url(arrow_up.png); */
+}
+
+.af-table-wrapper.af-default .af-table-descending .af-icon{
+/* 	background-image:url(arrow_down.png); */
+}
+
+.af-table-wrapper.af-default .af-table-editor {
+	background: url('./images/icon_table_edit_normal.png') no-repeat 93% center;
+}
+
+.af-table-wrapper.af-default .af-table-editor.af-editing {
+	background: none;
+}
+
+.af-table-wrapper.af-default .af-table-editor.af-edited {
+	background: url('./images/icon_table_edit_done.png') no-repeat 93% center;
+}
+

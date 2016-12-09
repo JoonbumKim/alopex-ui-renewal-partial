@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <script type="text/javascript"  src="/2.3/js/libs/jquery/jquery-1.11.3.js" ></script>
+   
+   <link rel="stylesheet" type="text/css" href="/2.3/dist/css/alopex-ui-white.css" />
+	   <script type="text/javascript"  src="/2.3/dist/script/alopex-ui.min.js"></script>
+   
+   <link rel="stylesheet" type="text/css" href="/2.3/css/prettify.css" />
+   	<link rel="stylesheet" type="text/css" href="/2.3/css/mddocs.css" />
+	<link rel="stylesheet" type="text/css" href="/2.3/dist/css/src/alopex-ext.css" />
+	<script type="text/javascript"  src="/2.3/dist/script/src/alopex-ext.js"></script>
+	<script type="text/javascript"  src="/2.3/dist/script/src/alopex-ext-setup.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="/2.3/dist/script/src/webeditor/alopex-webeditor.css" />
+	<script type="text/javascript"  src="/2.3/dist/script/src/webeditor/alopex-webeditor.js"></script>
+	<script type="text/javascript"  src="/2.3/dist/script/src/webeditor/alopex-webeditor-setup.js"></script>
+	<script type="text/javascript"  src="/2.3/dist/script/src/webeditor/lang/alopex-ko-KR.js"></script>
+
+   
+   <title>webeditor</title>
+   <script>
+   $a.page(function() {
+   this.init = function(id, param) {
+      $('#Webeditor1').webeditor({
+            height: 300,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: true                  // set focus to editable area after initializing webeditor
+        });
+
+        $('#Webeditor2').webeditor({
+            height: 300,                 // set editor height
+            minHeight: null,             // set minimum height of editor
+            maxHeight: null,             // set maximum height of editor
+            focus: true                  // set focus to editable area after initializing webeditor
+        });
+
+        $('#Webeditor5').webeditor('editor.insertText', '가나다라 마바사 가나다라 마바사');
+        setEventListener();
+   }; 
+   function setEventListener() {
+	   $('#btnGetContent').on('click', function(){
+           alert($('#Webeditor2').webeditor('code'));
+      });
+      $('#btnSetContent').on('click', function(){
+              $('#Webeditor2').webeditor('code','<p>입력 코드</p>');
+      });
+  	
+	}
+   });
+</script>
+   </head>
+   <body>
+
+<h3 id="API_webeditorcode" style="margin: 20px 0 10px;	font-size: 18px;">.webeditor('code')</h3>
+
+<p style="line-height: 20px; margin: 10px 0; font-size: 14px;">WebEditor 에서 html 코드를 Get/Set 할 수 있습니다.</p>
+
+<div class="eg">
+<div class="egview">
+
+
+
+<div class="Webeditor" id="Webeditor2" ><p>Hello World</p></div>
+<button id="btnGetContent" class="Button">Get Content</button>
+<button id="btnSetContent" class="Button" >Set Content</button>
+</div>
+
+
+
+<pre class="prettyprint prettyprinted"><div class="getSource">copy</div><code class="pretty"><span class="pln">    </span><span class="tag">&lt;script&gt;</span><span class="pln">
+   $a</span><span class="pun">.</span><span class="pln">page</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+   </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">init </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">id</span><span class="pun">,</span><span class="pln"> param</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       $</span><span class="pun">(</span><span class="str">'#Webeditor2'</span><span class="pun">).</span><span class="pln">webeditor</span><span class="pun">({</span><span class="pln">
+          height</span><span class="pun">:</span><span class="pln"> </span><span class="lit">300</span><span class="pun">,</span><span class="pln">                 </span><span class="com">// set editor height</span><span class="pln">
+          minHeight</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">             </span><span class="com">// set minimum height of editor</span><span class="pln">
+          maxHeight</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">,</span><span class="pln">             </span><span class="com">// set maximum height of editor</span><span class="pln">
+          focus</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">true</span><span class="pln">                  </span><span class="com">// set focus to editable area after initializing webeditor</span><span class="pln">
+        </span><span class="pun">});</span><span class="pln">
+      setEventListener</span><span class="pun">();</span><span class="pln">
+   </span><span class="pun">};</span><span class="pln">
+
+   </span><span class="kwd">function</span><span class="pln"> setEventListener</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+       $</span><span class="pun">(</span><span class="str">'#btnGetContent'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'click'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+            alert</span><span class="pun">(</span><span class="pln">$</span><span class="pun">(</span><span class="str">'#Webeditor2'</span><span class="pun">).</span><span class="pln">webeditor</span><span class="pun">(</span><span class="str">'code'</span><span class="pun">));</span><span class="pln">
+       </span><span class="pun">});</span><span class="pln">
+       $</span><span class="pun">(</span><span class="str">'#btnSetContent'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'click'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(){</span><span class="pln">
+               $</span><span class="pun">(</span><span class="str">'#Webeditor2'</span><span class="pun">).</span><span class="pln">webeditor</span><span class="pun">(</span><span class="str">'code'</span><span class="pun">,</span><span class="str">'&lt;p&gt;입력 코드&lt;/p&gt;'</span><span class="pun">);</span><span class="pln">
+       </span><span class="pun">});</span><span class="pln">
+   </span><span class="pun">}</span><span class="pln">
+   </span><span class="pun">});</span><span class="pln">
+
+
+</span><span class="tag">&lt;/script&gt;</span></code></pre>
+
+<pre class="prettyprint prettyprinted"><div class="getSource">copy</div><code class="pretty"><span class="tag">&lt;div</span><span class="pln">  </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"Webeditor"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"Webeditor2"</span><span class="tag">&gt;&lt;p&gt;</span><span class="pln">Hello World</span><span class="tag">&lt;/p&gt;&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"btnGetContent"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"Button"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">Get Content</span><span class="tag">&lt;/button&gt;</span><span class="pln">
+</span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"btnSetContent"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"Button"</span><span class="pln"> </span><span class="tag">&gt;</span><span class="pln">Set Content</span><span class="tag">&lt;/button&gt;</span></code></pre>
+
+<p></p></div>
+
+<h3 id="API_webeditoreditorinsertTextinserttext"  style="margin: 20px 0 10px;	font-size: 18px;">.webeditor('editor.insertText','insert text')</h3>
+
+<div class="eg">
+<div class="egview">
+
+
+
+<div class="Webeditor" id="Webeditor5"><p>Hello World</p></div>
+</div>
+<pre class="prettyprint prettyprinted"><div class="getSource">copy</div><code class="pretty"><span class="tag">&lt;div</span><span class="pln">  </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"Webeditor"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"Webeditor5"</span><span class="tag">&gt;&lt;p&gt;</span><span class="pln">Hello World</span><span class="tag">&lt;/p&gt;&lt;/div&gt;</span></code></pre>
+
+
+
+<pre class="prettyprint prettyprinted"><div class="getSource">copy</div><code class="pretty"><span class="tag">&lt;script&gt;</span><span class="pln">
+   $a</span><span class="pun">.</span><span class="pln">page</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+    </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">init </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">function</span><span class="pun">(</span><span class="pln">id</span><span class="pun">,</span><span class="pln"> param</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+           $</span><span class="pun">(</span><span class="str">'#Webeditor5'</span><span class="pun">).</span><span class="pln">webeditor</span><span class="pun">(</span><span class="str">'editor.insertText'</span><span class="pun">,</span><span class="pln"> </span><span class="str">'가나다라 마바사 가나다라 마바사'</span><span class="pun">);</span><span class="pln">
+       </span><span class="pun">};</span><span class="pln">
+
+   </span><span class="pun">});</span><span class="pln">
+</span><span class="tag">&lt;/script&gt;</span></code></pre>
+
+
+    </html>
+    

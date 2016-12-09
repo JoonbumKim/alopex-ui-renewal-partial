@@ -1,0 +1,260 @@
+//common
+.#{$button}, .#{$dropdownbutton} {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	overflow: visible;
+	vertical-align: middle;
+	padding: $btn-base-padding;
+  	font-size: $btn-font-size;
+	line-height: $btn-base-lineheight;
+	text-decoration: none;
+	text-align: center;
+	border: $btn-border-style;
+	@include border-radius($btn-border-radius);
+	@include transition($base-trans);
+}
+.#{$button} {
+	color: $btn-text-color;
+	@include gradation($flag, $btn-bg, $btn-bg, $btn-bg-backend);
+	
+	&:hover {
+		color: $btn-text-color-hover;
+		border: $btn-border-style-hover;
+		filter: none;
+		@include gradation($flag, $btn-bg-hover, $btn-bg-hover, $btn-bg-hover);
+	}
+	
+	&:active, &.Checked {
+		padding: $btn-base-padding;
+		line-height: $btn-base-lineheight;
+		color: $btn-text-color-hover;
+		border: $btn-border-style-hover;
+		@include gradation($flag, $btn-bg-active, $btn-bg-active, $btn-bg-active);
+	}
+}
+
+//symbolic
+.#{$button}.Disabled, 
+.#{$dropdownbutton}.Disabled {
+	color: $btn-text-disabled;
+	background: $btn-bg-disabled;
+	border: 0;
+}
+.#{$button}.White, 
+.#{$dropdownbutton}.White {
+	color: $base-text-gray;
+	background: $color-white;
+	border: $btn-white-border;
+}
+.#{$button}.Default,
+.#{$dropdownbutton}.Default {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-default, $color-default, $color-default-backend);
+}
+.#{$button}.Default:hover, 
+.#{$dropdownbutton}.Default:hover, 
+.#{$button}.Default:active, 
+.#{$dropdownbutton}.Default:active {
+	@include gradation($flag, $color-default-hover, $color-default-hover, $color-default-hover-backend);
+}
+.#{$button}.Primary,
+.#{$dropdownbutton}.Primary {
+	color: $btn-theme-color;
+	border: 0;
+	background: $color-primary;
+}
+.#{$button}.Primary:hover, 
+.#{$dropdownbutton}.Primary:hover, 
+.#{$button}.Primary:active, 
+.#{$dropdownbutton}.Primary:active {
+	background: $color-primary-hover;
+}
+.#{$button}.Confirm, 
+.#{$dropdownbutton}.Confirm {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-confirm, $color-confirm, $color-confirm-backend);
+}
+.#{$button}.Confirm:hover, 
+.#{$dropdownbutton}.Confirm:hover, 
+.#{$button}.Confirm:active, 
+.#{$dropdownbutton}.Confirm:active {
+	@include gradation($flag, $color-confirm-hover, $color-confirm-hover, $color-confirm-hover-backend);
+}
+.#{$button}.Success, 
+.#{$dropdownbutton}.Success {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+.#{$button}.Success:hover, 
+.#{$dropdownbutton}.Success:hover, 
+.#{$button}.Success:active, 
+.#{$dropdownbutton}.Success:active {
+	@include gradation($flag, $color-success-hover, $color-success-hover, $color-success-hover-backend);
+}
+.#{$button}.Warning, 
+.#{$dropdownbutton}.Warning {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+.#{$button}.Warning:hover, 
+.#{$dropdownbutton}.Warning:hover, 
+.#{$button}.Warning:active, 
+.#{$dropdownbutton}.Warning:active {
+	@include gradation($flag, $color-warning-hover, $color-warning-hover, $color-warning-hover-backend);
+}
+.#{$button}.Danger, 
+.#{$dropdownbutton}.Danger {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+.#{$button}.Danger:hover, 
+.#{$dropdownbutton}.Danger:hover, 
+.#{$button}.Danger:active, 
+.#{$dropdownbutton}.Danger:active {
+	@include gradation($flag, $color-danger-hover, $color-danger-hover, $color-danger-hover-backend);
+}
+
+.#{$button}.Large, 
+.#{$dropdownbutton}.Large {
+  	@include btn-size($btn-large-padding, $btn-font-size, $btn-large-lineheight);
+}
+.#{$button}.Extra, 
+.#{$dropdownbutton}.Extra {
+	@include btn-size($btn-extra-padding, $btn-font-size, $btn-extra-lineheight);
+}
+
+//typeb
+.#{$button}.Typeb {
+	color: $group-typeb-font-color;
+	background: $group-typeb-bg;
+    border: $group-border-style;
+    line-height: $btn-base-lineheight;
+	@include transition($none-trans);
+	
+	&:hover, &:active, &.Checked {
+		color: $group-typeb-font-color-hover;
+		border: 1px solid $group-typeb-border-hover;
+		background: $group-typeb-bg-hover;
+		filter: none;
+		@include transition($base-trans);
+	}
+}
+
+//typeb symbolic
+.#{$button}.Typeb.Default,
+.#{$dropdownbutton}.Typeb.Default {
+	color: $color-default;
+    border: 1px solid $color-default;
+}
+.#{$button}.Typeb.Default:hover, 
+.#{$dropdownbutton}.Typeb.Default:hover, 
+.#{$button}.Typeb.Default:active, 
+.#{$dropdownbutton}.Typeb.Default:active {
+	border: 1px solid $color-default-hover;
+}
+.#{$button}.Typeb.Primary,
+.#{$dropdownbutton}.Typeb.Primary {
+	color: $color-primary;
+    border: 1px solid $color-primary;
+}
+.#{$button}.Typeb.Primary:hover, 
+.#{$dropdownbutton}.Typeb.Primary:hover, 
+.#{$button}.Typeb.Primary:active, 
+.#{$dropdownbutton}.Typeb.Primary:active {
+	border: 1px solid $color-primary-hover;
+}
+.#{$button}.Typeb.Confirm, 
+.#{$dropdownbutton}.Typeb.Confirm {
+	color: $color-confirm;
+    border: 1px solid $color-confirm;
+}
+.#{$button}.Typeb.Confirm:hover, 
+.#{$dropdownbutton}.Typeb.Confirm:hover, 
+.#{$button}.Typeb.Confirm:active, 
+.#{$dropdownbutton}.Typeb.Confirm:active {
+	border: 1px solid $color-confirm-hover;
+}
+.#{$button}.Typeb.Success, 
+.#{$dropdownbutton}.Typeb.Success {
+	color: $color-success;
+    border: 1px solid $color-success;
+}
+.#{$button}.Typeb.Success:hover, 
+.#{$dropdownbutton}.Typeb.Success:hover, 
+.#{$button}.Typeb.Success:active, 
+.#{$dropdownbutton}.Typeb.Success:active {
+	border: 1px solid $color-success-hover;
+}
+.#{$button}.Typeb.Warning, 
+.#{$dropdownbutton}.Typeb.Warning {
+	color: $color-warning;
+    border: 1px solid $color-warning;
+}
+.#{$button}.Typeb.Warning:hover, 
+.#{$dropdownbutton}.Typeb.Warning:hover, 
+.#{$button}.Typeb.Warning:active, 
+.#{$dropdownbutton}.Typeb.Warning:active {
+	border: 1px solid $color-warning-hover;
+}
+.#{$button}.Typeb.Danger, 
+.#{$dropdownbutton}.Typeb.Danger {
+	color: $color-danger;
+    border: 1px solid $color-danger;
+}
+.#{$button}.Typeb.Danger:hover, 
+.#{$dropdownbutton}.Typeb.Danger:hover, 
+.#{$button}.Typeb.Danger:active, 
+.#{$dropdownbutton}.Typeb.Danger:active {
+	border: 1px solid $color-danger-hover;
+}
+
+//button size
+.#{$button}.Large, 
+.#{$dropdownbutton}.Large {
+  	@include btn-size($btn-large-padding, $btn-font-size, $btn-large-lineheight);
+}
+.#{$button}.Extra, 
+.#{$dropdownbutton}.Extra {
+	@include btn-size($btn-extra-padding, $btn-font-size, $btn-extra-lineheight);
+}
+
+//icon button
+.#{$button} .#{$icon} {
+	background: $icon-button-bg no-repeat 10000px 10000px;
+}
+.#{$button}:hover .#{$icon},
+.#{$button}:active .#{$icon} {
+	background: $icon-button-bg-hover no-repeat 10000px 10000px;
+}
+.#{$button}.Typeb .#{$icon} {
+	background: $icon-buttontypeb-bg no-repeat 10000px 10000px;
+}
+.#{$button}.Typeb:hover .#{$icon},
+.#{$button}.Typeb:active .#{$icon} {
+	background: $icon-buttontypeb-bg-hover no-repeat 10000px 10000px;
+}
+.#{$button}.Large .#{$icon} {
+	margin: $icon-large-margin;
+}
+.#{$button}.Extra .#{$icon} {
+	margin: $icon-extra-margin;
+}
+.#{$button}.Onlyicon {
+	height: $btn-base-lineheight + 6;
+	padding: $btn-onlyicon-padding;
+	
+	&:hover {
+		height: $btn-base-lineheight + 6;
+		padding: $btn-onlyicon-padding;
+	}
+}
+.#{$button}.Extra.Onlyicon {
+	height: $btn-extra-lineheight - 2;
+	padding: $btn-extra-padding;
+}

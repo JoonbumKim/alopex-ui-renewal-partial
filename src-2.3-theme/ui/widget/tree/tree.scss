@@ -1,0 +1,87 @@
+.#{$tree}, .#{$tree} * {
+	list-style:none;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+}
+.#{$tree} {
+	position:relative;
+	height: auto;
+	display: block;
+	padding-left: 0;
+}
+.#{$tree} li, 
+.#{$tree} .Expanded li {
+	line-height: $tree-line-height;
+}
+.#{$tree} li > span.Arrow {
+	position:relative;
+	z-index: 3;
+	display: inline-block;
+	width: $tree-arrow-width;
+	height: $tree-arrow-height;
+	margin-right: $tree-arrow-right;
+	margin-left: 0;
+	margin-top: 0;
+	background: url($component-image) no-repeat $tree-arrow-pos;
+}
+.#{$tree} li.expandable > span.Arrow {
+	visibility: visible;
+}	
+.#{$tree} li.Expanded > span.Arrow{
+	background: url($component-image) no-repeat $tree-arrow-expanded-pos;
+}
+.#{$tree} ul {
+	padding-left: $tree-ul-padding;
+	
+	&:before {
+		content: '';
+		position:absolute;
+		top: $tree-ul-top;
+		left: $tree-ul-left;
+		bottom: $tree-ul-bottom;
+		display: block; 
+		width: 0;
+		border-left: $tree-line-style;
+	}
+	
+	li:before {
+		content: '';
+		position:absolute;
+		left: $tree-ul-left;
+		z-index:1;
+		display: block; 
+		width: $tree-li-width;
+		height:0;
+		margin-top: $tree-li-top;
+		border-top: $tree-line-style;
+	}
+}
+.#{$tree} li > a {
+	display: inline-block;
+	cursor: pointer;
+	margin: $tree-li-link-margin;
+	width: auto;
+	padding: $tree-li-padding;
+	
+	&.Selected {
+		padding-top: 1px;
+		font-weight: bold;
+		color: $color-primary;
+		border-bottom: 1px dotted $color-primary;
+	}
+}
+.#{$tree} img {
+	display: inline-block;
+	width: $tree-img-width;
+	height: $tree-img-height;
+	margin-right: $tree-img-right;
+}
+.#{$tree} li.expandable li[data-expand="false"] > a {
+	width: auto;
+	padding-left: $tree-expandable-false-left;
+	background: url($component-image) no-repeat $tree-expandable-false-pos;
+}
+.#{$tree} li.expandable li.expandable[data-expand="false"] > a {
+	padding-left: 0;
+	background: transparent;
+}

@@ -1,0 +1,43 @@
+/********* spinner *********/
+.af-spinner.af-default.af-spinner-wrapper {
+	border: 1px solid #bfc8cf;
+	background: #ffffff;
+	font-size: 12px;
+	color: #000000;
+	padding-right:20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-spinner.af-default.af-spinner-wrapper.af-hover {
+	border: 1px solid #00bede;
+	background: #ffffff;
+}
+
+.af-spinner.af-default.af-spinner-wrapper:focus {
+	border: 1px solid #00bede;
+	background: #ffffff;
+}
+
+.af-spinner.af-default.af-spinner-wrapper.af-disabled {
+	border: 1px solid #d7dadd;
+	background: #f2f2f2;
+	color: #9a9a9a;
+}
+
+.af-spinner.af-default {
+	border: none;
+	margin: 0;
+}
+/* .af-spinner.af-default::-ms-clear {display: none;} */
+
+.af-spinner-wrapper>.af-spinner-button-up {
+	background: url(images/spinner_up.png) no-repeat;
+	background-size: 100% 100%;
+}
+
+.af-spinner-wrapper>.af-spinner-button-down {
+	background: url(images/spinner_down.png) no-repeat;
+	background-size: 100% 100%;
+}

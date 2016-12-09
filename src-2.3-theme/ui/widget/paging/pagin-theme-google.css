@@ -1,0 +1,40 @@
+/********* page indicator(temp) *********/
+.af-pagination.google {
+	height:40px;
+}
+
+.af-pagination.google.af-mobile .af-pagination-link {
+	background:#777;
+	font-size:0;
+}
+
+.af-pagination.google.af-mobile .af-pagination-link.af-selected {
+	background:#00AEEF;
+}
+
+.af-pagination.google .af-pagination-link {
+	
+}
+
+.af-pagination.google .af-pagination-link span{
+	background: url(https://www.google.co.kr/images/nav_logo170_hr.png) no-repeat;
+	background-position: -96px 0;
+	background-size: 167px;
+	width: 71px;
+	height:40px;
+}
+
+
+.af-pagination.google .af-pagination-link.af-selected {
+	font-weight:bold;
+	color: red;
+}
+
+.af-pagination.google .af-pagination-prev,
+.af-pagination.google .af-pagination-prevgroup,
+.af-pagination.google .af-pagination-next,
+.af-pagination.google .af-pagination-nextgroup {
+	background-color: #d9e1e9;
+	color: #161616;
+	font-size: 12px;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page | Alopex UI</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+
+<link rel="stylesheet" href="http://grid.alopex.io/dist/css/alopex-grid.css" />
+<link rel="stylesheet" type="text/css" href="/2.3/dist/css/alopex-ui-default.css" />
+<script type="text/javascript"  src="/2.3/js/libs/jquery/jquery-1.10.1.js"></script>
+<script type="text/javascript"  src="/2.3/dist/script/alopex-ui.min.js"></script>
+<script type="text/javascript" src="http://grid.alopex.io/dist/script/alopex-grid-trial.min.js"></script>
+
+
+<script>
+$a.page({
+	//var method = 'GET'; // 화면에서 사용되는 변수
+
+	/*function getGridData(id) { // 화면에서 사용되는 함수.
+    	 function implementation area 
+	    $a.request('service', {
+	        data: id,
+	        success: '#grid',
+	        method: method
+	    });
+    }*/
+    
+
+    
+
+    init: function(id, param) {
+
+       $("#btn_request").click(function(){
+	    
+			$a.request('aa', {
+				url : 'page-grid-data.json', 
+		        method :'GET',
+		        success: ['#grid', function(res) {
+	                // 통신이 성공적으로 이루어 진 경우 호출되는 콜백함수
+	                alert("success!!\n\nres :: \n\n" + JSON.stringify(res));
+	            }],
+				/*success : function(res) {
+	                // 통신이 성공적으로 이루어 진 경우 호출되는 콜백함수
+	                alert("success!!\n\nres :: \n\n" + JSON.stringify(res));
+	                $('#grid').alopexGrid("dataSet",res.data);
+	            },*/
+
+	            fail : function(res) {
+	                // 통신은 성공적으로 이루어 졌으나, 서버오류가 발생한 경우 호출되는 콜백함수
+	                alert("fail!!\n\nres :: \n\n" + JSON.stringify(res));
+	            },
+
+	            error : function(errObject) {
+	                // 통신이 실패한 경우 호출되는 콜백함수
+	                alert("error!!\n\nerrObject :: \n\n" + JSON.stringify(errObject));
+	            }
+			});
+		
+		});
+
+		method = 'POST'; //함수 내부에 서언된 변수 사용
+        //getGridData(param.id);
+
+        initGrid();// 그리드 초기화
+
+		function initGrid() {
+		
+			$('#grid').alopexGrid({
+				title: '그리드',
+
+				width: 800,
+				height: 250,
+				autoColumnIndex: true,
+				columnMapping : [
+				{
+					align : 'center',
+					key : 'check',
+					width : '30px',
+					selectorColumn : true
+				}, {
+					key : 'name',
+					title : 'name',
+					width : '100px'
+				}, {
+					key : 'phone',
+					title : 'phone',
+					width : '100px'
+				}, {
+					key : 'email',
+					title : 'email',
+					width : '250px'
+				}, {
+					align : 'center',
+					key : 'birthday',
+					title : 'birthday',
+					width : '100px'
+				}, {
+					align : 'center',
+					key : 'zip',
+					title : 'zip',
+					width : '100px'
+				}, {
+					align : 'right',
+					key : 'salary',
+					title : 'salary',
+					width : '100px'
+				}, {
+					key : 'country',
+					title : 'country',
+					width : '200px'
+				}, {
+					key : 'city',
+					title : 'city',
+					width : '150px'
+				}, {
+					key : 'company',
+					title : 'company',
+					width : '200px'
+				}, {
+					key : 'type',
+					align: 'center',
+					title : 'type',
+					width : '50px'
+				}
+				]
+			});
+		};
+
+		$('body').setData(param); // param으로 받은 이전 페이지 정보 세팅 
+
+		$('#btn_back').on('click', function() { 
+			$a.back(); // 이전 페이지로 이동
+		});
+
+	}
+});
+
+
+</script>
+</head>
+<body>
+
+	<button class="Button" id="btn_request">조회</button>
+	<div id="grid"></div>
+	<div>
+		<button id="btn_back" class="Button">Back</button>
+		<strong>이전페이지 :</strong>		
+		<span data-bind="text:pageInfo"></span>
+	</div>
+
+		
+</body>
+</html>
+

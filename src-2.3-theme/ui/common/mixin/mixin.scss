@@ -1,0 +1,102 @@
+//ui
+@mixin clearfix(){
+	&:before {
+		content: " ";
+		display:block; 
+		visibility: hidden; 
+		height:0;
+		clear:both
+	}
+	&:after {
+		content: " ";
+		display:block; 
+		visibility: hidden; 
+		height:0;
+		clear:both
+	}
+}
+
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+
+@mixin gutter-options($gutter:"", $gutter-css:"", $class:"", $i:0) {
+	@for $i from 0 through 20 {
+		.#{$gutter}-#{$class}-#{$i * 5} {
+			#{$gutter-css}-#{$class}: ($i * 5) + px;
+		}
+	} 
+}
+
+@mixin width-gutter($width:"", $width-css:"", $i:1) {
+	@for $i from 1 through 20 {
+		.#{$width}-#{$i * 5} {
+			#{$width-css}: percentage(($i * 5) / 100);
+		}
+	} 
+}
+
+// button size
+@mixin btn-size($padding, $font-size, $lineheight) {
+	padding: $padding;
+	font-size: $font-size;
+	line-height: $lineheight;
+}
+
+//Dialog Theme
+@mixin dialog-theme($color, $border) {
+	color: $color;
+	border-bottom: $border;
+}
+
+//paging typeb background
+@mixin page-bg($bgimg, $bgrepeat, $bgpos) {
+	background-image: $bgimg;
+	background-repeat: $bgrepeat;
+	background-position: $bgpos;
+}
+
+//form tag theme
+@mixin theme-color($border-color, $border-hover-color) {
+	border: 1px solid $border-color;
+	
+	&:hover, &:focus, &:active {
+		border: 1px solid $border-hover-color;
+  	}
+}
+
+//border-option
+@mixin border-option($border-top, $border-right, $border-bottom, $border-left) {
+	border-top: $border-top;
+	border-right: $border-right;
+	border-bottom: $border-bottom;
+	border-left: $border-left;
+}
+
+//tabs
+@mixin tabs-arrow($tabs-arrow-bg) {
+	@if $tabs-arrow-bg == 0 {
+		border-top: $tabs-style;
+		border-right: $tabs-style;
+		border-left: 0;
+		border-bottom: 0;
+	}
+	@if $tabs-arrow-bg == 1 {
+		background-position: right bottom;
+	}
+}
+@mixin tabs-ul-line($tabs-ul-before) {
+	@if $tabs-ul-before == 0 {
+		
+	}
+	@if $tabs-ul-before == 1 {
+		content: '';
+		display: table-cell;
+		width: 1px; 
+		background: $tabs-bg;
+		background-position: left bottom;
+	}
+}

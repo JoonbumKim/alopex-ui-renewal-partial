@@ -1,0 +1,197 @@
+<html>
+<head>
+	<meta charset="UTF-8"></meta>
+</head>
+<body>
+	<h2>HTML Form</h2>
+	
+	<form id="testForm" name="input" method="get" data-provider="personinfo">
+		<table data-type="table" border="1" data-bind="css: {background: bgColor}">
+			<colgroup>
+				<col style="width:100px;" />
+				<col />
+			</colgroup>
+			<tr data-bind="visible: bool">
+				<td>font size</td>
+				<td><input data-type="textinput" type="text" data-bind="value:fsize, style: {font-size:fsize}"></td>
+			</tr>
+			<tr>
+				<td>table color</td>
+				<td><input data-type="textinput" type="text" data-bind="value:bgColor"></td>
+			</tr>
+			<tr>
+				<td>Username</td>
+				<td><input data-type="textinput" type="text" data-bind="value:username"></td>
+			</tr>
+			<tr>
+				<td>Username2</td>
+				<td><input data-type="textinput" type="text" data-bind="value:name_gender"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input data-type="textinput" type="password" data-bind="value:password"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td>
+					<input data-type="radio" id="radio1" type="radio" name="gender" value="male" data-bind="checked:gender" />
+					<label for="radio1">male</label>
+					<input data-type="radio" id="radio2" type="radio" name="gender" value="female" data-bind="checked:gender" />
+					<label for="radio2">female</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Home Phone </td>
+				<td><input data-type="textinput" type="text" data-bind="value:phone"></td>
+			</tr>
+			<tr>
+				<td>Cell Phone</td>
+				<td><input data-type="textinput" type="text" data-bind="value:cell"></td>
+			</tr>
+			<tr>
+				<td>Description</td>
+				<td>
+					<textarea data-type="textarea" data-bind="text:description"></textarea>
+					<div style="color:red;" data-bind="html:description"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>Interests</td>
+				<td>
+					<input id="1" type="checkbox" name="interest" value="shopping" data-bind="checked:interest" />
+					<label for="1">shopping</label>
+					<input id="2" type="checkbox" name="interest" value="books" data-bind="checked: interest" />
+					<label for="2">books</label>
+					<input id="3" type="checkbox" name="interest" value="game" data-bind="checked: interest" />
+					<label for="3">game</label>
+					<input id="4" type="checkbox" name="interest" value="sports" data-bind="checked: interest" />
+					<label for="4">sports</label>
+					
+					<div style="color:red;" data-bind="text: interest"></div>
+					
+				</td>
+			</tr>
+			<tr>
+				<td>Occupation</td>
+				<td>
+					<select data-bind="selectedOptions:occupation">
+						<option value="">선택</option>
+						<option value="professor">professor</option>
+						<option value="student">student</option>
+						<option value="programmer">programmer</option>
+						<option value="etc">etc</option>
+					</select>
+					<span data-bind="text: occupation"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>family</td>
+				<td>
+					<table data-type="table">
+						<thead>
+							<tr>
+								<td>Image</td>
+								<td>Title</td>
+								<td>Descriptiont</td>
+							</tr>
+						</thead>
+						<tbody data-bind="foreach:family">
+							<tr >
+								<td>
+									<img src="" data-bind="attr: {src: image}" />
+								</td>
+								<td data-bind="html:name"></td>
+								<td>
+									<input type="text" data-bind="value:relation"/>
+								</td>
+								
+								
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</table>
+		
+		<table data-type="table">
+						<thead>
+							<tr>
+								<td>Image</td>
+								<td>Title</td>
+								<td>Descriptiont</td>
+							</tr>
+						</thead>
+						<tbody data-bind="foreach:family">
+							<tr >
+								<td>
+									<img src="" data-bind="attr: {src: image}" />
+								</td>
+								<td data-bind="html:name"></td>
+								<td>
+									<input type="text" data-bind="value:relation"/>
+								</td>
+								
+								
+							</tr>
+						</tbody>
+					</table>
+		
+		
+		<input type="submit" value="Submit">
+	</form>
+	
+	
+	
+<!-- 	<ul data-type="list" data-bind="foreach:movies"> -->
+<!-- 		<li id="testList"> -->
+<!-- 			<a> -->
+<!-- 				<img data-bind="attr: {src : imageUrl, alt:description}"/> -->
+<!-- 				<h3 data-bind="html : title"></h3> -->
+<!-- 				<span data-bind="html: director"></span> -->
+<!-- 			</a> -->
+<!-- 		</li> -->
+<!-- 	</ul> -->
+	
+	
+	<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script src="alopex-data2.js"></script>
+	<script>
+	var model2 = $.alopex.databind({
+	  bool: false,
+	    fsize: '12px',
+	    bgColor: '#fff',
+	    price: 111,
+	    formattedPrice: function() {
+	      
+	    },
+	    username: 'Steve',
+	    gender: 'female',
+	    password: 'password',
+	    phone: '515-233-5343',
+	    cell: '010-3333-3333',
+	    description: 'Descript\n Description1 33333\n test\n Data',
+	    occupation: 'programmer',
+	    interest: ['shopping', 'sports'],
+	    family: [
+	        {
+	          name: 'daddy',
+	          relation: 'father',
+	          image: 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTRAPbgHwVhCV0mVGk42ftb-1BQwtZR55TBpaH--tEp06lEAj0qTQ'
+	        },
+	        {
+	          name: 'mommy',
+	          relation: 'mother',
+	          image: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQQQSxrUt_BJF47UnqMngxjp8j9ZvAa1MXeNVphxXWkDBAaCtXG'
+	        },
+	        {
+	          name: 'granpa',
+	          relation: 'grand father',
+	          image: 'data:image/jpeg;base64,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'
+	        }],
+	    name_gender: function() { // computed 기능.
+	      return this.username.get() + ' = ' + this.gender.get();
+	    }
+  });
+	</script>
+</body>
+</html>

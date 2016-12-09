@@ -1,0 +1,18 @@
+/********* textarea *********/
+.af-textarea {
+	padding: 8px ;
+	margin: 10px ;
+	line-height: 21px;
+	vertical-align: middle;
+	overflow:auto;
+	
+	border:1px solid;
+	
+	scrollbar-face-color: #ffffff;
+	scrollbar-shadow-color: #ffffff;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-3dlight-color: #eeeeee;
+	scrollbar-darkshadow-color: #eeeeee;
+	scrollbar-track-color: #eeeeee;
+	scrollbar-arrow-color: #a1a4a8;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+	<table class="Table" data-highlight="all"> <!-- 모든 셀을 클릭하였을 시, 하이라이트 된다. -->
+		<thead>
+			<tr>
+				<td data-highlight="column">Head1</td> <!-- 헤더 td를 클릭할 경우, 해당 column이 하이라이트. -->
+				<td>Head2</td>
+				<td>Head3</td>
+				<td>Head4</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td data-highlight="row">Row 1, Cell1</td> <!-- 해당 셀 클릭할 경우, 해당 row 하이라이트. -->
+				<td>Row 1, Cell2</td>
+				<td>Row 1, Cell3</td>
+				<td data-highlight="both">Row 1, Cell4</td> <!-- 해당 셀 클릭할 경우, 해당 row & column 하이라이트. -->
+			</tr>
+			<tr>
+				<td>Row 2, Cell1</td>
+				<td data-highlight="table">Row 2, Cell2</td> <!-- 해당 셀 클릭할 경우, 전체 table???? 하이라이트. -->
+				<td>Row 2, Cell3</td>
+				<td>Row 2, Cell4</td>
+			</tr>
+			<tr>
+				<td>Row 3, Cell1</td>
+				<td>Row 3, Cell2</td>
+				<td>Row 3, Cell3</td>
+				<td>Row 3, Cell4</td>
+			</tr>
+			<tr>
+				<td>Row 4, Cell1</td>
+				<td>Row 4, Cell2</td>
+				<td>Row 4, Cell3</td>
+				<td>Row 4, Cell4</td>
+			</tr>
+			<tr>
+				<td>Row 5, Cell1</td>
+				<td>Row 5, Cell2</td>
+				<td>Row 5, Cell3</td>
+				<td>Row 5, Cell4</td>
+			</tr>
+			
+		</tbody>
+	</table>
+</body>
+</html>

@@ -1,0 +1,156 @@
+.#{$table}-wrapper {
+	position:relative;
+}
+.#{$table}-scroller {
+	display:inline-block;
+	overflow:auto;
+}
+.#{$table} {
+	border-collapse: collapse;
+	font-size: $font-size-base;
+	color: $base-text-gray; 
+	border: $table-td-style;
+}
+.#{$table} thead tr {
+	border-top: $table-thead-top;
+}
+.#{$table} tr {
+	border-top: $table-td-style;
+	
+	&:nth-child(odd) {
+		background: #ffffff;
+	}
+	
+	&:nth-child(even) {
+		background: $table-even-bg;
+	}
+}
+.#{$table} th {
+	height: $table-th-height;
+	padding: $table-th-gutter;
+	color: $table-th-font-color;
+	line-height: $table-lineheight;
+	border-left: $table-td-style;
+	@include gradation($flag, $table-th-bg, $table-th-bg, $table-th-bg-backend);
+}
+.#{$table} tbody {
+	border-top: $table-tbody-top;
+	
+	th {
+		color: $base-text-gray;
+		font-weight: normal;
+		border-top: $table-td-style;
+		border-left: $table-td-style;
+		filter: none;
+		background: $table-tbody-th-bg;
+		@include background-clip(padding-box);
+	}
+	
+	tr {
+		text-align: center;
+	}
+}
+.#{$table} td {
+	height: $table-td-height;
+	padding: $table-gutter;
+	line-height: $table-lineheight; 
+	border-left: $table-td-style;
+}
+.#{$table} .Left-line {
+	border-left: $table-td-style;
+}
+.#{$table} .Right-line {
+	border-right: $table-td-style;
+}
+.#{$table} tr .Color-typea {
+	background: $table-color-typea;
+}
+.#{$table} tr .Color-typeb {
+	background: $table-color-typeb;
+}
+.#{$table} tr .Color-typec {
+	background: $table-color-typec;
+}
+.#{$table} tr .Color-typed {
+	background: $table-color-typed;
+}
+.#{$table}.Form-type tr {
+	border-top: $table-td-style;
+	
+	&:nth-child(even) td {
+		background: $body-bg;
+	}
+}
+.#{$table}.Form-type tbody {
+	border-top:0;
+}
+.#{$table}.Form-type tbody th {
+	padding: $table-form-tbody-padding;
+	color: $table-th-font-color;
+	font-weight: bold;
+	text-align: $table-form-th-align;
+	border: $table-td-style;
+	background-clip: padding-box !important;
+	@include gradation($flag, $table-th-bg, $table-th-bg, $table-th-bg-backend);
+}
+.#{$table}.Form-type .#{$table} th {
+	text-align: $table-th-align;
+}
+.#{$table}.Form-type td {
+	text-align: left;
+}
+.#{$table} .AscendingOrder,
+.#{$table} .DescendingOrder {
+	position: relative;
+}
+.#{$table} .AscendingOrder .Icon, 
+.#{$table} .DescendingOrder .Icon {
+	position: absolute; 
+	top: 50%;
+	right: $table-sort-right;
+	display:inline-block;
+	margin-top: $table-sort-top;
+	@include opacity($table-sort-opacity);
+}
+.#{$table} .AscendingOrder .Icon{
+	background-position: $table-sort-asc-pos;
+}
+.#{$table} .DescendingOrder .Icon{
+	background-position: $table-sort-dsc-pos;
+}
+.#{$table} .ResizeIcon {
+	position: absolute;
+	right: 1px;
+	bottom: 1px;
+	width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid black;
+}
+.#{$table} .Editor {
+	cursor: text;
+	background: url($table-edit-icon) no-repeat 93% center;
+}
+.#{$table} tr {
+	&:nth-child(even) td.Editor {
+		background: url($table-edit-icon) no-repeat 93% center $table-even-bg;
+	}
+	&:nth-child(odd) td.Editor {
+		background: url($table-edit-icon) no-repeat 93% center #ffffff;
+	}
+	&:nth-child(even) td.Editor.Editing {
+		background: $table-even-bg;
+	}
+	&:nth-child(odd) td.Editor.Editing {
+		background: #ffffff;
+	}
+}
+.#{$table} .Editor input {
+	overflow: hidden;
+	width: $table-edit-width;
+	padding: $table-edit-padding;
+	margin: 0;
+	vertical-align: middle;
+	line-height: $table-edit-lineheight;
+	border: 0;
+}

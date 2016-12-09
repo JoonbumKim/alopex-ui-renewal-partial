@@ -1,0 +1,41 @@
+.#{$tooltip} {
+	position: absolute;
+	z-index:10;
+	padding: $tooltip-padding;
+	font-size: $font-size-base;
+	color: $tooltip-color; 
+	background: $tooltip-bg;
+	@include border-radius($border-radius-base);
+}
+.#{$tooltip}:before {
+	content:"";
+	position: absolute;
+	z-index: 10;
+    display: block; 
+}
+.#{$tooltip}.Top:before {
+	top: 100%;
+	left: 50%;
+	margin-left: $tooltip-gutter;
+	@include border-option($tooltip-border-pattern, $tooltip-border-trans, 0, $tooltip-border-trans);
+}
+.#{$tooltip}.Bottom:before {
+	top: $tooltip-bottom-top;
+	left: 50%;
+	margin-left: $tooltip-gutter;
+	border-width: $tooltip-bottom-width; 
+	@include border-option(0, $tooltip-border-trans, $tooltip-border-pattern, $tooltip-border-trans);
+}
+.#{$tooltip}.Left:before {
+	left: 100%;
+	top: 50%;
+	margin-top: $tooltip-gutter;
+	@include border-option($tooltip-border-trans, 0, $tooltip-border-trans, $tooltip-border-pattern);
+}
+.#{$tooltip}.Right:before {
+	left: -5px;
+	top: 50%;
+	margin-top: $tooltip-gutter;
+	border: 0;
+	@include border-option($tooltip-border-trans, $tooltip-border-pattern, $tooltip-border-trans, 0);
+}

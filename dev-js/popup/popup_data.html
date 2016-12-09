@@ -1,0 +1,57 @@
+<!-- child -->
+<!-- iframe: true 인 경우, DOCTYPE html head title meta link body 등 포함 시켜야 한다. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Popup Data</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+	
+	<link rel="stylesheet" type="text/css" href="../../dist/css/alopex-ui-default.css" />
+	
+	<script type="text/javascript"  src="../../js/libs/jquery/jquery-1.11.3.js"></script>
+	<script type="text/javascript"  src="../../dist/script/alopex-ui.min.js"></script>	
+	<style>
+
+	#popup_wrap {	    
+	    padding: 20px;	
+	}
+	#popup_wrap div {
+		text-align: center
+	}
+	#popCont {
+		font-size: 32px;
+	}
+	#btn_closePop {
+		position: absolute;
+	    bottom: 0;
+	    margin-bottom: 10px;
+	    left: 50%;
+	    margin-left: -35px;
+	}
+	
+	</style>
+	<script>
+	$a.page(function() {
+		this.init = function(id, param) {
+		    // $a.popup() 이 넘겨받은 data를 param으로 전달.
+		    var color = param["item"];
+		    var text = "하단의 close 버튼을 누르면, 팝업버튼 색상이 "+color+"로 변경됩니다.";
+		    $('#popCont').html(text);
+		    $('#btn_closePop').click( function(){ // close 버튼을 누르면 
+				$a.close(color); // 데이터를 팝업을 띄운 윈도우의 callback에 전달 
+		    });
+		}
+	});
+	</script>
+</head>
+<body>
+	<div id="popup_wrap">		
+		<span>popup_data.html</span>
+		<div id="popCont"></div>
+		<button id="btn_closePop" class="Button">close</button>		
+	</div>
+</body>
+</html>

@@ -1,0 +1,175 @@
+
+/********* Navigation Menu ********/
+/* Common Style */
+.af-accordion.af-default {
+	
+}
+
+
+
+/*******************대 메뉴 끝******************/
+
+.af-accordion.af-default a {
+	color:#000000;
+	font-size:12px;
+}
+
+
+.af-accordion.af-default .af-accordion-sub > li { /* 세로로 display */
+
+}
+
+/********************** Mobile Only */
+.af-accordion.af-default li {
+
+}
+
+.af-accordion.af-default ul {
+
+}
+
+.af-accordion.af-default  a {
+
+}
+
+.af-accordion.af-default  a.af-hover {
+	background: #00cfdc;
+	background: -ms-linear-gradient(top, #8BEEF4 0%, #2BD9E4 100%);
+	background: -moz-linear-gradient(top, #8BEEF4 0%, #2BD9E4 100%);
+	background: -o-linear-gradient(top, #8BEEF4 0%, #2BD9E4 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #8BEEF4), color-stop(1, #2BD9E4));
+	background: -webkit-linear-gradient(top, #8BEEF4 0%, #2BD9E4 100%);
+	background: linear-gradient(to bottom, #8BEEF4 0%, #2BD9E4 100%);
+  	
+  	border-color:#00a0ae;
+}
+
+/*customizable */
+.af-accordion.af-default  a.af-pressed {
+	background: #00bede;
+	background: -ms-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: -moz-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: -o-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #32D0EB), color-stop(1, #04BFE0));
+	background: -webkit-linear-gradient(top, #32D0EB 0%, #04BFE0 100%);
+	background: linear-gradient(to bottom, #32D0EB 0%, #04BFE0 100%);
+  	
+  	border-color:#007191;
+	color: #ffffff;
+}	
+
+.af-accordion.af-default  a.af-disabled{
+	border: 1px solid #c8c8c8;
+	color: #9a9a9a;
+	background: #e7e7e7;
+	
+}
+
+
+.af-accordion.af-default > li {
+	background: #e5e6e5;
+	background: -ms-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -moz-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -o-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4 ), color-stop(1, #e5e6e5));
+	background: -webkit-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: linear-gradient(to bottom, #f4f4f4  0%, #e5e6e5 100%);
+	
+	border:1px solid #a6a6a6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-accordion.af-default > li.af-hover {
+	background: #f1f1f1 ;
+	background: -ms-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -moz-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -o-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff  ), color-stop(1, #f1f1f1));
+	background: -webkit-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: linear-gradient(to bottom, #ffffff   0%, #f1f1f1 100%);
+	
+	border:1px solid #dadada;
+}
+
+.af-accordion.af-default > li.af-accordion-expand {
+	background: #00bede;
+	background: -ms-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -moz-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -o-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #65d9ec ), color-stop(1, #04bfe0));
+	background: -webkit-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: linear-gradient(to bottom, #65d9ec  0%, #04bfe0 100%);
+	
+	border:1px solid #0099c6;
+}
+
+.af-accordion.af-default > li.af-expandable > a {
+/* 	background:url('./images/navibar_dropdown_normal.png') no-repeat 95% center; */
+}
+
+.af-accordion.af-default > li.af-accordion-expand > a {
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+/* 	background: url('./images/navibar_dropdown_close_w.png') no-repeat 95% center; */
+}
+
+.af-accordion.af-default > li.af-hover.af-accordion-expand > a {
+	color:#474747;
+	font-size:14px;
+	font-weight:bold;
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.af-accordion.af-default > li > .af-accordion-sub {
+	background: #ffffff;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	border:1px solid #c3c3c3;
+}
+
+.af-accordion.af-default .af-accordion-sub a {
+	background:url(./images/navibar_child_normal.png) no-repeat 95% center;
+}
+
+.af-accordion.af-default .af-accordion-sub > li {
+	border-bottom: 1px solid #edeef0;
+	background: #ffffff;
+}
+
+.af-accordion.af-default .af-accordion-sub > li.af-hover {
+	background: #e5e6e5 ;
+	background: -ms-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -moz-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -o-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4), color-stop(1, #e5e6e5));
+	background: -webkit-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: linear-gradient(to bottom, #f4f4f4 0%, #e5e6e5 100%);
+}
+
+.af-accordion.af-default .af-accordion-sub > li.af-accordion-expand {
+	background: #a5e8f5 ;
+	background: -ms-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: -moz-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: -o-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #beedf6), color-stop(1, #a5e8f5));
+	background: -webkit-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: linear-gradient(to bottom, #beedf6 0%, #a5e8f5 100%);
+}
+
+.af-accordion.af-default .af-expandable > a {
+	background:url(./images/navibar_child_dropdown_normal.png) no-repeat 95% center;
+}
+
+.af-accordion.af-default .af-expandable > a.af-hover{
+	background: url('./images/navibar_child_dropdown_hover.png') no-repeat 95% center;
+}
+
+.af-accordion.af-default .af-expandable > a.af-expand{
+	background: url('./images/navibar_child_dropdown_close_w.png') no-repeat 95% center;
+}

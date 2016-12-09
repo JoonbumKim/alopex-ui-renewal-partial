@@ -1,0 +1,188 @@
+.#{$accordion} {
+	position:relative;
+	width: 100%; 
+	padding: 0;
+	list-style: none; 
+	border: $accrd-border-style;
+	border-bottom: 0;
+	@include border-radius($border-radius-base);
+}
+.#{$accordion}, 
+.#{$accordion} * {
+	padding: 0;
+	font-size: $font-size-base;
+	line-height: $accrd-lineheight;
+	color: $accrd-font-color;
+}
+.#{$accordion} ul > li { 
+	display: block;
+	width: 100%;
+	list-style: none;
+	border-top: $accrd-border-style;
+	  
+	&:hover, &.Expanded {
+		@include gradation($flag, $accrd-bg-depth, $accrd-bg-depth, $accrd-bg-depth-backend);
+	}
+}
+.#{$accordion} li > a {
+	display: block; 
+	width: 100%;
+	padding: $accrd-base-padding;
+	text-decoration: none; 
+	  
+	&:before {
+		content:'';
+		display:inline-block;
+		width: $accrd-img-width;
+		height: $accrd-img-height;
+		background: url($accrd-img) no-repeat 0 -162px;
+	}
+  
+	&:after {
+		content:'';
+		float: right;
+		width: $accrd-img-width;
+		height: $accrd-img-height;
+		margin-top: $accrd-img-pos;
+	}
+	
+	&.Disabled {
+		color: $btn-text-disabled;
+		background: $accrd-disabled-bg;
+		border: $accrd-disabled-border;
+	}
+}
+//1depth
+.#{$accordion} > li {
+	border-bottom: $accrd-border-style;
+	@include gradation($flag, $accrd-bg, $accrd-bg, $accrd-bg-backend);
+  
+	> a {
+  		@include gradation($flag, $accrd-bg, $accrd-bg, $accrd-bg-backend);
+	  	&:before {
+			content: none;
+		}
+		&:hover {
+			font-weight: $accrd-font-style-hover;
+		  	text-decoration : none;
+			color: $accrd-font-active;
+			@include gradation($flag, $accrd-bg-depth, $accrd-bg-depth, $accrd-bg-depth-backend);
+		}
+  	} 
+}
+.#{$accordion} > li > a + * {
+  	@include border-radius($border-radius-base);
+}
+
+.#{$accordion} > li.Expandable > a {
+	&:before {
+		content: none;
+	}
+}
+.#{$accordion} li.Expandable > a {
+	display: block; 
+	cursor: pointer;
+	text-decoration: none; 
+	@include gradation($flag, $accrd-bg, $accrd-bg, $accrd-bg-backend);
+	@include transition($base-trans);
+	  
+	&:after {
+		background: url($accrd-img) no-repeat right 0px;
+	}
+}
+.#{$accordion} > li.Expandable.Expanded > a, 
+.#{$accordion} > li.Expandable > a:hover {
+	display: block;
+	font-size: $accrd-font-size;
+	font-weight: $accrd-font-style-hover;
+  	text-decoration : none;
+	color: $accrd-font-active;
+	@include gradation($flag, $accrd-bg-depth, $accrd-bg-depth, $accrd-bg-depth-backend);
+	
+	&:before {
+	  	content: none;
+	  }
+}
+.#{$accordion} > li.Expandable.Expanded > a:after,
+.#{$accordion} > li.Expandable.Expanded > a:hover:after {
+	background: url($accrd-img) no-repeat $accrd-expanded-pos;
+}
+.#{$accordion} > li.Expandable > a:hover:after {
+	background: url($accrd-img) no-repeat $accrd-expandable-pos;
+}
+.#{$accordion}  li > div {
+	display: block; 
+	width: 100%;
+	padding: $accrd-base-padding;
+	line-height: $accrd-lineheight;
+	background: $accrd-bg-3depth;
+	border-top: $accrd-border-style;
+	@include border-radius(0);
+}
+//.#{$accordion}  li > div * {
+//	margin: 0;
+//	padding: 0;
+//	line-height: $accrd-lineheight;
+//}
+
+//2depth child
+.#{$accordion} > li.Expandable > ul > li > a, 
+.#{$accordion} > li.Expandable > ul > li > a:hover {
+	background: $accrd-bg-2depth;
+}
+.#{$accordion} li.Expandable > ul > li.Expandable > a {
+	cursor: pointer;
+	display: block; 
+	text-decoration: none; 
+	background: $accrd-bg-2depth;
+	  
+	&:after {
+		background: url($accrd-img) no-repeat right 0px;
+	}
+}
+.#{$accordion} li.Expandable.Expanded > ul > li.Expandable.Expanded > a  {
+	background: $accrd-bg-2depth;
+	  
+	&:after {
+		background: url($accrd-img) no-repeat $accrd-subarrow-pos;
+	}
+}
+
+//3depth
+.#{$accordion} > li > ul > li li a, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li a,
+.#{$accordion} > li > ul > li li a:hover, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li a:hover {
+	padding-left:20px;
+	background: $accrd-bg-3depth;
+}
+.#{$accordion} > li.Expandable > ul > li.Expandable li.Expandable a {
+	background: $accrd-bg-3depth;
+}
+.#{$accordion} li.Expandable.Expanded > ul > li.Expandable.Expanded > ul > li.Expandable.Expanded > a  {
+	background: $accrd-bg-3depth;
+  
+	&:after {
+		background: url($accrd-img) no-repeat $accrd-subarrow-pos;
+	}
+}
+.#{$accordion} > li > ul > li li li a, 
+.#{$accordion} > li.Expandable > ul > li.Expandable li li a, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li li a,
+.#{$accordion} > li > ul > li li li a:hover, 
+.#{$accordion} > li.Expandable > ul > li.Expandable li li a:hover, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li li a:hover {
+	padding-left: 30px;
+	background: $accrd-bg-4depth;
+}
+.#{$accordion} > li.Expandable > ul > li.Expandable li.Expandable li a, 
+.#{$accordion} > li.Expandable > ul > li.Expandable li.Expandable li a:hover {
+	background: $accrd-bg-4depth;
+}
+
+.#{$accordion} > li > ul {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	@include border-radius(0);
+}

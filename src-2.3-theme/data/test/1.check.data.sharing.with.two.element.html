@@ -1,0 +1,33 @@
+<input id="input1" type="text" />
+
+<input id="input2" type="text" />
+
+
+<script>
+
+
+
+	function eHandler(e) {
+		e.currentTarget.source.value = e.currentTarget.value
+	}
+	var str = {
+	    value: 'aaaa';
+	}
+	
+	var input1 = document.getElementById('input1');
+	var input2 = document.getElementById('input2');
+	
+	input1.source = str;
+	input2.source = str;
+	
+	str.listener = [];
+	listener['0'] = input1;
+	listener['1'] = input2;
+	
+	input1.addEventListener(eHandler);
+	input2.addEventListener(eHandler);
+	
+	
+
+
+</script>

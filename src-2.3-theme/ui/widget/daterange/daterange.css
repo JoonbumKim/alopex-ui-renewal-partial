@@ -1,0 +1,24 @@
+.af-daterange {
+	display:inline-block;
+}
+
+.af-daterange .af-daterange-start-button, .af-daterange .af-daterange-end-button{
+	vertical-align:middle;
+}
+
+.af-daterange .af-daterange-start, .af-daterange .af-daterange-end{
+	overflow: hidden;
+	padding: 0px 8px ;
+	margin: 0 10px ;
+	line-height: 26px;
+	height:26px;
+	vertical-align: middle;
+}
+
+
+.af-daterange.af-disabled .af-daterange-start-button, 
+.af-daterange.af-disabled .af-daterange-end-button,
+.af-daterange.af-disabled .af-daterange-start, 
+.af-daterange.af-disabled .af-daterange-end {
+	opacity: 0.7;
+}

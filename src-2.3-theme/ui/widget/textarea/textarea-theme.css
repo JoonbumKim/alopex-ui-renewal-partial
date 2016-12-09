@@ -1,0 +1,28 @@
+
+/********* textarea *********/
+.af-textarea.af-default {
+	background-color: #ffffff;
+	border-color: #bfc8cf;
+	font-size: 12px;
+  	color: #000000;
+  	
+  	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-textarea.af-default.af-hover{
+	background-color: #ffffff;
+	border-color: #00bede;
+}
+
+.af-textarea.af-default:focus{
+	background-color: #ffffff;
+	border-color: #00bede;
+}
+
+.af-textarea.af-default.af-disabled {
+    background-color: #f2f2f2;
+	border-color: #d7dadd;
+	color: #9a9a9a;
+}

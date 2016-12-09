@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inline Editing - Table | Alopex UI</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script>
+		$(document).ready(function () {
+		  $('#contact').find('.af-table-editor').each(function() {
+		    this.value = this.innerHTML;
+		  })
+		  
+		  $('#btn1').click(function() {
+		    addContact();
+		  }); 
+		  $('#btn2').click(function() {
+		    save();
+		  }); 
+		  $('#btn3').click(function() {
+		    discard();
+		  }); 
+		});
+		
+		function addContact() {
+		  $('#contact > tbody')
+		  	.append('<tr><td data-editable="true"></td><td data-editable="true"></td><td data-editable="true"></td><td data-editable="true"></td></tr>');
+		  $('#contact').refresh();
+		}
+		
+		function save() {
+		  $('#contact').find('[class*=af-edited]').each(function() {
+		    this.value = this.innerHTML;
+		    $(this).removeClass('af-edited');
+		  });
+		}
+		
+		function discard() {
+		  $('#contact').find('[class*=af-edited]').each(function() {
+		    this.innerHTML = (this.value == undefined)?"": this.value;
+		    $(this).removeClass('af-edited');
+		  });
+		}
+		
+	</script>
+</head>
+<body>
+	<button id="btn1" class="Button">New Contact</button>
+	<div class="Table-wrapper">
+    	<div class="Table-scroller">
+			<table id="contact" class="Table">
+				<thead>
+					<tr>
+						<td>First Name</td>
+						<td>Last Name</td>
+						<td>Organization</td>
+						<td>Email</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td data-editable="true">David</td>
+						<td data-editable="true">Howard</td>
+						<td data-editable="true">SK C&C</td>
+						<td data-editable="true">dhoward@sk.com</td>
+					</tr>
+					<tr>
+						<td data-editable="true">Jerry</td>
+						<td data-editable="true">Guynes</td>
+						<td data-editable="true">SK C&C</td>
+						<td data-editable="true">guynes@sk.com</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<button id="btn2" class="Button">Save Changes</button>
+	<button id="btn3" class="Button">Discard Changes</button>
+</body>
+</html>

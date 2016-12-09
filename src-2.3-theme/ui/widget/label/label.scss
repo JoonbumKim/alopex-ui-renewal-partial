@@ -1,0 +1,27 @@
+.#{$label} {
+	display: inline-block;
+	padding: $label-padding;
+	font-size: $font-size-base;
+	color: $base-text-white;
+	@include border-radius($border-radius-base);
+}
+.#{$label}.Default {
+	@include gradation($flag, $color-default, $color-default, $color-default-backend);
+}
+.#{$label}.Primary {
+	color: $label-font-color;
+	border: $label-border-style;
+	@include gradation($flag, $label-color-primary, $label-color-primary, $label-color-primary-backend);
+}
+.#{$label}.Success {
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+.#{$label}.Warning {
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+.#{$label}.Danger {
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+.#{$label}.Confirm {
+	@include gradation($flag, $color-info, $color-info, $color-info-backend);
+}

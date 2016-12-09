@@ -1,0 +1,205 @@
+
+/********* Navigation Menu ********/
+/* Common Style */
+.af-navmenu {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	position:relative;
+}
+
+.af-navmenu.af-desktop li {
+	position:relative;
+	cursor: pointer;
+	list-style: none ;
+}
+
+/* 대 메뉴 */
+
+.af-navmenu.af-desktop {
+	height:45px;
+}
+
+.af-navmenu.af-desktop > li {
+	padding: 0 20px;
+	width:auto;
+	line-height: 45px;
+	height: 45px;
+	display: inline-block;
+	float:left;
+}
+
+.af-navmenu.af-desktop > li > a {
+	text-decoration : none;
+	display:inline;
+	height:100%;
+}
+
+.af-navmenu.af-desktop > li.af-expandable > .af-navmenu-icon{
+	display:inline-block;
+	width:10px;
+	height:10px;
+	border:0;
+	margin-left:6px;
+}
+
+.af-navmenu.af-desktop > li.af-navmenu-expand > .af-navmenu-icon{
+	visibility: hidden;
+}
+
+.af-navmenu.af-desktop > li.af-navmenu-expand {
+
+}
+
+.af-navmenu.af-desktop > li.af-navmenu-expand > a {
+	text-decoration : none;
+	display:inline;
+	height:100%;
+}
+
+.af-navmenu.af-desktop > li:hover.af-navmenu-expand > a {
+	text-decoration : none;
+	display:inline;
+	height:100%;
+}
+
+/*******************대 메뉴 끝******************/
+
+.af-navmenu a {
+	text-decoration : none;
+	display:block;
+	height:100%;
+}
+
+
+.af-navmenu .af-navmenu-sub > li { /* 세로로 display */
+	display: block;
+	width:100%;
+	list-style: none;
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.af-navmenu.af-desktop > li > .af-navmenu-sub {
+	position:absolute;
+	top:98%;
+	left:60%;
+	margin:0px;
+	padding:0px;
+}
+
+/* 3 depth 이상 sub menu */
+.af-navmenu.af-desktop .af-navmenu-sub {
+	position:absolute;
+	top:3px;
+	left:102%;
+	margin:0px;
+	padding:0px;
+}
+
+.af-navmenu.af-desktop .af-navmenu-sub > li {
+	line-height: 32px;
+	height:32px;
+	padding:0 20px;
+}
+
+.af-navmenu.af-desktop .af-navmenu-sub > li.af-navmenu-expand {
+
+}
+
+.af-navmenu.af-desktop .af-navmenu-sub > li.af-expandable > .af-navmenu-icon{
+	position:absolute;
+	display:inline-block;
+	width:10px;
+	height:20px;
+	margin-left:6px;
+	top:6px;
+	right:20px;
+}
+
+.af-navmenu.af-desktop .af-navmenu-sub > li.af-navmenu-expand > .af-navmenu-icon{
+	visibility: hidden;
+}
+
+.af-navmenu.af-desktop .af-navmenu-sub .af-expandable > a {
+	width:100%;
+	line-height: 32px;
+	height:32px;
+	display:inline;
+}
+
+.af-navmenu.af-desktop .af-navmenu-sub a {
+	width:100%;
+	line-height: 32px;
+	height:32px;
+}
+
+/********************** Mobile Only */
+.af-navmenu.af-mobile li {
+	list-style:none ;	
+}
+
+.af-navmenu.af-mobile ul {
+	width:100%;
+}
+
+.af-navmenu.af-mobile  a {
+	padding:10px 20px;
+}
+
+.af-navmenu.af-mobile > li {
+	width:auto;
+	line-height: 43px;
+}
+
+.af-navmenu.af-mobile > li.af-navmenu-expand {
+	
+}
+
+.af-navmenu.af-mobile > li.af-expandable > a {
+
+}
+
+.af-navmenu.af-mobile > li.af-navmenu-expand > a {
+	text-decoration : none;
+	display:block;
+	height:100%;
+}
+
+.af-navmenu.af-mobile > li:hover.af-navmenu-expand > a {
+	text-decoration : none;
+	display:block;
+	height:100%;
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.af-navmenu.af-mobile > li > .af-navmenu-sub {
+	position:relative;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+.af-navmenu.af-mobile .af-navmenu-sub a {
+	width:100%;
+	line-height: 30px;
+	padding: 4px 30px;
+}
+
+.af-navmenu.af-mobile .af-navmenu-sub > li {
+	line-height: 32px;
+}
+
+.af-navmenu.af-mobile .af-navmenu-sub > li.af-navmenu-expand {
+
+}
+
+.af-navmenu.af-mobile .af-navmenu-sub .af-expandable > a {
+	width:100%;
+	line-height: 30px;
+	padding: 4px 30px;
+}
+
+.af-navmenu.af-mobile .af-navmenu-sub > li.af-expandable.af-expand > a{
+
+}
+

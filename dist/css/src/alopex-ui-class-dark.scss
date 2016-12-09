@@ -1,0 +1,5292 @@
+/*! Alopex UI - v2.3.6.18 - 2016-12-09
+* http://ui.alopex.io
+* Copyright (c) 2016 alopex.ui; Licensed Copyright. SK C&C. All rights reserved. */
+// *Base value
+$base-text-white: #ffffff;
+$base-text-black: #000000;
+$base-text-gray: #303030;
+
+$link-text: #9b9b9b;
+$link-hover: $link-text;
+$link-active: $link-hover;
+$link-select: $base-text-gray;
+$link-decoration: underline;
+
+//font, font-size, line-height, header font etc
+$font-size-base: 12px;
+$font-size-small: 11px;
+$font-size-large: 20px;
+
+//body
+$body-bg: #ffffff;
+$border-radius-base: 2px;
+
+//component image url
+$component-image: './images/component_dark.png';
+
+//flag
+$flag: 0; 
+
+//type
+$type: dark;
+
+// *Component
+
+// **theme color
+$color-white: #ffffff;
+$color-cancel: #9ea3a9;
+$color-primary: #222222;
+$color-primary-backend: #222222;
+$color-default: #596068;
+$color-default-backend: #596068;
+$color-confirm: #006cff;
+$color-confirm-backend: #006cff;
+$color-success: #6bc600;
+$color-success-backend: #6bc600;
+$color-warning: #ff630e;
+$color-warning-backend: #ff630e;
+$color-danger: #c60001;
+$color-danger-backend: #c60001;
+$color-info: #006cff;
+$color-info-backend: #006cff;
+
+$color-primary-hover: #222222;
+$color-default-hover: #44484d;
+$color-default-hover-backend: #44484d;
+$color-confirm-hover: #005ad5;
+$color-confirm-hover-backend: #005ad5;
+$color-success-hover: #61b300;
+$color-success-hover-backend: #61b300;
+$color-warning-hover: #e65100;
+$color-warning-hover-backend: #e65100;
+$color-danger-hover: #a30000;
+$color-danger-hover-backend: #a30000;
+
+// **accordion
+$accrd-img: './images/accordion_dark.png';
+$accrd-img-width: 10px;
+$accrd-img-height: 5px;
+$accrd-img-pos: 8px;
+$accrd-disabled-bg: #e7e7e7;
+$accrd-disabled-border: 1px solid #c8c8c8;
+$accrd-bg: #ffffff;
+$accrd-bg-backend: $accrd-bg;
+$accrd-font-size: $font-size-base;
+$accrd-font-color: $base-text-gray;
+$accrd-font-active: #ffffff;
+$accrd-lineheight: 20px;
+$accrd-border-style: 1px solid #596068;
+$accrd-font-color-hover: #ffffff;
+$accrd-font-style-hover: bold;
+$accrd-first-bg-hover: #44484d;
+$accrd-first-bg-active: $accrd-first-bg-hover;
+$accrd-height:36px;
+$accrd-base-padding: 9px 10px;
+$accrd-bg-depth: #44484d;
+$accrd-bg-depth-backend: #44484d;
+$accrd-bg-2depth: #d3d5d8;
+$accrd-bg-3depth: #e5e6e7;
+$accrd-bg-4depth: #f5f6f6;
+$accrd-expandable-pos: right -214px;
+$accrd-expanded-pos: right -54px;
+$accrd-subarrow-pos: right -108px;
+
+// **button
+$btn-white-border: 1px solid #040404;
+$btn-bg-disabled: #b3b9c0;
+$btn-text-disabled: #dcdcdc;
+$btn-font-size: $font-size-base;
+$btn-text-color: $base-text-white;
+$btn-text-color-hover: $base-text-white;
+$btn-text-gray: $base-text-gray;
+$btn-bg: #222222;
+$btn-bg-backend: #222222;
+$btn-bg-hover: #44484d;
+$btn-bg-active: $btn-bg-hover;
+$btn-bg-select: $btn-bg-hover;
+$btn-border-style: 1px solid $btn-bg;
+$btn-border-style-hover: 1px solid $btn-bg-hover;
+$btn-border-radius: $border-radius-base;
+$btn-base-padding: 2px 10px;
+$btn-base-lineheight: 20px;
+$btn-large-padding: 1px 15px;
+$btn-large-lineheight: 28px;
+$btn-extra-padding: 1px 20px;
+$btn-extra-lineheight: 36px;
+$btn-theme-color: $btn-text-color;
+$btn-onlyicon-padding: 0 12px;
+
+// **icon
+$icon-margin: -5px 0;
+$icon-large-margin: -4px 0;
+$icon-extra-margin: 0 0;
+$icon-button-bg: url('./images/glyphicons-halflings-white.png');
+$icon-button-bg-hover: url('./images/glyphicons-halflings-white.png');
+$icon-buttontypeb-bg: url('./images/glyphicons-halflings.png');
+$icon-buttontypeb-bg-hover: url('./images/glyphicons-halflings-white.png');
+$icon-bg: url('./images/glyphicons-halflings.png');
+$icon-white-bg: url('./images/glyphicons-halflings-white.png');
+
+// **group button
+$group-border-color: 1px solid #ffffff;
+$group-border-style: 1px solid #040404;
+$group-default-style: 0;
+$group-typeb-bg: #fff;
+$group-typeb-font-color: $base-text-gray;
+$group-typeb-font-color-hover: #ffffff;
+$group-typeb-border-color: #040404;
+$group-typeb-border-hover: #44484d;
+$group-typeb-border-active: $group-typeb-border-hover;
+$group-typeb-border-select: $group-typeb-border-hover;
+$group-typeb-bg-hover: #44484d;
+$group-first-radius: $border-radius-base 0 0 $border-radius-base;
+$group-last-radius: 0 $border-radius-base $border-radius-base 0;
+$group-vertical-first-radius: 0 0 $border-radius-base $border-radius-base;
+$group-vertical-typeb-first-radius: $border-radius-base $border-radius-base 0 0;
+$group-vertical-typeb-last-radius: 0 0 $border-radius-base $border-radius-base;
+
+// **checkbox
+$imgchk-size: 13px;
+$imgchk-top-pos: 48%;
+$imgchk-left-pos: 4px;
+$imgchk-margin-top: -5px;
+$imgchk-pos: 0px -72px;
+$imgchk-checked-pos: -48px -72px;
+$imgchk-disabled-pos: -96px -72px;
+$imgchk-checked-disabled-pos: -144px -72px;
+
+// **radio
+$imgradio-size: 13px;
+$imgradio-left-pos: 4px;
+$imgradio-top: -2px;
+$imgradio-pos: -260px -72px;
+$imgradio-checked-pos: -304px -72px;
+$imgradio-disabled-pos: -353px -72px;
+$imgradio-checked-disabled-pos: -397px -72px;
+
+// **carousel
+$carousel-width: 600px; //carousel 사용자 이미지 사이즈 넓이값 반드시 설정 필요
+$carousel-height: 304px; //carousel 사용자 이미지 사이즈 높이값 반드시 설정필요
+$carousel-btn-width: 28px;
+$carousel-btn-height: 50px;
+$carousel-position: 20px;
+$carousel-gutter: -23px;
+$carousel-line-height: 30px;
+$carousel-prev-pos: -112px 0px;
+$carousel-next-pos: -47px 0px;
+
+// **dateinput
+//input 적용시 사용해도 무방함
+$input-bg: #ffffff;
+$input-font-color: $base-text-gray;
+$input-style: 1px solid #afb3b8;
+$input-hover: 1px solid #222222;
+$input-focus: $input-hover;
+$input-disabled-bg: #f2f2f2;
+$input-disabled-style: 1px solid #d7d9db;
+$input-width: 110px;
+$input-height: 26px;
+$input-line-height: $input-height;
+$input-gutter: 0 8px;
+
+//dateinput에만 사용되는 scss
+$calendar-icon-style: 1px solid #343434;
+$calendar-icon-hover-style: 1px solid #343434;
+$calendar-icon-hover-bg: #343434;
+$calendar-margin-left: -29px;
+$calendar-right: 25px;
+$calendar-width: 29px;
+$calendar-height: 26px;
+$calendar-pos: -170px -237px;
+$calendar-hover-pos: -314px -237px;
+$calendar-radius: 0 $border-radius-base $border-radius-base 0;
+$calendar-trans: background-color 0.3s;
+$dateclear-top: 2px;
+$dateclear-right: 32px;
+$dateclear-width: 15px;
+$dateclear-height: 15px;
+$dateclear-pos: -177px -293px;
+$dateclear-hover-pos: -323px -293px;
+$dateclear-icon-gutter: 1px 14px 0px -28px;
+
+// **datepicker
+$datepicker-width: 273px;
+$datepicker-padding: 10px;
+$datepicker-shadow: 1px 1px 5px #afb3b8;
+$datepicker-header: 28px;
+$datepicker-bg: #ffffff;
+$datepicker-cell-width: 35px;
+$datepicker-cell-height: 26px;
+$datepicker-font-color: $base-text-gray;
+$datepicker-font-active: $base-text-white;
+$datepicker-style: 1px solid #afb3b8;
+$datepicker-control-width: 17px;
+$datepicker-control-height: 17px;
+$datepicker-border-style: 1px solid #d2d2d2;
+$datepicker-today-bg: #000000;
+$datepicker-holiday-bg: #eceeef;
+$datepicker-holiday: #e70d2a;
+$datepicker-thead-thbg: #dadcdf;
+$datepicker-thead-style: 1px solid #a4a8ae;
+$datepicker-disabled: #d2d5d9;
+$datepicker-day-hoverbg: #596068;
+$datepicker-lineheight: 19px;
+$datepicker-prev-pos: 0px -129px;
+$datepicker-prev-hover-pos: -109px -129px;
+$datepicker-prev-active-pos: $datepicker-prev-hover-pos;
+$datepicker-prev-disabled-pos: -48px -129px;
+$datepicker-next-pos: -48px -129px;
+$datepicker-next-hover-pos: -161px -129px;
+$datepicker-next-active-pos: $datepicker-next-hover-pos;
+$datepicker-next-disabled-pos: 0px -129px;
+$datepicker-close-pos: -59px -241px;
+$datepicker-close-hover-pos: 0px -241px;
+$datepicker-subheader: 110px;
+$datepicker-subheader-gutter: 10px;
+$datepicker-subheaderwide: 220px;
+$datepicker-subheadermonth: 100px;
+$datepicker-inline-subheadermonth: 120px;
+$datepicker-current-padding: 0 14px 0 18px;
+$datepicker-inline-currentselect: 60%;
+$datepicker-inline-current: 65%;
+$datepicker-monthday-color: #afafaf;
+$datepicker-monthday-bg: #e9edf0;
+$datepicker-monthday-hover-bg: #00bede;
+$datepicker-monthday-active-bg: #0099c5;
+$datepicker-monthday-disabled-color: #d3d3d3;
+$datepicker-bottom-bg: #04bfe0;
+$datepicker-bottom-btnwidth: 30%;
+$datepicker-bottom-color: #ff0000;
+$datepicker-weekly-tr-hover: #00bede;
+$datepicker-weekly-tr-active: #0099c5;
+
+// **dialog
+$dialog-wrap: 1px solid #b3b9c0;
+$dialog-minheight: 122px;
+$dialog-header-height: 36px;
+$dialog-header-lineheight: $dialog-header-height;
+$dialog-header-primary: 1px solid #b2c6d4;
+$dialog-header-confirm: 1px solid #b2d3ff;
+$dialog-header-success: 1px solid #d2eeb2;
+$dialog-header-warning: 1px solid #ffd0b6;
+$dialog-header-danger: 1px solid #eeb2b2;
+$dialog-title-success: #198600;
+$dialog-title-warning: #f15500;
+$dialog-toggle: './images/dialog_toggle.png';
+$dialog-shadow: 1px 1px 5px #303030;
+$dialog-btn-top: 5px;
+$dialog-btn-right: 8px;
+$dialog-btn-width: 25px;
+$dialog-btn-height: 25px;
+$dialog-btn-pos: -54px -236px;
+$dialog-btn-hover-pos: 4px -236px;
+$dialog-btn-active-pos: -106px -236px;
+$dialog-toggle-top: 8px;
+$dialog-toggle-left: 8px;
+$dialog-toggle-width: 19px;
+$dialog-toggle-height: 19px;
+$dialog-toggle-pos: 0 -117px;
+$dialog-toggle-hover-pos: 0 -78px;
+$dialog-toggle-expanded-pos: 0 -39px;
+$dialog-toggle-expanded-hover-pos: 0 0;
+$dialog-resize-width: 8px;
+$dialog-resize-height: 8px;
+$dialog-resize-pos: -160px -496px;
+$dialog-contents: 14px;
+$dialog-bottom: 16px;
+$dialog-btn-gutter: 0 2px;
+
+// **dropdown
+$dropdown-list-border: 1px solid #c3c3c3;
+$dropdown-list-hover: #44484d;
+$dropdown-list-2depth-hover: #2f3338;
+$dropdown-list-3depth-hover: #131518;
+$dropdown-line-height: 26px;
+$dropdown-btn-bg: $btn-bg;
+$dropdown-btn-font-color: $btn-text-color;
+$dropdown-btn-hover-bg: $btn-bg-hover;
+$dropdown-btn-hover-font: $btn-text-color;
+$dropdown-btn-style: 0;
+$dropdown-color-hover: $base-text-white;
+$dropdown-minwidth: 170px;
+$dropdown-ul-padding: 6px 0;
+$dropdown-li-padding: 0 10px;
+$dropdown-header-color: #337ab7;
+$dropdown-disabled-color: #aaaaaa;
+$dropdown-arrow-width: 6px;
+$dropdown-arrow-height: 8px;
+$dropdown-arrow-top: 50%;
+$dropdown-arrow-right: 10px;
+$dropdown-arrow-pos: -293px -846px;
+$dropdown-arrow-hover-pos: -293px -893px;
+$dropdown-btn-padding: 30px;
+$dropdown-btn-right: 6px;
+$dropdown-btn-width: 14px;
+$dropdown-btn-height: 14px;
+$dropdown-btn-pos: 0 -846px;
+
+// **hierarchical
+$hierarch-hover: #44484d;
+$hierarch-height: 26px;
+$hierarch-sub-bg: #ffffff;
+$hierarch-sub-style: 1px solid #c3c3c3;
+$hierarch-sub-hover: $base-text-white;
+
+// **label
+$label-color-primary: $color-primary;
+$label-color-primary-backend: $color-primary;
+$label-border-style: 0;
+$label-font-color: $base-text-white;
+$label-padding: 2px 6px;
+
+// **list
+$list-flag: 0;
+$list-bg: #ffffff;
+$list-bg-backend: $list-bg;
+$list-border-style: 1px solid #596068;
+$list-font: $font-size-base;
+$list-font-color: $base-text-gray;
+$list-link-hover: $base-text-white;
+$list-link-active: $list-link-hover;
+$list-title-font-size: $font-size-base;
+$list-title-font-color: $base-text-gray;
+$list-sub-style: 1px solid #eeeeee;
+$list-height:40px;
+$list-line-height: 16px;
+$list-link-hoverbg: #44484d;
+$list-text-gutter: 10px 14px;
+$list-first-radius: $border-radius-base $border-radius-base 0 0;
+$list-last-radius: 0 0 $border-radius-base $border-radius-base;
+$list-link-gutter: -10px -14px;
+$list-link-right: 10px;
+$list-link-top: -3px;
+$list-link-arrow-width: 4px;
+$list-link-arrow-height: 7px;
+$list-link-pos: 0 -950px;
+$list-link-hover-pos: 0 -990px;
+$list-link-thumb-width: 50px;
+$list-link-thumb-height: 50px;
+$list-link-small-thumb-width: 16px;
+$list-link-small-thumb-height: 16px;
+$list-link-thumb-span: 10px;
+
+// **navmenu
+$navmenu-bg: #222222;
+$navmenu-bg-backend: $navmenu-bg;
+$navmenu-border: 0;
+$navmenu-font-size: $font-size-base;
+$navmenu-font-color: $base-text-white;
+$navmenu-font-hover: $base-text-white;
+$navmenu-hover: #44484d;
+$navmenu-style: 1px solid #00436f;
+$navmenu-height: 45px;
+$nav-sub-bg: #ffffff;
+$nav-sub-height: 26px;
+$nav-sub-font-hover: $navmenu-font-hover;
+$nav-sub-hover-1depth: $navmenu-hover;
+$nav-sub-hover-2depth: #2f3338;
+$nav-sub-hover-3depth: #131518;
+$nav-padding: 0 24px 0 20px;
+$nav-arrow-width: 8px;
+$nav-arrow-height: 8px;
+$nav-arrow-right: 8px;
+$nav-arrow-left: 6px;
+$nav-arrow-pos: -197px -846px;
+$nav-arrow-hover-pos: -197px -896px;
+$nav-sub-top: 3px;
+$nav-sub-width: 160px;
+$nav-sub-padding: 6px 0;
+$nav-sub-border: 1px solid #c3c3c3;
+$nav-sub-shadow: 0px 0px 5px #c3c3c3;
+$nav-sub-li-padding: 0 18px;
+$nav-sub-expanded-right: 10px;
+$nav-sub-expanded-arrow-width: 8px;
+$nav-sub-expanded-arrow-height: 8px;
+$nav-sub-expanded-pos: -293px -893px;
+
+// **paging
+$page-font-color: #808080;
+$page-font-hover: #303030;
+$page-line: 1px solid #e2e4e7;
+$paging-mobile-width: 7px;
+$paging-mobile-height: 7px;
+$paging-mobile-font-hover: normal;
+$paging-mobile-radius: 5px;
+$paging-mobile-bg: #040404;
+$paging-mobile-bghover: #ffffff;
+$paging-mobile-gutter: 14px 1px;
+$paging-mobile-padding: 4px;
+$paging-mobile-pos: 20px;
+$paging-typeb-linkborder: 1px solid #e2e4e7;
+$paging-typeb-prev: 1px solid #afb3b8;
+$paging-typeb-hoverbg: #44484d;
+$paging-typeb-icon: 25px;
+$paging-link-padding: 1px 10px;
+$paging-gutter: 10px;
+$paging-left: 14px;
+$paging-width: 4px;
+$paging-height: 7px;
+$paging-prev-pos: -38px -749px;
+$paging-prev-hover-pos: -38px -793px;
+$paging-group-width: 8px;
+$paging-group-height: 7px;
+$paging-prevgroup-pos: 0px -749px;
+$paging-prevgroup-hover-pos: 0px -793px;
+$paging-next-pos: -84px -749px;
+$paging-next-hover-pos: -84px -793px;
+$paging-nextgroup-pos: -118px -749px;
+$paging-nextgroup-hover-pos: -118px -793px;
+$paging-first-width: 9px;
+$paging-first-height: 9px;
+$paging-first-pos: -156px -748px;
+$paging-first-hover-pos: -156px -792px;
+$paging-last-pos: -195px -748px;
+$paging-last-hover-pos: -195px -792px;
+$paging-typeb-padding: 5px 9px;
+$paging-typeb-trans: background-color 0.3s;
+$paging-typeb-prev-pos: -321px -741px;
+$paging-typeb-prev-hover-pos: -321px -785px;
+$paging-typeb-prevgroup-radius: 12px 0 0 12px;
+$paging-typeb-prevgroup-pos: -284px -741px;
+$paging-typeb-prevgroup-hover-pos: -284px -785px;
+$paging-typeb-prevgroup-hover-radius: 11px 0 0 11px;
+$paging-typeb-next-pos: -354px -741px;
+$paging-typeb-next-hover-pos: -354px -785px;
+$paging-typeb-nextgroup-radius: 0 12px 12px 0;
+$paging-typeb-nextgroup-pos: -390px -741px;
+$paging-typeb-nextgroup-hover-pos: -390px -785px;
+$paging-typeb-nextgroup-hover-radius: 0 11px 11px 0;
+$paging-typeb-first-radius: 12px 0 0 12px;
+$paging-typeb-first-hover-radius: 11px 0 0 11px;
+$paging-typeb-first-pos: -428px -741px;
+$paging-typeb-first-hover-pos: -428px -785px;
+$paging-typeb-last-radius: 0 12px 12px 0;
+$paging-typeb-last-hover-radius: 0 11px 11px 0;
+$paging-typeb-last-pos: -469px -741px;
+$paging-typeb-last-hover-pos: -469px -785px;
+
+// **panel
+$panel-style: 1px solid #afb3b8;
+$panel-theme-bg: #f5f6f6;
+$panel-theme-bg-backend: $panel-theme-bg;
+$panel-bottom-gutter: 20px;
+$panel-color-primary: $color-primary;
+$panel-color-primary-backend: $color-primary;
+$panel-content-padding: 15px 13px;
+$panel-header-padding: 13px;
+$panel-footer-padding: 13px;
+
+// **progressbar
+$bar-bg: #b3b9c0;
+$bar-progress-bg: #222222;
+$bar-height: 8px;
+$bar-progress-img: './images/progressbar_dark.gif';
+
+// **select
+$select-style: 1px solid #afb3b8;
+$select-hover-style: 1px solid #343434;
+$select-multi-headerbg: #e5e6e7;
+$select-multi-height: 200px;
+$select-multi-columheight: 26px;
+$select-padding: 4px;
+
+// **div-select
+$divselect-img: './images/multi_btn_off_dark.png';
+$divselect-img-hover: './images/multi_btn_on_dark.png';
+$divselect-bg-pos: right 10px;
+$divselect-padding: 4px 8px 5px;
+$divselect-minwidth: 90px;
+$divselect-disabled-opacity: 0.6;
+$divselect-span: 12px;
+
+// **spinner
+$spinner-flag:0;
+$spinner-bg: #ffffff;
+$spinner-bg-backend: $spinner-bg;
+$spinner-font-color: $base-text-gray;
+$spinner-border-style: 1px solid #afb3b8;
+$spinner-gutter:0 8px;
+$spinner-hover-bg: #343434;
+$spinner-disabled: #f2f2f2;
+$spinner-disabled-border: 1px solid #d7d9db;
+$spinner-disabled-color: #cccccc;
+$spinner-time-width: 40px;
+$spinner-height: 30px;
+$spinner-lineheight: 26px;
+$spinner-right: 23px;
+$spinner-input-padding: 0 8px;
+$spinner-up-pos: -149px -667px;
+$spinner-up-hover-pos: -266px -667px;
+$spinner-down-pos: -90px -668px;
+$spinner-down-hover-pos: -207px -667px;
+$spinner-btn-width: 23px;
+
+// **table
+$table-style: 1px solid #bbbbc6;
+$table-thead-top: $table-style;
+$table-tbody-top: 2px solid #222222;
+$table-th-bg: #d5d9de;
+$table-th-bg-backend: $table-th-bg;
+$table-tbody-th-bg: #f0f2f4;
+$table-tbody-th-right: 1px solid #bbbbc6;
+$table-th-height: 30px;
+$table-th-font-color: #303030;
+$table-th-style: $table-style;
+$table-th-align: center;
+$table-td-style: 1px solid #e2e4e7;
+$table-td-height: 30px;
+$table-lineheight: 14px;
+$table-th-gutter: 10px 0;
+$table-gutter: 4px 10px;
+$table-even-bg: #f7f7f7;
+$table-vertical-gutter: 0 10px;
+$table-color-typea: #f8eeef;
+$table-color-typeb: #f8f3ed;
+$table-color-typec: #f2f5e4;
+$table-color-typed: #e4f4f1;
+$table-formtype-width: 100px;
+$table-form-th-align: center;
+$table-form-thead-top: $table-style;
+$table-edit-icon:'./images/icon_table_edit_normal.png';
+$table-form-tbody-padding: 10px;
+$table-sort-top: -8px;
+$table-sort-right: 5px;
+$table-sort-opacity: 0.5;
+$table-sort-asc-pos: -312px -96px;
+$table-sort-dsc-pos: -289px -96px;
+$table-edit-width: 97%;
+$table-edit-padding: 2px;
+$table-edit-lineheight: 12px;
+
+// **tabs
+$tabs-style: 1px solid #d3d4d7;
+$tabs-style-hover: 1px solid #040404;
+$tabs-font-color: #808080;
+$tabs-font-hover: #040404;
+$tabs-select-font: #040404;
+$tabs-line-height: 18px;
+$tabs-gutter: 10px 16px;
+$tabs-content-top: 1px solid #040404;
+$tabs-content-gutter: 10px;
+$tabs-element: 11px;
+$tabs-double-width: 20%;
+$tabs-fixed-width: 100px; 
+$tabs-bg: #f6f7f8;
+$tabs-bg-hover: #f6f7f8;
+$tabs-bg-hover-backend: $tabs-bg-hover;
+$tabs-select-bg: #ffffff;
+$tabs-sub-bg: #ffffff;
+$tabs-sub-style: $tabs-style;
+$tabs-margin: 0;
+$tabs-arrow-bg: 0;
+$tabs-ul-before: 0;
+$tabs-type: fixed;
+$tabs-vertical-width: 30px;
+$tabs-vertical-height: 120px;
+$tabs-vertical-padding: 4px;
+$tabs-vertical-pos: -40px;
+$tabs-vertical-hoverbg: $color-primary;
+$tabs-vertical-hover-color: #ffffff;
+$tabs-vertical-left: 6px;
+$tabs-vertical-radius: 6px 0 0 6px;
+$tabs-scroll-top: 3px;
+$tabs-disabled-color: #d3d4d4;
+$tabs-disabled-border: 1px solid #e0e0e0;
+$tabs-disabled-border-bottom: #c3c3c3;
+$tabs-img-height: 20px;
+$tabs-remove-pos: -61px -243px;
+$tabs-remove-hover-pos: -113px -243px;
+$tabs-remove-disabled-pos: 0px -243px; 
+$tabs-remove-selected-pos: -485px -243px;
+$tabs-refresh-pos: -61px -360px;
+$tabs-refresh-hover-pos: -116px -360px;
+$tabs-refresh-disabled-pos: 5px -360px;
+$tabs-edit-top: 9px;
+$tabs-edit-btn-width: 21px;
+$tabs-edit-btn-height: 21px;
+$tabs-edit-btn-pos: -479px -879px;
+$tabs-sub-hover-bottom: 2px solid $tabs-select-font;
+
+// **textarea
+$textarea-bg: #ffffff;
+$textarea-font-color: $base-text-gray;
+$textarea-style: 1px solid #afb3b8;
+$textarea-hover: 1px solid #222222;
+$textarea-line-height: 21px;
+$textarea-disabled-bg: #f2f2f2;
+$textarea-disabled-color: #cccccc;
+$textarea-disabled-style: 1px solid #d7d9db;
+
+// **textinput
+$textinput-bg: #ffffff;
+$textinput-font-color: $base-text-gray;
+$textinput-style: 1px solid #afb3b8;
+$textinput-hover: 1px solid #222222;
+$textinput-height: 26px;
+$textinput-padding: 0px 8px;
+$textinput-line-height: $textinput-height;
+$textinput-disabled-bg: #f2f2f2;
+$textinput-disabled-color: #cccccc;
+$textinput-disabled-style: 1px solid #d7d9db;
+
+// **tooltip
+$tooltip-bg: #222222;
+$tooltip-color: $base-text-white;
+$tooltip-padding: 5px 10px;
+$tooltip-gutter: -6px;
+$tooltip-border-trans: 6px solid transparent;
+$tooltip-border-pattern: 6px solid $tooltip-bg;
+$tooltip-bottom-width: 0px 6px 6px;
+$tooltip-bottom-top: -5px;
+
+// **tree
+$tree-line-height: 10px;
+$tree-line-style: 1px solid #e2e4e7;
+$tree-arrow-width: 11px;
+$tree-arrow-height: 11px;
+$tree-arrow-right: 2px;
+$tree-arrow-pos: -200px -560px;
+$tree-arrow-expanded-pos: -152px -560px;
+$tree-ul-padding: 14px;
+$tree-ul-top: 14px;
+$tree-ul-left: 5px;
+$tree-ul-bottom: 9px;
+$tree-li-width: 18px;
+$tree-li-top: 10px;
+$tree-li-link-margin: 3px 0;
+$tree-li-padding: 2px;
+$tree-img-width: 10px;
+$tree-img-height: 10px;
+$tree-img-right: 3px;
+$tree-expandable-false-left: 10px;
+$tree-expandable-false-pos: -250px -555px;
+
+// **typography
+$typoimg: './images/typo_img.png';
+$cite-font-color: #919191;
+$quotation-line-height: 18px;
+$quotation-width: 300px;
+$quotation-height: 50px;
+$mark-bg: #fdf870;
+
+$alink-color: #9b9b9b;
+$alink-active-color: #303030;
+$alink-hoverstyle: underline;
+
+$code-bg: #f7f7f7;
+$code-style: 1px solid #d3d3db;
+$code-line-height: 16px;
+
+// **autocomplate
+$autocom-img: './images/multi_btn_off_dark.png';
+$autocom-img-hover: './images/multi_btn_on_dark.png';
+$autocom-bg-pos: 7px 11px;
+$autocom-btn-width: 22px;
+$autocom-btn-height: 15px;
+$autocom-btn-clear-top: 6px;
+$autocom-btn-clear-right: 6px;
+$autocom-clear-pos: -173px -293px;
+$autocom-opener-pos: -319px -293px;
+
+// **transition
+$base-trans: all 0.3s;
+$none-trans: all 0s;
+//ui
+@mixin clearfix(){
+	&:before {
+		content: " ";
+		display:block; 
+		visibility: hidden; 
+		height:0;
+		clear:both
+	}
+	&:after {
+		content: " ";
+		display:block; 
+		visibility: hidden; 
+		height:0;
+		clear:both
+	}
+}
+
+@mixin ellipsis {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+
+@mixin gutter-options($gutter:"", $gutter-css:"", $class:"", $i:0) {
+	@for $i from 0 through 20 {
+		.#{$gutter}-#{$class}-#{$i * 5} {
+			#{$gutter-css}-#{$class}: ($i * 5) + px;
+		}
+	} 
+}
+
+@mixin width-gutter($width:"", $width-css:"", $i:1) {
+	@for $i from 1 through 20 {
+		.#{$width}-#{$i * 5} {
+			#{$width-css}: percentage(($i * 5) / 100);
+		}
+	} 
+}
+
+// button size
+@mixin btn-size($padding, $font-size, $lineheight) {
+	padding: $padding;
+	font-size: $font-size;
+	line-height: $lineheight;
+}
+
+//Dialog Theme
+@mixin dialog-theme($color, $border) {
+	color: $color;
+	border-bottom: $border;
+}
+
+//paging typeb background
+@mixin page-bg($bgimg, $bgrepeat, $bgpos) {
+	background-image: $bgimg;
+	background-repeat: $bgrepeat;
+	background-position: $bgpos;
+}
+
+//form tag theme
+@mixin theme-color($border-color, $border-hover-color) {
+	border: 1px solid $border-color;
+	
+	&:hover, &:focus, &:active {
+		border: 1px solid $border-hover-color;
+  	}
+}
+
+//border-option
+@mixin border-option($border-top, $border-right, $border-bottom, $border-left) {
+	border-top: $border-top;
+	border-right: $border-right;
+	border-bottom: $border-bottom;
+	border-left: $border-left;
+}
+
+//tabs
+@mixin tabs-arrow($tabs-arrow-bg) {
+	@if $tabs-arrow-bg == 0 {
+		border-top: $tabs-style;
+		border-right: $tabs-style;
+		border-left: 0;
+		border-bottom: 0;
+	}
+	@if $tabs-arrow-bg == 1 {
+		background-position: right bottom;
+	}
+}
+@mixin tabs-ul-line($tabs-ul-before) {
+	@if $tabs-ul-before == 0 {
+		
+	}
+	@if $tabs-ul-before == 1 {
+		content: '';
+		display: table-cell;
+		width: 1px; 
+		background: $tabs-bg;
+		background-position: left bottom;
+	}
+}
+@mixin background($flag, $base, $gradstart:0, $gradend:0) {
+	@if $flag == 0 {
+		background: $base;
+	}
+	@if $flag == 1 {
+		background: $base;
+		background: -ms-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: -moz-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: -o-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0, $gradstart), color-stop(1, $gradend));
+		background: -webkit-linear-gradient(top, $gradstart 0%, $gradend 100%);
+		background: linear-gradient(to bottom, $gradstart 0%, $gradend 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#{$gradstart}', endColorstr='#{$gradend}');
+	}
+}
+
+@mixin gradation($flag, $backbase: "", $backstart: "", $backend: "") {
+	@if $flag == 0 {
+		@include background($flag, $backbase);
+	}
+	@if $flag == 1 {
+		@include background($flag, $backbase, $backstart, $backend);
+	}
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin opacity($transparent) {
+      _noFocusLine: expression(this.hideFocus = true);
+        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + ($transparent*100) + ")";
+    	    filter: alpha(opacity = ($transparent*100));
+    -khtml-opacity: $transparent;
+      -moz-opacity: $transparent;
+		   opacity: $transparent;
+}
+
+@mixin appearance($value) {
+	-webkit-appearance: $value;
+	 -khtml-appearance:$value;
+	   -moz-appearance: $value;
+			appearance:$value;
+}
+
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	   -moz-box-shadow: $value;
+			box-shadow: $value;
+}
+
+@mixin background-clip($value) {
+	-webkit-background-clip: $value;
+	   -moz-background-clip: $value;
+			background-clip: $value;
+}
+
+@mixin transform($value) {
+    -webkit-transform: $value;
+       -moz-transform: $value;
+        -ms-transform: $value;
+    	 -o-transform: $value;
+    		transform: $value;
+}
+
+@mixin transition($value) {
+	-webkit-transition: $value;
+	   -moz-transition: $value;
+	     -o-transition: $value;
+			transition: $value;
+}
+$accordion: Accordion;
+$button: Button;
+$carousel: Carousel;
+$checkbox: Checkbox;
+$dateinput: Dateinput;
+$datepicker: Datepicker;
+$daterange: Daterange;
+$dialog: Dialog;
+$divselect: Divselect;
+$dropdown: Dropdown;
+$dropdownbutton: Dropdownbutton;
+$group: Group;
+$groupbutton: Groupbutton;
+$icon: Icon;
+$list: List;
+$navigationbar: Navigationbar;
+$navmenu: Navmenu;
+$paging: Paging;
+$panel: Panel;
+$progressbar: Progressbar;
+$radio: Radio;
+$searchinput: Searchinput;
+$select: Select;
+$slider: Slider;
+$spinner: Spinner;
+$switch: Switch;
+$table: Table;
+$tabs: Tabs;
+$textarea: Textarea;
+$textinput: Textinput;
+$togglebutton: ToggleButton;
+$tooltip: Tooltip;
+$tree: Tree;
+
+//new component
+$label: Label;
+$quotation: Quotation;
+$cite: Cite;
+$mark: Mark;
+$small: Small;
+$del: Del;
+$strong: Strong;
+$alink: Alink;
+$code: Code;
+$splitter: Splitter;
+$hierarchical: Hierarchical;
+$multiselect: MultiSelect;
+$autocomplete: Autocomplete;
+
+//css-version 확인을 위한 css입니다.
+.Css-version {
+	/* css version 확인을 위한 css입니다. 삭제하거나 변경하지 마세요. */
+}
+
+.#{$accordion}, .#{$accordion} *, 
+.#{$button}, .#{$button} *,
+.#{$carousel}, .#{$carousel} *,
+.#{$checkbox}, .#{$checkbox} *,
+.#{$dateinput}, .#{$dateinput} *,
+.#{$datepicker}, .#{$datepicker} *,
+.#{$daterange}, .#{$daterange} *,
+.#{$dialog}, .#{$dialog} *,
+.#{$divselect}, .#{$divselect} *,
+.#{$dropdown}, .#{$dropdown} *,
+.#{$dropdownbutton}, .#{$dropdownbutton} *,
+.#{$group}, .#{$group} *,
+.#{$groupbutton}, .#{$groupbutton} *,
+.#{$icon}, .#{$icon} *,
+.#{$list}, .#{$list} *,
+.#{$navigationbar}, .#{$navigationbar} *,
+.#{$navmenu}, .#{$navmenu} *,
+.#{$paging}, .#{$paging} *,
+.#{$panel}, .#{$panel} *,
+.#{$progressbar}, .#{$progressbar} *,
+.#{$radio}, .#{$radio} *,
+.#{$searchinput}, .#{$searchinput} *,
+.#{$select}, .#{$select} *,
+.#{$slider}, .#{$slider} *,
+.#{$spinner}, .#{$spinner} *,
+.#{$switch}, .#{$switch} *,
+.#{$table}, .#{$table} *,
+.#{$tabs}, .#{$tabs} *,
+.#{$textarea}, .#{$textarea} *,
+.#{$textinput}, .#{$textinput} *,
+.#{$tooltip}, .#{$tooltip} *,
+.#{$tree}, .#{$tree} *, 
+.#{$label}, .#{$label} *,
+.#{$quotation}, .#{$quotation} *,
+.#{$cite}, .#{$cite} *,
+.#{$mark}, .#{$mark} *,
+.#{$code}, .#{$code} *,
+.#{$small}, .#{$small} *,
+.#{$strong}, .#{$strong} *,
+.#{$del}, .#{$del} *,
+.#{$alink}, .#{$alink} *,
+.#{$splitter}, .#{$splitter} *,
+.#{$hierarchical}, .#{$hierarchical} * ,
+.#{$multiselect}, .#{$multiselect} *,
+.#{$autocomplete}, .#{$autocomplete} * {
+	box-sizing: border-box;
+	font-family: Arial, "돋움", "돋움체", dotum, sans-serif;
+}
+.#{$accordion} {
+	position:relative;
+	width: 100%; 
+	padding: 0;
+	list-style: none; 
+	border: $accrd-border-style;
+	border-bottom: 0;
+	@include border-radius($border-radius-base);
+}
+.#{$accordion}, 
+.#{$accordion} * {
+	padding: 0;
+	font-size: $font-size-base;
+	line-height: $accrd-lineheight;
+	color: $accrd-font-color;
+}
+.#{$accordion} ul > li { 
+	display: block;
+	width: 100%;
+	list-style: none;
+	border-top: $accrd-border-style;
+	  
+	&:hover, &.Expanded {
+		@include gradation($flag, $accrd-bg-depth, $accrd-bg-depth, $accrd-bg-depth-backend);
+	}
+}
+.#{$accordion} li > a {
+	display: block; 
+	width: 100%;
+	padding: $accrd-base-padding;
+	text-decoration: none; 
+	  
+	&:before {
+		content:'';
+		display:inline-block;
+		width: $accrd-img-width;
+		height: $accrd-img-height;
+		background: url($accrd-img) no-repeat 0 -162px;
+	}
+  
+	&:after {
+		content:'';
+		float: right;
+		width: $accrd-img-width;
+		height: $accrd-img-height;
+		margin-top: $accrd-img-pos;
+	}
+	
+	&.Disabled {
+		color: $btn-text-disabled;
+		background: $accrd-disabled-bg;
+		border: $accrd-disabled-border;
+	}
+}
+//1depth
+.#{$accordion} > li {
+	border-bottom: $accrd-border-style;
+	@include gradation($flag, $accrd-bg, $accrd-bg, $accrd-bg-backend);
+  
+	> a {
+  		@include gradation($flag, $accrd-bg, $accrd-bg, $accrd-bg-backend);
+	  	&:before {
+			content: none;
+		}
+		&:hover {
+			font-weight: $accrd-font-style-hover;
+		  	text-decoration : none;
+			color: $accrd-font-active;
+			@include gradation($flag, $accrd-bg-depth, $accrd-bg-depth, $accrd-bg-depth-backend);
+		}
+  	} 
+}
+.#{$accordion} > li > a + * {
+  	@include border-radius($border-radius-base);
+}
+
+.#{$accordion} > li.Expandable > a {
+	&:before {
+		content: none;
+	}
+}
+.#{$accordion} li.Expandable > a {
+	display: block; 
+	cursor: pointer;
+	text-decoration: none; 
+	@include gradation($flag, $accrd-bg, $accrd-bg, $accrd-bg-backend);
+	@include transition($base-trans);
+	  
+	&:after {
+		background: url($accrd-img) no-repeat right 0px;
+	}
+}
+.#{$accordion} > li.Expandable.Expanded > a, 
+.#{$accordion} > li.Expandable > a:hover {
+	display: block;
+	font-size: $accrd-font-size;
+	font-weight: $accrd-font-style-hover;
+  	text-decoration : none;
+	color: $accrd-font-active;
+	@include gradation($flag, $accrd-bg-depth, $accrd-bg-depth, $accrd-bg-depth-backend);
+	
+	&:before {
+	  	content: none;
+	  }
+}
+.#{$accordion} > li.Expandable.Expanded > a:after,
+.#{$accordion} > li.Expandable.Expanded > a:hover:after {
+	background: url($accrd-img) no-repeat $accrd-expanded-pos;
+}
+.#{$accordion} > li.Expandable > a:hover:after {
+	background: url($accrd-img) no-repeat $accrd-expandable-pos;
+}
+.#{$accordion}  li > div {
+	display: block; 
+	width: 100%;
+	padding: $accrd-base-padding;
+	line-height: $accrd-lineheight;
+	background: $accrd-bg-3depth;
+	border-top: $accrd-border-style;
+	@include border-radius(0);
+}
+//.#{$accordion}  li > div * {
+//	margin: 0;
+//	padding: 0;
+//	line-height: $accrd-lineheight;
+//}
+
+//2depth child
+.#{$accordion} > li.Expandable > ul > li > a, 
+.#{$accordion} > li.Expandable > ul > li > a:hover {
+	background: $accrd-bg-2depth;
+}
+.#{$accordion} li.Expandable > ul > li.Expandable > a {
+	cursor: pointer;
+	display: block; 
+	text-decoration: none; 
+	background: $accrd-bg-2depth;
+	  
+	&:after {
+		background: url($accrd-img) no-repeat right 0px;
+	}
+}
+.#{$accordion} li.Expandable.Expanded > ul > li.Expandable.Expanded > a  {
+	background: $accrd-bg-2depth;
+	  
+	&:after {
+		background: url($accrd-img) no-repeat $accrd-subarrow-pos;
+	}
+}
+
+//3depth
+.#{$accordion} > li > ul > li li a, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li a,
+.#{$accordion} > li > ul > li li a:hover, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li a:hover {
+	padding-left:20px;
+	background: $accrd-bg-3depth;
+}
+.#{$accordion} > li.Expandable > ul > li.Expandable li.Expandable a {
+	background: $accrd-bg-3depth;
+}
+.#{$accordion} li.Expandable.Expanded > ul > li.Expandable.Expanded > ul > li.Expandable.Expanded > a  {
+	background: $accrd-bg-3depth;
+  
+	&:after {
+		background: url($accrd-img) no-repeat $accrd-subarrow-pos;
+	}
+}
+.#{$accordion} > li > ul > li li li a, 
+.#{$accordion} > li.Expandable > ul > li.Expandable li li a, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li li a,
+.#{$accordion} > li > ul > li li li a:hover, 
+.#{$accordion} > li.Expandable > ul > li.Expandable li li a:hover, 
+.#{$accordion} > li.Expanded > ul > li.Expanded li li a:hover {
+	padding-left: 30px;
+	background: $accrd-bg-4depth;
+}
+.#{$accordion} > li.Expandable > ul > li.Expandable li.Expandable li a, 
+.#{$accordion} > li.Expandable > ul > li.Expandable li.Expandable li a:hover {
+	background: $accrd-bg-4depth;
+}
+
+.#{$accordion} > li > ul {
+	position: relative;
+	width: 100%;
+	margin: 0;
+	@include border-radius(0);
+}
+.#{$autocomplete} {
+	position: relative;
+	display: inline-block;
+}
+.#{$autocomplete} .#{$dropdown} li {
+	@include ellipsis;
+}
+.#{$autocomplete} > .Clear {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	top: $autocom-btn-clear-top;
+	right: $autocom-btn-clear-right;
+	width: $autocom-btn-width;
+	height: $autocom-btn-height;
+	text-indent:-99999px;
+	background: #ffffff url($component-image) no-repeat $autocom-clear-pos;
+}
+  	
+.#{$autocomplete} > .Clear:hover, 
+.#{$autocomplete} > .Clear:focus,
+.#{$autocomplete} > .Clear:active {
+	background: #ffffff url($component-image) no-repeat $autocom-opener-pos;
+}
+//20160831 tango issue
+.#{$autocomplete} > .Opener {
+	cursor: pointer;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: $autocom-btn-width;
+	height:  $autocom-btn-height + 10;
+	background: url($autocom-img) no-repeat $autocom-bg-pos;
+	&:hover, &:active, &.ui-state-active {
+		background: url($autocom-img-hover) no-repeat $autocom-bg-pos;
+	}
+} 
+//common
+.#{$button}, .#{$dropdownbutton} {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	overflow: visible;
+	vertical-align: middle;
+	padding: $btn-base-padding;
+  	font-size: $btn-font-size;
+	line-height: $btn-base-lineheight;
+	text-decoration: none;
+	text-align: center;
+	border: $btn-border-style;
+	@include border-radius($btn-border-radius);
+	@include transition($base-trans);
+}
+.#{$button} {
+	color: $btn-text-color;
+	@include gradation($flag, $btn-bg, $btn-bg, $btn-bg-backend);
+	
+	&:hover {
+		color: $btn-text-color-hover;
+		border: $btn-border-style-hover;
+		filter: none;
+		@include gradation($flag, $btn-bg-hover, $btn-bg-hover, $btn-bg-hover);
+	}
+	
+	&:active, &.Checked {
+		padding: $btn-base-padding;
+		line-height: $btn-base-lineheight;
+		color: $btn-text-color-hover;
+		border: $btn-border-style-hover;
+		@include gradation($flag, $btn-bg-active, $btn-bg-active, $btn-bg-active);
+	}
+}
+
+//symbolic
+.#{$button}.Disabled, 
+.#{$dropdownbutton}.Disabled {
+	color: $btn-text-disabled;
+	background: $btn-bg-disabled;
+	border: 0;
+}
+.#{$button}.White, 
+.#{$dropdownbutton}.White {
+	color: $base-text-gray;
+	background: $color-white;
+	border: $btn-white-border;
+}
+.#{$button}.Default,
+.#{$dropdownbutton}.Default {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-default, $color-default, $color-default-backend);
+}
+.#{$button}.Default:hover, 
+.#{$dropdownbutton}.Default:hover, 
+.#{$button}.Default:active, 
+.#{$dropdownbutton}.Default:active {
+	@include gradation($flag, $color-default-hover, $color-default-hover, $color-default-hover-backend);
+}
+.#{$button}.Primary,
+.#{$dropdownbutton}.Primary {
+	color: $btn-theme-color;
+	border: 0;
+	background: $color-primary;
+}
+.#{$button}.Primary:hover, 
+.#{$dropdownbutton}.Primary:hover, 
+.#{$button}.Primary:active, 
+.#{$dropdownbutton}.Primary:active {
+	background: $color-primary-hover;
+}
+.#{$button}.Confirm, 
+.#{$dropdownbutton}.Confirm {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-confirm, $color-confirm, $color-confirm-backend);
+}
+.#{$button}.Confirm:hover, 
+.#{$dropdownbutton}.Confirm:hover, 
+.#{$button}.Confirm:active, 
+.#{$dropdownbutton}.Confirm:active {
+	@include gradation($flag, $color-confirm-hover, $color-confirm-hover, $color-confirm-hover-backend);
+}
+.#{$button}.Success, 
+.#{$dropdownbutton}.Success {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+.#{$button}.Success:hover, 
+.#{$dropdownbutton}.Success:hover, 
+.#{$button}.Success:active, 
+.#{$dropdownbutton}.Success:active {
+	@include gradation($flag, $color-success-hover, $color-success-hover, $color-success-hover-backend);
+}
+.#{$button}.Warning, 
+.#{$dropdownbutton}.Warning {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+.#{$button}.Warning:hover, 
+.#{$dropdownbutton}.Warning:hover, 
+.#{$button}.Warning:active, 
+.#{$dropdownbutton}.Warning:active {
+	@include gradation($flag, $color-warning-hover, $color-warning-hover, $color-warning-hover-backend);
+}
+.#{$button}.Danger, 
+.#{$dropdownbutton}.Danger {
+	color: $btn-theme-color;
+	border: 0;
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+.#{$button}.Danger:hover, 
+.#{$dropdownbutton}.Danger:hover, 
+.#{$button}.Danger:active, 
+.#{$dropdownbutton}.Danger:active {
+	@include gradation($flag, $color-danger-hover, $color-danger-hover, $color-danger-hover-backend);
+}
+
+.#{$button}.Large, 
+.#{$dropdownbutton}.Large {
+  	@include btn-size($btn-large-padding, $btn-font-size, $btn-large-lineheight);
+}
+.#{$button}.Extra, 
+.#{$dropdownbutton}.Extra {
+	@include btn-size($btn-extra-padding, $btn-font-size, $btn-extra-lineheight);
+}
+
+//typeb
+.#{$button}.Typeb {
+	color: $group-typeb-font-color;
+	background: $group-typeb-bg;
+    border: $group-border-style;
+    line-height: $btn-base-lineheight;
+	@include transition($none-trans);
+	
+	&:hover, &:active, &.Checked {
+		color: $group-typeb-font-color-hover;
+		border: 1px solid $group-typeb-border-hover;
+		background: $group-typeb-bg-hover;
+		filter: none;
+		@include transition($base-trans);
+	}
+}
+
+//typeb symbolic
+.#{$button}.Typeb.Default,
+.#{$dropdownbutton}.Typeb.Default {
+	color: $color-default;
+    border: 1px solid $color-default;
+}
+.#{$button}.Typeb.Default:hover, 
+.#{$dropdownbutton}.Typeb.Default:hover, 
+.#{$button}.Typeb.Default:active, 
+.#{$dropdownbutton}.Typeb.Default:active {
+	border: 1px solid $color-default-hover;
+}
+.#{$button}.Typeb.Primary,
+.#{$dropdownbutton}.Typeb.Primary {
+	color: $color-primary;
+    border: 1px solid $color-primary;
+}
+.#{$button}.Typeb.Primary:hover, 
+.#{$dropdownbutton}.Typeb.Primary:hover, 
+.#{$button}.Typeb.Primary:active, 
+.#{$dropdownbutton}.Typeb.Primary:active {
+	border: 1px solid $color-primary-hover;
+}
+.#{$button}.Typeb.Confirm, 
+.#{$dropdownbutton}.Typeb.Confirm {
+	color: $color-confirm;
+    border: 1px solid $color-confirm;
+}
+.#{$button}.Typeb.Confirm:hover, 
+.#{$dropdownbutton}.Typeb.Confirm:hover, 
+.#{$button}.Typeb.Confirm:active, 
+.#{$dropdownbutton}.Typeb.Confirm:active {
+	border: 1px solid $color-confirm-hover;
+}
+.#{$button}.Typeb.Success, 
+.#{$dropdownbutton}.Typeb.Success {
+	color: $color-success;
+    border: 1px solid $color-success;
+}
+.#{$button}.Typeb.Success:hover, 
+.#{$dropdownbutton}.Typeb.Success:hover, 
+.#{$button}.Typeb.Success:active, 
+.#{$dropdownbutton}.Typeb.Success:active {
+	border: 1px solid $color-success-hover;
+}
+.#{$button}.Typeb.Warning, 
+.#{$dropdownbutton}.Typeb.Warning {
+	color: $color-warning;
+    border: 1px solid $color-warning;
+}
+.#{$button}.Typeb.Warning:hover, 
+.#{$dropdownbutton}.Typeb.Warning:hover, 
+.#{$button}.Typeb.Warning:active, 
+.#{$dropdownbutton}.Typeb.Warning:active {
+	border: 1px solid $color-warning-hover;
+}
+.#{$button}.Typeb.Danger, 
+.#{$dropdownbutton}.Typeb.Danger {
+	color: $color-danger;
+    border: 1px solid $color-danger;
+}
+.#{$button}.Typeb.Danger:hover, 
+.#{$dropdownbutton}.Typeb.Danger:hover, 
+.#{$button}.Typeb.Danger:active, 
+.#{$dropdownbutton}.Typeb.Danger:active {
+	border: 1px solid $color-danger-hover;
+}
+
+//button size
+.#{$button}.Large, 
+.#{$dropdownbutton}.Large {
+  	@include btn-size($btn-large-padding, $btn-font-size, $btn-large-lineheight);
+}
+.#{$button}.Extra, 
+.#{$dropdownbutton}.Extra {
+	@include btn-size($btn-extra-padding, $btn-font-size, $btn-extra-lineheight);
+}
+
+//icon button
+.#{$button} .#{$icon} {
+	background: $icon-button-bg no-repeat 10000px 10000px;
+}
+.#{$button}:hover .#{$icon},
+.#{$button}:active .#{$icon} {
+	background: $icon-button-bg-hover no-repeat 10000px 10000px;
+}
+.#{$button}.Typeb .#{$icon} {
+	background: $icon-buttontypeb-bg no-repeat 10000px 10000px;
+}
+.#{$button}.Typeb:hover .#{$icon},
+.#{$button}.Typeb:active .#{$icon} {
+	background: $icon-buttontypeb-bg-hover no-repeat 10000px 10000px;
+}
+.#{$button}.Large .#{$icon} {
+	margin: $icon-large-margin;
+}
+.#{$button}.Extra .#{$icon} {
+	margin: $icon-extra-margin;
+}
+.#{$button}.Onlyicon {
+	height: $btn-base-lineheight + 6;
+	padding: $btn-onlyicon-padding;
+	
+	&:hover {
+		height: $btn-base-lineheight + 6;
+		padding: $btn-onlyicon-padding;
+	}
+}
+.#{$button}.Extra.Onlyicon {
+	height: $btn-extra-lineheight - 2;
+	padding: $btn-extra-padding;
+}
+.#{$carousel} {
+	position: relative;
+	overflow: hidden;
+	height: $carousel-height;
+	width: $carousel-width;
+	z-index: 0;
+}
+.#{$carousel} > .Paging {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	bottom: 0;
+}
+.#{$carousel} > .Paging .Link {
+	float: none;
+}
+.#{$carousel} .Prev, 
+.#{$carousel} .Next {
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	z-index: 2;
+	width: $carousel-btn-width;
+	height: $carousel-btn-height;
+	margin-top: $carousel-gutter;
+	line-height: $carousel-line-height;
+}
+.#{$carousel} .Prev {
+	left: $carousel-position;
+	background: url($component-image) no-repeat $carousel-prev-pos;
+}
+.#{$carousel} .Next {
+	right: $carousel-position;
+	background: url($component-image) no-repeat $carousel-next-pos;
+}
+.#{$checkbox} {
+	position: relative;
+	top: -1px;
+    overflow:hidden;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+}
+.ImageCheckbox {
+	position:relative;
+	
+	&:after {
+		content: '';
+		position:absolute;
+		left: $imgchk-left-pos;
+		left: 0px \0/IE8;
+		top: $imgchk-top-pos;
+		width: $imgchk-size;
+		height: $imgchk-size;
+		margin-top: $imgchk-margin-top;
+		background: url($component-image) no-repeat $imgchk-pos;
+	}
+	
+	&.Checked:after {
+		background: url($component-image) no-repeat $imgchk-checked-pos;
+	}
+	
+	&.Disabled:after {
+		background: url($component-image) no-repeat $imgchk-disabled-pos;
+	}
+	
+	&.Checked.Disabled:after {
+		background: url($component-image) no-repeat $imgchk-checked-disabled-pos;
+	}
+	
+	> .#{$checkbox} {
+		@include opacity(0);
+	}
+}
+
+.#{$dateinput}, .#{$daterange} {
+	display:inline-block;
+	position: relative;
+}
+.#{$dateinput}>input, 
+.#{$daterange} .Startdate>input, 
+.#{$daterange} .Enddate>input {
+	outline: 0;
+	overflow: hidden;
+	width: $input-width;
+	height: $input-height;
+	padding: $input-gutter;
+	vertical-align: middle;
+	font-size: $font-size-base;
+	line-height: $input-line-height;
+  	color: $input-font-color;
+	background: $input-bg;
+	border: $input-style;
+  	@include border-radius($border-radius-base);
+  	@include transition($base-trans);
+}
+.#{$dateinput}>input:hover, 
+.#{$daterange} .Startdate>input:hover, 
+.#{$daterange} .Enddate>input:hover,
+.#{$dateinput} > input:focus, 
+.#{$daterange} .Startdate > input:focus, 
+.#{$daterange} .Enddate > input:focus, {
+	background: $input-bg;
+	border: $input-hover;
+}
+.#{$dateinput} > input:active, 
+.#{$daterange} .Startdate > input:active, 
+.#{$daterange} .Enddate > input:active{
+	background: $input-bg;
+	border: $input-hover;
+}
+.#{$dateinput} > input.Disabled,
+.#{$daterange} .Startdate > input.Disabled,
+.#{$daterange} .Enddate > input.Disabled {
+	background: $input-disabled-bg;
+    border: $input-disabled-style;
+}
+.#{$dateinput} > .Calendar, 
+.#{$daterange} .Calendar {
+	cursor: pointer;
+	display: inline-block;
+	//input width size 조정으로 인한 clear와 calendar 위치값 조정
+	position: relative;
+	right: $calendar-right;
+	vertical-align: middle;
+	width: $calendar-width;
+	height: $calendar-height;
+	//margin-left: $calendar-margin-left;
+	background-color: #ffffff;
+	background-image: url($component-image);
+	background-repeat: no-repeat;
+	background-position: $calendar-pos;
+	border: $calendar-icon-style;
+	@include border-radius($calendar-radius);
+}
+.#{$dateinput} > .Calendar.Single,
+.#{$daterange} .Calendar.Single {
+	margin-left: -4px;
+	@include border-radius($border-radius-base);
+}
+.#{$dateinput} > .Calendar:hover,
+.#{$daterange} .Calendar:hover,
+.#{$dateinput} > .Calendar:active,
+.#{$daterange} .Calendar:active {
+	background-color: $calendar-icon-hover-bg;
+	background-image: url($component-image);
+	background-repeat: no-repeat;
+	background-position: $calendar-hover-pos;
+	border: $calendar-icon-hover-style; 
+	@include transition($calendar-trans);
+}
+
+.#{$dateinput}>.Clear,
+.#{$daterange} .Clear {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	top: $dateclear-top;
+	right: $dateclear-right;
+	width: $dateclear-width;
+	height: $dateclear-height;
+	//margin: $dateclear-icon-gutter;
+	text-indent:-99999px;
+	background: url($component-image) no-repeat $dateclear-pos;
+	border: 0;
+}
+.#{$dateinput}>.Clear:hover,
+.#{$daterange} .Clear:hover,
+.#{$dateinput}>.Clear:active,
+.#{$daterange} .Clear:active {
+	background: url($component-image) no-repeat $dateclear-hover-pos;
+	border: 0;
+ }
+.#{$datepicker} {
+	width: $datepicker-width;
+	padding: $datepicker-padding;
+	font-size: $font-size-base;
+	background: $datepicker-bg;
+	border: $datepicker-style;
+	@include border-radius($border-radius-base);
+	@include box-shadow($datepicker-shadow);
+}
+.#{$datepicker} a {
+	display:block;
+	cursor: pointer;
+	width:100%;
+	height: $datepicker-cell-height;
+	font-size: $font-size-base;
+	line-height:$datepicker-cell-height;
+	text-decoration: none;
+}
+.#{$datepicker} .Header {
+	height: $datepicker-header;
+	
+	.Control {
+		display:inline-block;
+		text-decoration: none;
+	}
+}
+
+//control
+.#{$datepicker} .PrevYear, 
+.#{$datepicker} .PrevMonth {
+	display: inline-block;
+	float: left;
+	width: $datepicker-control-width;
+	height: $datepicker-control-height;
+	padding: 0;
+}
+.#{$datepicker} .PrevYear .Control, 
+.#{$datepicker} .PrevMonth .Control {
+	width: $datepicker-control-width;
+	height: $datepicker-control-height;
+}
+.#{$datepicker} .NextYear, 
+.#{$datepicker} .NextMonth {
+	display: inline-block;
+	float: right;
+	padding: 0;
+	width: $datepicker-control-width;
+	height: $datepicker-control-height;
+}
+.#{$datepicker} .NextYear .Control, 
+.#{$datepicker} .NextMonth .Control {
+	width: $datepicker-control-width;
+	height: $datepicker-control-height;
+}
+.#{$datepicker} .PrevYear .Control, 
+.#{$datepicker} .PrevMonth .Control {
+	background: url($component-image) no-repeat $datepicker-prev-pos;
+}
+.#{$datepicker} .PrevYear .Control:hover, 
+.#{$datepicker} .PrevMonth .Control:hover {
+	background: url($component-image) no-repeat $datepicker-prev-hover-pos;
+}
+.#{$datepicker} .PrevYear .Control:active, 
+.#{$datepicker} .PrevMonth .Control:active {
+	background: url($component-image) no-repeat $datepicker-prev-active-pos;
+}
+
+//.#{$datepicker} .PrevYear .Control.Disabled, 
+//.#{$datepicker} .PrevMonth .Control.Disabled {
+//	cursor: default;
+//	background: url($component-image) no-repeat -48px -129px;
+//}
+
+.#{$datepicker} .NextYear .Control, 
+.#{$datepicker} .NextMonth .Control {
+	background: url($component-image) no-repeat $datepicker-next-pos;
+}
+.#{$datepicker} .NextYear .Control:hover, 
+.#{$datepicker} .NextMonth .Control:hover {
+	background: url($component-image) no-repeat $datepicker-next-hover-pos;
+}
+.#{$datepicker} .NextYear .Control:active, 
+.#{$datepicker} .NextMonth .Control:active {
+	background: url($component-image) no-repeat $datepicker-next-active-pos;
+}
+//.#{$datepicker} .NextYear .Control.Disabled, 
+//.#{$datepicker} .NextMonth .Control.Disabled {
+//	cursor: default;
+//	background: url($component-image) no-repeat 0px -129px;
+//}
+
+.#{$datepicker} .BtnClose {
+	position: absolute;
+	top: 11px;
+	right: 10px;
+	width: $datepicker-control-width;
+	height: $datepicker-control-height;
+	
+	.Control {
+		display: block;
+		width: $datepicker-control-width;
+		height: $datepicker-control-height;
+	}
+}
+.#{$datepicker} .BtnClose .Control {
+	background: url($component-image) no-repeat $datepicker-close-pos;
+	&:hover, &:active {
+		background: url($component-image) no-repeat $datepicker-close-hover-pos;
+	}
+}
+
+.#{$datepicker} .SubheaderYear {
+	float: left;
+	width: $datepicker-subheader;
+	height: 100%;
+	margin-right: $datepicker-subheader-gutter;
+}
+.#{$datepicker} .SubheaderYearWide {
+	float: left;
+	width: $datepicker-subheaderwide;
+	height: 100%;
+	text-align: center;
+}
+.#{$datepicker} .SubheaderMonth {
+	float: left;
+	width: $datepicker-subheadermonth;
+	height: 100%;
+	text-align: center;
+}
+.#{$datepicker}.Inline {
+	.SubheaderYearWide {
+		float: left;
+		width: 100%;
+		height: 100%;
+	}
+	.SubheaderYear, & .SubheaderMonth {
+		width: $datepicker-inline-subheadermonth;
+	}
+}
+
+.#{$datepicker} .CurrentYear {
+	display:inline-block;
+	padding: $datepicker-current-padding;
+	text-align: center;
+	line-height: $datepicker-lineheight;
+	font-size: $font-size-base;
+	font-weight: bold;
+}
+.#{$datepicker} .CurrentMonth {
+	display:inline-block;
+	line-height: $datepicker-lineheight;
+	font-size: $font-size-base;
+	font-weight: bold;
+}
+.#{$datepicker} .CurrentYearSelect, 
+.#{$datepicker} .CurrentMonthSelect {
+	display:inline-block;
+	margin-right: 3px;
+	margin-left: 3px;
+	font-size: $font-size-base;
+}
+.#{$datepicker}.Inline .CurrentYearSelect, 
+.#{$datepicker}.Inline .CurrentMonthSelect {
+	width: $datepicker-inline-currentselect;
+}
+.#{$datepicker}.Inline .CurrentYear, 
+.#{$datepicker}.Inline .CurrentMonth {
+	width: $datepicker-inline-current;
+}
+.#{$datepicker} .CurrentYearSelect, 
+.#{$datepicker} .CurrentMonthSelect {
+	/* none */
+}
+
+//Calendar table
+.#{$datepicker} table {
+	border-collapse: collapse;
+	width: 100%;
+	padding: 0;
+}
+.#{$datepicker} thead th {
+	height:26px;
+	background: $datepicker-thead-thbg;
+	border: $datepicker-thead-style;
+	border-left:0;
+	font-size: $font-size-base;
+}
+.#{$datepicker} thead th:first-child {
+	border-left: $datepicker-thead-style;
+}
+
+.#{$datepicker} .Cell {
+	width: $datepicker-cell-width;
+	height: $datepicker-cell-height;
+	padding: 0;
+	text-align: center;
+	border: $datepicker-border-style;
+}
+
+.#{$datepicker} .Day, 
+.#{$datepicker} .PrevMonthDay, 
+.#{$datepicker} .NextMonthDay {
+	display: block;
+}
+
+.#{$datepicker} .Month {
+	display: block;
+}
+.#{$datepicker} .Weekdays {
+	width: $datepicker-cell-width;
+	font-size: $font-size-base;
+}
+.#{$datepicker} .Bottom {
+    display: block;
+    width: 100%;
+    height: $datepicker-cell-height; 
+    
+    .BottomButton {
+    	margin: 5px;
+    }
+    
+    .BottomText {vertical-align:middle;}
+}
+.#{$datepicker} .ChildBottom {
+
+}
+
+.#{$datepicker} .Day, 
+.#{$datepicker} .Month {
+	color: $datepicker-font-color;
+	background: $datepicker-bg;
+}
+
+.#{$datepicker} .Day {
+	&.Holiday {
+		background: $datepicker-holiday-bg;
+	}
+	&.Sat {
+	  /* none */
+	}
+	&.Disabled {
+		cursor: default;
+		color: $datepicker-disabled;
+	}
+}
+
+.#{$datepicker} .Day:hover,
+.#{$datepicker} .Month:hover {
+	font-weight: bold;
+	color: $datepicker-font-active;
+	background: $datepicker-day-hoverbg;
+}
+
+.#{$datepicker} .Day:active, 
+.#{$datepicker} .Month:active {
+	background: $datepicker-day-hoverbg;
+}
+
+.#{$datepicker} .Today {
+	color: $datepicker-font-active;
+	background: $datepicker-today-bg;
+}
+
+.#{$datepicker} .Weekdays, 
+.#{$datepicker} .Weekdays.Holiday, 
+.#{$datepicker} .Weekdays.Sat{
+	/* none */
+}
+
+.#{$datepicker} .PrevMonthDay, 
+.#{$datepicker} .NextMonthDay {
+	color: $datepicker-monthday-color;
+	background: $datepicker-monthday-bg;
+}
+.#{$datepicker} .PrevMonthDay.Disabled, 
+.#{$datepicker} .NextMonthDay.Disabled {
+	color: $datepicker-monthday-disabled-color;
+	cursor: default; 
+}
+.#{$datepicker} .PrevMonthDay:hover, 
+.#{$datepicker} .NextMonthDay:hover {
+    color: $datepicker-monthday-color;
+	background: $datepicker-monthday-hover-bg;
+}
+.#{$datepicker} .PrevMonthDay:active, 
+.#{$datepicker} .NextMonthDay:active {
+    color: #ffffff;
+	background: $datepicker-monthday-active-bg;
+}
+.#{$datepicker} .Bottom {
+    background: #ffffff;
+    border-color: $datepicker-bottom-bg;  
+    .BottomButton {
+    	width: $datepicker-bottom-btnwidth;
+    }
+    .BottomText {
+    	color: $datepicker-bottom-color;
+    }
+}
+.#{$datepicker} tr a:hover, 
+.#{$datepicker}.Weekly tr:hover a {
+	color: $datepicker-font-color;
+	background: $datepicker-weekly-tr-hover;
+}
+.#{$datepicker} tr a:active, 
+.#{$datepicker}.Weekly tr:active a {
+	color: #ffffff;
+	background-color: $datepicker-weekly-tr-active;
+}
+.#{$daterange}, .#{$daterange}>.Startdate, .#{$daterange}>.Enddate {
+	display:inline-block;
+}
+
+.#{$dialog} {
+	width: 270px;
+	//min-height: $dialog-minheight;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+	background: $body-bg;
+	border: $dialog-wrap;
+	@include border-radius($border-radius-base);
+	@include box-shadow($dialog-shadow);
+}
+.#{$dialog} .Header{
+	position: relative;
+	width: 100%;
+	height: $dialog-header-height;
+	font-size: $font-size-base;
+	font-weight: bold; 
+	line-height: $dialog-header-lineheight;
+	text-align: center;
+	color: $base-text-gray;
+	border-bottom: $dialog-header-primary;
+}
+.#{$dialog} .Header .DialogBtn{
+	position: absolute;
+	cursor: pointer;
+	top: $dialog-btn-top;
+	right: $dialog-btn-right;
+	width: $dialog-btn-width; 
+	height: $dialog-btn-height;
+	padding: 0;
+	border: 0;
+	background: url($component-image) no-repeat $dialog-btn-pos;
+	
+	&:hover {
+		background: url($component-image) no-repeat $dialog-btn-hover-pos;
+	}
+	&:active {
+		background: url($component-image) no-repeat $dialog-btn-active-pos;
+	}
+}
+
+.#{$dialog} .DialogToggle {
+	position: absolute;
+	cursor: pointer;
+	top: $dialog-toggle-top;
+	left: $dialog-toggle-left;
+	width: $dialog-toggle-width; 
+	height: $dialog-toggle-height;
+	padding: 0;
+	border: 0;
+	background: url($dialog-toggle) no-repeat $dialog-toggle-pos;
+	
+	&:hover {
+		background: url($dialog-toggle) no-repeat $dialog-toggle-hover-pos;
+	}
+	
+	&.Expanded {
+		background: url($dialog-toggle) no-repeat $dialog-toggle-expanded-pos;
+	}
+	&.Expanded:hover {
+		background: url($dialog-toggle) no-repeat $dialog-toggle-expanded-hover-pos;
+	}
+}
+
+.#{$dialog}.Confirm {
+	border: 1px solid $color-confirm;
+	
+	.Header {
+		@include dialog-theme($color-confirm, $dialog-header-confirm);
+	}
+}
+
+.#{$dialog}.Success {
+	border: 1px solid $color-success;
+	
+	.Header {
+		@include dialog-theme($dialog-title-success, $dialog-header-success);
+	}
+}
+
+.#{$dialog}.Warning {
+	border: 1px solid $color-warning;
+	
+	.Header {
+		@include dialog-theme($dialog-title-warning, $dialog-header-warning);
+	}
+}
+
+.#{$dialog}.Danger {
+	border: 1px solid $color-danger;
+	
+	.Header {
+		@include dialog-theme($color-danger, $dialog-header-warning);
+	}
+}
+
+.#{$dialog} .ResizeBtn{
+	position: absolute;
+    cursor: se-resize;
+	right: $dialog-resize-width / 2;
+	bottom: $dialog-resize-height / 2;
+    width: $dialog-resize-width;
+    height: $dialog-resize-height;
+    background: url($component-image) no-repeat $dialog-resize-pos;
+}
+
+.Dialog-mask {
+	background: #000000;
+}
+
+.Dialog-contents {
+	padding: $dialog-contents;
+}
+
+.Dialog-btnwrap {
+	margin-bottom: $dialog-bottom;
+	text-align: center;
+	
+	& button {
+		margin: $dialog-btn-gutter;
+	}
+}
+
+.#{$divselect} {
+	position: relative;
+	cursor: pointer;
+	display: inline-block;
+	min-width: $divselect-minwidth;
+	padding: $divselect-padding;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+	text-align: left;
+	background: url($divselect-img) no-repeat $divselect-bg-pos;
+	border: $select-style;
+	@include border-radius($border-radius-base);
+	@include transition($base-trans);
+	
+	&:hover, &:active, &.ui-state-active {
+		background: url($divselect-img-hover) no-repeat $divselect-bg-pos;
+		border: $select-hover-style;
+	}
+}
+.#{$divselect}.Disabled {
+	@include opacity($divselect-disabled-opacity);
+}
+.#{$divselect} > select {
+	position: absolute;
+	left: 0;
+	top: 0;
+	cursor: pointer;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	border: 0;
+	@include opacity(0);
+	@include appearance(none);
+}
+.#{$divselect} span {
+	margin-right: $divselect-span;
+}
+.#{$dropdown}, .#{$dropdown} * {
+	list-style:none;
+	font-size: $font-size-base;
+}
+.#{$dropdown}, .#{$dropdown} ul {
+	z-index: 10;
+	padding: $dropdown-ul-padding;
+	margin: 0;
+	min-width: $dropdown-minwidth;
+	background: $body-bg;
+	border: $dropdown-list-border;
+	@include border-radius($border-radius-base);
+}
+.#{$dropdown} .Header a {
+	color: $dropdown-header-color;
+}
+.#{$dropdown} > li.Header:hover, 
+.#{$dropdown} > li.Header.Focused {
+	cursor: auto;
+	background: none;
+	
+	& > a {
+		color: $dropdown-header-color;
+	}
+}
+.#{$dropdown} .Divider {
+	margin: 0;
+	padding: 0;
+}
+.#{$dropdown} ul {
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 100%;
+}
+.#{$dropdown} li {
+	position: relative;
+	padding: $dropdown-li-padding;
+	line-height: $dropdown-line-height;
+	color: $base-text-gray;
+	
+	& > a {
+		width:100%; 
+		height:100%; 
+		display:inline-block;
+		color: $base-text-gray;
+		text-decoration: none;
+		
+		&:hover {
+			color: $dropdown-color-hover;
+			text-decoration: none;
+		}
+	}
+	
+	&.Disabled, &.Disabled * {color: #aaaaaa;}
+}
+
+.#{$dropdown} > li:hover, 
+.#{$dropdown} > li.Focused {
+	cursor: pointer;
+	background: $dropdown-list-hover;
+	color: $dropdown-color-hover;
+	@include transition($base-trans);
+	
+	&.Disabled, 
+	&.Disabled > a, 
+	&.Disabled > a:hover {
+		background: $body-bg;
+		color: $dropdown-disabled-color;
+	}
+	
+	& > a {
+		color: $dropdown-color-hover;
+	}
+	
+}
+
+//2depth background color
+.#{$dropdown} > li > ul > li:hover, 
+.#{$dropdown} > li > ul > li.Focused {
+	background: $dropdown-list-2depth-hover;
+	color: $dropdown-color-hover;
+	@include transition($base-trans);
+}
+
+//3depth background color
+.#{$dropdown} > li > ul > li > ul > li:hover, 
+.#{$dropdown} > li > ul > li > ul > li.Focused {
+	background: $dropdown-list-3depth-hover;
+	color: $dropdown-color-hover;
+	@include transition($base-trans);
+} 
+
+.#{$dropdown} .Expandable {
+	position:relative;
+	&:after {
+		content: ""; 
+		position: absolute;
+		right: $dropdown-arrow-right;
+		top: $dropdown-arrow-top;
+		width: $dropdown-arrow-width;
+		height: $dropdown-arrow-height;
+		margin-top: -4px;
+		background: url($component-image) no-repeat $dropdown-arrow-pos; 
+	}
+	&:hover:after, 
+	&.Focused:after {
+		background: url($component-image) no-repeat $dropdown-arrow-hover-pos; 
+	}
+}
+.#{$dropdown} .Expandable .Expandable {
+	&.af-expanded {
+		color: $dropdown-color-hover;
+	}
+}
+.#{$dropdownbutton} {
+	color: $dropdown-btn-font-color;
+	border: $dropdown-btn-style;
+	@include gradation($flag, $dropdown-btn-bg, $dropdown-btn-bg, $btn-bg-backend);
+	
+	&:hover {
+		color: $dropdown-btn-hover-font;
+		filter: none;
+		@include gradation($flag, $dropdown-btn-hover-bg, $dropdown-btn-hover-bg, $dropdown-btn-hover-bg);
+	}
+}
+
+.#{$dropdownbutton} {
+	padding-right: $dropdown-btn-padding;
+	
+	&:after {
+		content:"";
+		position:absolute;
+		top: 50%;
+		right: $dropdown-btn-right;
+		display:inline-block;
+		width: $dropdown-btn-width;
+		height: $dropdown-btn-height;
+		vertical-align:middle;
+		margin-top: -2px;
+		background: url($component-image) no-repeat $dropdown-btn-pos;
+		background-repeat:no-repeat;
+	}
+}
+//grid variables
+$total-grid-columns: 12 !default;
+$grid-gutter: 30px !default;
+$push: 0 !default;
+
+//wide desktop : ex
+$break-wide: 1180px;
+//desktop :lg
+$break-desktop: 992px;
+//tablet : md
+$break-tablet: 768px;
+//mobile : sm
+$break-mobile: 320px;
+
+$container-wide: 1200px - $grid-gutter;
+$container-desktop: 1000px - $grid-gutter;
+$container-tablet: 780px - $grid-gutter;
+$container-mobile: 340px - $grid-gutter;
+
+$max-width: $break-wide + $grid-gutter; 
+$min-width: $break-mobile - 20px;
+
+$gutter-pcnt: ($grid-gutter/$total-grid-columns) * 100%;
+
+//mixin
+//make grid common css
+@mixin make-grid-option($i:1, $collist: ".Grid-sm-#{$i}, .Grid-md-#{$i}, .Grid-lg-#{$i}, .Grid-ex-#{$i}, .Push-#{$i}") {
+	@for $i from 2 through $total-grid-columns {
+		$collist: "#{$collist}, .Grid-sm-#{$i}, .Grid-md-#{$i}, .Grid-lg-#{$i}, .Grid-ex-#{$i}, .Push-#{$i}";
+	}
+	#{$collist} {
+		float: left;
+		position: relative;
+		min-height: 1px;
+	}
+}
+//width mixin
+@mixin calc-columns($class, $i:1) {
+	@for $i from 1 through $total-grid-columns {
+		.Grid-#{$class}-#{$i} {
+			width: percentage(($i / $total-grid-columns));
+		}
+	}
+}
+//grid ie9.0 wrapper
+.Grid-wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+	width: $container-wide;
+}
+.Grid-wrapper.Lg {
+	margin: 0 auto;
+	overflow: hidden;
+	width: $container-desktop;
+}
+.Grid-wrapper.Md {
+	margin: 0 auto;
+	overflow: hidden;
+	width: $container-tablet;
+}
+
+@include make-grid-option;
+
+//base grid : mobile
+.Grid-container {
+	margin: 0 auto;
+	padding: 0 $grid-gutter / 2; 
+	@include clearfix();
+}
+@include calc-columns(sm);
+
+//device width : media query
+@media (min-width: $break-tablet) {
+	.Grid-container {
+		width: $container-tablet;
+	}
+	@include calc-columns(md);
+}
+@media (min-width: $break-desktop) {
+	.Grid-container {
+		width: $container-desktop;
+	}
+	@include calc-columns(lg);
+}
+@media (min-width: $break-wide) {
+	.Grid-container {
+		width: $container-wide;
+	}
+	@include calc-columns(ex);
+}
+
+//push mixin
+@mixin push-cols($i:1) {
+	@for $i from 1 through $total-grid-columns {
+		.Push-#{$i} {
+			margin-left: percentage(($i / $total-grid-columns));
+		}
+	}
+}
+
+@include push-cols();
+
+
+.#{$groupbutton}, .#{$groupbutton} * {box-sizing: border-box;}
+.#{$groupbutton} {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+	Vertical-align: middle;
+	text-align: center;
+	line-height: $btn-base-lineheight;
+	text-decoration: none;
+	@include border-radius($border-radius-base);
+}
+.#{$groupbutton} .#{$button} {
+	float: left;
+	margin: 0px;
+	border: $group-default-style;
+	border-left: $group-border-color;
+	@include border-radius(0);
+}
+
+.#{$groupbutton} > .#{$button}:first-child {
+	border: $group-default-style;
+}
+
+.#{$groupbutton} > .#{$button}:first-child {
+    &:hover {
+    	@include border-radius($group-first-radius);
+    }
+}
+.#{$groupbutton} > .#{$button}:last-child {
+    &:hover {
+    	@include border-radius($group-last-radius);
+    }
+}
+
+.#{$groupbutton}.Typeb {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: center;
+	Vertical-align: middle;
+	line-height: $btn-base-lineheight;
+	text-decoration: none;
+	@include border-radius($border-radius-base);
+}
+
+.#{$groupbutton}.Typeb .#{$button} {
+    float: left;
+    margin: 0;
+    margin-left: 0;
+    color: $group-typeb-font-color;
+    background: $group-typeb-bg;
+    border: $group-border-style;
+    border-left: 0;
+    filter: none;
+    @include border-radius(0);
+    @include transition($none-trans);
+}
+
+.#{$groupbutton}.Typeb > .#{$button}:first-child {
+	margin-left: 0;
+    border-left: $group-border-style;
+    @include border-radius($group-first-radius);
+}
+.#{$groupbutton}.Typeb > .#{$button}:last-child {
+    border: $group-border-style;
+    border-left: 0;
+    @include border-radius($group-last-radius);
+}
+
+.#{$groupbutton}.Typeb .#{$button}:hover, 
+.#{$groupbutton}.Typeb .#{$button}:active, 
+.#{$groupbutton}.Typeb .#{$button}.Selected, 
+.#{$groupbutton}.Typeb .#{$button}.Checked {
+	margin-left: -1px;
+  	z-index: 2;
+	color: $group-typeb-font-color-hover;
+	background: $group-typeb-bg-hover;
+	border: 1px solid $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Typeb .#{$button}:first-child:hover, 
+.#{$groupbutton}.Typeb .#{$button}:first-child:active, 
+.#{$groupbutton}.Typeb .#{$button}:first-child.Selected, 
+.#{$groupbutton}.Typeb .#{$button}:first-child.Checked {
+	margin-left: 0;
+	z-index: 2;
+	color: $group-typeb-font-color-hover;
+	background: $group-typeb-bg-hover;
+	border-color: $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Typeb .#{$button}:hover + a, 
+.#{$groupbutton}.Typeb .#{$button}:active + a, 
+.#{$groupbutton}.Typeb .#{$button}.Selected + a ,
+.#{$groupbutton}.Typeb .#{$button}.Checked + a {
+	margin-right: 0;
+}
+
+.#{$groupbutton} .#{$radio}, 
+.#{$groupbutton} .#{$checkbox}, 
+.#{$groupbutton} .#{$radio}.Checked, 
+.#{$groupbutton} .#{$checkbox}.Checked {
+	position:absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	line-height: $btn-base-lineheight;
+	@include opacity(0);
+}
+
+.#{$groupbutton}.Vertical .#{$button} {
+	float:left;
+	clear:both;
+	width:100%;
+	border: $group-default-style;
+	border-top: $group-border-color;
+}
+.#{$groupbutton}.Vertical .#{$button}:first-child {
+	border: $group-default-style;
+	@include border-radius($group-vertical-first-radius);
+}
+.#{$groupbutton}.Vertical.Typeb .#{$button} {
+	float: left;
+	width: 100%;
+	margin: 0;
+    color: $group-typeb-font-color;
+    background: $group-typeb-bg;
+    border: $group-border-style;
+    border-top: 0;
+    @include border-radius(0);
+}
+
+.#{$groupbutton}.Vertical.Typeb > .#{$button}:first-child {
+	margin-top: 0;
+    border-top: $group-border-style;
+    @include border-radius($group-vertical-typeb-first-radius);
+}
+.#{$groupbutton}.Vertical.typeb > .#{$button}:last-child {
+	@include border-radius($group-vertical-typeb-last-radius);
+}
+
+.#{$groupbutton}.Vertical.Typeb .#{$button}:hover, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:active, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Selected, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Checked {
+	margin-top: -1px;
+  	z-index:2;
+	background: $group-typeb-bg-hover;
+	color: $group-typeb-font-color-hover;
+	border: 1px solid $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child:hover, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child:active, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child.Selected, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child.Checked {
+	margin-top: 0;
+	z-index: 2;
+	color: $group-typeb-font-color-hover;
+	background: $group-typeb-bg-hover;
+	border-color: $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Vertical.Typeb .#{$button}:hover +a, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:active +a, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Selected +a ,
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Checked +a {
+	margin-bottom: 0;
+}
+
+
+/* Common Style */
+.#{$hierarchical} {
+	position: relative;
+	list-style :none;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+}
+
+.#{$hierarchical} li {
+	position: relative;
+	cursor: pointer;
+	list-style: none;
+}
+
+.#{$hierarchical} a {
+	display: block;
+	width: 100%;
+	text-decoration: none;
+	color: $base-text-gray;
+}
+
+.#{$hierarchical} > li {
+	display: inline-block;
+	float: left; 
+	padding: 4px 30px 10px 20px;
+	background: url('./images/hierach_icon.png') no-repeat 0 -87px;
+	&:first-child {
+		background: none;
+	}
+	
+	&:first-child > a {
+		content:'';
+		display: inline-block;
+		width: 19px;
+		height: 19px;
+		padding: 3px 20px 0 25px;
+		margin-top:-3px;
+		background: url('./images/hierach_icon.png') no-repeat 0 0px;
+	}
+	
+	&:first-child > a:after {
+		background: none;
+	}
+}
+
+.#{$hierarchical} > li.Expandable > .ArrowIcon {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	display: inline-block;
+	width: 19px;
+	height: 19px;
+	margin-right:5px;
+	background: url('./images/hierach_icon.png') no-repeat 0 -30px;
+}
+
+.#{$hierarchical} > li.Expandable:hover > .ArrowIcon {
+	background: url('./images/hierach_icon.png') no-repeat 0 -60px;
+}
+
+.#{$hierarchical} > li.Expanded > ul > li {
+	&:hover {
+		background: $hierarch-hover;
+	}
+	
+	&:hover a {color: $hierarch-sub-hover}
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.#{$hierarchical} > li > ul {
+	top: 25px;
+	left: 20px;
+}
+/* 3 depth 이상 sub menu */
+.#{$hierarchical} ul {
+	position:absolute;
+	top: 10px;
+	left: 100%;
+	width: 160px;
+	margin: 0;
+	padding: 6px 0;
+	border: $hierarch-sub-style;
+	@include border-radius($border-radius-base);
+}
+
+.#{$hierarchical} ul > li {
+	display: block;
+	height: $hierarch-height;
+	padding: 0 18px;
+	list-style: none;
+	line-height: $hierarch-height - 2px;
+	background: $hierarch-sub-bg;
+}
+.#{$icon} {
+	display:inline-block;
+	vertical-align:middle;
+	width: 14px;
+	height: 14px;
+	margin: $icon-margin;
+	background: $icon-bg no-repeat 1000px 1000px;
+}
+.#{$icon}.White {
+	background: $icon-white-bg no-repeat 1000px 1000px;
+}
+.#{$icon}.Default {
+	background: $icon-bg no-repeat 1000px 1000px;
+}
+.#{$icon}.Glass,
+.#{$button} .#{$icon}.Glass,
+.#{$button}.Typeb .#{$icon}.Glass {
+  background-position: 0 0;
+}
+
+.#{$icon}.Music,
+.#{$button} .#{$icon}.Music,
+.#{$button}.Typeb .#{$icon}.Music {
+  background-position: -24px 0;
+}
+
+.#{$icon}.Search,
+.#{$button} .#{$icon}.Search,
+.#{$button}.Typeb .#{$icon}.Search {
+  background-position: -48px 0;
+}
+
+.#{$icon}.Envelope,
+.#{$button} .#{$icon}.Envelope,
+.#{$button}.Typeb .#{$icon}.Envelope {
+  background-position: -72px 0;
+}
+
+.#{$icon}.Heart,
+.#{$button} .#{$icon}.Heart,
+.#{$button}.Typeb .#{$icon}.Heart {
+  background-position: -96px 0;
+}
+
+.#{$icon}.Star,
+.#{$button} .#{$icon}.Star,
+.#{$button}.Typeb .#{$icon}.Star {
+  background-position: -120px 0;
+}
+
+.#{$icon}.Star-empty,
+.#{$button} .#{$icon}.Star-empty,
+.#{$button}.Typeb .#{$icon}.Star-empty {
+  background-position: -144px 0;
+}
+
+.#{$icon}.User,
+.#{$button} .#{$icon}.User,
+.#{$button}.Typeb .#{$icon}.User {
+  background-position: -168px 0;
+}
+
+.#{$icon}.Film,
+.#{$button} .#{$icon}.Film,
+.#{$button}.Typeb .#{$icon}.Film {
+  background-position: -192px 0;
+}
+
+.#{$icon}.Th-large,
+.#{$button} .#{$icon}.Th-large,
+.#{$button}.Typeb .#{$icon}.Th-large {
+  background-position: -216px 0;
+}
+
+.#{$icon}.Th,
+.#{$button} .#{$icon}.Th,
+.#{$button}.Typeb .#{$icon}.Th {
+  background-position: -240px 0;
+}
+
+.#{$icon}.Th-list,
+.#{$button} .#{$icon}.Th-list,
+.#{$button}.Typeb .#{$icon}.Th-list {
+  background-position: -264px 0;
+}
+
+.#{$icon}.Ok,
+.#{$button} .#{$icon}.Ok,
+.#{$button}.Typeb .#{$icon}.Ok {
+  background-position: -288px 0;
+}
+
+.#{$icon}.Remove,
+.#{$button} .#{$icon}.Remove,
+.#{$button}.Typeb .#{$icon}.Remove {
+  background-position: -312px 0;
+}
+
+.#{$icon}.Zoom-in,
+.#{$button} .#{$icon}.Zoom-in,
+.#{$button}.Typeb .#{$icon}.Zoom-in {
+  background-position: -336px 0;
+}
+
+.#{$icon}.Zoom-out,
+.#{$button} .#{$icon}.Zoom-out,
+.#{$button}.Typeb .#{$icon}.Zoom-out {
+  background-position: -360px 0;
+}
+
+.#{$icon}.Off,
+.#{$button} .#{$icon}.Off,
+.#{$button}.Typeb .#{$icon}.Off {
+  background-position: -384px 0;
+}
+
+.#{$icon}.Signal,
+.#{$button} .#{$icon}.Signal,
+.#{$button}.Typeb .#{$icon}.Signal {
+  background-position: -408px 0;
+}
+
+.#{$icon}.Cog,
+.#{$button} .#{$icon}.Cog,
+.#{$button}.Typeb .#{$icon}.Cog {
+  background-position: -432px 0;
+}
+
+.#{$icon}.Trash,
+.#{$button} .#{$icon}.Trash,
+.#{$button}.Typeb .#{$icon}.Trash {
+  background-position: -456px 0;
+}
+
+.#{$icon}.Home,
+.#{$button} .#{$icon}.Home,
+.#{$button}.Typeb .#{$icon}.Home {
+  background-position: 0 -24px;
+}
+
+.#{$icon}.File,
+.#{$button} .#{$icon}.File,
+.#{$button}.Typeb .#{$icon}.File {
+  background-position: -24px -24px;
+}
+
+.#{$icon}.Time,
+.#{$button} .#{$icon}.Time,
+.#{$button}.Typeb .#{$icon}.Time {
+  background-position: -48px -24px;
+}
+
+.#{$icon}.Road,
+.#{$button} .#{$icon}.Road,
+.#{$button}.Typeb .#{$icon}.Road {
+  background-position: -72px -24px;
+}
+
+.#{$icon}.Download-alt,
+.#{$button} .#{$icon}.Download-alt,
+.#{$button}.Typeb .#{$icon}.Download-alt {
+  background-position: -96px -24px;
+}
+
+.#{$icon}.Download,
+.#{$button} .#{$icon}.Download,
+.#{$button}.Typeb .#{$icon}.Download {
+  background-position: -120px -24px;
+}
+
+.#{$icon}.Upload,
+.#{$button} .#{$icon}.Upload,
+.#{$button}.Typeb .#{$icon}.Upload {
+  background-position: -144px -24px;
+}
+
+.#{$icon}.Inbox,
+.#{$button} .#{$icon}.Inbox,
+.#{$button}.Typeb .#{$icon}.Inbox {
+  background-position: -168px -24px;
+}
+
+.#{$icon}.Play-circle,
+.#{$button} .#{$icon}.Play-circle,
+.#{$button}.Typeb .#{$icon}.Play-circle {
+  background-position: -192px -24px;
+}
+
+.#{$icon}.Repeat,
+.#{$button} .#{$icon}.Repeat,
+.#{$button}.Typeb .#{$icon}.Repeat {
+  background-position: -216px -24px;
+}
+
+.#{$icon}.Refresh,
+.#{$button} .#{$icon}.Refresh,
+.#{$button}.Typeb .#{$icon}.Refresh {
+  background-position: -240px -24px;
+}
+
+.#{$icon}.List-alt,
+.#{$button} .#{$icon}.List-alt,
+.#{$button}.Typeb .#{$icon}.List-alt {
+  background-position: -264px -24px;
+}
+
+.#{$icon}.Lock,
+.#{$button} .#{$icon}.Lock,
+.#{$button}.Typeb .#{$icon}.Lock {
+  background-position: -287px -24px;
+}
+
+.#{$icon}.Flag,
+.#{$button} .#{$icon}.Flag,
+.#{$button}.Typeb .#{$icon}.Flag {
+  background-position: -312px -24px;
+}
+
+.#{$icon}.Headphones,
+.#{$button} .#{$icon}.Headphones,
+.#{$button}.Typeb .#{$icon}.Headphones {
+  background-position: -336px -24px;
+}
+
+.#{$icon}.Volume-off,
+.#{$button} .#{$icon}.Volume-off,
+.#{$button}.Typeb .#{$icon}.Volume-off {
+  background-position: -360px -24px;
+}
+
+.#{$icon}.Volume-down,
+.#{$button} .#{$icon}.Volume-down,
+.#{$button}.Typeb .#{$icon}.Volume-down {
+  background-position: -384px -24px;
+}
+
+.#{$icon}.Volume-up,
+.#{$button} .#{$icon}.Volume-up,
+.#{$button}.Typeb .#{$icon}.Volume-up {
+  background-position: -408px -24px;
+}
+
+.#{$icon}.Qrcode,
+.#{$button} .#{$icon}.Qrcode,
+.#{$button}.Typeb .#{$icon}.Qrcode {
+  background-position: -432px -24px;
+}
+
+.#{$icon}.Barcode,
+.#{$button} .#{$icon}.Barcode,
+.#{$button}.Typeb .#{$icon}.Barcode {
+  background-position: -456px -24px;
+}
+
+.#{$icon}.Tag,
+.#{$button} .#{$icon}.Tag,
+.#{$button}.Typeb .#{$icon}.Tag {
+  background-position: 0 -48px;
+}
+
+.#{$icon}.Tags,
+.#{$button} .#{$icon}.Tags,
+.#{$button}.Typeb .#{$icon}.Tags {
+  background-position: -25px -48px;
+}
+
+.#{$icon}.Book,
+.#{$button} .#{$icon}.Book,
+.#{$button}.Typeb .#{$icon}.Book {
+  background-position: -48px -48px;
+}
+
+.#{$icon}.Bookmark,
+.#{$button} .#{$icon}.Bookmark,
+.#{$button}.Typeb .#{$icon}.Bookmark {
+  background-position: -72px -48px;
+}
+
+.#{$icon}.Print,
+.#{$button} .#{$icon}.Print,
+.#{$button}.Typeb .#{$icon}.Print {
+  background-position: -96px -48px;
+}
+
+.#{$icon}.Camera,
+.#{$button} .#{$icon}.Camera,
+.#{$button}.Typeb .#{$icon}.Camera {
+  background-position: -120px -48px;
+}
+
+.#{$icon}.Font,
+.#{$button} .#{$icon}.Font,
+.#{$button}.Typeb .#{$icon}.Font {
+  background-position: -144px -48px;
+}
+
+.#{$icon}.Bold,
+.#{$button} .#{$icon}.Bold,
+.#{$button}.Typeb .#{$icon}.Bold {
+  background-position: -167px -48px;
+}
+
+.#{$icon}.Italic,
+.#{$button} .#{$icon}.Italic,
+.#{$button}.Typeb .#{$icon}.Italic {
+  background-position: -192px -48px;
+}
+
+.#{$icon}.Text-height,
+.#{$button} .#{$icon}.Text-height,
+.#{$button}.Typeb .#{$icon}.Text-height {
+  background-position: -216px -48px;
+}
+
+.#{$icon}.Text-width,
+.#{$button} .#{$icon}.Text-width,
+.#{$button}.Typeb .#{$icon}.Text-width {
+  background-position: -240px -48px;
+}
+
+.#{$icon}.Align-left,
+.#{$button} .#{$icon}.Align-left,
+.#{$button}.Typeb .#{$icon}.Align-left {
+  background-position: -264px -48px;
+}
+
+.#{$icon}.Align-center,
+.#{$button} .#{$icon}.Align-center,
+.#{$button}.Typeb .#{$icon}.Align-center {
+  background-position: -288px -48px;
+}
+
+.#{$icon}.Align-right,
+.#{$button} .#{$icon}.Align-right,
+.#{$button}.Typeb .#{$icon}.Align-right {
+  background-position: -312px -48px;
+}
+
+.#{$icon}.Align-justify,
+.#{$button} .#{$icon}.Align-justify,
+.#{$button}.Typeb .#{$icon}.Align-justify {
+  background-position: -336px -48px;
+}
+
+.#{$icon}.List,
+.#{$button} .#{$icon}.List,
+.#{$button}.Typeb .#{$icon}.List {
+  background-position: -360px -48px;
+}
+
+.#{$icon}.Indent-left,
+.#{$button} .#{$icon}.Indent-left,
+.#{$button}.Typeb .#{$icon}.Indent-left {
+  background-position: -384px -48px;
+}
+
+.#{$icon}.Indent-right,
+.#{$button} .#{$icon}.Indent-right,
+.#{$button}.Typeb .#{$icon}.Indent-right {
+  background-position: -408px -48px;
+}
+
+.#{$icon}.Facetime-video,
+.#{$button} .#{$icon}.Facetime-video,
+.#{$button}.Typeb .#{$icon}.Facetime-video {
+  background-position: -432px -48px;
+}
+
+.#{$icon}.Picture,
+.#{$button} .#{$icon}.Picture,
+.#{$button}.Typeb .#{$icon}.Picture {
+  background-position: -456px -48px;
+}
+
+.#{$icon}.Pencil,
+.#{$button} .#{$icon}.Pencil,
+.#{$button}.Typeb .#{$icon}.Pencil {
+  background-position: 0 -72px;
+}
+
+.#{$icon}.Map-marker,
+.#{$button} .#{$icon}.Map-marker,
+.#{$button}.Typeb .#{$icon}.Map-marker {
+  background-position: -24px -72px;
+}
+
+.#{$icon}.Adjust,
+.#{$button} .#{$icon}.Adjust,
+.#{$button}.Typeb .#{$icon}.Adjust {
+  background-position: -48px -72px;
+}
+
+.#{$icon}.Tint,
+.#{$button} .#{$icon}.Tint,
+.#{$button}.Typeb .#{$icon}.Tint {
+  background-position: -72px -72px;
+}
+
+.#{$icon}.Edit,
+.#{$button} .#{$icon}.Edit,
+.#{$button}.Typeb .#{$icon}.Edit {
+  background-position: -96px -72px;
+}
+
+.#{$icon}.Share,
+.#{$button} .#{$icon}.Share,
+.#{$button}.Typeb .#{$icon}.Share {
+  background-position: -120px -72px;
+}
+
+.#{$icon}.Check,
+.#{$button} .#{$icon}.Check,
+.#{$button}.Typeb .#{$icon}.Check {
+  background-position: -144px -72px;
+}
+
+.#{$icon}.Move,
+.#{$button} .#{$icon}.Move,
+.#{$button}.Typeb .#{$icon}.Move {
+  background-position: -168px -72px;
+}
+
+.#{$icon}.Step-backward,
+.#{$button} .#{$icon}.Step-backward,
+.#{$button}.Typeb .#{$icon}.Step-backward {
+  background-position: -192px -72px;
+}
+
+.#{$icon}.Fast-backward,
+.#{$button} .#{$icon}.Fast-backward,
+.#{$button}.Typeb .#{$icon}.Fast-backward {
+  background-position: -216px -72px;
+}
+
+.#{$icon}.Backward,
+.#{$button} .#{$icon}.Backward,
+.#{$button}.Typeb .#{$icon}.Backward {
+  background-position: -240px -72px;
+}
+
+.#{$icon}.Play,
+.#{$button} .#{$icon}.Play,
+.#{$button}.Typeb .#{$icon}.Play {
+  background-position: -264px -72px;
+}
+
+.#{$icon}.Pause,
+.#{$button} .#{$icon}.Pause,
+.#{$button}.Typeb .#{$icon}.Pause {
+  background-position: -288px -72px;
+}
+
+.#{$icon}.Stop,
+.#{$button} .#{$icon}.Stop,
+.#{$button}.Typeb .#{$icon}.Stop {
+  background-position: -312px -72px;
+}
+
+.#{$icon}.Forward,
+.#{$button} .#{$icon}.Forward,
+.#{$button}.Typeb .#{$icon}.Forward {
+  background-position: -336px -72px;
+}
+
+.#{$icon}.Fast-forward,
+.#{$button} .#{$icon}.Fast-forward,
+.#{$button}.Typeb .#{$icon}.Fast-forward {
+  background-position: -360px -72px;
+}
+
+.#{$icon}.Step-forward,
+.#{$button} .#{$icon}.Step-forward,
+.#{$button}.Typeb .#{$icon}.Step-forward {
+  background-position: -384px -72px;
+}
+
+.#{$icon}.Eject,
+.#{$button} .#{$icon}.Eject,
+.#{$button}.Typeb .#{$icon}.Eject {
+  background-position: -408px -72px;
+}
+
+.#{$icon}.Chevron-left,
+.#{$button} .#{$icon}.Chevron-left,
+.#{$button}.Typeb .#{$icon}.Chevron-left {
+  background-position: -432px -72px;
+}
+
+.#{$icon}.Chevron-right,
+.#{$button} .#{$icon}.Chevron-right,
+.#{$button}.Typeb .#{$icon}.Chevron-right {
+  background-position: -456px -72px;
+}
+
+.#{$icon}.Plus-sign,
+.#{$button} .#{$icon}.Plus-sign,
+.#{$button}.Typeb .#{$icon}.Plus-sign {
+  background-position: 0 -96px;
+}
+
+.#{$icon}.Minus-sign,
+.#{$button} .#{$icon}.Minus-sign,
+.#{$button}.Typeb .#{$icon}.Minus-sign {
+  background-position: -24px -96px;
+}
+
+.#{$icon}.Remove-sign,
+.#{$button} .#{$icon}.Remove-sign,
+.#{$button}.Typeb .#{$icon}.Remove-sign {
+  background-position: -48px -96px;
+}
+
+.#{$icon}.Ok-sign,
+.#{$button} .#{$icon}.Ok-sign,
+.#{$button}.Typeb .#{$icon}.Ok-sign {
+  background-position: -72px -96px;
+}
+
+.#{$icon}.Question-sign,
+.#{$button} .#{$icon}.Question-sign,
+.#{$button}.Typeb .#{$icon}.Question-sign {
+  background-position: -96px -96px;
+}
+
+.#{$icon}.Info-sign,
+.#{$button} .#{$icon}.Info-sign,
+.#{$button}.Typeb .#{$icon}.Info-sign {
+  background-position: -120px -96px;
+}
+
+.#{$icon}.Screenshot,
+.#{$button} .#{$icon}.Screenshot,
+.#{$button}.Typeb .#{$icon}.Screenshot {
+  background-position: -144px -96px;
+}
+
+.#{$icon}.Remove-circle,
+.#{$button} .#{$icon}.Remove-circle,
+.#{$button}.Typeb .#{$icon}.Remove-circle {
+  background-position: -168px -96px;
+}
+
+.#{$icon}.Ok-circle,
+.#{$button} .#{$icon}.Ok-circle,
+.#{$button}.Typeb .#{$icon}.Ok-circle {
+  background-position: -192px -96px;
+}
+
+.#{$icon}.Ban-circle,
+.#{$button} .#{$icon}.Ban-circle,
+.#{$button}.Typeb .#{$icon}.Ban-circle {
+  background-position: -216px -96px;
+}
+
+.#{$icon}.Arrow-left,
+.#{$button} .#{$icon}.Arrow-left,
+.#{$button}.Typeb .#{$icon}.Arrow-left {
+  background-position: -240px -96px;
+}
+
+.#{$icon}.Arrow-right,
+.#{$button} .#{$icon}.Arrow-right,
+.#{$button}.Typeb .#{$icon}.Arrow-right {
+  background-position: -264px -96px;
+}
+
+.#{$icon}.Arrow-up,
+.#{$button} .#{$icon}.Arrow-up,
+.#{$button}.Typeb .#{$icon}.Arrow-up {
+  background-position: -289px -96px;
+}
+
+.#{$icon}.Arrow-down,
+.#{$button} .#{$icon}.Arrow-down,
+.#{$button}.Typeb .#{$icon}.Arrow-down {
+  background-position: -312px -96px;
+}
+
+.#{$icon}.Share-alt,
+.#{$button} .#{$icon}.Share-alt,
+.#{$button}.Typeb .#{$icon}.Share-alt {
+  background-position: -336px -96px;
+}
+
+.#{$icon}.Resize-full,
+.#{$button} .#{$icon}.Resize-full,
+.#{$button}.Typeb .#{$icon}.Resize-full {
+  background-position: -360px -96px;
+}
+
+.#{$icon}.Resize-small,
+.#{$button} .#{$icon}.Resize-small,
+.#{$button}.Typeb .#{$icon}.Resize-small {
+  background-position: -384px -96px;
+}
+
+.#{$icon}.Plus,
+.#{$button} .#{$icon}.Plus,
+.#{$button}.Typeb .#{$icon}.Plus {
+  background-position: -408px -96px;
+}
+
+.#{$icon}.Minus,
+.#{$button} .#{$icon}.Minus,
+.#{$button}.Typeb .#{$icon}.Minus {
+  background-position: -433px -96px;
+}
+
+.#{$icon}.Asterisk,
+.#{$button} .#{$icon}.Asterisk,
+.#{$button}.Typeb .#{$icon}.Asterisk {
+  background-position: -456px -96px;
+}
+
+.#{$icon}.Exclamation-sign,
+.#{$button} .#{$icon}.Exclamation-sign,
+.#{$button}.Typeb .#{$icon}.Exclamation-sign {
+  background-position: 0 -120px;
+}
+
+.#{$icon}.Gift,
+.#{$button} .#{$icon}.Gift,
+.#{$button}.Typeb .#{$icon}.Gift {
+  background-position: -24px -120px;
+}
+
+.#{$icon}.Leaf,
+.#{$button} .#{$icon}.Leaf,
+.#{$button}.Typeb .#{$icon}.Leaf {
+  background-position: -48px -120px;
+}
+
+.#{$icon}.Fire,
+.#{$button} .#{$icon}.Fire,
+.#{$button}.Typeb .#{$icon}.Fire {
+  background-position: -72px -120px;
+}
+
+.#{$icon}.Eye-open,
+.#{$button} .#{$icon}.Eye-open,
+.#{$button}.Typeb .#{$icon}.Eye-open {
+  background-position: -96px -120px;
+}
+
+.#{$icon}.Eye-close,
+.#{$button} .#{$icon}.Eye-close,
+.#{$button}.Typeb .#{$icon}.Eye-close {
+  background-position: -120px -120px;
+}
+
+.#{$icon}.Warning-sign,
+.#{$button} .#{$icon}.Warning-sign,
+.#{$button}.Typeb .#{$icon}.Warning-sign {
+  background-position: -144px -120px;
+}
+
+.#{$icon}.Plane,
+.#{$button} .#{$icon}.Plane,
+.#{$button}.Typeb .#{$icon}.Plane {
+  background-position: -168px -120px;
+}
+
+.#{$icon}.Calendar,
+.#{$button} .#{$icon}.Calendar,
+.#{$button}.Typeb .#{$icon}.Calendar {
+  background-position: -192px -120px;
+}
+
+.#{$icon}.Random,
+.#{$button} .#{$icon}.Random,
+.#{$button}.Typeb .#{$icon}.Random {
+  width: 16px;
+  background-position: -216px -120px;
+}
+
+.#{$icon}.Comment,
+.#{$button} .#{$icon}.Comment,
+.#{$button}.Typeb .#{$icon}.Comment {
+  background-position: -240px -120px;
+}
+
+.#{$icon}.Magnet,
+.#{$button} .#{$icon}.Magnet,
+.#{$button}.Typeb .#{$icon}.Magnet {
+  background-position: -264px -120px;
+}
+
+.#{$icon}.Chevron-up,
+.#{$button} .#{$icon}.Chevron-up,
+.#{$button}.Typeb .#{$icon}.Chevron-up {
+  background-position: -288px -120px;
+}
+
+.#{$icon}.Chevron-down,
+.#{$button} .#{$icon}.Chevron-down,
+.#{$button}.Typeb .#{$icon}.Chevron-down {
+  background-position: -313px -119px;
+}
+
+.#{$icon}.Retweet,
+.#{$button} .#{$icon}.Retweet,
+.#{$button}.Typeb .#{$icon}.Retweet {
+  background-position: -336px -120px;
+}
+
+.#{$icon}.Shopping-cart,
+.#{$button} .#{$icon}.Shopping-cart,
+.#{$button}.Typeb .#{$icon}.Shopping-cart {
+  background-position: -360px -120px;
+}
+
+.#{$icon}.Folder-close,
+.#{$button} .#{$icon}.Folder-close,
+.#{$button}.Typeb .#{$icon}.Folder-close {
+  width: 16px;
+  background-position: -384px -120px;
+}
+
+.#{$icon}.Folder-open,
+.#{$button} .#{$icon}.Folder-open,
+.#{$button}.Typeb .#{$icon}.Folder-open {
+  width: 16px;
+  background-position: -408px -120px;
+}
+
+.#{$icon}.Resize-vertical,
+.#{$button} .#{$icon}.Resize-vertical,
+.#{$button}.Typeb .#{$icon}.Resize-vertical {
+  background-position: -432px -119px;
+}
+
+.#{$icon}.Resize-horizontal,
+.#{$button} .#{$icon}.Resize-horizontal,
+.#{$button}.Typeb .#{$icon}.Resize-horizontal {
+  background-position: -456px -118px;
+}
+
+.#{$icon}.Hdd,
+.#{$button} .#{$icon}.Hdd,
+.#{$button}.Typeb .#{$icon}.Hdd {
+  background-position: 0 -144px;
+}
+
+.#{$icon}.Bullhorn,
+.#{$button} .#{$icon}.Bullhorn,
+.#{$button}.Typeb .#{$icon}.Bullhorn {
+  background-position: -24px -144px;
+}
+
+.#{$icon}.Bell,
+.#{$button} .#{$icon}.Bell,
+.#{$button}.Typeb .#{$icon}.Bell {
+  background-position: -48px -144px;
+}
+
+.#{$icon}.Certificate,
+.#{$button} .#{$icon}.Certificate,
+.#{$button}.Typeb .#{$icon}.Certificate {
+  background-position: -72px -144px;
+}
+
+.#{$icon}.Thumbs-up,
+.#{$button} .#{$icon}.Thumbs-up,
+.#{$button}.Typeb .#{$icon}.Thumbs-up {
+  background-position: -96px -144px;
+}
+
+.#{$icon}.Thumbs-down,
+.#{$button} .#{$icon}.Thumbs-down,
+.#{$button}.Typeb .#{$icon}.Thumbs-down {
+  background-position: -120px -144px;
+}
+
+.#{$icon}.Hand-right,
+.#{$button} .#{$icon}.Hand-right,
+.#{$button}.Typeb .#{$icon}.Hand-right {
+  background-position: -144px -144px;
+}
+
+.#{$icon}.Hand-left,
+.#{$button} .#{$icon}.Hand-left,
+.#{$button}.Typeb .#{$icon}.Hand-left {
+  background-position: -168px -144px;
+}
+
+.#{$icon}.Hand-up,
+.#{$button} .#{$icon}.Hand-up,
+.#{$button}.Typeb .#{$icon}.Hand-up {
+  background-position: -192px -144px;
+}
+
+.#{$icon}.Hand-down,
+.#{$button} .#{$icon}.Hand-down,
+.#{$button}.Typeb .#{$icon}.Hand-down {
+  background-position: -216px -144px;
+}
+
+.#{$icon}.Circle-arrow-right,
+.#{$button} .#{$icon}.Circle-arrow-right,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-right {
+  background-position: -240px -144px;
+}
+
+.#{$icon}.Circle-arrow-left,
+.#{$button} .#{$icon}.Circle-arrow-left,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-left {
+  background-position: -264px -144px;
+}
+
+.#{$icon}.Circle-arrow-up,
+.#{$button} .#{$icon}.Circle-arrow-up,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-up {
+  background-position: -288px -144px;
+}
+
+.#{$icon}.Circle-arrow-down,
+.#{$button} .#{$icon}.Circle-arrow-down,
+.#{$button}.Typeb .#{$icon}.Circle-arrow-down {
+  background-position: -312px -144px;
+}
+
+.#{$icon}.Globe,
+.#{$button} .#{$icon}.Globe,
+.#{$button}.Typeb .#{$icon}.Globe {
+  background-position: -336px -144px;
+}
+
+.#{$icon}.Wrench,
+.#{$button} .#{$icon}.Wrench,
+.#{$button}.Typeb .#{$icon}.Wrench {
+  background-position: -360px -144px;
+}
+
+.#{$icon}.Tasks,
+.#{$button} .#{$icon}.Tasks,
+.#{$button}.Typeb .#{$icon}.Tasks {
+  background-position: -384px -144px;
+}
+
+.#{$icon}.Filter,
+.#{$button} .#{$icon}.Filter,
+.#{$button}.Typeb .#{$icon}.Filter {
+  background-position: -408px -144px;
+}
+
+.#{$icon}.Briefcase,
+.#{$button} .#{$icon}.Briefcase,
+.#{$button}.Typeb .#{$icon}.Briefcase {
+  background-position: -432px -144px;
+}
+
+.#{$icon}.Fullscreen,
+.#{$button} .#{$icon}.Fullscreen,
+.#{$button}.Typeb .#{$icon}.Fullscreen {
+  background-position: -456px -144px;
+}
+
+.#{$icon}.Down-arrow,
+.#{$button} .#{$icon}.Down-arrow,
+.#{$button}.Typeb .#{$icon}.Down-arrow {
+  background-position: -264px -72px;
+  @include transform(rotate(90deg));
+}
+
+.#{$icon}.Magic,
+.#{$button} .#{$icon}.Magic,
+.#{$button}.Typeb .#{$icon}.Magic {
+  background-position: -2px -170px;
+}
+
+.#{$icon}.Underline,
+.#{$button} .#{$icon}.Underline,
+.#{$button}.Typeb .#{$icon}.Underline {
+  background-position: -24px -170px;
+}
+
+.#{$icon}.Remove-font-style,
+.#{$button} .#{$icon}.Remove-font-style,
+.#{$button}.Typeb .#{$icon}.Remove-font-style {
+  background-position: -48px -170px;
+}
+
+.#{$icon}.Ordered-list,
+.#{$button} .#{$icon}.Ordered-list,
+.#{$button}.Typeb .#{$icon}.Ordered-list {
+  background-position: -72px -170px;
+}
+
+.#{$icon}.Link,
+.#{$button} .#{$icon}.Link,
+.#{$button}.Typeb .#{$icon}.Link {
+  background-position: -96px -170px;
+}
+
+.#{$icon}.Unlink,
+.#{$button} .#{$icon}.Unlink,
+.#{$button}.Typeb .#{$icon}.Unlink {
+  background-position: -120px -170px;
+}
+
+.#{$icon}.Codeview,
+.#{$button} .#{$icon}.Codeview,
+.#{$button}.Typeb .#{$icon}.Codeview {
+  background-position: -145px -170px;
+}
+
+.#{$icon}.Undo,
+.#{$button} .#{$icon}.Undo,
+.#{$button}.Typeb .#{$icon}.Undo {
+  background-position: -168px -170px;
+}
+
+.#{$icon}.Line-help,
+.#{$button} .#{$icon}.Line-help,
+.#{$button}.Typeb .#{$icon}.Line-help {
+  background-position: -189px -170px;
+}
+
+//only editor icon
+.#{$icon}.Editor-magic,
+.#{$button} .#{$icon}.Editor-magic,
+.#{$button}.Typeb .#{$icon}.Editor-magic {
+  width: 27px;
+  background-position: -217px -170px;
+}
+.#{$icon}.Editor-text-height,
+.#{$button} .#{$icon}.Editor-text-height,
+.#{$button}.Typeb .#{$icon}.Editor-text-height {
+  width: 27px;
+  background-position: -263px -170px;
+}
+.#{$icon}.Editor-align-left,
+.#{$button} .#{$icon}.Editor-align-left,
+.#{$button}.Typeb .#{$icon}.Editor-align-left {
+  width: 27px;
+  background-position: -313px -170px;
+}
+.#{$icon}.Editor-arrow,
+.#{$button} .#{$icon}.Editor-arrow,
+.#{$button}.Typeb .#{$icon}.Editor-arrow {
+  background-position: -452px -170px;
+}
+.#{$label} {
+	display: inline-block;
+	padding: $label-padding;
+	font-size: $font-size-base;
+	color: $base-text-white;
+	@include border-radius($border-radius-base);
+}
+.#{$label}.Default {
+	@include gradation($flag, $color-default, $color-default, $color-default-backend);
+}
+.#{$label}.Primary {
+	color: $label-font-color;
+	border: $label-border-style;
+	@include gradation($flag, $label-color-primary, $label-color-primary, $label-color-primary-backend);
+}
+.#{$label}.Success {
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+.#{$label}.Warning {
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+.#{$label}.Danger {
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+.#{$label}.Confirm {
+	@include gradation($flag, $color-info, $color-info, $color-info-backend);
+}
+.#{$list} {
+	height: auto;
+	padding: 0;
+	list-style: none;
+	background: $list-bg;
+	border: $list-border-style;
+	@include border-radius($border-radius-base);
+}
+.#{$list} span {
+	display: inline-block;
+}
+.#{$list} > li {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	margin: 0;
+	padding: $list-text-gutter;
+	font-size: $list-font;
+	line-height: $list-line-height;
+	color: $list-font-color;
+	background: $list-bg;
+	border-top: $list-sub-style;
+}
+.#{$list} > li:first-child {
+	border-top:0;
+	@include border-radius($list-first-radius);
+}
+.#{$list} > li:last-child {
+	@include border-radius($list-last-radius);
+}
+.#{$list} > li.Link > a {
+	cursor: pointer;
+	display: block;
+	overflow: hidden;
+	box-sizing: border-box;
+	vertical-align: middle;
+	padding: $list-text-gutter;
+	margin: $list-link-gutter;
+	color: $list-font-color;
+	text-decoration: none;
+	@include transition($base-trans);
+	
+	&:hover, &:active {
+		color: $list-link-hover;
+		background: $list-link-hoverbg;
+	}
+	
+	&:after {
+		content:'';
+		position:absolute;
+		top: 50%;
+		right: $list-link-right;
+		display: block;
+		width: $list-link-arrow-width;
+		height: $list-link-arrow-height;
+		margin-top: $list-link-top;
+		background: url($component-image) no-repeat $list-link-pos;
+	}
+}
+.#{$list} > li.Link:hover > a:after, 
+.#{$list} > li.Link:active > a:after, 
+.#{$list} > li.Link:focus > a:after {
+	background: url($component-image) no-repeat $list-link-hover-pos;
+}
+.#{$list} .Title {
+	margin: 0;
+	color: $list-title-font-color;
+	font-size: $list-title-font-size;
+	font-weight: bold;
+}
+//.#{$list} > li .Icon{
+//	position: absolute;
+//	top: 50%;
+//	right: 15px;
+//	height: 30px;
+//	width: 30px;
+//	margin-top: -9px;
+//	background-size: 100% 100%;
+//}
+.#{$list} > li.Divider {
+	padding: $list-text-gutter;
+	font-weight: bold;
+	line-height: $list-line-height;
+	@include gradation($list-flag, $list-bg, $list-bg, $list-bg-backend);
+}
+.#{$list} > li img.Thumbnail{
+	display: inline-block;
+	width: $list-link-thumb-width;
+	height: $list-link-thumb-height;
+	border: 0;
+}
+.#{$list} > li img.Thumbnail.Small{
+	top: 50%;
+	width: $list-link-small-thumb-width; 
+	height: $list-link-small-thumb-height;
+}
+.#{$list} > li img.Thumbnail + span {
+	margin-left: $list-link-thumb-span;
+}
+.#{$navmenu} {
+	position: relative;
+	height: $navmenu-height;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-size: $navmenu-font-size;
+	color: $navmenu-font-color; 
+	border: $navmenu-border;
+	@include border-radius($border-radius-base);
+	@include gradation($flag, $navmenu-bg, $navmenu-bg, $navmenu-bg-backend);
+}
+.#{$navmenu} li {
+	position:relative;
+	cursor: pointer;
+	list-style: none;
+
+	&:hover {
+		color: $navmenu-font-hover;
+		background: $navmenu-hover;
+	}
+}
+.#{$navmenu} a {
+	display: block;
+	width: 100%;
+	height: $navmenu-height;
+	line-height: $navmenu-height;
+	text-decoration: none;
+}
+.#{$navmenu} > li {
+	display: inline-block;
+	height: $navmenu-height;
+	line-height: $navmenu-height;
+	
+	& > a {
+		display: inline-block;
+		color: $navmenu-font-color;
+		padding: $nav-padding;
+	}
+	
+	&:hover > a {
+		color: $navmenu-font-hover;
+	}
+}
+.#{$navmenu} > li.Expandable > .ArrowIcon {
+	/*display:inline-block;*/
+	position: absolute;
+	top:($navmenu-height/2)-4px;
+	right: $nav-arrow-right;
+	width: $nav-arrow-width;
+	height: $nav-arrow-height;
+	margin-left: $nav-arrow-left;
+	background: url($component-image) no-repeat $nav-arrow-pos; 
+	border: 0;
+}
+
+//theme dark start
+.#{$navmenu} > li.Expandable:hover > .ArrowIcon {
+	background: url($component-image) no-repeat $nav-arrow-hover-pos; 
+}
+
+//theme dark end
+.#{$navmenu} > li.Expanded {
+	/*padding: 0 20px;*/
+	background: $navmenu-hover;
+	
+	& > a {
+		display: inline-block;
+		color: $navmenu-font-hover;
+	}
+}
+.#{$navmenu} > li.Expanded > ul > li:hover > a {
+	color: $nav-sub-font-hover;
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.#{$navmenu} > li > ul {
+	top:102%;
+	left:0%;
+}
+
+/* 3 depth 이상 sub menu */
+.#{$navmenu} ul {
+	position:absolute;
+	top: $nav-sub-top;
+	left: 100%;
+	width: $nav-sub-width;
+	margin: 0;
+	padding: $nav-sub-padding;
+	background: $nav-sub-bg;
+	border: $nav-sub-border;
+	@include border-radius($border-radius-base);
+	@include box-shadow($nav-sub-shadow);
+}
+.#{$navmenu} ul > li {
+	display: block;
+	height: $nav-sub-height;
+	padding: $nav-sub-li-padding;
+	list-style: none;
+	line-height: $nav-sub-height - 2px;
+	background: $nav-sub-bg;
+}
+.#{$navmenu} ul li {
+	&:hover, & a:hover, &.Expanded {
+		color: $nav-sub-font-hover;
+		background: $nav-sub-hover-1depth;
+	}
+}
+.#{$navmenu} ul > .Expanded > .ArrowIcon{
+	position: absolute;
+	top: ($nav-sub-height/2) - 3px;
+	right: $nav-sub-expanded-right;
+	display: inline-block;
+	width: $nav-sub-expanded-arrow-width;
+	height: $nav-sub-expanded-arrow-height;
+	background: url($component-image) no-repeat $nav-sub-expanded-pos; 
+	border: 0;
+}
+.#{$navmenu} ul .Expandable > a , 
+.#{$navmenu} ul li > a {
+	display: inline-block;
+	width:100%;
+	height: $nav-sub-height;
+	color: $base-text-gray;
+	line-height: $nav-sub-height - 2px;
+}
+.#{$navmenu} ul > .Expanded {
+	& > a, & > li > a {
+		color: $nav-sub-font-hover;
+	}
+}
+.#{$navmenu} ul .Expanded > ul > li.Expanded, 
+.#{$navmenu} ul .Expanded > ul > li:hover {
+	background: $nav-sub-hover-2depth; 
+	color: $nav-sub-font-hover;
+}
+.#{$navmenu} ul .Expanded > ul > .Expanded > ul > li:hover, 
+.#{$navmenu} ul .Expanded > ul > .Expanded > ul > li:hover a {
+	background: $nav-sub-hover-3depth; 
+	color: $nav-sub-font-hover;
+}
+.#{$navmenu} ul .Expanded > ul > li:hover > a, 
+.#{$navmenu} ul .Expanded > ul > .Expanded > ul > li:hover a {
+	color: $nav-sub-font-hover;
+	background: none;
+}
+
+.#{$paging}, .#{$paging} * {
+	vertical-align: middle;
+}
+.#{$paging} {
+	display: inline-block;
+	cursor: pointer;
+	padding: 0;
+	font-size: $font-size-base;
+	text-align: center;
+}
+.#{$paging} .Link{
+	display: inline-block;
+	float: left;
+	padding: $paging-link-padding;
+	color: $page-font-color;
+	
+	&:hover, &:active, &.Selected {
+		color: $page-font-hover;
+		font-weight: bold;
+	}
+}
+.#{$paging} .Link.Prev {
+	margin-right: $paging-gutter;
+	border-right: $page-line; 
+	
+	span {
+		display: inline-block;
+		width: $paging-width;
+		height: $paging-height;
+		padding-left: $paging-left;
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-prev-pos;
+	}
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-prev-hover-pos; 
+	}
+}
+.#{$paging} .Link.Prev-group {
+	span {
+		display: inline-block;
+		width: $paging-group-width;
+		height: $paging-group-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-prevgroup-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-prevgroup-hover-pos;
+	}
+}
+.#{$paging} .Link.Next {
+	margin-left: $paging-gutter;
+	border-left: $page-line; 
+	
+	span {
+		display: inline-block;
+		width: $paging-width;
+		height: $paging-height;
+		margin-left: $paging-left;
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-next-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-next-hover-pos;
+	}
+}
+.#{$paging} .Link.Next-group {
+	span {
+		display: inline-block;
+		width: $paging-group-width;
+		height: $paging-group-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-nextgroup-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-nextgroup-hover-pos;
+	}
+}
+.#{$paging} .Link.First {
+	span {
+		display: inline-block;
+		width: $paging-first-width;
+		height: $paging-first-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-first-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-first-hover-pos;
+	}
+}
+.#{$paging} .Link.Last {
+	span {
+		display: inline-block;
+		width: $paging-first-width;
+		height: $paging-first-height; 
+		text-indent: -9999px;
+		background: url($component-image) no-repeat $paging-last-pos;
+	}
+	
+	&:hover span, &:active span {
+		background: url($component-image) no-repeat $paging-last-hover-pos;
+	}
+}
+
+//typeb
+.#{$paging}.Typeb .Link {
+	display: inline-block;
+	float: left;
+	padding: $paging-typeb-padding;
+	color: $page-font-color;
+	border: $paging-typeb-linkborder;
+	border-right: 0;
+	&:hover, &:active, &.Selected {
+		color: $page-font-hover;
+		font-weight: bold;
+	}
+}
+.#{$paging}.Typeb .Link.Prev {
+	border: $paging-typeb-prev;
+	margin: 0;
+	padding: 0;
+}
+.#{$paging}.Typeb .Link.Prev span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prev-pos);
+}
+.#{$paging}.Typeb .Link.Prev:hover span, 
+.#{$paging}.Typeb .Link.Prev:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prev-hover-pos);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Prev-group {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-right: 0;
+	@include border-radius($paging-typeb-prevgroup-radius);
+}
+.#{$paging}.Typeb .Link.Prev-group span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prevgroup-pos);
+}
+.#{$paging}.Typeb .Link.Prev-group:hover span, 
+.#{$paging}.Typeb .Link.Prev-group:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-prevgroup-hover-pos);
+	@include border-radius($paging-typeb-prevgroup-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Next {
+	margin: 0;
+	padding: 0;
+	border: $paging-typeb-prev;
+}
+.#{$paging}.Typeb .Link.Next span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	margin: 0;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-next-pos);
+}
+.#{$paging}.Typeb .Link.Next:hover span, 
+.#{$paging}.Typeb .Link.Next:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-next-hover-pos);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Next-group {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-left: 0;
+	@include border-radius($paging-typeb-nextgroup-radius);
+}
+.#{$paging}.Typeb .Link.Next-group span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-nextgroup-pos);
+}
+.#{$paging}.Typeb .Link.Next-group:hover span, 
+.#{$paging}.Typeb .Link.Next-group:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-nextgroup-hover-pos);
+	@include border-radius($paging-typeb-nextgroup-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.First {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-right: 0;
+	@include border-radius($paging-typeb-first-radius);
+}
+.#{$paging}.Typeb .Link.First span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-first-pos);
+}
+.#{$paging}.Typeb .Link.First:hover span, 
+.#{$paging}.Typeb .Link.First:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-first-hover-pos);
+	@include border-radius($paging-typeb-first-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+.#{$paging}.Typeb .Link.Last {
+	padding: 0;
+	margin: 0;
+	border: $paging-typeb-prev;
+	border-left: 0;
+	@include border-radius($paging-typeb-last-radius);
+}
+.#{$paging}.Typeb .Link.Last span {
+	display: inline-block;
+	width: $paging-typeb-icon;
+	height: $paging-typeb-icon - 1px;
+	text-indent: -9999px;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-last-pos);
+}
+.#{$paging}.Typeb .Link.Last:hover span, 
+.#{$paging}.Typeb .Link.NLast:active span {
+	background-color: $paging-typeb-hoverbg;
+	@include page-bg(url($component-image), no-repeat, $paging-typeb-last-hover-pos);
+	@include border-radius($paging-typeb-last-hover-radius);
+	@include transition($paging-typeb-trans);
+}
+
+//mobile
+.#{$paging}.Mobile {border:0;}
+.#{$paging}.Mobile .Link {
+	width: $paging-mobile-width;
+	height: $paging-mobile-height;
+	margin: $paging-mobile-gutter;
+	padding: $paging-mobile-padding;
+	font-size: 0;
+	background: $paging-mobile-bg;
+	border: 0;
+	@include border-radius($paging-mobile-radius);
+	@include transition($base-trans);
+	
+	&.Selected, &:hover, &:active {
+		font-weight: $paging-mobile-font-hover;
+		background: $paging-mobile-bghover;
+	}
+}
+.#{$paging}.Mobile.Left {
+	top: 0;
+	left: $paging-mobile-pos;
+	text-align: left;
+}
+.#{$paging}.Mobile.Right {
+	top: 0;
+	right: $paging-mobile-pos;
+	text-align: right;
+}
+.#{$panel} {
+	margin-bottom: $panel-bottom-gutter;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+	background: $body-bg;
+	border: $panel-style;
+	@include border-radius($border-radius-base);
+}
+.#{$panel} .Panel-content {
+	padding: $panel-content-padding;
+	@include clearfix()
+}
+.#{$panel} .Panel-header {
+	padding: $panel-header-padding;
+	font-weight: bold;
+	border-bottom: $panel-style;
+	@include gradation($flag, $panel-theme-bg, $panel-theme-bg, $panel-theme-bg-backend);
+}
+.#{$panel} .Panel-footer {
+	padding: $panel-footer-padding;
+	font-weight: bold;
+	border-top: $panel-style;
+	@include gradation($flag, $panel-theme-bg, $panel-theme-bg, $panel-theme-bg-backend);
+}
+
+// Panel Theme Primary
+.#{$panel}.Primary {
+	border: 1px solid $panel-color-primary;
+}
+.#{$panel}.Primary .Panel-header {
+	color: $base-text-white;
+	background: $panel-color-primary;
+	border-bottom: 1px solid $panel-color-primary;
+	@include gradation($flag, $panel-color-primary, $panel-color-primary, $panel-color-primary-backend);
+}
+.#{$panel}.Primary .Panel-footer {
+	color: $base-text-white;
+	background: $color-primary;
+	border-top: 1px solid $color-primary;
+}
+
+//Panel Theme Success
+.#{$panel}.Success {
+	border: 1px solid $color-success;
+}
+.#{$panel}.Success .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-success;
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+.#{$panel}.Success .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-success;
+	@include gradation($flag, $color-success, $color-success, $color-success-backend);
+}
+
+//Panel Theme Warning
+.#{$panel}.Warning {
+	border: 1px solid $color-warning;
+}
+.#{$panel}.Warning .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-warning;
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+.#{$panel}.Warning .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-warning;
+	@include gradation($flag, $color-warning, $color-warning, $color-warning-backend);
+}
+
+//Panel Theme Danger
+.#{$panel}.Danger {
+	border: 1px solid $color-danger;
+}
+.#{$panel}.Danger .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-danger;
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+.#{$panel}.Danger .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-danger;
+	@include gradation($flag, $color-danger, $color-danger, $color-danger-backend);
+}
+
+//Panel Theme Info
+.#{$panel}.Info {
+	border: 1px solid $color-info;
+}
+.#{$panel}.Info .Panel-header {
+	color: $base-text-white;
+	border-bottom: 1px solid $color-info;
+	@include gradation($flag, $color-info, $color-info, $color-info-backend);
+}
+.#{$panel}.Info .Panel-footer {
+	color: $base-text-white;
+	border-top: 1px solid $color-info;
+	@include gradation($flag, $color-info, $color-info, $color-info-backend);
+}
+
+.#{$progressbar} {
+	overflow: hidden;
+	height: $bar-height;
+	background: $bar-bg;
+	@include border-radius(4px);
+}
+.#{$progressbar} div {
+	background: $bar-progress-bg;
+}
+.#{$progressbar}.Progress-text{
+	height: $bar-height * 2;
+    font-size: $font-size-base;
+}
+
+.#{$progressbar}.Progress-text span{
+    padding-top: 1px;
+    text-align: center;
+    color: $base-text-white;
+}
+.#{$progressbar}.Progress-img div {
+	background: url($bar-progress-img);
+}
+.#{$radio} {
+	position: relative;
+	top: $imgradio-top;
+    overflow:hidden;
+	padding: 0;
+	vertical-align: middle;
+	border: 0;
+}
+.ImageRadio {
+	position:relative;
+	
+	&:after {
+		content: '';
+		position:absolute;
+		top: $imgchk-top-pos;
+		left: $imgradio-left-pos;
+		left: 0px \0/IE8;
+		width: $imgradio-size;
+		height: $imgradio-size;
+		margin-top: $imgchk-margin-top;
+		background: url($component-image) no-repeat $imgradio-pos;
+	}
+	
+	&.Checked:after {
+		background: url($component-image) no-repeat $imgradio-checked-pos;
+	}
+	
+	&.Disabled:after {
+		background: url($component-image) no-repeat $imgradio-disabled-pos;
+	}
+	
+	&.Checked.Disabled:after {
+		background: url($component-image) no-repeat $imgradio-checked-disabled-pos;
+	}
+	
+	> .#{$radio} {
+		@include opacity(0);
+	}
+}
+.#{$select} {
+	cursor: pointer;
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	padding: $select-padding;
+	vertical-align:middle;
+	font-size: $font-size-base; 
+	line-height:normal;
+	color: $base-text-gray;
+	border: $select-style;
+	@include border-radius($border-radius-base);
+	@include transition($base-trans);
+	
+	&:hover, &:active, &:focus {
+		color: $base-text-gray;
+		border: $select-hover-style;
+	}
+}
+
+.#{$select}.Confirm {
+	@include theme-color($color-confirm, $color-confirm-hover);
+}
+.#{$select}.Warning {
+	@include theme-color($color-warning, $color-warning-hover);
+}
+.#{$select}.Danger {
+	@include theme-color($color-danger, $color-danger-hover);
+}
+.#{$select}.Success {
+	@include theme-color($color-success, $color-success-hover);
+}
+.#{$spinner} {
+	position:relative;
+	display:inline-block;
+  	overflow:hidden;
+  	height: $spinner-height;
+	padding-right: $spinner-right;
+    line-height: $spinner-lineheight;
+	font-size: $font-size-base;
+	color: $spinner-font-color;
+  	border: $spinner-border-style;
+  	@include gradation($spinner-flag, $spinner-bg, $spinner-bg, $spinner-bg-backend);
+	@include border-radius($border-radius-base);
+}
+.#{$spinner}.Disabled {
+	color: $spinner-disabled-color;
+	background: $spinner-disabled;
+	border: $spinner-disabled-border;
+}
+.#{$spinner} > input {
+	height: 100%;
+	padding: $spinner-input-padding;
+	border: 0;
+}
+.#{$spinner} >.Up {
+	top: 0;
+	text-indent: -9999px;
+	background: url($component-image) no-repeat $spinner-up-pos;
+}
+.#{$spinner} >.Up:hover {
+	background: $spinner-hover-bg url($component-image) no-repeat $spinner-up-hover-pos;
+}
+.#{$spinner} >.Down {
+	bottom: 0;
+	text-indent: -9999px;
+	background: url($component-image) no-repeat $spinner-down-pos;
+}
+.#{$spinner} >.Down:hover {
+	background: $spinner-hover-bg url($component-image) no-repeat $spinner-down-hover-pos;
+}
+.#{$spinner}>.Up, .#{$spinner}>.Down {
+	position: absolute;
+	right: 0px;
+	cursor:pointer;
+	display: block;
+	width: $spinner-btn-width;
+	height: 50%;
+	border-left: $spinner-border-style;
+}
+.#{$spinner}.Time input[data-ampm],
+.#{$spinner}.Time input[data-hour],
+.#{$spinner}.Time input[data-minute] {
+	width: $spinner-time-width;
+	text-align: center;
+}
+.#{$table}-wrapper {
+	position:relative;
+}
+.#{$table}-scroller {
+	display:inline-block;
+	overflow:auto;
+}
+.#{$table} {
+	border-collapse: collapse;
+	font-size: $font-size-base;
+	color: $base-text-gray; 
+	border: $table-td-style;
+}
+.#{$table} thead tr {
+	border-top: $table-thead-top;
+}
+.#{$table} tr {
+	border-top: $table-td-style;
+	
+	&:nth-child(odd) {
+		background: #ffffff;
+	}
+	
+	&:nth-child(even) {
+		background: $table-even-bg;
+	}
+}
+.#{$table} th {
+	height: $table-th-height;
+	padding: $table-th-gutter;
+	color: $table-th-font-color;
+	line-height: $table-lineheight;
+	border-left: $table-td-style;
+	@include gradation($flag, $table-th-bg, $table-th-bg, $table-th-bg-backend);
+}
+.#{$table} tbody {
+	border-top: $table-tbody-top;
+	
+	th {
+		color: $base-text-gray;
+		font-weight: normal;
+		border-top: $table-td-style;
+		border-left: $table-td-style;
+		filter: none;
+		background: $table-tbody-th-bg;
+		@include background-clip(padding-box);
+	}
+	
+	tr {
+		text-align: center;
+	}
+}
+.#{$table} td {
+	height: $table-td-height;
+	padding: $table-gutter;
+	line-height: $table-lineheight; 
+	border-left: $table-td-style;
+}
+.#{$table} .Left-line {
+	border-left: $table-td-style;
+}
+.#{$table} .Right-line {
+	border-right: $table-td-style;
+}
+.#{$table} tr .Color-typea {
+	background: $table-color-typea;
+}
+.#{$table} tr .Color-typeb {
+	background: $table-color-typeb;
+}
+.#{$table} tr .Color-typec {
+	background: $table-color-typec;
+}
+.#{$table} tr .Color-typed {
+	background: $table-color-typed;
+}
+.#{$table}.Form-type tr {
+	border-top: $table-td-style;
+	
+	&:nth-child(even) td {
+		background: $body-bg;
+	}
+}
+.#{$table}.Form-type tbody {
+	border-top:0;
+}
+.#{$table}.Form-type tbody th {
+	padding: $table-form-tbody-padding;
+	color: $table-th-font-color;
+	font-weight: bold;
+	text-align: $table-form-th-align;
+	border: $table-td-style;
+	background-clip: padding-box !important;
+	@include gradation($flag, $table-th-bg, $table-th-bg, $table-th-bg-backend);
+}
+.#{$table}.Form-type .#{$table} th {
+	text-align: $table-th-align;
+}
+.#{$table}.Form-type td {
+	text-align: left;
+}
+.#{$table} .AscendingOrder,
+.#{$table} .DescendingOrder {
+	position: relative;
+}
+.#{$table} .AscendingOrder .Icon, 
+.#{$table} .DescendingOrder .Icon {
+	position: absolute; 
+	top: 50%;
+	right: $table-sort-right;
+	display:inline-block;
+	margin-top: $table-sort-top;
+	@include opacity($table-sort-opacity);
+}
+.#{$table} .AscendingOrder .Icon{
+	background-position: $table-sort-asc-pos;
+}
+.#{$table} .DescendingOrder .Icon{
+	background-position: $table-sort-dsc-pos;
+}
+.#{$table} .ResizeIcon {
+	position: absolute;
+	right: 1px;
+	bottom: 1px;
+	width: 0px;
+	height: 0px;
+	border-left: 5px solid transparent;
+	border-bottom: 5px solid black;
+}
+.#{$table} .Editor {
+	cursor: text;
+	background: url($table-edit-icon) no-repeat 93% center;
+}
+.#{$table} tr {
+	&:nth-child(even) td.Editor {
+		background: url($table-edit-icon) no-repeat 93% center $table-even-bg;
+	}
+	&:nth-child(odd) td.Editor {
+		background: url($table-edit-icon) no-repeat 93% center #ffffff;
+	}
+	&:nth-child(even) td.Editor.Editing {
+		background: $table-even-bg;
+	}
+	&:nth-child(odd) td.Editor.Editing {
+		background: #ffffff;
+	}
+}
+.#{$table} .Editor input {
+	overflow: hidden;
+	width: $table-edit-width;
+	padding: $table-edit-padding;
+	margin: 0;
+	vertical-align: middle;
+	line-height: $table-edit-lineheight;
+	border: 0;
+}
+.#{$tabs}{
+	position: relative;
+	overflow: hidden; 
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.#{$tabs} > ul {
+	display: table;
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	table-layout: fixed;
+	border-bottom: $tabs-style-hover;
+	&:before {
+		@include tabs-ul-line($tabs-ul-before);
+	}
+}
+.#{$tabs} > .Scroller {
+	overflow-x: auto;
+	padding: 0;
+	margin-top: $tabs-scroll-top;
+	border: 0;
+}
+.#{$tabs} > .Scroller > ul {
+	overflow: hidden;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	border-bottom: $tabs-style-hover;
+	&:before {
+		@include tabs-ul-line($tabs-ul-before);
+	}
+}
+.#{$tabs} > ul > li, 
+.#{$tabs} > .Scroller > ul > li {
+	position: relative;	
+	cursor: pointer;
+	display: table-cell;
+	margin: 0;
+	padding: $tabs-gutter;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	font-size: $font-size-base;
+	color: $tabs-font-color;
+	line-height: $tabs-line-height;
+	background: $tabs-bg;
+	@include tabs-arrow($tabs-arrow-bg);
+}
+.#{$tabs} > ul > li:first-child, 
+.#{$tabs} > .Scroller > ul > li:first-child {
+	border-left: $tabs-style;
+}
+.#{$tabs} > ul > li:hover, 
+.#{$tabs} > .Scroller > ul > li:hover,
+.#{$tabs} > ul > li:active, 
+.#{$tabs} > .Scroller > ul > li:active {
+	color: $tabs-font-hover;
+	font-weight: bold;
+	border: $tabs-style-hover;
+	border-bottom: 0;
+	@include gradation($flag, $tabs-bg-hover, $tabs-bg-hover, $tabs-bg-hover-backend);
+}
+.#{$tabs} > ul > li.Selected, 
+.#{$tabs} > .Scroller > ul > li.Selected {
+	color: $tabs-select-font;
+	font-weight: bold;
+	border: $tabs-style-hover;
+	border-bottom: 0;
+	background: $tabs-select-bg;
+}
+.#{$tabs} > ul > li.Disabled, 
+.#{$tabs} > .Scroller > ul > li.Disabled {
+	color: $tabs-disabled-color;
+	border: $tabs-disabled-border;
+	border-bottom-color : $tabs-disabled-border-bottom;
+}
+.#{$tabs} > ul > li.Tabs-ellipsis, 
+.#{$tabs} > .Scroller > ul > li.Tabs-ellipsis {	
+	@include ellipsis;
+}
+.#{$tabs} > ul > li img, 
+.#{$tabs} > .Scroller > ul > li img{
+	display: block;
+	height: $tabs-img-height;
+	margin: auto;
+	text-align: center;
+	border: 0px;
+}
+//remove buttonn
+.#{$tabs} ul > li .RemoveButton {
+    position: absolute;
+	cursor: pointer;
+	top: $tabs-element + 2;
+	right: ($tabs-element - 1);
+	width: $tabs-element;
+	height: $tabs-element;
+	padding: 0px;
+	border: 0;
+	text-align: center;
+	background: url($component-image) no-repeat $tabs-remove-pos;
+}
+.#{$tabs} ul > li .RemoveButton:hover, 
+.#{$tabs} ul > li .RemoveButton:active{
+	background: url($component-image) no-repeat $tabs-remove-hover-pos;
+}
+.#{$tabs} ul > li .RemoveButton.Disabled{
+	background: url($component-image) no-repeat $tabs-remove-disabled-pos;
+}
+//refresh button : 20160828 
+.#{$tabs} ul > li .RefreshButton {
+    position: absolute;
+	cursor: pointer;
+	top: $tabs-element + 1;
+	right: ($tabs-element - 1);
+	width: $tabs-element + 2;
+	height: $tabs-element + 2;
+	padding: 0px;
+	border: 0;
+	text-align: center;
+	background: url($component-image) no-repeat $tabs-refresh-pos;
+}
+.#{$tabs} ul > li .RefreshButton:hover, 
+.#{$tabs} ul > li .RefreshButton:active{
+	background: url($component-image) no-repeat $tabs-refresh-hover-pos;
+}
+.#{$tabs} ul > li .RefreshButton.Disabled{
+	background: url($component-image) no-repeat $tabs-refresh-disabled-pos;
+}
+.#{$tabs} div iframe {
+	width: 100%;
+	height: 100%;
+	border: 0px;
+}
+
+//remove & add tabs
+.#{$tabs}.Edit {
+	position:relative;
+}
+.#{$tabs}.Edit > ul {
+	padding-right: 33px;
+}
+.#{$tabs}.Edit > div {
+	margin-right:33px;
+}
+.#{$tabs}.Edit > .Tabs-btn__edit,
+.#{$tabs}.Edit > .Scroller > .Tabs-btn__edit {
+	position:absolute;
+	top: $tabs-edit-top;
+	right: 0;
+	margin: 0;
+	padding: 0;
+}
+.#{$tabs}.Edit > .Tabs-btn__edit > button,
+.#{$tabs}.Edit > .Scroller > .Tabs-btn__edit > button {
+	width: $tabs-edit-btn-width;
+	height: $tabs-edit-btn-height;
+	text-indent: -9999px;
+	background: url($component-image) no-repeat $tabs-edit-btn-pos;
+	border: 0;
+}
+
+//Fixed tabs
+.#{$tabs}.Fixed > ul > li,
+.#{$tabs}.Fixed > .Scroller > ul > li {
+	float: left;
+	width: $tabs-fixed-width;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	word-wrap: normal;
+}
+
+//2depth tabs
+.#{$tabs}.Sub-tabs {
+	> div {
+		padding: $tabs-content-gutter;
+		border-top: 0;
+	}
+}
+.#{$tabs}.Sub-tabs > ul {
+	margin-left: 1px;
+	border-bottom: $tabs-sub-style;
+}
+.#{$tabs}.Sub-tabs > ul:before {
+	display: inline;
+}
+.#{$tabs}.Sub-tabs > ul > li {
+	float: left;
+	padding: $tabs-gutter;
+	font-weight: normal;
+	background: $tabs-sub-bg;
+	border: 0;
+	filter: none;
+	
+	&:hover, &:active, &.Selected {
+		color: $tabs-font-hover;
+		font-weight: bold;
+		border-bottom: $tabs-sub-hover-bottom;
+	}
+}
+
+//Vertical-sub-tabs : 2depth를 vertical로 두고 3depth는 horizontal로
+.#{$tabs}.Vertical {
+	overflow: visible; 
+}
+.#{$tabs}.Vertical > .Scroller ~ div {
+	border: $tabs-style;
+	border-top: 0;
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs {
+	margin-left: $tabs-vertical-pos;
+	
+	> ul {
+		float: left;
+		width: -($tabs-vertical-pos)-1px;
+		border-bottom: 0;
+	}
+	
+	> ul ~ div {
+		float: left;
+	}
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li {
+	display: block;
+	color: $tabs-font-color;
+	width: $tabs-vertical-width;
+	height: $tabs-vertical-height;
+	margin-left: $tabs-vertical-left;
+	background: $tabs-bg;
+	border: $tabs-style;
+	border-top: 0;
+	@include border-radius($tabs-vertical-radius);
+	
+	&:first-child {
+		border-top:  $tabs-style;
+	}
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li > p {
+	color: $tabs-font-color;
+	line-height: 0;
+	@include transform(rotate(90deg));
+	filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:hover,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:active,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li.Selected {
+	width: -$tabs-vertical-pos;
+	margin-left: 1px;
+	background: $tabs-vertical-hoverbg;
+	color: $tabs-vertical-hover-color;
+	border: $tabs-style-hover;
+}
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:hover > p,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li:active > p,
+.#{$tabs}.Vertical .Vertical-sub-tabs > ul > li.Selected > p {
+	color: $tabs-vertical-hover-color;
+}
+.#{$textarea} {
+	overflow:auto;
+	padding: 8px;
+	line-height: $textarea-line-height;
+	vertical-align: middle;
+	font-size: $font-size-base;
+  	color: $textarea-font-color;
+	background: $textarea-bg;
+	border: $textarea-style;
+  	@include border-radius($border-radius-base);
+  	@include transition($base-trans);
+  	
+  	&:hover, &:focus {
+		border: $textarea-hover;
+  	}
+  	&.Disabled {
+		color: $textarea-disabled-color;
+	  	background: $textarea-disabled-bg;
+		border: $textarea-disabled-style;
+  	}
+}
+.#{$textarea}.Confirm {
+	@include theme-color($color-confirm, $color-confirm-hover);
+}
+.#{$textarea}.Warning {
+	@include theme-color($color-warning, $color-warning-hover);
+}
+.#{$textarea}.Danger {
+	@include theme-color($color-danger, $color-danger-hover);
+}
+.#{$textarea}.Success {
+	@include theme-color($color-success, $color-success-hover);
+}
+.#{$textinput} {
+	position: relative;
+	overflow: hidden;
+	height: $textinput-height;
+	padding: 0px 8px;
+	line-height: $textinput-line-height;
+	vertical-align: middle;
+	font-size: $font-size-base;
+  	color: $textinput-font-color;
+	background: $textinput-bg;
+	border: $textinput-style;
+	@include transition($base-trans);
+  	
+  	@include border-radius($border-radius-base);
+  	
+  	&:hover, &:focus, &:active {
+	  	border: $textinput-hover;
+  	}
+  	
+  	&.Disabled {
+		color: $textinput-disabled-color;
+		background: $textinput-disabled-bg;
+	  	border: $textinput-disabled-style;
+  	}
+}
+.#{$textinput}.Confirm {
+	@include theme-color($color-confirm, $color-confirm-hover);
+}
+.#{$textinput}.Warning {
+	@include theme-color($color-warning, $color-warning-hover);
+}
+.#{$textinput}.Danger {
+	@include theme-color($color-danger, $color-danger-hover);
+}
+.#{$textinput}.Success {
+	@include theme-color($color-success, $color-success-hover);
+}
+.#{$tooltip} {
+	position: absolute;
+	z-index:10;
+	padding: $tooltip-padding;
+	font-size: $font-size-base;
+	color: $tooltip-color; 
+	background: $tooltip-bg;
+	@include border-radius($border-radius-base);
+}
+.#{$tooltip}:before {
+	content:"";
+	position: absolute;
+	z-index: 10;
+    display: block; 
+}
+.#{$tooltip}.Top:before {
+	top: 100%;
+	left: 50%;
+	margin-left: $tooltip-gutter;
+	@include border-option($tooltip-border-pattern, $tooltip-border-trans, 0, $tooltip-border-trans);
+}
+.#{$tooltip}.Bottom:before {
+	top: $tooltip-bottom-top;
+	left: 50%;
+	margin-left: $tooltip-gutter;
+	border-width: $tooltip-bottom-width; 
+	@include border-option(0, $tooltip-border-trans, $tooltip-border-pattern, $tooltip-border-trans);
+}
+.#{$tooltip}.Left:before {
+	left: 100%;
+	top: 50%;
+	margin-top: $tooltip-gutter;
+	@include border-option($tooltip-border-trans, 0, $tooltip-border-trans, $tooltip-border-pattern);
+}
+.#{$tooltip}.Right:before {
+	left: -5px;
+	top: 50%;
+	margin-top: $tooltip-gutter;
+	border: 0;
+	@include border-option($tooltip-border-trans, $tooltip-border-pattern, $tooltip-border-trans, 0);
+}
+.#{$tree}, .#{$tree} * {
+	list-style:none;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+}
+.#{$tree} {
+	position:relative;
+	height: auto;
+	display: block;
+	padding-left: 0;
+}
+.#{$tree} li, 
+.#{$tree} .Expanded li {
+	line-height: $tree-line-height;
+}
+.#{$tree} li > span.Arrow {
+	position:relative;
+	z-index: 3;
+	display: inline-block;
+	width: $tree-arrow-width;
+	height: $tree-arrow-height;
+	margin-right: $tree-arrow-right;
+	margin-left: 0;
+	margin-top: 0;
+	background: url($component-image) no-repeat $tree-arrow-pos;
+}
+.#{$tree} li.expandable > span.Arrow {
+	visibility: visible;
+}	
+.#{$tree} li.Expanded > span.Arrow{
+	background: url($component-image) no-repeat $tree-arrow-expanded-pos;
+}
+.#{$tree} ul {
+	padding-left: $tree-ul-padding;
+	
+	&:before {
+		content: '';
+		position:absolute;
+		top: $tree-ul-top;
+		left: $tree-ul-left;
+		bottom: $tree-ul-bottom;
+		display: block; 
+		width: 0;
+		border-left: $tree-line-style;
+	}
+	
+	li:before {
+		content: '';
+		position:absolute;
+		left: $tree-ul-left;
+		z-index:1;
+		display: block; 
+		width: $tree-li-width;
+		height:0;
+		margin-top: $tree-li-top;
+		border-top: $tree-line-style;
+	}
+}
+.#{$tree} li > a {
+	display: inline-block;
+	cursor: pointer;
+	margin: $tree-li-link-margin;
+	width: auto;
+	padding: $tree-li-padding;
+	
+	&.Selected {
+		padding-top: 1px;
+		font-weight: bold;
+		color: $color-primary;
+		border-bottom: 1px dotted $color-primary;
+	}
+}
+.#{$tree} img {
+	display: inline-block;
+	width: $tree-img-width;
+	height: $tree-img-height;
+	margin-right: $tree-img-right;
+}
+.#{$tree} li.expandable li[data-expand="false"] > a {
+	width: auto;
+	padding-left: $tree-expandable-false-left;
+	background: url($component-image) no-repeat $tree-expandable-false-pos;
+}
+.#{$tree} li.expandable li.expandable[data-expand="false"] > a {
+	padding-left: 0;
+	background: transparent;
+}
+//Typography etc
+.#{$quotation} {
+	position: relative; 
+	color: $base-text-gray;
+	font-weight: bold;
+	font-style: italic;
+}
+.#{$quotation}.Block-typea {
+	font-style: normal;
+	font-weight: normal;
+	
+	&:before {
+		position: absolute;
+		content:'';
+		display: inline-block;
+		width: 24px;
+		height: 18px;
+		background: url($typoimg) no-repeat 0 0;
+	}
+	
+	&:after {
+		position: absolute;
+		content:'';
+		display: inline-block;
+		width: 24px;
+		height: 18px;
+		background: url($typoimg) no-repeat 0 -50px;
+	}
+	
+	span {
+		display: inline-block;
+		padding: 4px 20px 4px 40px;
+		line-height: $quotation-line-height;
+	}
+}
+.#{$quotation}.Block-typeb {
+	font-style: normal;
+	font-weight: normal;
+	
+	&:before {
+		position: absolute;
+		content:'';
+		display: inline-block;
+		width: 12px;
+		height: 77px;
+		background: url($typoimg) no-repeat 0 -94px;
+	}
+	
+	&:after {
+		position: absolute;
+		content:'';
+		display: inline-block;
+		width: 12px;
+		height: 77px;
+		background: url($typoimg) no-repeat 0 -198px;
+	}
+	
+	span {
+		display: inline-block;
+		padding: 4px 10px 4px 20px;
+		line-height: $quotation-line-height;
+		width: $quotation-width;
+		height: $quotation-height;
+	}
+}
+.#{$cite} {
+	display: block;
+	padding: 0px 20px;
+	font-style: normal;
+	color:$cite-font-color;
+	font-size: $font-size-base;
+	background: url($typoimg) no-repeat 0 -326px;
+}
+.#{$quotation}.Block-typea + .#{$cite} {
+	margin: 4px 40px;
+}
+.#{$quotation}.Block-typeb + .#{$cite} {
+	margin: 4px 22px;
+}
+
+.#{$mark} {
+	color: $base-text-gray;
+	background: $mark-bg;
+}
+.#{$small} {
+	font-size: $font-size-small;
+}
+.#{$strong} {
+	font-weight: bold;
+}
+.#{$del} {
+	text-decoration: line-through;
+}
+.#{$alink} {
+	color: $alink-color;
+	text-decoration: none; 
+	
+	&:hover {
+		text-decoration: $alink-hoverstyle;
+	}
+	
+	&:active {
+		color: $alink-active-color;
+		text-decoration: none;
+	}
+}
+.#{$code} {
+	overflow: hidden;
+	padding: 20px;
+	margin-bottom: 24px;
+	font-size: $font-size-base;
+	color: $base-text-gray;
+	line-height: $code-line-height;
+	background: $code-bg;
+	border: $code-style;
+	@include border-radius($border-radius-base);
+}
+//.#{$splitter} {
+//	overflow: hidden;
+//	width: 100%;
+//	height: 2px;
+//	background: url('./images/splitter_bg.png') repeat-x; 
+//}
+
+//header
+h1 {font-size: 40px;}
+h2 {font-size: 32px;}
+h3 {font-size: 29px;}
+h4 {font-size: 20px;}
+h5 {font-size: 16px;}
+h6 {font-size: 12px;}
+
+//header class
+.Header-1 {font-size: 40px;}
+.Header-2 {font-size: 32px;}
+.Header-3 {font-size: 29px;}
+.Header-4 {font-size: 20px;}
+.Header-5 {font-size: 16px;}
+.Header-6 {font-size: 12px;}
+
+.Disabled {
+	cursor: not-allowed !important;
+}
+.Flexlayout {
+  	display: -moz-box;
+  	display: -ms-flexbox;
+  	display: flex;
+  	display: -webkit-box;
+}
+
+.Clearfix {
+	@include clearfix();
+}
+
+.Ellipsis {
+	@include ellipsis;
+}
+
+.Clearboth {
+	clear: both;
+}
+// float, position, align
+.Float-left {
+	float: left;
+}
+.Float-right {
+	float: right;
+}
+.Pos-abs {
+	position: absolute;
+}
+.Pos-rel {
+	position: relative;
+}
+.Pos-fix {
+	position: fix;
+}
+.Valign-top {
+	vertical-align: top;
+}
+.Valign-md {
+	vertical-align: middle;
+}
+.Valign-bot {
+	vertical-align: bottom;
+}
+.Text-underline {
+	text-decoration: underline;
+}
+.Text-through {
+	text-decoration: line-through;
+}
+.Text-none {
+	text-decoration: none;
+}
+.Text-left {
+	text-align: left;
+}
+.Text-right {
+	text-align: right;
+}
+.Text-center {
+	text-align: center;
+}
+
+// display
+.Display-none {
+	display: none
+}
+.Display-inblock {
+	display: inline-block;
+}
+.Display-inline {
+	display: inline;
+}
+.Display-block {
+	display: block;
+}
+
+//overflow
+.Overflow-hid {
+	overflow: hidden;
+}
+.Overflow-x {
+	overflow-x: auto;
+}
+.Overflow-y {
+	overflow-y: auto;
+}
+
+//font
+.Font-default {
+	font-size: 12px;
+}
+.Font-normal {
+	font-weight: normal;
+}
+.Font-bold {
+	font-weight: bold;
+}
+.Font-italic {
+	font-style: italic;
+}
+.Font-big {
+	font-size: $font-size-large;
+}
+.Font-small {
+	font-size: $font-size-small;
+}
+
+//list-style
+.List-style-none {
+	list-style: none;
+}
+
+//color
+.Color-default {
+	color: $color-default;
+}
+.Color-primary {
+	color: $color-primary;
+}
+.Color-confirm {
+	color: $color-confirm;
+}
+.Color-success {
+	color: $color-success;
+}
+.Color-warning {
+	color: $color-warning;
+}
+.Color-danger {
+	color: $color-danger;
+}
+.Color-info {
+	color: $color-info;
+}
+.Color-white {
+	color: $color-white;
+}
+
+//background
+.Bg-default {
+	background: $color-default;
+}
+.Bg-primary {
+	background: $color-primary;
+}
+.Bg-confirm {
+	background: $color-confirm;
+}
+.Bg-success {
+	background: $color-success;
+}
+.Bg-warning {
+	background: $color-warning;
+}
+.Bg-danger {
+	background: $color-danger;
+}
+.Bg-info {
+	background: $color-info;
+}
+.Bg-white {
+	background: $color-white;
+}
+
+
+//width, padding, margin
+.Margin-auto {
+	margin: auto;
+}
+.Margin-0 {
+	margin: 0;
+}
+
+.Padding-0 {
+	padding: 0;
+}
+@include gutter-options(Padding, padding, left);
+@include gutter-options(Padding, padding, right);
+@include gutter-options(Padding, padding, top);
+@include gutter-options(Padding, padding, bottom);
+@include gutter-options(Margin, margin, left);
+@include gutter-options(Margin, margin, right);
+@include gutter-options(Margin, margin, top);
+@include gutter-options(Margin, margin, bottom);
+
+@include width-gutter(Width, width);

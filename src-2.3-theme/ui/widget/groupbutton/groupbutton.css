@@ -1,0 +1,69 @@
+.af-groupbutton {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: center;
+	margin: 5px 5px;
+	vertical-align: middle;
+	line-height: 33px;
+	min-height: 35px;
+	text-decoration: none;
+	border-width: 1px;
+	border-style: solid;
+}
+
+.af-groupbutton .af-button {
+	margin:0px;
+	border:0px;
+	border-right-width: 1px;
+	border-right-style: solid;
+	float:left;
+}
+
+.af-groupbutton .af-radio, .af-groupbutton .af-checkbox {
+	top:0;
+	left:0;
+	opacity:0;
+	position:absolute;
+}
+
+.af-groupbutton .af-radio-text, .af-groupbutton .af-checkbox-text {
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	overflow: visible;
+	text-align: center;
+	padding: 0px 20px 0px 20px;
+	vertical-align: middle;
+	line-height: 33px;
+	min-height: 35px;
+	text-decoration: none;
+}
+
+
+.af-groupbutton.af-horizontal .af-radio-text, 
+.af-groupbutton.af-horizontal .af-checkbox-text {
+	float:left;
+	border-right-width: 1px;
+	border-right-style: solid;
+}
+
+
+.af-groupbutton.af-vertical .af-button, 
+.af-groupbutton.af-vertical .af-radio-text, 
+.af-groupbutton.af-vertical .af-checkbox-text {
+	width:100%;
+	float:left;
+	clear:both;
+	border:0px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+.af-groupbutton .af-button:last-child,
+.af-groupbutton .af-radio-text:last-child, 
+.af-groupbutton .af-checkbox-text:last-child {
+	border-width: 0px;
+}
+

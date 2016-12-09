@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+/*
+#####################################################
+default theme
+data-theme속성이 없는 경우
+#####################################################
+*/
+* {
+	font-family: Arial, Helvetica, 돋움, 굴림, sans-serif;
+	/* font-size: 12px;*/
+	line-height:21px; 
+	color:#000000;
+	
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+}
+
+h1, h2, h3, h4, h5, h6{ font-weight: bold; color:#000000;}
+h1{ font-size: 40px; line-height:48px; margin: 40px 0 }
+h2{ font-size: 30px; line-height:38px; margin: 32px 0 }
+h3{ font-size: 24px; line-height:32px; margin: 29px 0 }
+h4{ font-size: 20px; line-height:26px; margin: 29px 0 }
+h5{ font-size: 16px; line-height:21px; margin: 27px 0 }
+h6{ font-size: 14px; line-height:20px; margin: 26px 0 }
+
+/* for label tag in IE browser */
+label.af-disabled{
+	display:inline-block;
+	color:#ababab;
+}
+
+ul.af-default, ol.af-default, li.af-default,
+.af-default ul, .af-default ol, .af-default li {
+	list-style:none;
+}
+
+.af-disabled {opacity:0.5;}

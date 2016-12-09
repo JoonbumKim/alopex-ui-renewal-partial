@@ -1,0 +1,78 @@
+.hy-radio-tobe { 
+    position: absolute; left: -999em; 
+}
+.hy-radio-tobe + label:before { 
+    content:''; /* this is generated content*/ 
+    display: inline-block; /* make this fake elements inline block */
+    position:relative; /* we need to move the element without effecting the doc flow */
+    top:0.25em;  /* we're moving it slightly down for alignment purposes */
+    left:-2px; /* we're moving it slightly to the left */
+    width:20px; height:20px; /* the width and height of the fake elements */
+    background-image:url(form.png); /* the background image sprite */
+    background-position: 0px top;
+}
+
+.hy-radio-tobe:checked + label:before {
+	background-position: -50px top;
+}
+
+.hy-radio {
+/* 	position: relative; */
+	position: absolute;
+/* 	right: 0px; */
+    width: 20px;
+    height: 20px;
+    margin: 0px !important;
+    padding: 0px !important;
+    border:0px;
+    vertical-align: middle;
+    cursor: pointer;
+    
+    opacity: 0;
+    _noFocusLine: expression(this.hideFocus = true);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity = 0);
+    -khtml-opacity: 0;
+    -moz-opacity: 0;
+}
+
+.hy-radio + .hy-radio-span
+ {
+ 	padding:0px !important;
+ 	margin:0px !important;
+  	display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+
+/* // 체크안된 상태 */
+.hy-radio  + .hy-radio-span
+ { 
+	background: url('form.png') no-repeat 0px top;
+	margin-right: 3px;
+}
+
+/* // 체크상태 */
+.hy-radio:checked  + .hy-radio-span
+ { 
+	background: url('form.png') no-repeat 0px top;
+	background-position: -50px top;
+}
+
+/* // 체크상태에서 disabled  */
+.hy-radio:checked.af-disabled  + .hy-radio-span{ 
+	background: url('form.png') no-repeat 0px top;
+}
+
+/* // 체크 안된상태에서 disabled */
+.hy-radio.af-disabled  + .hy-radio-span { 
+    background: url('form.png') no-repeat 0px top;
+}
+
+/* //intermiate 상태 */
+.hy-radio:indeterminate  + .hy-radio-span { 
+	background: url('form.png') no-repeat 0px top;
+}

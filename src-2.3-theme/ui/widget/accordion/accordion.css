@@ -1,0 +1,103 @@
+
+/********* Navigation Menu ********/
+/* Common Style */
+.af-accordion {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	position:relative;
+}
+
+.af-expandable {
+	cursor: pointer;
+}
+
+
+/* 대 메뉴 */
+
+/*******************대 메뉴 끝******************/
+
+.af-accordion a {
+	text-decoration : none;
+	display:block;
+}
+
+
+.af-accordion .af-accordion-sub > li { /* 세로로 display */
+	display: block;
+	width:100%;
+	list-style: none;
+}
+
+
+/********************** Mobile Only */
+.af-accordion li {
+	list-style:none ;	
+}
+
+.af-accordion ul {
+	width:100%;
+}
+
+.af-accordion  a {
+	padding:10px 20px;
+}
+
+.af-accordion > li {
+	width:auto;
+	line-height: 43px;
+}
+
+.af-accordion > li.af-accordion-expand {
+	
+}
+
+.af-accordion > li.af-expandable > a {
+
+}
+
+.af-accordion > li.af-accordion-expand > a {
+	text-decoration : none;
+	display:block;
+	height:100%;
+}
+
+.af-accordion > li:hover.af-accordion-expand > a {
+	text-decoration : none;
+	display:block;
+	height:100%;
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.af-accordion > li > .af-accordion-sub {
+	position:relative;
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+
+.af-accordion .af-accordion-sub a {
+	width:100%;
+	line-height: 30px;
+	padding: 4px 30px;
+}
+
+.af-accordion .af-accordion-sub > li {
+	line-height: 32px;
+}
+
+.af-accordion .af-accordion-sub > li.af-accordion-expand {
+
+}
+
+.af-accordion .af-accordion-sub .af-expandable > a {
+	width:100%;
+	line-height: 30px;
+	padding: 4px 30px;
+}
+
+.af-accordion .af-accordion-sub > li.af-expandable.af-expand > a{
+
+}
+
+.af-accordion .af-icon {display:none;}

@@ -1,0 +1,32 @@
+
+/************* 임시 스타일 *************/
+.af-carousel {
+	position:relative;
+}
+.af-carousel > .af-paging {
+	position:absolute;
+	z-index:1;
+	width:100%;
+	bottom:0;
+}
+
+.af-carousel > .prev, .af-carousel > .next {
+	position:absolute;
+	width: 23px;
+	height:46px;
+	top:50%;
+	margin-top:-23px;
+	z-index:2;
+	line-height:30px;
+}
+
+.af-carousel > .prev {
+	left:0px;
+	background-image:url(images/carousel_prev.png);
+}
+
+.af-carousel > .next {
+	right:0px;
+	background:url(images/carousel_next.png) no-repeat;
+	
+}

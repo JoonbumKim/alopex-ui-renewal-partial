@@ -1,0 +1,288 @@
+
+/********* Navigation Menu ********/
+/* Common Style */
+.af-navmenu.af-default {
+	
+}
+
+.af-navmenu.af-default.af-desktop li {
+
+}
+
+/* 대 메뉴 */
+
+.af-navmenu.af-default.af-desktop {
+	background: #e5e6e5;
+	background: -ms-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -moz-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -o-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4 ), color-stop(1, #e5e6e5));
+	background: -webkit-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: linear-gradient(to bottom, #f4f4f4  0%, #e5e6e5 100%);
+	
+	border:1px solid #a6a6a6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 0px 2px 0px #e9e9e9;
+}
+
+.af-navmenu.af-default.af-desktop > li {
+	border-right:1px solid #dadada;
+}
+
+.af-navmenu.af-default.af-desktop > li.af-hover {
+	background: #f1f1f1 ;
+	background: -ms-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -moz-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -o-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff  ), color-stop(1, #f1f1f1));
+	background: -webkit-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: linear-gradient(to bottom, #ffffff   0%, #f1f1f1 100%);
+	
+	border:1px solid #dadada;
+}
+
+.af-navmenu.af-default.af-desktop > li > a {
+	color:#474747;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.af-navmenu.af-default.af-desktop > li.af-expandable > .af-navmenu-icon{
+	background:url('./images/navibar_dropdown_normal.png') no-repeat center center;
+}
+
+.af-navmenu.af-default.af-desktop > li.af-navmenu-expand > .af-navmenu-icon{
+
+}
+
+.af-navmenu.af-default.af-desktop > li.af-navmenu-expand {
+	background: #00bede;
+	background: -ms-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -moz-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -o-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #65d9ec ), color-stop(1, #04bfe0));
+	background: -webkit-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: linear-gradient(to bottom, #65d9ec  0%, #04bfe0 100%);
+	
+	border:1px solid #0099c6;
+}
+
+.af-navmenu.af-default.af-desktop > li.af-navmenu-expand > a {
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+}
+
+.af-navmenu.af-default.af-desktop > li.af-hover.af-navmenu-expand > a {
+	color:#474747;
+	font-size:14px;
+	font-weight:bold;
+}
+
+/*******************대 메뉴 끝******************/
+
+.af-navmenu.af-default a {
+	color:#000000;
+	font-size:12px;
+}
+
+
+.af-navmenu.af-default .af-navmenu-sub > li { /* 세로로 display */
+
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.af-navmenu.af-default.af-desktop > li > .af-navmenu-sub {
+	background: #ffffff;
+	border:1px solid #c3c3c3;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 1px 1px 3px #000000;
+}
+
+/* 3 depth 이상 sub menu */
+.af-navmenu.af-default.af-desktop .af-navmenu-sub {
+	background: #ffffff;
+	border:1px solid #c3c3c3;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	box-shadow: 1px 1px 3px #000000;
+	width:auto;
+}
+
+.af-navmenu.af-default.af-desktop .af-navmenu-sub > li {
+	border-bottom: 1px solid #edeef0;
+	background: #ffffff;
+	width:150px;
+	*width:110px;
+}
+
+.af-navmenu.af-default.af-desktop .af-navmenu-sub > li.af-hover {
+	background: #e5e6e5 ;
+	background: -ms-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -moz-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -o-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4), color-stop(1, #e5e6e5));
+	background: -webkit-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: linear-gradient(to bottom, #f4f4f4 0%, #e5e6e5 100%);
+	
+	/* border:1px solid #dadada; */
+}
+
+.af-navmenu.af-default.af-desktop .af-navmenu-sub > li.af-navmenu-expand {
+	background: #e5e6e5 ;
+	background: -ms-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -moz-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -o-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4), color-stop(1, #e5e6e5));
+	background: -webkit-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: linear-gradient(to bottom, #f4f4f4 0%, #e5e6e5 100%);
+	
+	/* border:1px solid #dadada; */
+}
+
+.af-navmenu.af-default.af-desktop .af-navmenu-sub > li.af-expandable > .af-navmenu-icon{
+	background:url('./images/navibar_child_normal.png') no-repeat center center;
+}
+
+.af-navmenu.af-default.af-desktop .af-navmenu-sub > li.af-navmenu-expand > .af-navmenu-icon{
+
+}
+
+.af-navmenu.af-default.af-desktop .af-navmenu-sub .af-expandable > a {
+
+}
+
+.af-navmenu.af-default.af-desktop .af-navmenu-sub a {
+
+}
+
+/********************** Mobile Only */
+.af-navmenu.af-default.af-mobile li {
+
+}
+
+.af-navmenu.af-default.af-mobile ul {
+
+}
+
+.af-navmenu.af-default.af-mobile  a {
+
+}
+
+.af-navmenu.af-default.af-mobile > li {
+	background: #e5e6e5;
+	background: -ms-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -moz-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -o-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4 ), color-stop(1, #e5e6e5));
+	background: -webkit-linear-gradient(top, #f4f4f4  0%, #e5e6e5 100%);
+	background: linear-gradient(to bottom, #f4f4f4  0%, #e5e6e5 100%);
+	
+	border:1px solid #a6a6a6;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-navmenu.af-default.af-mobile > li.af-hover {
+	background: #f1f1f1 ;
+	background: -ms-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -moz-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -o-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ffffff  ), color-stop(1, #f1f1f1));
+	background: -webkit-linear-gradient(top, #ffffff   0%, #f1f1f1 100%);
+	background: linear-gradient(to bottom, #ffffff   0%, #f1f1f1 100%);
+	
+	border:1px solid #dadada;
+}
+
+.af-navmenu.af-default.af-mobile > li.af-navmenu-expand {
+	background: #00bede;
+	background: -ms-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -moz-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -o-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #65d9ec ), color-stop(1, #04bfe0));
+	background: -webkit-linear-gradient(top, #65d9ec  0%, #04bfe0 100%);
+	background: linear-gradient(to bottom, #65d9ec  0%, #04bfe0 100%);
+	
+	border:1px solid #0099c6;
+}
+
+.af-navmenu.af-default.af-mobile > li.af-expandable > a {
+	background:url('./images/navibar_dropdown_normal.png') no-repeat 95% center;
+}
+
+.af-navmenu.af-default.af-mobile > li.af-navmenu-expand > a {
+	color:#ffffff;
+	font-size:14px;
+	font-weight:bold;
+	background: url('./images/navibar_dropdown_close_w.png') no-repeat 95% center;
+}
+
+.af-navmenu.af-default.af-mobile > li.af-hover.af-navmenu-expand > a {
+	color:#474747;
+	font-size:14px;
+	font-weight:bold;
+}
+
+/* 대 메뉴 바로 아래 sub menu */
+.af-navmenu.af-default.af-mobile > li > .af-navmenu-sub {
+	background: #ffffff;
+	
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	border:1px solid #c3c3c3;
+}
+
+.af-navmenu.af-default.af-mobile .af-navmenu-sub a {
+	background:url(./images/navibar_child_normal.png) no-repeat 95% center;
+}
+
+.af-navmenu.af-default.af-mobile .af-navmenu-sub > li {
+	border-bottom: 1px solid #edeef0;
+	background: #ffffff;
+}
+
+.af-navmenu.af-default.af-mobile .af-navmenu-sub > li.af-hover {
+	background: #e5e6e5 ;
+	background: -ms-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -moz-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -o-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f4f4f4), color-stop(1, #e5e6e5));
+	background: -webkit-linear-gradient(top, #f4f4f4 0%, #e5e6e5 100%);
+	background: linear-gradient(to bottom, #f4f4f4 0%, #e5e6e5 100%);
+}
+
+.af-navmenu.af-default.af-mobile .af-navmenu-sub > li.af-navmenu-expand {
+	background: #a5e8f5 ;
+	background: -ms-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: -moz-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: -o-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #beedf6), color-stop(1, #a5e8f5));
+	background: -webkit-linear-gradient(top, #beedf6 0%, #a5e8f5 100%);
+	background: linear-gradient(to bottom, #beedf6 0%, #a5e8f5 100%);
+}
+
+.af-navmenu.af-default.af-mobile .af-navmenu-sub .af-expandable > a {
+	background:url(./images/navibar_child_dropdown_normal.png) no-repeat 95% center;
+}
+
+.af-navmenu.af-default.af-mobile .af-navmenu-sub > li.af-expandable.af-hover > a{
+	background: url('./images/navibar_child_dropdown_hover.png') no-repeat 95% center;
+}
+
+.af-navmenu.af-default.af-mobile .af-navmenu-sub > li.af-expandable.af-expand > a{
+	background: url('./images/navibar_child_dropdown_close_w.png') no-repeat 95% center;
+}

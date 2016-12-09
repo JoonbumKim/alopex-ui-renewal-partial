@@ -1,0 +1,11 @@
+
+/********* textinput *********/
+.af-textinput {
+	overflow: hidden;
+	padding: 0px 8px ;
+	margin: 0 10px ;
+	line-height: 26px;
+	height:26px;
+	vertical-align: middle;
+}
+

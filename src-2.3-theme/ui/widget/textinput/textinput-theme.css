@@ -1,0 +1,30 @@
+/********* textinput *********/
+.af-textinput.af-default {
+	border: 1px solid #bfc8cf;
+	background: #ffffff;
+	font-size: 12px;
+  	color: #000000;
+  	
+  	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.af-textinput.af-default.af-hover{
+	border: 1px solid #00bede;
+	background: #ffffff;
+	
+}
+
+.af-textinput.af-default:focus{
+	border: 1px solid #00bede;
+	background: #ffffff;
+	
+}
+
+.af-textinput.af-default.af-disabled {
+    border: 1px solid #d7dadd;
+	background: #f2f2f2;
+	color: #9a9a9a;
+}
+

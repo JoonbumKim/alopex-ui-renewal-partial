@@ -1,0 +1,37 @@
+
+/********* checkbox *********/
+/* checkbox custom image for webkit browser */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	.af-checkbox.af-default {
+		background: url('./images/checkbox_unchecked.png') no-repeat center center;
+	}
+	.af-checkbox.af-default:checked {
+		background: url('./images/checkbox_checked.png') no-repeat center center;
+	}
+	.af-checkbox.af-default:checked.af-disabled{
+		background: url('./images/checkbox_disabled_checked.png') no-repeat center center;
+	}
+	.af-checkbox.af-default.af-disabled {
+	    background: url('./images/checkbox_disabled_unchecked.png') no-repeat center center;
+	}
+	.af-checkbox.af-default:indeterminate {
+		background: url('./images/checkbox_indeterminate_basic.png') no-repeat center center;
+	}
+}
+
+/********* wrapcheckbox *********/
+.af-checkbox.af-wrapcheckbox.af-default  + .af-wrapcheckbox-span {
+	background: url('./images/checkbox_unchecked.png') no-repeat center center;
+}
+.af-checkbox.af-wrapcheckbox.af-default:checked  + .af-wrapcheckbox-span {
+	background: url('./images/checkbox_checked.png') no-repeat center center;
+}
+.af-checkbox.af-wrapcheckbox.af-default:checked.af-disabled  + .af-wrapcheckbox-span{
+	background: url('./images/checkbox_disabled_checked.png') no-repeat center center;
+}
+.af-checkbox.af-wrapcheckbox.af-default.af-disabled  + .af-wrapcheckbox-span {
+    background: url('./images/checkbox_disabled_unchecked.png') no-repeat center center;
+}
+.af-checkbox.af-wrapcheckbox.af-default:indeterminate  + .af-wrapcheckbox-span {
+	background: url('./images/checkbox_indeterminate_basic.png') no-repeat center center;
+}

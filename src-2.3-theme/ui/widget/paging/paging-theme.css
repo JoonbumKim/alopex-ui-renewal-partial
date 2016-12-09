@@ -1,0 +1,33 @@
+
+/********* page indicator(temp) *********/
+.af-paging.af-default {
+	height:40px;
+}
+
+.af-paging.af-default .af-paging-mobile {
+	background:#777;
+}
+
+.af-paging.af-default .af-paging-mobile.af-paging-selected {
+	background:#00AEEF;
+}
+
+.af-paging.af-default .af-paging-number {
+	
+}
+
+.af-paging.af-default .af-paging-number.af-paging-selected {
+	font-weight:bold;
+	color: red;
+}
+
+.af-paging.af-default .af-paging-first,
+.af-paging.af-default .af-paging-prev,
+.af-paging.af-default .af-paging-prevgroup,
+.af-paging.af-default .af-paging-next,
+.af-paging.af-default .af-paging-nextgroup,
+.af-paging.af-default .af-paging-last {
+	background-color: #d9e1e9;
+	color: #161616;
+	font-size: 12px;
+}

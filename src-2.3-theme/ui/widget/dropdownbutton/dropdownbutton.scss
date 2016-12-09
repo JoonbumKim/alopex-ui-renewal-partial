@@ -1,0 +1,29 @@
+.#{$dropdownbutton} {
+	color: $dropdown-btn-font-color;
+	border: $dropdown-btn-style;
+	@include gradation($flag, $dropdown-btn-bg, $dropdown-btn-bg, $btn-bg-backend);
+	
+	&:hover {
+		color: $dropdown-btn-hover-font;
+		filter: none;
+		@include gradation($flag, $dropdown-btn-hover-bg, $dropdown-btn-hover-bg, $dropdown-btn-hover-bg);
+	}
+}
+
+.#{$dropdownbutton} {
+	padding-right: $dropdown-btn-padding;
+	
+	&:after {
+		content:"";
+		position:absolute;
+		top: 50%;
+		right: $dropdown-btn-right;
+		display:inline-block;
+		width: $dropdown-btn-width;
+		height: $dropdown-btn-height;
+		vertical-align:middle;
+		margin-top: -2px;
+		background: url($component-image) no-repeat $dropdown-btn-pos;
+		background-repeat:no-repeat;
+	}
+}

@@ -1,0 +1,172 @@
+.#{$groupbutton}, .#{$groupbutton} * {box-sizing: border-box;}
+.#{$groupbutton} {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+	Vertical-align: middle;
+	text-align: center;
+	line-height: $btn-base-lineheight;
+	text-decoration: none;
+	@include border-radius($border-radius-base);
+}
+.#{$groupbutton} .#{$button} {
+	float: left;
+	margin: 0px;
+	border: $group-default-style;
+	border-left: $group-border-color;
+	@include border-radius(0);
+}
+
+.#{$groupbutton} > .#{$button}:first-child {
+	border: $group-default-style;
+}
+
+.#{$groupbutton} > .#{$button}:first-child {
+    &:hover {
+    	@include border-radius($group-first-radius);
+    }
+}
+.#{$groupbutton} > .#{$button}:last-child {
+    &:hover {
+    	@include border-radius($group-last-radius);
+    }
+}
+
+.#{$groupbutton}.Typeb {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	overflow: hidden;
+	text-align: center;
+	Vertical-align: middle;
+	line-height: $btn-base-lineheight;
+	text-decoration: none;
+	@include border-radius($border-radius-base);
+}
+
+.#{$groupbutton}.Typeb .#{$button} {
+    float: left;
+    margin: 0;
+    margin-left: 0;
+    color: $group-typeb-font-color;
+    background: $group-typeb-bg;
+    border: $group-border-style;
+    border-left: 0;
+    filter: none;
+    @include border-radius(0);
+    @include transition($none-trans);
+}
+
+.#{$groupbutton}.Typeb > .#{$button}:first-child {
+	margin-left: 0;
+    border-left: $group-border-style;
+    @include border-radius($group-first-radius);
+}
+.#{$groupbutton}.Typeb > .#{$button}:last-child {
+    border: $group-border-style;
+    border-left: 0;
+    @include border-radius($group-last-radius);
+}
+
+.#{$groupbutton}.Typeb .#{$button}:hover, 
+.#{$groupbutton}.Typeb .#{$button}:active, 
+.#{$groupbutton}.Typeb .#{$button}.Selected, 
+.#{$groupbutton}.Typeb .#{$button}.Checked {
+	margin-left: -1px;
+  	z-index: 2;
+	color: $group-typeb-font-color-hover;
+	background: $group-typeb-bg-hover;
+	border: 1px solid $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Typeb .#{$button}:first-child:hover, 
+.#{$groupbutton}.Typeb .#{$button}:first-child:active, 
+.#{$groupbutton}.Typeb .#{$button}:first-child.Selected, 
+.#{$groupbutton}.Typeb .#{$button}:first-child.Checked {
+	margin-left: 0;
+	z-index: 2;
+	color: $group-typeb-font-color-hover;
+	background: $group-typeb-bg-hover;
+	border-color: $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Typeb .#{$button}:hover + a, 
+.#{$groupbutton}.Typeb .#{$button}:active + a, 
+.#{$groupbutton}.Typeb .#{$button}.Selected + a ,
+.#{$groupbutton}.Typeb .#{$button}.Checked + a {
+	margin-right: 0;
+}
+
+.#{$groupbutton} .#{$radio}, 
+.#{$groupbutton} .#{$checkbox}, 
+.#{$groupbutton} .#{$radio}.Checked, 
+.#{$groupbutton} .#{$checkbox}.Checked {
+	position:absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	line-height: $btn-base-lineheight;
+	@include opacity(0);
+}
+
+.#{$groupbutton}.Vertical .#{$button} {
+	float:left;
+	clear:both;
+	width:100%;
+	border: $group-default-style;
+	border-top: $group-border-color;
+}
+.#{$groupbutton}.Vertical .#{$button}:first-child {
+	border: $group-default-style;
+	@include border-radius($group-vertical-first-radius);
+}
+.#{$groupbutton}.Vertical.Typeb .#{$button} {
+	float: left;
+	width: 100%;
+	margin: 0;
+    color: $group-typeb-font-color;
+    background: $group-typeb-bg;
+    border: $group-border-style;
+    border-top: 0;
+    @include border-radius(0);
+}
+
+.#{$groupbutton}.Vertical.Typeb > .#{$button}:first-child {
+	margin-top: 0;
+    border-top: $group-border-style;
+    @include border-radius($group-vertical-typeb-first-radius);
+}
+.#{$groupbutton}.Vertical.typeb > .#{$button}:last-child {
+	@include border-radius($group-vertical-typeb-last-radius);
+}
+
+.#{$groupbutton}.Vertical.Typeb .#{$button}:hover, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:active, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Selected, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Checked {
+	margin-top: -1px;
+  	z-index:2;
+	background: $group-typeb-bg-hover;
+	color: $group-typeb-font-color-hover;
+	border: 1px solid $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child:hover, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child:active, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child.Selected, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:first-child.Checked {
+	margin-top: 0;
+	z-index: 2;
+	color: $group-typeb-font-color-hover;
+	background: $group-typeb-bg-hover;
+	border-color: $group-typeb-border-hover;
+}
+
+.#{$groupbutton}.Vertical.Typeb .#{$button}:hover +a, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}:active +a, 
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Selected +a ,
+.#{$groupbutton}.Vertical.Typeb .#{$button}.Checked +a {
+	margin-bottom: 0;
+}
+

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Table - Column Toggle</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<script>
+		$(document).ready(function() {
+		  var btn = $('#toggle')[0];
+		  var pos = $.alopex.util.getPagePosition(btn);
+		  $('#table').setColumnToggleButton(btn, true, pos);
+		  
+		  
+		  //$('#table').hideColumn(0);
+		  //$('#table').hideColumn(1);
+		});
+	</script>
+</head>
+<body>
+	<a id="toggle" class="Button">Toggle</a>
+	<br/><br/><br/>
+	<table id="table" class="Table" data-height="200px" data-scroll="body">
+		<thead>
+			<tr >
+				<th>First Name</th>
+				<th data-priority="3">Last Name</th>
+				<th data-priority="1">Organization</th>
+				<th data-priority="2">Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>David</td>
+				<td>Howard</td>
+				<td>SK C&C</td>
+				<td>dhoward@sk.com</td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>Guynes</td>
+				<td>SK C&C</td>
+				<td>guynes@sk.com</td>
+			</tr>
+			<tr>
+				<td>David</td>
+				<td>Howard</td>
+				<td>SK C&C</td>
+				<td>dhoward@sk.com</td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>Guynes</td>
+				<td>SK C&C</td>
+				<td>guynes@sk.com</td>
+			</tr>
+			<tr>
+				<td>David</td>
+				<td>Howard</td>
+				<td>SK C&C</td>
+				<td>dhoward@sk.com</td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>Guynes</td>
+				<td>SK C&C</td>
+				<td>guynes@sk.com</td>
+			</tr>
+			<tr>
+				<td>David</td>
+				<td>Howard</td>
+				<td>SK C&C</td>
+				<td>dhoward@sk.com</td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>Guynes</td>
+				<td>SK C&C</td>
+				<td>guynes@sk.com</td>
+			</tr>
+			<tr>
+				<td>David</td>
+				<td>Howard</td>
+				<td>SK C&C</td>
+				<td>dhoward@sk.com</td>
+			</tr>
+			<tr>
+				<td>Jerry</td>
+				<td>Guynes</td>
+				<td>SK C&C</td>
+				<td>guynes@sk.com</td>
+			</tr>
+		</tbody>
+		
+		<tfoot>
+		</tfoot>
+	</table>
+
+		
+</body>
+</html>

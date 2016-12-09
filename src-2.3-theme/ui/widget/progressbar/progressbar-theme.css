@@ -1,0 +1,16 @@
+/********* Progressbar(temp) ************/
+.af-progressbar.af-default {
+ width: 500px;
+ height: 17px;
+ border-color: #AAA;
+}
+.af-progressbar.af-default span {
+ font-weight: bold;
+}
+.af-progressbar.af-default div {
+ background-color: #CCC;
+ /* background: url(./images/progressbar.gif); */
+}
+ 
+
+

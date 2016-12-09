@@ -1,0 +1,32 @@
+/********* radio *********/
+/* radio button custom image for webkit browser */
+@media screen and (-webkit-min-device-pixel-ratio:0){
+	.af-radio.af-default {
+		background: url('./images/radiobtn_unchecked.png') no-repeat center center;
+	}
+	.af-radio.af-default:checked {
+		background: url('./images/radiobtn_checked.png') no-repeat center center;
+	}
+	
+	.af-radio.af-default:checked.af-disabled {
+		background: url('./images/radiobtn_disabled_checked.png') no-repeat center center;
+	}
+	
+	.af-radio.af-default.af-disabled {
+	    background: url('./images/radiobtn_disabled_unchecked.png') no-repeat center center;
+	}
+}
+
+/********* wrapradio *********/
+.af-radio.af-wrapradio.af-default + .af-wrapradio-span {
+    background: url('./images/radiobtn_unchecked.png') no-repeat center center;
+}
+.af-radio.af-wrapradio.af-default:checked + .af-wrapradio-span {
+    background: url('./images/radiobtn_checked.png') no-repeat center center;
+}
+.af-radio.af-wrapradio.af-default.af-disabled + .af-wrapradio-span {
+    background: url('./images/radiobtn_unchecked.png') no-repeat center center;
+}
+.af-radio.af-wrapradio.af-default:checked.af-disabled + .af-wrapradio-span {
+    background: url('./images/radiobtn_checked.png') no-repeat center center;
+}

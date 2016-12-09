@@ -1,0 +1,19 @@
+/*********** DropdownButton ***********/
+
+.af-dropdownbutton.af-button.af-default {
+	padding-right:40px;
+}
+.af-dropdownbutton.af-button.af-default:after {
+	content:"";
+	display:inline-block;
+	width: 14px;
+	height: 14px;
+	background-repeat:no-repeat;
+	vertical-align:middle;
+	background-image:url(./images/glyphicons-halflings.png);
+	background-position: -313px -119px;
+	position:absolute;
+	right:15px;
+	top:50%;
+	margin-top:-9px;
+}

@@ -1,0 +1,33 @@
+.#{$textarea} {
+	overflow:auto;
+	padding: 8px;
+	line-height: $textarea-line-height;
+	vertical-align: middle;
+	font-size: $font-size-base;
+  	color: $textarea-font-color;
+	background: $textarea-bg;
+	border: $textarea-style;
+  	@include border-radius($border-radius-base);
+  	@include transition($base-trans);
+  	
+  	&:hover, &:focus {
+		border: $textarea-hover;
+  	}
+  	&.Disabled {
+		color: $textarea-disabled-color;
+	  	background: $textarea-disabled-bg;
+		border: $textarea-disabled-style;
+  	}
+}
+.#{$textarea}.Confirm {
+	@include theme-color($color-confirm, $color-confirm-hover);
+}
+.#{$textarea}.Warning {
+	@include theme-color($color-warning, $color-warning-hover);
+}
+.#{$textarea}.Danger {
+	@include theme-color($color-danger, $color-danger-hover);
+}
+.#{$textarea}.Success {
+	@include theme-color($color-success, $color-success-hover);
+}

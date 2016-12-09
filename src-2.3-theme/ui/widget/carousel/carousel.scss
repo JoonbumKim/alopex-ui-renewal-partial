@@ -1,0 +1,35 @@
+.#{$carousel} {
+	position: relative;
+	overflow: hidden;
+	height: $carousel-height;
+	width: $carousel-width;
+	z-index: 0;
+}
+.#{$carousel} > .Paging {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	bottom: 0;
+}
+.#{$carousel} > .Paging .Link {
+	float: none;
+}
+.#{$carousel} .Prev, 
+.#{$carousel} .Next {
+	position: absolute;
+	cursor: pointer;
+	top: 50%;
+	z-index: 2;
+	width: $carousel-btn-width;
+	height: $carousel-btn-height;
+	margin-top: $carousel-gutter;
+	line-height: $carousel-line-height;
+}
+.#{$carousel} .Prev {
+	left: $carousel-position;
+	background: url($component-image) no-repeat $carousel-prev-pos;
+}
+.#{$carousel} .Next {
+	right: $carousel-position;
+	background: url($component-image) no-repeat $carousel-next-pos;
+}
